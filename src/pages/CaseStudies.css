@@ -1,0 +1,117 @@
+.case-studies__hero h1 {
+  margin-bottom: var(--space-sm);
+}
+
+.case-studies__intro {
+  font-size: 1.125rem;
+  max-width: 55ch;
+}
+
+.case-studies__list .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.case-study-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.case-study-card:nth-child(even) {
+  direction: rtl;
+}
+
+.case-study-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+.case-study-card__image {
+  overflow: hidden;
+  background: var(--color-warm-gray);
+}
+
+.case-study-card__image img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.case-study-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--space-xs);
+}
+
+.case-study-card__client {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.case-study-card__year {
+  font-size: 0.8125rem;
+  color: var(--color-accent-light);
+}
+
+.case-study-card__body h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: var(--space-sm);
+}
+
+.case-study-card__body p {
+  font-size: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.case-study-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.case-study-card__metrics {
+  display: flex;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.metric__value {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-dark-brown);
+}
+
+.metric__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .case-study-card {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .case-study-card__metrics {
+    gap: var(--space-md);
+  }
+}
