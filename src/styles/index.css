@@ -105,7 +105,7 @@ ul { list-style: none; }
   background: transparent;
   color: var(--color-dark);
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
@@ -116,14 +116,14 @@ ul { list-style: none; }
 }
 
 .btn--filled {
-  background: var(--color-dark);
-  color: var(--color-bg);
-  border-color: var(--color-dark);
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
 }
 
 .btn--filled:hover {
-  background: #1a1410;
-  border-color: #1a1410;
+  background: #A34E30;
+  border-color: #A34E30;
 }
 
 .btn--pill {
