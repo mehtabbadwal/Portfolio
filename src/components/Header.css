@@ -157,13 +157,28 @@
   transition: color 0.2s ease;
 }
 
-.header__mobile-nav a:last-child {
-  border-bottom: none;
-}
-
 .header__mobile-nav a:hover,
 .header__mobile-nav a.active {
   color: var(--color-dark);
+}
+
+.header__mobile-ask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: var(--color-dark);
+  color: var(--color-bg);
+  border-radius: var(--radius);
+  border-bottom: none;
+  font-weight: 500;
+}
+
+.header__mobile-ask:hover,
+.header__mobile-ask.active {
+  color: var(--color-bg);
 }
 
 @media (max-width: 768px) {

@@ -44,8 +44,13 @@ function Header() {
           <NavLink to="/work" onClick={() => setMenuOpen(false)}>Projects</NavLink>
           <NavLink to="/writing" onClick={() => setMenuOpen(false)}>Writing</NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
-          <a href="mailto:mehtabbadwal@gmail.com" onClick={() => setMenuOpen(false)}>Ask Mehtab</a>
           <a href="/resume" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a>
+          <a href="mailto:mehtabbadwal@gmail.com" className="header__mobile-ask" onClick={() => setMenuOpen(false)}>
+            <span className="green-dot" />
+            <span className="header__ask-text">
+              <span className="header__ask-word">Ask</span> Mehtab
+            </span>
+          </a>
         </nav>
       </div>
     </header>

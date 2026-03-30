@@ -123,6 +123,7 @@ ul { list-style: none; }
 .btn--filled:hover {
   background: #A34E30;
   border-color: #A34E30;
+  color: #fff;
 }
 
 .btn--pill {

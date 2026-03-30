@@ -64,7 +64,7 @@
 
 .hero__learn-more {
   font-size: 0.8125rem;
-  color: var(--color-warm);
+  color: var(--color-light);
   transition: color 0.2s ease;
 }
 
@@ -553,6 +553,7 @@
 
   .hero__learn-more {
     margin-top: 1rem;
+    text-align: center;
   }
 
   .hero__photo-placeholder {
