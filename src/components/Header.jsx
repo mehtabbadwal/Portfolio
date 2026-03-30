@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <div className="header__inner container">
@@ -24,6 +27,26 @@ function Header() {
             </a>
           </div>
         </div>
+
+        <button
+          className="header__burger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className={`header__burger-line ${menuOpen ? 'open' : ''}`} />
+          <span className={`header__burger-line ${menuOpen ? 'open' : ''}`} />
+          <span className={`header__burger-line ${menuOpen ? 'open' : ''}`} />
+        </button>
+      </div>
+
+      <div className={`header__mobile-menu ${menuOpen ? 'header__mobile-menu--open' : ''}`}>
+        <nav className="header__mobile-nav">
+          <NavLink to="/work" onClick={() => setMenuOpen(false)}>Projects</NavLink>
+          <NavLink to="/writing" onClick={() => setMenuOpen(false)}>Writing</NavLink>
+          <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
+          <a href="mailto:mehtabbadwal@gmail.com" onClick={() => setMenuOpen(false)}>Ask Mehtab</a>
+          <a href="/resume" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a>
+        </nav>
       </div>
     </header>
   );
