@@ -109,9 +109,8 @@ ul { list-style: none; }
 }
 
 .btn:hover {
-  background: var(--color-dark);
-  color: var(--color-bg);
-  border-color: var(--color-dark);
+  border-color: #A34E30;
+  color: #A34E30;
   transform: translateY(-2px);
 }
 

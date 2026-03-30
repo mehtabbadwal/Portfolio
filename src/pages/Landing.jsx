@@ -112,10 +112,10 @@ function Landing() {
         <div className="container hero__grid">
           <div className="hero__content">
             <div className="hero__accent-line fade-up stagger-1" />
-            <p className="hero__name fade-up stagger-1">Mehtab Badwal</p>
-            <h1 className="hero__headline fade-up stagger-2">
+            <h1 className="hero__name fade-up stagger-1">Mehtab Badwal</h1>
+            <p className="hero__headline fade-up stagger-2">
               I design how products think &mdash; so users don&rsquo;t have to.
-            </h1>
+            </p>
             <p className="hero__tagline fade-up stagger-3">Designer. Behaviorist. Builder.</p>
             <p className="hero__desc fade-up stagger-3">
               Six years designing complex products &mdash; enterprise systems, AI tools,
