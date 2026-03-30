@@ -1,182 +1,227 @@
 import { Link } from 'react-router-dom';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Landing.css';
 
-const principles = [
+const philosophyCards = [
   {
-    number: '01',
-    title: 'Start with behavior',
-    description: 'Before pixels, understand how people think. Every design decision should be grounded in real behavioral patterns.',
+    statement: 'The conventional answer is a starting point, not a destination.',
+    project: 'HPE Chatbot',
+    slug: 'hpe-chatbot',
   },
   {
-    number: '02',
-    title: 'Reduce cognitive load',
-    description: 'The best interfaces disappear. Remove every unnecessary decision, step, and distraction between the user and their goal.',
+    statement: 'Clarity is not the same as simplicity.',
+    project: 'HPE PFA',
+    slug: 'hpe-pfa',
   },
   {
-    number: '03',
-    title: 'Measure what matters',
-    description: 'Design isn\'t done when it looks right — it\'s done when it works right. Validate with data, iterate with intention.',
+    statement: 'Design for the moment, not the average.',
+    project: 'Fluidra',
+    slug: 'fluidra',
   },
 ];
 
 const featuredProject = {
+  year: '2025',
+  tags: ['Enterprise Systems', 'Conversational AI'],
   title: 'HPE Chatbot',
-  category: 'AI / Conversational Design',
-  description: 'Redesigned the support chatbot experience for Hewlett Packard Enterprise, reducing escalations and dramatically increasing self-service resolution.',
-  image: 'https://placehold.co/1200x680/E8E2D8/2D2420?text=HPE+Chatbot',
-  slug: 'hpe-chatbot',
+  description: 'The fix wasn\u2019t smarter AI. It was more honest AI.',
   metrics: [
-    { value: '32%', label: 'Fewer Escalations' },
-    { value: '3x', label: 'Chatbot Usage' },
-    { value: '2 min', label: 'Resolution Time' },
+    { value: '32%', label: 'fewer escalations' },
+    { value: '3x', label: 'chatbot usage' },
+    { value: '2 min', label: 'avg resolution time' },
   ],
+  slug: 'hpe-chatbot',
 };
 
-const projects = [
+const projectCards = [
   {
-    id: 1,
     title: 'HPE PFA',
+    year: '2025',
+    category: 'Enterprise Systems',
+    description: 'For power users, a cleaner interface is actually slower. So I built a denser one.',
+    metrics: [
+      { value: '75%', label: 'fewer clicks' },
+      { value: '3 wks', label: 'MVP shipped' },
+    ],
     slug: 'hpe-pfa',
-    category: 'Enterprise / SaaS',
-    description: 'Partner-facing analytics platform for Hewlett Packard Enterprise — enabling channel partners to track performance, manage rebates, and make data-driven decisions.',
-    image: 'https://placehold.co/800x540/E8E2D8/2D2420?text=HPE+PFA',
   },
   {
-    id: 2,
     title: 'Qubera',
+    year: '2024',
+    category: 'AI Product',
+    description: 'Analysts knew what questions to ask. The tool just made them ask manually, every time.',
+    metrics: [
+      { value: '85%', label: 'faster extraction' },
+      { value: '30%', label: 'faster decisions' },
+    ],
     slug: 'qubera',
-    category: 'Fintech',
-    description: 'A modern investment platform simplifying portfolio management and financial planning for retail investors.',
-    image: 'https://placehold.co/800x540/E8E2D8/2D2420?text=Qubera',
   },
   {
-    id: 3,
     title: 'Fluidra',
+    year: '2023',
+    category: 'Mobile \u00B7 Field Service',
+    description: 'Built around the 40-minute window, not the system.',
+    metrics: [
+      { value: '40%', label: 'feature adoption' },
+      { value: '25%', label: 'task efficiency' },
+    ],
     slug: 'fluidra',
-    category: 'IoT / Smart Home',
-    description: 'Connected pool management system — giving homeowners and service professionals real-time control over water quality and equipment.',
-    image: 'https://placehold.co/800x540/E8E2D8/2D2420?text=Fluidra',
   },
 ];
 
 const testimonials = [
   {
-    quote: 'Mehtab has a rare ability to zoom out and think strategically while still delivering pixel-perfect work. She doesn\'t just design screens — she solves problems.',
+    quote: 'She notices the friction points that others overlook and finds ways to make interactions feel more natural.',
     author: 'Navya Nayaki Yelloji',
-    role: 'Product Manager',
+    role: 'Senior Product Manager \u00B7 HPE',
   },
   {
-    quote: 'What sets Mehtab apart is her deep understanding of user behavior. She brings a level of rigor and empathy to design that consistently elevates the product.',
+    quote: 'Her proactive approach consistently moved projects forward, especially when navigating complex system models with varied user goals.',
     author: 'Geoffrey Pay',
-    role: 'Engineering Lead',
+    role: 'Lead Product Designer \u00B7 HPE',
   },
   {
-    quote: 'Mehtab is the kind of designer who makes everyone around her better. Her design systems work saved our team countless hours and brought real consistency to the product.',
+    quote: 'Her ability to translate complex user requirements into seamless UI designs was impressive and significantly enhanced the user experience.',
     author: 'Brian Liss',
-    role: 'Director of Design',
+    role: 'Lead Engineer \u00B7 Fluidra',
+  },
+];
+
+const articles = [
+  {
+    title: 'When AI Changes Who\u2019s in Control',
+    excerpt: 'As AI becomes more embedded in products, something subtle shifts in the user experience \u2014 often without being designed for.',
+  },
+  {
+    title: 'Why Users Don\u2019t Say What They Feel',
+    excerpt: 'Much of what drives user behavior happens before conscious thought \u2014 in instinct, emotion, and physical reaction.',
+  },
+  {
+    title: 'The Paradox of Choice in UX',
+    excerpt: 'Too much freedom can paralyze users. Designing lighter, reversible choices restores ease, flow, and confidence.',
   },
 ];
 
 function Landing() {
+  const pageRef = useScrollReveal();
+
   return (
-    <div className="landing">
-      {/* Hero */}
+    <div className="landing" ref={pageRef}>
+      {/* ── Hero ── */}
       <section className="hero section">
-        <div className="container">
-          <p className="section-label">Designer. Behaviorist. Builder.</p>
-          <h1 className="hero__title">
-            I design how products think — so users don&rsquo;t have to.
-          </h1>
-          <p className="hero__subtitle">
-            Six years designing complex products — enterprise systems, AI tools,
-            things built from scratch. The context always changes. People don&rsquo;t.
-          </p>
-          <div className="hero__actions">
-            <Link to="/work" className="btn btn--filled">
-              View Projects &rarr;
+        <div className="container hero__grid">
+          <div className="hero__content">
+            <div className="hero__accent-line fade-up stagger-1" />
+            <p className="hero__name fade-up stagger-1">Mehtab Badwal</p>
+            <h1 className="hero__headline fade-up stagger-2">
+              I design how products think &mdash; so users don&rsquo;t have to.
+            </h1>
+            <p className="hero__tagline fade-up stagger-3">Designer. Behaviorist. Builder.</p>
+            <p className="hero__desc fade-up stagger-3">
+              Six years designing complex products &mdash; enterprise systems, AI tools,
+              things built from scratch. The context always changes. People don&rsquo;t.
+            </p>
+            <div className="hero__actions fade-up stagger-4">
+              <Link to="/work" className="btn btn--filled">View my work</Link>
+              <a href="mailto:mehtabbadwal@gmail.com" className="btn">Get in touch</a>
+            </div>
+            <Link to="/about" className="hero__learn-more fade-up stagger-5">
+              Or learn more about me &rarr;
             </Link>
-            <a href="mailto:mehtabbadwal@gmail.com" className="btn">
-              Get in Touch
-            </a>
           </div>
-          <div className="hero__location">
-            San Diego, CA
+          <div className="hero__photo fade-up stagger-3">
+            <div className="hero__photo-placeholder">
+              <span>Photo</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <hr className="section-divider container" />
-
-      {/* Philosophy */}
+      {/* ── Philosophy ── */}
       <section className="philosophy section">
         <div className="container">
-          <p className="section-label">Approach</p>
-          <h2 className="philosophy__heading">
+          <p className="section-label fade-up">How I Think</p>
+          <h2 className="philosophy__heading fade-up">
             Most design problems already have a standard answer.
           </h2>
-          <p className="philosophy__subheading">
-            I focus on finding it — then making it feel effortless.
-          </p>
-          <div className="philosophy__grid">
-            {principles.map((item) => (
-              <div key={item.number} className="principle-card">
-                <span className="principle-card__number">{item.number}</span>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-              </div>
+          <div className="philosophy__cards">
+            {philosophyCards.map((card, i) => (
+              <Link
+                to={`/case-studies/${card.slug}`}
+                key={i}
+                className={`philosophy-card fade-up stagger-${i + 1}`}
+              >
+                <p className="philosophy-card__statement">&ldquo;{card.statement}&rdquo;</p>
+                <span className="philosophy-card__link">{card.project} &rarr;</span>
+              </Link>
             ))}
           </div>
+          <p className="philosophy__footer fade-up">See how this shows up in the work &darr;</p>
         </div>
       </section>
 
-      <hr className="section-divider container" />
+      <hr className="divider container" />
 
-      {/* Featured Project */}
-      <section className="featured-project section">
+      {/* ── Selected Work ── */}
+      <section className="work section">
         <div className="container">
-          <p className="section-label">Featured Project</p>
-          <Link to={`/case-studies/${featuredProject.slug}`} className="featured-project__card">
-            <div className="featured-project__image">
-              <img src={featuredProject.image} alt={featuredProject.title} />
+          <div className="work__header fade-up">
+            <p className="section-label">Selected Work</p>
+            <Link to="/work" className="work__view-all">View all work &rarr;</Link>
+          </div>
+
+          {/* Featured */}
+          <Link to={`/case-studies/${featuredProject.slug}`} className="featured fade-up">
+            <div className="featured__image">
+              <div className="featured__placeholder"><span>HPE Chatbot</span></div>
             </div>
-            <div className="featured-project__body">
-              <span className="tag">{featuredProject.category}</span>
-              <h2>{featuredProject.title}</h2>
-              <p>{featuredProject.description}</p>
-              <div className="featured-project__metrics">
-                {featuredProject.metrics.map((metric) => (
-                  <div key={metric.label} className="metric">
-                    <span className="metric__value">{metric.value}</span>
-                    <span className="metric__label">{metric.label}</span>
+            <div className="featured__body">
+              <div className="featured__meta">
+                <span className="featured__year">{featuredProject.year}</span>
+                {featuredProject.tags.map((t) => (
+                  <span key={t} className="tag">{t}</span>
+                ))}
+              </div>
+              <h3 className="featured__title">{featuredProject.title}</h3>
+              <p className="featured__desc">{featuredProject.description}</p>
+              <div className="featured__metrics">
+                {featuredProject.metrics.map((m) => (
+                  <div key={m.label} className="metric">
+                    <span className="metric__value">{m.value}</span>
+                    <span className="metric__label">{m.label}</span>
                   </div>
                 ))}
               </div>
-              <span className="btn">View Case Study &rarr;</span>
+              <span className="featured__cta">Read case study &rarr;</span>
             </div>
           </Link>
-        </div>
-      </section>
 
-      <hr className="section-divider container" />
-
-      {/* Projects Grid */}
-      <section className="featured section">
-        <div className="container">
-          <p className="section-label">Selected Work</p>
-          <div className="featured__header">
-            <h2>More Projects</h2>
-            <Link to="/work" className="btn">View All &rarr;</Link>
-          </div>
-          <div className="featured__grid">
-            {projects.map((project) => (
-              <Link to={`/case-studies/${project.slug}`} key={project.id} className="project-card">
+          {/* Grid */}
+          <div className="work__grid">
+            {projectCards.map((project, i) => (
+              <Link
+                to={`/case-studies/${project.slug}`}
+                key={project.slug}
+                className={`project-card fade-up stagger-${i + 1}`}
+              >
                 <div className="project-card__image">
-                  <img src={project.image} alt={project.title} />
+                  <div className="project-card__placeholder"><span>{project.title}</span></div>
                 </div>
-                <div className="project-card__info">
-                  <span className="tag">{project.category}</span>
+                <div className="project-card__body">
+                  <div className="project-card__meta">
+                    <span>{project.year}</span>
+                    <span>{project.category}</span>
+                  </div>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  <div className="project-card__metrics">
+                    {project.metrics.map((m) => (
+                      <div key={m.label} className="metric metric--small">
+                        <span className="metric__value">{m.value}</span>
+                        <span className="metric__label">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Link>
             ))}
@@ -184,24 +229,94 @@ function Landing() {
         </div>
       </section>
 
-      <hr className="section-divider container" />
+      <hr className="divider container" />
 
-      {/* Testimonials */}
+      {/* ── Testimonials ── */}
       <section className="testimonials section">
         <div className="container">
-          <p className="section-label">Testimonials</p>
-          <h2>Kind words from colleagues</h2>
+          <p className="section-label fade-up">From the people I&rsquo;ve built with</p>
           <div className="testimonials__grid">
-            {testimonials.map((item, i) => (
-              <blockquote key={i} className="testimonial">
-                <p className="testimonial__quote">&ldquo;{item.quote}&rdquo;</p>
+            {testimonials.map((t, i) => (
+              <blockquote key={i} className={`testimonial fade-up stagger-${i + 1}`}>
+                <p className="testimonial__quote">&ldquo;{t.quote}&rdquo;</p>
                 <footer className="testimonial__author">
-                  <strong>{item.author}</strong>
-                  <span>{item.role}</span>
+                  <strong>{t.author}</strong>
+                  <span>{t.role}</span>
                 </footer>
               </blockquote>
             ))}
           </div>
+          <div className="testimonials__footer fade-up">
+            <p>Across enterprise, startup, and field environments.</p>
+            <div className="testimonials__tags">
+              <span className="tag">HPE</span>
+              <span className="tag">Fluidra</span>
+              <span className="tag">Qubera</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr className="divider container" />
+
+      {/* ── Writing ── */}
+      <section className="writing section">
+        <div className="container">
+          <div className="work__header fade-up">
+            <p className="section-label">Mind Meets Design</p>
+            <Link to="/writing" className="work__view-all">Explore all writing &rarr;</Link>
+          </div>
+
+          <div className="writing__featured fade-up">
+            <blockquote className="writing__quote">
+              &ldquo;I was giving my son a bath when I realized I was out of groceries.&rdquo;
+            </blockquote>
+            <p className="writing__quote-sub">
+              When a platform consolidates everything, it takes on more responsibility &mdash;
+              to understand intent, not just expose options.
+            </p>
+            <div className="writing__featured-meta">
+              <strong>&ldquo;Stay Out of My Way&rdquo;</strong>
+              <span>Mind Meets Design &middot; Feb 2025</span>
+            </div>
+          </div>
+
+          <div className="writing__list">
+            {articles.map((a, i) => (
+              <Link to="/writing" key={i} className={`writing__item fade-up stagger-${i + 1}`}>
+                <h3>{a.title}</h3>
+                <p>{a.excerpt}</p>
+                <span className="writing__arrow">&rarr;</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <hr className="divider container" />
+
+      {/* ── CTA ── */}
+      <section className="cta section">
+        <div className="container cta__inner">
+          <h2 className="cta__heading fade-up">
+            If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
+          </h2>
+          <p className="cta__sub fade-up">
+            Currently open to senior and staff UX roles in enterprise, AI, or anything in between.
+          </p>
+          <div className="cta__actions fade-up">
+            <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent btn--pill">
+              mehtabbadwal@gmail.com
+            </a>
+            <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn btn--pill">
+              Resume
+            </a>
+          </div>
+          <div className="cta__badge fade-up">
+            <span className="green-dot" />
+            <span>Open to opportunities</span>
+          </div>
+          <p className="cta__location fade-up">Based in San Diego, CA</p>
         </div>
       </section>
     </div>
