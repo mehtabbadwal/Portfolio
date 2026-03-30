@@ -6,16 +6,16 @@ function Header() {
     <header className="header">
       <div className="header__inner container">
         <Link to="/" className="header__logo">
-          Portfolio
+          Mehtab Badwal
         </Link>
         <nav className="header__nav">
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/work">Work</NavLink>
+          <NavLink to="/work">Projects</NavLink>
           <NavLink to="/writing">Writing</NavLink>
-          <NavLink to="/case-studies">Case Studies</NavLink>
-          <NavLink to="/resources">Resources</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <a href="mailto:mehtabbadwal@gmail.com">Ask Mehtab</a>
+          <a href="/resume" target="_blank" rel="noopener noreferrer">Resume</a>
         </nav>
-        <a href="mailto:hello@example.com" className="header__cta btn">
+        <a href="mailto:mehtabbadwal@gmail.com" className="header__cta btn">
           Get in Touch
         </a>
       </div>
