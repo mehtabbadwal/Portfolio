@@ -567,6 +567,22 @@
 .writing__featured {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: -1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.writing__featured:hover,
+.writing__featured:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.writing__featured:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 4px;
 }
 
 .writing__mark {

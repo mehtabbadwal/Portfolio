@@ -276,7 +276,7 @@ function Landing() {
 
           <div className="writing__columns">
             {/* Left — Featured */}
-            <div className="writing__featured fade-up">
+            <Link to="/writing" className="writing__featured fade-up">
               <span className="writing__mark">&ldquo;</span>
               <p className="writing__quote">
                 I was giving my son a bath when I realized I was out of groceries.
@@ -292,7 +292,7 @@ function Landing() {
                   <span>Mind Meets Design &middot; Feb 2025</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Right — Article list */}
             <div className="writing__list">
