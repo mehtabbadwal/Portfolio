@@ -16,12 +16,12 @@ function Header() {
             <NavLink to="/about">About</NavLink>
           </nav>
           <div className="header__actions">
-            <a href="mailto:mehtabbadwal@gmail.com" className="header__ask">
+            <button className="header__ask" onClick={() => window.mllmOpen && window.mllmOpen()}>
               <span className="green-dot" />
               <span className="header__ask-text">
                 <span className="header__ask-word">Ask</span> Mehtab
               </span>
-            </a>
+            </button>
             <a href="/resume" target="_blank" rel="noopener noreferrer" className="header__resume">
               Resume
             </a>
@@ -45,12 +45,12 @@ function Header() {
           <NavLink to="/writing" onClick={() => setMenuOpen(false)}>Writing</NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
           <a href="/resume" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a>
-          <a href="mailto:mehtabbadwal@gmail.com" className="header__mobile-ask" onClick={() => setMenuOpen(false)}>
+          <button className="header__mobile-ask" onClick={() => { setMenuOpen(false); window.mllmOpen && window.mllmOpen(); }}>
             <span className="green-dot" />
             <span className="header__ask-text">
               <span className="header__ask-word">Ask</span> Mehtab
             </span>
-          </a>
+          </button>
         </nav>
       </div>
     </header>

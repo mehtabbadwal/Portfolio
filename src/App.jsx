@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Landing from './pages/Landing';
 import ComingSoon from './pages/ComingSoon';
+import MehtabLLM from './components/MehtabLLM';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="case-studies/:slug" element={<ComingSoon title="Case Study" />} />
         </Route>
       </Routes>
+      <MehtabLLM />
     </BrowserRouter>
   );
 }
