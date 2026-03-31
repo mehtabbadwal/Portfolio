@@ -159,41 +159,37 @@ function About() {
           <p className="about__chapter-label fade-up">Chapter 05 &mdash; Where I&rsquo;m Headed</p>
           <div className="about__headed-grid">
             <div className="about__headed-content fade-up">
-              <p>
-                I&rsquo;m looking for a team that cares about the same things I do &mdash;
-                meaningful problems, honest collaboration, and the freedom to do deep work
-                without being micromanaged into shallow output.
+              <p className="about__headed-quote">
+                Senior or Staff UX roles &mdash; enterprise, AI, startups, or anything in between.
               </p>
-              <p>
-                I want to be somewhere my background in behavior, systems thinking, and
-                craft actually matters. Not just a &ldquo;design resource&rdquo; &mdash; a
-                partner in building the product.
+              <p className="about__headed-body">
+                Complexity doesn&rsquo;t intimidate me. Unclear problems are the interesting ones.
               </p>
+              <div className="about__headed-actions">
+                <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
+                  mehtabbadwal@gmail.com
+                </a>
+                <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn about__resume-btn">
+                  Resume
+                </a>
+              </div>
             </div>
             <div className="about__headed-right fade-up">
               <ul className="about__principles">
                 <li>
                   <span className="about__principle-dot" />
-                  Senior or staff-level UX roles
+                  Meaningful problems that change lives through clarity, not simplicity.
                 </li>
                 <li>
                   <span className="about__principle-dot" />
-                  Enterprise, AI, or complex product spaces
+                  A team that actually uses what each person is good at rather than averaging everyone out.
                 </li>
                 <li>
                   <span className="about__principle-dot" />
-                  Teams that value depth over speed
+                  No micromanagement. A problem that&rsquo;s genuinely hard to solve.
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="about__headed-actions fade-up">
-            <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
-              mehtabbadwal@gmail.com
-            </a>
-            <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn about__resume-btn">
-              Resume
-            </a>
           </div>
         </div>
       </section>
