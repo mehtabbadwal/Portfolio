@@ -312,26 +312,33 @@ function Landing() {
 
       {/* ── CTA ── */}
       <section className="cta section">
-        <div className="container cta__inner">
-          <h2 className="cta__heading fade-up">
-            If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
-          </h2>
-          <p className="cta__sub fade-up">
-            Currently open to senior and staff UX roles in enterprise, AI, or anything in between.
-          </p>
-          <div className="cta__actions fade-up">
-            <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent btn--pill">
-              mehtabbadwal@gmail.com
-            </a>
-            <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn btn--pill">
-              Resume
-            </a>
+        <div className="container">
+          <hr className="cta__divider" />
+          <div className="cta__grid">
+            <div className="cta__content">
+              <h2 className="cta__heading fade-up">
+                If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
+              </h2>
+              <p className="cta__sub fade-up">
+                Currently open to senior and staff UX roles in enterprise, AI, or anything in between.
+              </p>
+              <div className="cta__actions fade-up">
+                <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent btn--pill">
+                  mehtabbadwal@gmail.com
+                </a>
+                <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn btn--pill cta__resume">
+                  Resume
+                </a>
+              </div>
+            </div>
+            <div className="cta__status fade-up">
+              <div className="cta__badge">
+                <span className="green-dot green-dot--lg" />
+                <span>Open to opportunities</span>
+              </div>
+              <p className="cta__location">Based in San Diego, CA</p>
+            </div>
           </div>
-          <div className="cta__badge fade-up">
-            <span className="green-dot" />
-            <span>Open to opportunities</span>
-          </div>
-          <p className="cta__location fade-up">Based in San Diego, CA</p>
         </div>
       </section>
     </div>
