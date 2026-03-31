@@ -296,6 +296,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       loading = true;
       const assistantEl = document.createElement('div');
       assistantEl.className = 'mllm-msg-assistant streaming';
+      assistantEl.textContent = '';
       convo.appendChild(assistantEl);
 
       try {
@@ -305,41 +306,25 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
           body: JSON.stringify({
             model: 'claude-sonnet-4-20250514',
             max_tokens: 300,
-            stream: true,
             system: SYSTEM,
             messages: history
           })
         });
 
-        if (!res.ok) throw new Error('API error ' + res.status);
-
-        const reader = res.body.getReader();
-        const decoder = new TextDecoder();
-        let fullText = '', buffer = '';
-
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          buffer += decoder.decode(value, { stream: true });
-          const lines = buffer.split('\n');
-          buffer = lines.pop();
-          for (const line of lines) {
-            if (line.startsWith('data: ')) {
-              try {
-                const p = JSON.parse(line.slice(6));
-                if (p.type === 'content_block_delta' && p.delta?.text) {
-                  fullText += p.delta.text;
-                  assistantEl.textContent = fullText;
-                  messages.scrollTop = messages.scrollHeight;
-                }
-              } catch {}
-            }
-          }
+        if (!res.ok) {
+          const errorData = await res.json().catch(() => ({}));
+          throw new Error(errorData.error || `HTTP ${res.status}`);
         }
 
-        assistantEl.classList.remove('streaming');
-        history.push({ role: 'assistant', content: fullText });
+        const data = await res.json();
+        const fullText = data.content?.[0]?.text || 'No response';
 
+        assistantEl.classList.remove('streaming');
+        assistantEl.textContent = fullText;
+        history.push({ role: 'assistant', content: fullText });
+        messages.scrollTop = messages.scrollHeight;
+
+        // Generate follow-up questions
         try {
           const fRes = await fetch(API_URL, {
             method: 'POST',
@@ -351,29 +336,35 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
               messages: [{ role: 'user', content: 'Answer: "' + fullText + '"' }]
             })
           });
-          const fData = await fRes.json();
-          const questions = (fData.content?.[0]?.text || '')
-            .split('\n').map(q => q.trim())
-            .filter(q => q.length > 4).slice(0, 3);
 
-          if (questions.length) {
-            const div = document.createElement('div');
-            div.className = 'mllm-followups';
-            questions.forEach(q => {
-              const btn = document.createElement('button');
-              btn.className = 'mllm-followup';
-              btn.innerHTML = '<span class="mllm-followup-arrow">↳</span><span class="mllm-followup-text">' + q + '</span>';
-              btn.addEventListener('click', () => { inputEl.value = q; send(); });
-              div.appendChild(btn);
-            });
-            convo.appendChild(div);
-            messages.scrollTop = messages.scrollHeight;
+          if (fRes.ok) {
+            const fData = await fRes.json();
+            const questions = (fData.content?.[0]?.text || '')
+              .split('\n').map(q => q.trim())
+              .filter(q => q.length > 4).slice(0, 3);
+
+            if (questions.length) {
+              const div = document.createElement('div');
+              div.className = 'mllm-followups';
+              questions.forEach(q => {
+                const btn = document.createElement('button');
+                btn.className = 'mllm-followup';
+                btn.innerHTML = '<span class="mllm-followup-arrow">↳</span><span class="mllm-followup-text">' + q + '</span>';
+                btn.addEventListener('click', () => { inputEl.value = q; send(); });
+                div.appendChild(btn);
+              });
+              convo.appendChild(div);
+              messages.scrollTop = messages.scrollHeight;
+            }
           }
-        } catch {}
+        } catch (e) {
+          console.log('Follow-ups failed:', e);
+        }
 
       } catch (err) {
+        console.error('Chat error:', err);
         assistantEl.classList.remove('streaming');
-        assistantEl.textContent = 'Something went wrong. This may work once the site is published — the preview environment sometimes blocks external API calls.';
+        assistantEl.textContent = 'Sorry, something went wrong. Error: ' + err.message;
       }
 
       loading = false;
