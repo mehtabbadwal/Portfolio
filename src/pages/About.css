@@ -191,8 +191,15 @@
 .about__photos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  gap: 1.25rem;
+  margin-bottom: 3.75rem;
+}
+
+.about__photo-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .about__outside-bottom {
@@ -302,8 +309,8 @@
     gap: 1rem;
   }
 
-  .about__placeholder--square {
-    aspect-ratio: 16/9;
+  .about__photo-img {
+    height: 240px;
   }
 
   .about__outside-bottom {

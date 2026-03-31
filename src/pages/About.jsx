@@ -125,9 +125,21 @@ function About() {
         <div className="container">
           <p className="about__chapter-label fade-up">Chapter 04 &mdash; Outside Work</p>
           <div className="about__photos fade-up">
-            <div className="about__placeholder about__placeholder--square"><span>Photo 1</span></div>
-            <div className="about__placeholder about__placeholder--square"><span>Photo 2</span></div>
-            <div className="about__placeholder about__placeholder--square"><span>Photo 3</span></div>
+            <img
+              src="/Portfolio/ocean-sunset.webp"
+              alt="Ocean sunset in San Diego"
+              className="about__photo-img"
+            />
+            <img
+              src="/Portfolio/holi-family.webp"
+              alt="Family celebrating Holi festival"
+              className="about__photo-img"
+            />
+            <img
+              src="/Portfolio/hands-artwork.webp"
+              alt="Street art mural with hands and eyes"
+              className="about__photo-img"
+            />
           </div>
           <div className="about__outside-bottom">
             <div className="about__outside-left fade-up">
