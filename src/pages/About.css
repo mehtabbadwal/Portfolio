@@ -157,9 +157,16 @@
 /* ── Chapter 03 — How I Work Now ── */
 .about__work-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
-  align-items: start;
+  grid-template-columns: 640fr 520fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.about__work-img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .about__work-content p {
@@ -308,6 +315,10 @@
   .about__work-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .about__work-img {
+    height: 360px;
   }
 
   .about__photos {

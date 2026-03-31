@@ -114,9 +114,11 @@ function About() {
               </div>
             </div>
             <div className="about__work-photo fade-up">
-              <div className="about__placeholder about__placeholder--landscape">
-                <span>Work Photo</span>
-              </div>
+              <img
+                src="/Portfolio/chapter-03-books.jpeg"
+                alt="Books on reading and reflection"
+                className="about__work-img"
+              />
             </div>
           </div>
         </div>
