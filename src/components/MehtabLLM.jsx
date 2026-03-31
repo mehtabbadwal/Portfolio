@@ -175,7 +175,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       <div id="mehtab-sidebar">
         <div class="mllm-header">
           <div>
-            <div class="mllm-brand">Mehtab<em>LLM</em></div>
+            <div class="mllm-brand">Ask <em>Mehtab</em></div>
             <div class="mllm-brand-sub">Ask me anything about my work</div>
           </div>
           <div class="mllm-header-actions">
@@ -211,7 +211,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
               <svg viewBox="0 0 16 16"><path d="M14.5 8L2 2l2.5 6L2 14l12.5-6z"/></svg>
             </button>
           </div>
-          <p class="mllm-footer">MehtabLLM · Powered by Claude</p>
+          <p class="mllm-footer">Ask Mehtab · Powered by Claude</p>
         </div>
       </div>
     `;
