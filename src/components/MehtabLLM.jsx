@@ -136,8 +136,14 @@ export default function MehtabLLM() {
         text-align: center; font-size: 10px;
         color: #B0A090; margin-top: 10px;
       }
-      @media (max-width: 480px) {
-        #mehtab-sidebar { width: 100%; }
+      @media (max-width: 768px) {
+        #mehtab-sidebar {
+          width: 100%;
+          border-left: none;
+        }
+        body.sidebar-open {
+          overflow: hidden;
+        }
       }
     `;
     document.head.appendChild(style);
@@ -223,12 +229,14 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
     const empty = document.getElementById('mllm-empty');
     const messages = document.getElementById('mllm-messages');
     const sidebar = document.getElementById('mehtab-sidebar');
-    const isMobile = () => window.innerWidth < 480;
+    const isMobile = () => window.innerWidth <= 768;
 
     const open = () => {
       isOpen = true;
       sidebar.classList.add('open');
-      if (!isMobile()) {
+      if (isMobile()) {
+        document.body.classList.add('sidebar-open');
+      } else {
         document.body.style.marginRight = '420px';
       }
       setTimeout(() => inputEl.focus(), 350);
@@ -237,6 +245,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
     const close = () => {
       isOpen = false;
       sidebar.classList.remove('open');
+      document.body.classList.remove('sidebar-open');
       document.body.style.marginRight = '0px';
     };
 
