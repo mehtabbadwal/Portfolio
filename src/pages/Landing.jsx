@@ -127,9 +127,11 @@ function Landing() {
             </Link>
           </div>
           <div className="hero__photo fade-up stagger-3">
-            <div className="hero__photo-placeholder">
-              <span>Photo</span>
-            </div>
+            <img
+              src="/Portfolio/hero-photo.jpeg"
+              alt="Mehtab Badwal - UX Designer"
+              className="hero__photo-img"
+            />
           </div>
         </div>
       </section>

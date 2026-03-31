@@ -72,16 +72,11 @@
   color: #A34E30;
 }
 
-.hero__photo-placeholder {
+.hero__photo-img {
   width: 100%;
-  aspect-ratio: 4/5;
-  background: var(--color-border);
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-light);
-  font-size: 0.875rem;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* ── Philosophy ── */
@@ -811,8 +806,8 @@
     grid-template-columns: 1fr;
   }
 
-  .hero__photo-placeholder {
-    aspect-ratio: 1;
+  .hero__photo-img {
+    height: 400px;
   }
 
   .cta__heading {
@@ -863,8 +858,8 @@
     text-align: center;
   }
 
-  .hero__photo-placeholder {
-    aspect-ratio: 4/3;
+  .hero__photo {
+    order: -1;
   }
 
   .philosophy__heading {
