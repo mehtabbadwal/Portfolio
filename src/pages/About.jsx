@@ -90,17 +90,18 @@ function About() {
           <p className="about__chapter-label fade-up">Chapter 03 &mdash; How I Work Now</p>
           <div className="about__work-grid">
             <div className="about__work-content">
-              <p className="fade-up">
-                Right now I&rsquo;m Lead UX Designer and Product Lead at Buildrooms, an
-                early-stage AI startup building project management tools. I&rsquo;m shaping
-                the product from scratch &mdash; information architecture, feature
-                prioritization, design system, and strategy.
+              <p className="about__work-primary fade-up">
+                Right now I&rsquo;m working with a startup &mdash; leading product and UX
+                from strategy to screen. Information architecture, user flows, feature
+                decisions, design system, user testing. The full stack of what it takes
+                to build something real.
               </p>
               <p className="fade-up">
-                I&rsquo;ve also built custom Claude skills into my workflow &mdash; for
-                design system auditing, UX copy review, and rapid prototyping. AI isn&rsquo;t
-                replacing my process; it&rsquo;s accelerating the parts that used to slow
-                me down.
+                I&rsquo;ve also built AI into how I work. Speed matters less to me than
+                clarity, and having something that will question every assumption without
+                getting tired of it has changed what I can produce alone. I&rsquo;ve built
+                custom workflows in Claude for design system creation, UX review, and
+                copywriting.
               </p>
               <div className="about__tags fade-up">
                 <span className="about__tag">AI Workflow Design</span>
