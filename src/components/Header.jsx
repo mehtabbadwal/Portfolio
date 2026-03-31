@@ -8,7 +8,13 @@ function Header() {
   return (
     <header className="header">
       <div className="header__inner container">
-        <Link to="/" className="header__logo">MB</Link>
+        <Link to="/" className="header__logo">
+          <img
+            src="/Portfolio/logo.svg"
+            alt="Mehtab Badwal"
+            className="header__logo-img"
+          />
+        </Link>
         <div className="header__right">
           <nav className="header__nav">
             <NavLink to="/work">Projects</NavLink>

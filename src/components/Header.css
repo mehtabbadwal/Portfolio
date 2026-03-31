@@ -15,12 +15,19 @@
 }
 
 .header__logo {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: -0.03em;
-  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  height: 32px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .header__logo-img {
+    height: 28px;
+  }
 }
 
 .header__right {
