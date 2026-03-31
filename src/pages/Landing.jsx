@@ -237,11 +237,15 @@ function Landing() {
       {/* ── Testimonials ── */}
       <section className="testimonials section">
         <div className="container">
-          <p className="section-label fade-up">From the people I&rsquo;ve built with</p>
+          <div className="testimonials__header fade-up">
+            <p className="section-label">From the people I&rsquo;ve built with</p>
+            <div className="testimonials__accent" />
+          </div>
           <div className="testimonials__grid">
             {testimonials.map((t, i) => (
               <blockquote key={i} className={`testimonial fade-up stagger-${i + 1}`}>
-                <p className="testimonial__quote">&ldquo;{t.quote}&rdquo;</p>
+                <span className="testimonial__mark">&ldquo;</span>
+                <p className="testimonial__quote">{t.quote}</p>
                 <footer className="testimonial__author">
                   <strong>{t.author}</strong>
                   <span>{t.role}</span>
@@ -252,9 +256,9 @@ function Landing() {
           <div className="testimonials__footer fade-up">
             <p>Across enterprise, startup, and field environments.</p>
             <div className="testimonials__tags">
-              <span className="tag">HPE</span>
-              <span className="tag">Fluidra</span>
-              <span className="tag">Qubera</span>
+              <span className="testimonials__tag">HPE</span>
+              <span className="testimonials__tag">Fluidra</span>
+              <span className="testimonials__tag">Qubera</span>
             </div>
           </div>
         </div>
