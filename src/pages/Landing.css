@@ -396,6 +396,7 @@
   font-weight: 500;
   line-height: 1.4;
   color: var(--color-dark);
+  min-height: 75px;
 }
 
 .project-card__title {
@@ -690,6 +691,10 @@
 
   .work__grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-card__desc {
+    min-height: auto;
   }
 
   .testimonials__grid {
