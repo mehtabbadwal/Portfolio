@@ -1,89 +1,40 @@
-exports.handler = async (event, context) => {
-  console.log('=== FUNCTION CALLED ===');
-  console.log('HTTP Method:', event.httpMethod);
-  console.log('Headers:', JSON.stringify(event.headers));
-  console.log('Body length:', event.body?.length || 0);
+exports.handler = async (event) => {
+  console.log('🚀 Function called!');
+  console.log('Method:', event.httpMethod);
+  console.log('Path:', event.path);
+  console.log('Headers:', JSON.stringify(event.headers, null, 2));
 
   const headers = {
     'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type, Accept',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Max-Age': '86400'
+    'Access-Control-Allow-Headers': '*',
+    'Access-Control-Allow-Methods': '*'
   };
 
-  // Handle CORS preflight
   if (event.httpMethod === 'OPTIONS') {
-    console.log('OPTIONS request - returning CORS headers');
+    console.log('✅ OPTIONS request');
     return { statusCode: 200, headers, body: '' };
   }
 
-  // Only allow POST
-  if (event.httpMethod !== 'POST') {
-    console.log('Method not allowed:', event.httpMethod);
-    return {
-      statusCode: 405,
-      headers,
-      body: JSON.stringify({ error: 'Method Not Allowed: ' + event.httpMethod })
-    };
-  }
+  if (event.httpMethod === 'POST') {
+    console.log('✅ POST request received');
 
-  try {
-    console.log('Parsing request body...');
-    const { messages, system, max_tokens } = JSON.parse(event.body);
-    console.log('Request parsed. Messages count:', messages?.length);
-
-    if (!process.env.ANTHROPIC_API_KEY) {
-      throw new Error('ANTHROPIC_API_KEY not configured');
-    }
-
-    console.log('Calling Anthropic API...');
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': process.env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01'
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: max_tokens || 300,
-        system: system,
-        messages: messages
-      })
-    });
-
-    console.log('Anthropic API status:', response.status);
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Anthropic API error:', errorText);
-      throw new Error(`Anthropic API returned ${response.status}: ${errorText}`);
-    }
-
-    const data = await response.json();
-    console.log('Response received successfully');
-
+    // Test response without calling Anthropic yet
     return {
       statusCode: 200,
-      headers: {
-        ...headers,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    };
-
-  } catch (error) {
-    console.error('=== FUNCTION ERROR ===');
-    console.error('Error:', error.message);
-    console.error('Stack:', error.stack);
-
-    return {
-      statusCode: 500,
-      headers,
+      headers: { ...headers, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        error: error.message,
-        type: 'function_error'
+        content: [{
+          type: 'text',
+          text: 'Test response - function is working!'
+        }]
       })
     };
   }
+
+  console.log('❌ Method not allowed:', event.httpMethod);
+  return {
+    statusCode: 405,
+    headers,
+    body: JSON.stringify({ error: 'Method not allowed: ' + event.httpMethod })
+  };
 };
