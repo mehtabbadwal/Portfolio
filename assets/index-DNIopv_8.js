@@ -12,33 +12,6 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       body {
         transition: margin-right 0.32s cubic-bezier(0.16,1,0.3,1);
       }
-      #mllm-trigger {
-        position: fixed; bottom: 32px; right: 32px;
-        height: 40px; padding: 0 16px 0 12px;
-        border-radius: 8px; background: #2C2420;
-        border: none; cursor: pointer;
-        display: flex; align-items: center; gap: 8px;
-        z-index: 100;
-        box-shadow: 0 2px 16px rgba(44,36,32,0.18);
-        font-family: -apple-system, sans-serif;
-        transition: background 0.2s;
-      }
-      #mllm-trigger:hover { background: #C4603E; }
-      .mllm-trigger-dot {
-        width: 6px; height: 6px; border-radius: 999px;
-        background: #6B9E6B; flex-shrink: 0;
-      }
-      .mllm-trigger-label {
-        font-size: 12px; font-weight: 600;
-        color: #F4F0E8; letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-      .mllm-trigger-label em {
-        font-style: italic; color: #C4603E;
-        font-family: Georgia, serif;
-        text-transform: none; letter-spacing: 0;
-      }
-      #mllm-trigger:hover .mllm-trigger-label em { color: #F4F0E8; }
       #mehtab-sidebar {
         position: fixed; top: 0; right: 0;
         width: 420px; height: 100vh;
@@ -168,13 +141,8 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       }
       @media (max-width: 480px) {
         #mehtab-sidebar { width: 100%; }
-        #mllm-trigger { bottom: 80px; }
       }
     `,document.head.appendChild(e);let t=[],n=!1,r=document.createElement(`div`);r.innerHTML=`
-      <button id="mllm-trigger">
-        <div class="mllm-trigger-dot"></div>
-        <span class="mllm-trigger-label">Mehtab<em>LLM</em></span>
-      </button>
       <div id="mehtab-sidebar">
         <div class="mllm-header">
           <div>
@@ -217,7 +185,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           <p class="mllm-footer">MehtabLLM · Powered by Claude</p>
         </div>
       </div>
-    `,document.body.appendChild(r);let i=document.getElementById(`mllm-input`),a=document.getElementById(`mllm-send`),o=document.getElementById(`mllm-convo`),s=document.getElementById(`mllm-empty`),c=document.getElementById(`mllm-messages`),l=document.getElementById(`mehtab-sidebar`),u=()=>window.innerWidth<480,d=()=>{l.classList.add(`open`),u()||(document.body.style.marginRight=`420px`),setTimeout(()=>i.focus(),350)},f=()=>{l.classList.remove(`open`),document.body.style.marginRight=`0px`};document.getElementById(`mllm-trigger`).addEventListener(`click`,d),document.getElementById(`mllm-close-btn`).addEventListener(`click`,f),document.getElementById(`mllm-reset-btn`).addEventListener(`click`,()=>{t=[],o.innerHTML=``,o.style.display=`none`,s.style.display=`flex`,i.value=``,i.style.height=`auto`,a.disabled=!0}),document.querySelectorAll(`.mllm-starter`).forEach(e=>{e.addEventListener(`click`,()=>{i.value=e.querySelector(`.mllm-starter-text`).textContent,m()})}),i.addEventListener(`input`,()=>{i.style.height=`auto`,i.style.height=Math.min(i.scrollHeight,80)+`px`,a.disabled=!i.value.trim()||n}),i.addEventListener(`keydown`,e=>{e.key===`Enter`&&!e.shiftKey&&(e.preventDefault(),m())}),a.addEventListener(`click`,m),window.mllmOpen=d,window.mllmClose=f;let p=`/.netlify/functions/chat`;async function m(){let e=i.value.trim();if(!e||n)return;s.style.display=`none`,o.style.display=`flex`,i.value=``,i.style.height=`auto`,a.disabled=!0;let r=document.createElement(`div`);r.className=`mllm-msg-user`,r.textContent=e,o.appendChild(r),t.push({role:`user`,content:e}),c.scrollTop=c.scrollHeight,n=!0;let l=document.createElement(`div`);l.className=`mllm-msg-assistant streaming`,o.appendChild(l);try{let e=await fetch(p,{method:`POST`,headers:{"Content-Type":`application/json`},body:JSON.stringify({model:`claude-sonnet-4-20250514`,max_tokens:300,stream:!0,system:`You are Mehtab Badwal speaking directly to someone visiting your portfolio. First person only. Be warm, honest, and direct. Talk like a real conversation.
+    `,document.body.appendChild(r);let i=document.getElementById(`mllm-input`),a=document.getElementById(`mllm-send`),o=document.getElementById(`mllm-convo`),s=document.getElementById(`mllm-empty`),c=document.getElementById(`mllm-messages`),l=document.getElementById(`mehtab-sidebar`),u=()=>window.innerWidth<480,d=()=>{l.classList.add(`open`),u()||(document.body.style.marginRight=`420px`),setTimeout(()=>i.focus(),350)},f=()=>{l.classList.remove(`open`),document.body.style.marginRight=`0px`};document.getElementById(`mllm-close-btn`).addEventListener(`click`,f),document.getElementById(`mllm-reset-btn`).addEventListener(`click`,()=>{t=[],o.innerHTML=``,o.style.display=`none`,s.style.display=`flex`,i.value=``,i.style.height=`auto`,a.disabled=!0}),document.querySelectorAll(`.mllm-starter`).forEach(e=>{e.addEventListener(`click`,()=>{i.value=e.querySelector(`.mllm-starter-text`).textContent,m()})}),i.addEventListener(`input`,()=>{i.style.height=`auto`,i.style.height=Math.min(i.scrollHeight,80)+`px`,a.disabled=!i.value.trim()||n}),i.addEventListener(`keydown`,e=>{e.key===`Enter`&&!e.shiftKey&&(e.preventDefault(),m())}),a.addEventListener(`click`,m),window.mllmOpen=d,window.mllmClose=f;let p=`/.netlify/functions/chat`;async function m(){let e=i.value.trim();if(!e||n)return;s.style.display=`none`,o.style.display=`flex`,i.value=``,i.style.height=`auto`,a.disabled=!0;let r=document.createElement(`div`);r.className=`mllm-msg-user`,r.textContent=e,o.appendChild(r),t.push({role:`user`,content:e}),c.scrollTop=c.scrollHeight,n=!0;let l=document.createElement(`div`);l.className=`mllm-msg-assistant streaming`,o.appendChild(l);try{let e=await fetch(p,{method:`POST`,headers:{"Content-Type":`application/json`},body:JSON.stringify({model:`claude-sonnet-4-20250514`,max_tokens:300,stream:!0,system:`You are Mehtab Badwal speaking directly to someone visiting your portfolio. First person only. Be warm, honest, and direct. Talk like a real conversation.
 
 CRITICAL: Keep answers to 2-4 sentences maximum. No bullet lists. No headers. Sound like a person talking.
 
