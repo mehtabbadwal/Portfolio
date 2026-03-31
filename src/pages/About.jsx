@@ -12,24 +12,28 @@ function About() {
           <p className="about__chapter-label fade-up">Chapter 01 &mdash; Opening</p>
           <div className="about__opening">
             <div className="about__opening-content">
-              <h1 className="about__opening-heading fade-up">
-                I&rsquo;ve spent six years trying to understand why people do what they do
-                inside products &mdash; and building from that answer.
-              </h1>
+              <p className="about__opening-heading fade-up">
+                I&rsquo;ve spent six years working with early-stage startups in fintech,
+                edtech, and SaaS &mdash; translating dense systems into experiences that
+                felt intuitive without sacrificing depth. The work usually started with
+                clarity, not aesthetics.
+              </p>
               <p className="about__opening-body fade-up">
-                Before UX, I worked in fashion. Designing for physical bodies taught me
-                something that transferred completely: form shapes experience. It doesn&rsquo;t
-                matter how functional something is if it doesn&rsquo;t fit how a person
-                actually moves through the world.
+                Before UX, I worked in fashion &mdash; pattern-making, production, quality
+                assurance. The precision mattered there too. The cleaner the system, the
+                less noise got in the way.
               </p>
               <p className="about__opening-italic fade-up">
-                That&rsquo;s still how I think. Just with different materials.
+                That&rsquo;s still how I think about design &mdash; getting the structure
+                right so everything else can breathe.
               </p>
             </div>
             <div className="about__opening-photo fade-up">
-              <div className="about__placeholder about__placeholder--portrait">
-                <span>Photo</span>
-              </div>
+              <img
+                src="/Portfolio/chapter-01-photo.webp"
+                alt="Looking out at the ocean"
+                className="about__opening-img"
+              />
             </div>
           </div>
         </div>
