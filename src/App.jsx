@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import About from './pages/About';
 import ComingSoon from './pages/ComingSoon';
 import MehtabLLM from './components/MehtabLLM';
+import FloatingChatButton from './components/FloatingChatButton';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         </Route>
       </Routes>
       <MehtabLLM />
+      <FloatingChatButton />
     </BrowserRouter>
   );
 }

@@ -240,6 +240,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
         document.body.style.marginRight = '420px';
       }
       setTimeout(() => inputEl.focus(), 350);
+      window.dispatchEvent(new CustomEvent('chatbot-opened'));
     };
 
     const close = () => {
@@ -247,6 +248,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       sidebar.classList.remove('open');
       document.body.classList.remove('sidebar-open');
       document.body.style.marginRight = '0px';
+      window.dispatchEvent(new CustomEvent('chatbot-closed'));
     };
 
     const reset = () => {
@@ -282,6 +284,9 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
     sendBtn.addEventListener('click', send);
     window.mllmOpen = open;
     window.mllmClose = close;
+
+    const handleOpenEvent = () => open();
+    window.addEventListener('open-chatbot', handleOpenEvent);
 
     const API_URL = 'https://adorable-youtiao-e521ef.netlify.app/.netlify/functions/chat';
 
@@ -381,6 +386,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
     }
 
     return () => {
+      window.removeEventListener('open-chatbot', handleOpenEvent);
       try { document.head.removeChild(style); } catch {}
     };
   }, []);
