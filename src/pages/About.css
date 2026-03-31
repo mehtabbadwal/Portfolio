@@ -177,8 +177,11 @@
   margin-bottom: 2.5rem;
 }
 
-.about__outside-text {
-  max-width: 640px;
+.about__outside-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
 
 .about__outside-text p {
@@ -265,6 +268,11 @@
 
   .about__placeholder--square {
     aspect-ratio: 16/9;
+  }
+
+  .about__outside-bottom {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .about__headed-grid {
