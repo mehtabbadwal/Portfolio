@@ -269,33 +269,41 @@ function Landing() {
       {/* ── Writing ── */}
       <section className="writing section">
         <div className="container">
-          <div className="work__header fade-up">
-            <p className="section-label">Mind Meets Design</p>
-            <Link to="/writing" className="work__view-all">Explore all writing &rarr;</Link>
+          <div className="writing__header fade-up">
+            <p className="writing__label">Mind Meets Design</p>
+            <Link to="/writing" className="writing__view-all">Explore all writing &rarr;</Link>
           </div>
 
-          <div className="writing__featured fade-up">
-            <blockquote className="writing__quote">
-              &ldquo;I was giving my son a bath when I realized I was out of groceries.&rdquo;
-            </blockquote>
-            <p className="writing__quote-sub">
-              When a platform consolidates everything, it takes on more responsibility &mdash;
-              to understand intent, not just expose options.
-            </p>
-            <div className="writing__featured-meta">
-              <strong>&ldquo;Stay Out of My Way&rdquo;</strong>
-              <span>Mind Meets Design &middot; Feb 2025</span>
+          <div className="writing__columns">
+            {/* Left — Featured */}
+            <div className="writing__featured fade-up">
+              <span className="writing__mark">&ldquo;</span>
+              <p className="writing__quote">
+                I was giving my son a bath when I realized I was out of groceries.
+              </p>
+              <p className="writing__quote-sub">
+                When a platform consolidates everything, it takes on more responsibility &mdash;
+                to understand intent, not just expose options.
+              </p>
+              <div className="writing__featured-meta">
+                <div className="writing__meta-line" />
+                <div className="writing__meta-text">
+                  <strong>&ldquo;Stay Out of My Way&rdquo;</strong>
+                  <span>Mind Meets Design &middot; Feb 2025</span>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="writing__list">
-            {articles.map((a, i) => (
-              <Link to="/writing" key={i} className={`writing__item fade-up stagger-${i + 1}`}>
-                <h3>{a.title}</h3>
-                <p>{a.excerpt}</p>
-                <span className="writing__arrow">&rarr;</span>
-              </Link>
-            ))}
+            {/* Right — Article list */}
+            <div className="writing__list">
+              {articles.map((a, i) => (
+                <Link to="/writing" key={i} className={`writing__item fade-up stagger-${i + 1}`}>
+                  <h3 className="writing__item-title">{a.title}</h3>
+                  <p className="writing__item-excerpt">{a.excerpt}</p>
+                  <span className="writing__item-link">Read &rarr;</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
