@@ -24,6 +24,15 @@
   width: auto;
 }
 
+.header__logo-fallback {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -0.03em;
+  color: var(--color-dark);
+}
+
 @media (max-width: 768px) {
   .header__logo-img {
     height: 28px;

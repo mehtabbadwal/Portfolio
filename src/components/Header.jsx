@@ -10,10 +10,15 @@ function Header() {
       <div className="header__inner container">
         <Link to="/" className="header__logo">
           <img
-            src="/Portfolio/logo.svg"
-            alt="Mehtab Badwal"
+            src={`${import.meta.env.BASE_URL}logo.svg`}
+            alt="MB"
             className="header__logo-img"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'block';
+            }}
           />
+          <span className="header__logo-fallback" style={{ display: 'none' }}>MB</span>
         </Link>
         <div className="header__right">
           <nav className="header__nav">
