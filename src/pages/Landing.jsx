@@ -4,19 +4,16 @@ import './Landing.css';
 
 const philosophyCards = [
   {
+    number: '01',
     statement: 'The conventional answer is a starting point, not a destination.',
-    project: 'HPE Chatbot',
-    slug: 'hpe-chatbot',
   },
   {
+    number: '02',
     statement: 'Clarity is not the same as simplicity.',
-    project: 'HPE PFA',
-    slug: 'hpe-pfa',
   },
   {
+    number: '03',
     statement: 'Design for the moment, not the average.',
-    project: 'Fluidra',
-    slug: 'fluidra',
   },
 ];
 
@@ -146,14 +143,11 @@ function Landing() {
           </h2>
           <div className="philosophy__cards">
             {philosophyCards.map((card, i) => (
-              <Link
-                to={`/case-studies/${card.slug}`}
-                key={i}
-                className={`philosophy-card fade-up stagger-${i + 1}`}
-              >
+              <div key={i} className={`philosophy-card philosophy-card--${i + 1} fade-up stagger-${i + 1}`}>
+                <div className="philosophy-card__accent" />
                 <p className="philosophy-card__statement">&ldquo;{card.statement}&rdquo;</p>
-                <span className="philosophy-card__link">{card.project} &rarr;</span>
-              </Link>
+                <span className="philosophy-card__number">{card.number}</span>
+              </div>
             ))}
           </div>
           <p className="philosophy__footer fade-up">See how this shows up in the work &darr;</p>
