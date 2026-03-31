@@ -323,10 +323,10 @@ function Landing() {
                 Currently open to senior and staff UX roles in enterprise, AI, or anything in between.
               </p>
               <div className="cta__actions fade-up">
-                <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent btn--pill">
+                <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent cta__email">
                   mehtabbadwal@gmail.com
                 </a>
-                <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn btn--pill cta__resume">
+                <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn cta__resume">
                   Resume
                 </a>
               </div>

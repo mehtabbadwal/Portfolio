@@ -700,6 +700,7 @@
 .cta__heading {
   font-size: clamp(2rem, 3.5vw, 2.5rem);
   line-height: 1.25;
+  white-space: nowrap;
   margin-bottom: 1rem;
 }
 
@@ -715,15 +716,24 @@
   gap: 0.75rem;
 }
 
+.cta__email {
+  border-radius: var(--radius);
+}
+
+.cta__email:hover {
+  color: #fff;
+}
+
 .cta__resume {
+  border-radius: var(--radius);
   border-color: var(--color-dark);
   color: var(--color-dark);
 }
 
 .cta__resume:hover {
-  background: rgba(44, 36, 32, 0.05);
+  background: var(--color-dark);
   border-color: var(--color-dark);
-  color: var(--color-dark);
+  color: #fff;
 }
 
 .cta__status {
@@ -741,6 +751,10 @@
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-dark);
+  padding: 0.375rem 0.75rem;
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid var(--color-green);
+  border-radius: 999px;
 }
 
 .green-dot--lg {
@@ -768,6 +782,10 @@
 
   .hero__photo-placeholder {
     aspect-ratio: 1;
+  }
+
+  .cta__heading {
+    white-space: normal;
   }
 }
 
