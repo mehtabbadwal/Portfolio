@@ -111,7 +111,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         transform: translateX(100%);
         transition: transform 0.32s cubic-bezier(0.16,1,0.3,1);
         border-left: 1px solid #D6CFBF;
-        font-family: -apple-system, sans-serif;
+        font-family: 'Inter', 'Satoshi Variable', -apple-system, sans-serif;
+        color: #2C2420;
+        line-height: 1.6;
         box-shadow: -4px 0 24px rgba(44,36,32,0.08);
       }
       #mehtab-sidebar.open { transform: translateX(0); }
@@ -122,23 +124,25 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         justify-content: space-between;
       }
       .mllm-brand {
-        font-size: 13px; font-weight: 600; color: #2C2420;
-        letter-spacing: 0.08em; text-transform: uppercase;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-size: 15px; font-weight: 500; color: #2C2420;
       }
       .mllm-brand em {
         font-style: italic; color: #C4603E;
-        font-family: Georgia, serif;
-        text-transform: none; letter-spacing: 0;
+        font-family: Georgia, 'Fraunces', serif;
+        font-weight: 400;
       }
       .mllm-brand-sub {
-        font-size: 12px; color: #7A6A60;
-        margin-top: 3px; font-weight: 400; text-transform: none;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-size: 13px; color: #7A6A60;
+        margin-top: 3px; font-weight: 400;
       }
       .mllm-header-actions { display: flex; gap: 4px; }
       .mllm-icon-btn {
         width: 32px; height: 32px; border: none; background: none;
         cursor: pointer; border-radius: 8px; display: flex;
         align-items: center; justify-content: center; color: #B0A090;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
       }
       .mllm-icon-btn:hover { background: #EAE4D8; color: #2C2420; }
       .mllm-icon-btn svg { width: 15px; height: 15px; }
@@ -154,7 +158,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       .mllm-empty-prompt {
         font-size: 26px; font-weight: 400; color: #2C2420;
         line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 28px;
-        font-family: Georgia, serif; font-style: italic;
+        font-family: Georgia, 'Fraunces', serif; font-style: italic;
       }
       .mllm-starters { display: flex; flex-direction: column; }
       .mllm-starter {
@@ -162,23 +166,27 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         padding: 13px 0; border-top: 1px solid #EAE4D8;
         cursor: pointer; background: none; border-left: none;
         border-right: none; border-bottom: none;
-        text-align: left; font-family: inherit; width: 100%;
+        text-align: left; width: 100%;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
       }
       .mllm-starter:last-child { border-bottom: 1px solid #EAE4D8; }
       .mllm-starter:hover .mllm-starter-text { color: #C4603E; }
       .mllm-arrow { font-size: 13px; color: #B0A090; flex-shrink: 0; }
-      .mllm-starter-text { font-size: 14px; color: #2C2420; }
+      .mllm-starter-text { font-size: 14px; color: #2C2420; font-weight: 400; }
       .mllm-convo {
         padding: 24px; display: flex;
         flex-direction: column; gap: 20px;
       }
       .mllm-msg-user {
         align-self: flex-end; background: #EAE4D8; color: #2C2420;
-        font-size: 14px; line-height: 1.55; padding: 10px 16px;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-size: 15px; font-weight: 400; line-height: 1.6;
+        padding: 10px 16px;
         border-radius: 18px; border-bottom-right-radius: 4px; max-width: 85%;
       }
       .mllm-msg-assistant {
-        font-size: 15px; color: #2C2420; line-height: 1.75;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-size: 15px; font-weight: 400; color: #2C2420; line-height: 1.7;
       }
       .mllm-msg-assistant.streaming::after {
         content: '▋'; animation: mllm-blink 0.8s infinite;
@@ -192,12 +200,13 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         display: flex; align-items: center; gap: 10px; padding: 10px 0;
         border-top: 1px solid #EAE4D8; cursor: pointer; background: none;
         border-left: none; border-right: none; border-bottom: none;
-        text-align: left; font-family: inherit; width: 100%;
+        text-align: left; width: 100%;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
       }
       .mllm-followup:last-child { border-bottom: 1px solid #EAE4D8; }
       .mllm-followup:hover .mllm-followup-text { color: #C4603E; }
       .mllm-followup-arrow { font-size: 12px; color: #B0A090; flex-shrink: 0; }
-      .mllm-followup-text { font-size: 13px; color: #7A6A60; }
+      .mllm-followup-text { font-size: 13px; color: #7A6A60; font-weight: 400; }
       .mllm-input-area {
         padding: 14px 20px 20px; border-top: 1px solid #EAE4D8;
         flex-shrink: 0; background: #FAF8F5;
@@ -211,10 +220,14 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       .mllm-input-wrap:focus-within { border-color: #B0A090; }
       #mllm-input {
         flex: 1; background: none; border: none; outline: none;
-        font-size: 14px; color: #2C2420; font-family: inherit;
-        resize: none; min-height: 20px; max-height: 80px; line-height: 1.5;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-size: 15px; font-weight: 400; color: #2C2420;
+        resize: none; min-height: 20px; max-height: 80px; line-height: 1.6;
       }
-      #mllm-input::placeholder { color: #B0A090; }
+      #mllm-input::placeholder {
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        color: #B0A090; font-weight: 400;
+      }
       #mllm-send {
         width: 32px; height: 32px; border-radius: 999px;
         background: #2C2420; border: none; cursor: pointer;
@@ -227,7 +240,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       #mllm-send:disabled { background: #D6CFBF; cursor: not-allowed; }
       #mllm-send svg { width: 14px; height: 14px; fill: #F4F0E8; }
       .mllm-footer {
-        text-align: center; font-size: 10px;
+        text-align: center;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-size: 11px; font-weight: 400;
         color: #B0A090; margin-top: 10px;
       }
       @media (max-width: 768px) {
