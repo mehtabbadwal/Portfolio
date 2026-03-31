@@ -171,18 +171,17 @@ function Landing() {
 
           {/* Featured */}
           <Link to={`/case-studies/${featuredProject.slug}`} className="featured fade-up">
-            <div className="featured__image">
-              <div className="featured__placeholder"><span>HPE Chatbot</span></div>
-            </div>
             <div className="featured__body">
               <div className="featured__meta">
                 <span className="featured__year">{featuredProject.year}</span>
-                {featuredProject.tags.map((t) => (
-                  <span key={t} className="tag">{t}</span>
+                <span className="featured__dot" />
+                {featuredProject.tags.map((t, i) => (
+                  <span key={t} className="featured__tag">
+                    {t}{i < featuredProject.tags.length - 1 && <span className="featured__dot" />}
+                  </span>
                 ))}
               </div>
-              <h3 className="featured__title">{featuredProject.title}</h3>
-              <p className="featured__desc">{featuredProject.description}</p>
+              <p className="featured__quote">{featuredProject.description}</p>
               <div className="featured__metrics">
                 {featuredProject.metrics.map((m) => (
                   <div key={m.label} className="metric">
@@ -192,6 +191,9 @@ function Landing() {
                 ))}
               </div>
               <span className="featured__cta">Read case study &rarr;</span>
+            </div>
+            <div className="featured__image">
+              <div className="featured__placeholder"><span>HPE Chatbot</span></div>
             </div>
           </Link>
 
@@ -208,11 +210,12 @@ function Landing() {
                 </div>
                 <div className="project-card__body">
                   <div className="project-card__meta">
-                    <span>{project.year}</span>
-                    <span>{project.category}</span>
+                    <span className="project-card__year">{project.year}</span>
+                    <span className="project-card__dot" />
+                    <span className="project-card__cat">{project.category}</span>
                   </div>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
+                  <p className="project-card__desc">{project.description}</p>
+                  <h3 className="project-card__title">{project.title}</h3>
                   <div className="project-card__metrics">
                     {project.metrics.map((m) => (
                       <div key={m.label} className="metric metric--small">
@@ -221,6 +224,7 @@ function Landing() {
                       </div>
                     ))}
                   </div>
+                  <span className="project-card__cta">Read case study &rarr;</span>
                 </div>
               </Link>
             ))}
