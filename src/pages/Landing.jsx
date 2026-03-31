@@ -150,14 +150,19 @@ function Landing() {
               </div>
             ))}
           </div>
-          <p className="philosophy__footer fade-up">See how this shows up in the work &darr;</p>
+          <button
+            className="philosophy__footer fade-up"
+            onClick={() => document.getElementById('selected-work').scrollIntoView({ behavior: 'smooth' })}
+          >
+            See how this shows up in the work &darr;
+          </button>
         </div>
       </section>
 
       <hr className="divider container" />
 
       {/* ── Selected Work ── */}
-      <section className="work section">
+      <section id="selected-work" className="work section">
         <div className="container">
           <div className="work__header fade-up">
             <p className="section-label">Selected Work</p>
