@@ -1,5 +1,4 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import OceanPaintingDrawing from '../components/OceanPaintingDrawing';
 import './About.css';
 
 function About() {
@@ -131,21 +130,22 @@ function About() {
             <div className="about__placeholder about__placeholder--square"><span>Photo 3</span></div>
           </div>
           <div className="about__outside-bottom">
-            <div className="about__outside-text fade-up">
-              <p>
-                I write poems. I paint &mdash; mostly when I can&rsquo;t find words for
-                something. I walk along the ocean in San Diego and let my mind go quiet.
-                I have a child who asks better questions than most stakeholders I&rsquo;ve
-                worked with.
+            <div className="about__outside-left fade-up">
+              <p className="about__outside-quote">
+                I live in San Diego. The ocean helps.
               </p>
-              <p className="about__outside-italic">
-                The things I care about outside of work are the same things I care about
-                inside it: paying attention, making space, and building things that fit
-                the people they&rsquo;re for.
+              <p className="about__outside-body">
+                I have a child who asks better questions than most stakeholders. I make
+                art, I write &mdash; Mind Meets Design is where I think out loud about
+                behavior, design, and why people do what they do. I read and reflect more
+                than I probably should.
               </p>
             </div>
-            <div className="about__outside-drawing fade-up">
-              <OceanPaintingDrawing />
+            <div className="about__outside-right fade-up">
+              <p className="about__outside-closing">
+                None of this is separate from the work. It&rsquo;s where most of the
+                good ideas actually come from.
+              </p>
             </div>
           </div>
         </div>
