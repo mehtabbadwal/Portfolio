@@ -9,33 +9,6 @@ export default function MehtabLLM() {
       body {
         transition: margin-right 0.32s cubic-bezier(0.16,1,0.3,1);
       }
-      #mllm-trigger {
-        position: fixed; bottom: 32px; right: 32px;
-        height: 40px; padding: 0 16px 0 12px;
-        border-radius: 8px; background: #2C2420;
-        border: none; cursor: pointer;
-        display: flex; align-items: center; gap: 8px;
-        z-index: 100;
-        box-shadow: 0 2px 16px rgba(44,36,32,0.18);
-        font-family: -apple-system, sans-serif;
-        transition: background 0.2s;
-      }
-      #mllm-trigger:hover { background: #C4603E; }
-      .mllm-trigger-dot {
-        width: 6px; height: 6px; border-radius: 999px;
-        background: #6B9E6B; flex-shrink: 0;
-      }
-      .mllm-trigger-label {
-        font-size: 12px; font-weight: 600;
-        color: #F4F0E8; letter-spacing: 0.06em;
-        text-transform: uppercase;
-      }
-      .mllm-trigger-label em {
-        font-style: italic; color: #C4603E;
-        font-family: Georgia, serif;
-        text-transform: none; letter-spacing: 0;
-      }
-      #mllm-trigger:hover .mllm-trigger-label em { color: #F4F0E8; }
       #mehtab-sidebar {
         position: fixed; top: 0; right: 0;
         width: 420px; height: 100vh;
@@ -165,7 +138,6 @@ export default function MehtabLLM() {
       }
       @media (max-width: 480px) {
         #mehtab-sidebar { width: 100%; }
-        #mllm-trigger { bottom: 80px; }
       }
     `;
     document.head.appendChild(style);
@@ -200,10 +172,6 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
 
     const container = document.createElement('div');
     container.innerHTML = `
-      <button id="mllm-trigger">
-        <div class="mllm-trigger-dot"></div>
-        <span class="mllm-trigger-label">Mehtab<em>LLM</em></span>
-      </button>
       <div id="mehtab-sidebar">
         <div class="mllm-header">
           <div>
@@ -282,7 +250,6 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       sendBtn.disabled = true;
     };
 
-    document.getElementById('mllm-trigger').addEventListener('click', open);
     document.getElementById('mllm-close-btn').addEventListener('click', close);
     document.getElementById('mllm-reset-btn').addEventListener('click', reset);
 
