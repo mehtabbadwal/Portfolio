@@ -307,7 +307,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
     window.mllmOpen = open;
     window.mllmClose = close;
 
-    const API_URL = 'https://api.anthropic.com/v1/messages';
+    const API_URL = '/.netlify/functions/chat';
 
     async function send() {
       const text = inputEl.value.trim();
