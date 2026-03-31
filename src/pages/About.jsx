@@ -47,33 +47,34 @@ function About() {
             The hard part was figuring out whether that solution was actually right,
             for this person, in this moment.
           </blockquote>
-          <div className="about__think-grid">
-            <div className="about__think-left fade-up">
+          <div className="about__think-grid fade-up">
+            <div className="about__think-left">
               <p>
-                I don&rsquo;t start with frameworks. I start with behavior &mdash; what someone
-                is actually trying to do, and what&rsquo;s getting in their way. Most of the
-                time, the answer already exists. The work is knowing when to use it and
-                when to push past it.
+                Sometimes it was. Often it wasn&rsquo;t.
               </p>
               <p>
-                I care about the moment the user is in. Not the average user, not the
-                ideal flow &mdash; the specific person, under real conditions, making a
-                decision they may not fully understand.
+                A denser interface for power users who needed speed. An honest AI over
+                a polished one. A field app reorganized around a 40-minute window, not
+                the system.
+              </p>
+              <p className="about__think-emphasis">
+                The space between what&rsquo;s expected and what&rsquo;s actually needed
+                is where the interesting work is.
               </p>
             </div>
-            <div className="about__think-right fade-up">
+            <div className="about__think-right">
               <ul className="about__principles">
                 <li>
                   <span className="about__principle-dot" />
-                  The conventional answer is a starting point, not a destination.
+                  The interesting problems usually start where the brief ends.
                 </li>
                 <li>
                   <span className="about__principle-dot" />
-                  Clarity is not the same as simplicity.
+                  Users know when a system is hiding something. They always know.
                 </li>
                 <li>
                   <span className="about__principle-dot" />
-                  Design for the moment, not the average.
+                  The first version of a brief is almost never the real problem.
                 </li>
               </ul>
             </div>

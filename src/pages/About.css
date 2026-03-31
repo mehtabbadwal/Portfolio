@@ -112,6 +112,15 @@
   margin-bottom: 0;
 }
 
+.about__think-emphasis {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--color-dark);
+  margin-top: 0.25rem;
+}
+
 .about__principles {
   display: flex;
   flex-direction: column;
@@ -121,12 +130,11 @@
 .about__principles li {
   display: flex;
   align-items: flex-start;
-  gap: 0.625rem;
-  font-family: var(--font-heading);
-  font-weight: 300;
-  font-style: italic;
+  gap: 0.875rem;
+  font-family: var(--font-body);
+  font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--color-warm);
 }
 
