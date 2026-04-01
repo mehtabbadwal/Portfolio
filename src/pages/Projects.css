@@ -292,10 +292,8 @@
   line-height: 1.6;
   color: #9A8A7D;
   font-style: italic;
-  padding: 0.75rem;
-  background: #2C1810;
-  border-radius: 6px;
-  border-left: 2px solid var(--color-accent);
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-accent);
 }
 
 .skill-card__tag {
