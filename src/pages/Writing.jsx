@@ -44,19 +44,17 @@ function Writing() {
       {/* ── Header ── */}
       <section className="wp__header section">
         <div className="container">
+          <p className="wp__label fade-up">Mind Meets Design</p>
+          <h1 className="wp__title fade-up">
+            Writing about why people do what they do and what it means
+            for the products we build.
+          </h1>
           <div className="wp__header-flex">
-            <div className="wp__header-left">
-              <p className="wp__label fade-up">Mind Meets Design</p>
-              <h1 className="wp__title fade-up">
-                Writing about why people do what they do and what it means
-                for the products we build.
-              </h1>
-              <p className="wp__intro fade-up">
-                I write about why people do what they do and what it means for the
-                products we build. It starts with observation. Usually in the middle
-                of something else entirely.
-              </p>
-            </div>
+            <p className="wp__intro fade-up">
+              I write about why people do what they do and what it means for the
+              products we build. It starts with observation. Usually in the middle
+              of something else entirely.
+            </p>
             <p className="wp__count fade-up">5 essays</p>
           </div>
         </div>
