@@ -95,7 +95,7 @@
 
 /* Metrics Card */
 .cs__metrics-card {
-  background: #fff;
+  background: #EAE4D8;
   border-radius: 12px;
   padding: 1.75rem;
   width: 320px;
@@ -269,7 +269,7 @@
 
 /* Pull Quote */
 .cs__pullquote {
-  background: #fff;
+  background: #EAE4D8;
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #E8E2D8;
@@ -325,7 +325,7 @@
 
 /* Callout */
 .cs__callout {
-  background: #fff;
+  background: #EAE4D8;
   border: 1px solid #E8E2D8;
   border-radius: 12px;
   padding: 2rem;
