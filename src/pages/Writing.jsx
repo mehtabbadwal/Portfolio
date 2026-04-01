@@ -72,11 +72,7 @@ function Writing() {
               </div>
             </div>
             <div className="wp__featured-right fade-up">
-              <span className="wp__featured-mark">&ldquo;</span>
-              <p className="wp__featured-quote">
-                If a platform is more consolidated, it has more responsibility to
-                understand the intent of the user &mdash; not less.
-              </p>
+              <span className="wp__featured-image-label">Featured article image</span>
             </div>
           </div>
         </div>
