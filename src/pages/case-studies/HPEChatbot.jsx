@@ -12,20 +12,43 @@ function HPEChatbot() {
         <div className="container">
           <Link to="/work" className="cs__back fade-up">&larr; Work</Link>
 
-          <div className="cs__hero-grid">
-            <div className="cs__hero-content fade-up">
-              <div className="cs__hero-meta">
-                <span className="cs__hero-year">2025</span>
-                <span className="cs__hero-dot" />
-                <span className="cs__hero-tag">Enterprise Systems</span>
+          <div className="cs__hero-top fade-up">
+            <div className="cs__hero-meta">
+              <span className="cs__hero-year">2025</span>
+              <span className="cs__hero-dot" />
+              <span className="cs__hero-tag">Enterprise Systems</span>
+            </div>
+            <h1 className="cs__hero-title">HPE Agentic Chatbot</h1>
+            <p className="cs__hero-subtitle">
+              The fix wasn&rsquo;t smarter AI. It was more honest AI.
+            </p>
+          </div>
+
+          <div className="cs__hero-bar fade-up">
+            <div className="cs__meta-items">
+              <div className="cs__meta-item">
+                <span className="cs__meta-item-label">Role</span>
+                <span className="cs__meta-item-value">Senior Product Designer</span>
               </div>
-              <h1 className="cs__hero-title">HPE Agentic Chatbot</h1>
-              <p className="cs__hero-subtitle">
-                The fix wasn&rsquo;t smarter AI. It was more honest AI.
-              </p>
+              <div className="cs__meta-item">
+                <span className="cs__meta-item-label">Timeline</span>
+                <span className="cs__meta-item-value">3 weeks</span>
+              </div>
+              <div className="cs__meta-item">
+                <span className="cs__meta-item-label">Company</span>
+                <span className="cs__meta-item-value">Hewlett Packard Enterprise</span>
+              </div>
+              <div className="cs__meta-item">
+                <span className="cs__meta-item-label">Scope</span>
+                <span className="cs__meta-item-value">End-to-end conversational design</span>
+              </div>
+              <div className="cs__meta-item">
+                <span className="cs__meta-item-label">Team</span>
+                <span className="cs__meta-item-value">Lead UX, PM, Engineers</span>
+              </div>
             </div>
 
-            <div className="cs__metrics-card fade-up">
+            <div className="cs__metrics-card">
               <p className="cs__metrics-label">Impact</p>
               <div className="cs__metric">
                 <span className="cs__metric-value">32%</span>
@@ -40,13 +63,6 @@ function HPEChatbot() {
               <div className="cs__metric">
                 <span className="cs__metric-value">2 min</span>
                 <span className="cs__metric-text">avg resolution time</span>
-              </div>
-              <div className="cs__meta-footer">
-                <div className="cs__meta-row"><span>Role</span><span>Senior Product Designer</span></div>
-                <div className="cs__meta-row"><span>Timeline</span><span>3 weeks</span></div>
-                <div className="cs__meta-row"><span>Company</span><span>Hewlett Packard Enterprise</span></div>
-                <div className="cs__meta-row"><span>Scope</span><span>End-to-end conversational design</span></div>
-                <div className="cs__meta-row"><span>Team</span><span>Lead UX, PM, Engineers</span></div>
               </div>
             </div>
           </div>

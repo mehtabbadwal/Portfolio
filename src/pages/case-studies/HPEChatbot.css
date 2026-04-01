@@ -30,17 +30,11 @@
 /* ── Hero ── */
 .cs__hero {
   padding-top: 5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3.75rem;
 }
 
-.cs__hero-grid {
-  display: flex;
-  gap: 5rem;
-  margin-bottom: 4rem;
-}
-
-.cs__hero-content {
-  max-width: 800px;
+.cs__hero-top {
+  margin-bottom: 2.5rem;
 }
 
 .cs__hero-meta {
@@ -77,7 +71,7 @@
 
 .cs__hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 4.5vw, 3rem);
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
   font-weight: 400;
   font-style: italic;
   line-height: 1.2;
@@ -91,14 +85,49 @@
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-warm);
+  max-width: 800px;
+}
+
+/* Hero Bar */
+.cs__hero-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3.75rem;
+}
+
+.cs__meta-items {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex: 1;
+  max-width: 700px;
+}
+
+.cs__meta-item-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+  color: var(--color-light);
+  margin-bottom: 0.25rem;
+}
+
+.cs__meta-item-value {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-warm);
 }
 
 /* Metrics Card */
 .cs__metrics-card {
   background: #EAE4D8;
   border-radius: 12px;
-  padding: 1.75rem;
-  width: 320px;
+  padding: 1.5rem;
+  min-width: 280px;
   flex-shrink: 0;
   border: 1px solid #E8E2D8;
 }
@@ -110,11 +139,15 @@
   letter-spacing: 0.88px;
   text-transform: uppercase;
   color: var(--color-light);
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .cs__metric {
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.cs__metric:last-of-type {
+  margin-bottom: 0;
 }
 
 .cs__metric-value {
@@ -124,43 +157,19 @@
   font-weight: 300;
   font-style: italic;
   color: var(--color-accent);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .cs__metric-text {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   color: var(--color-warm);
 }
 
 .cs__metric-divider {
   border: none;
-  border-top: 1px solid #EAE4D8;
-  margin: 1.75rem 0;
-}
-
-.cs__meta-footer {
-  border-top: 1px solid #EAE4D8;
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.cs__meta-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
-  font-size: 0.8125rem;
-}
-
-.cs__meta-row span:first-child {
-  font-family: var(--font-body);
-  color: var(--color-light);
-}
-
-.cs__meta-row span:last-child {
-  font-family: var(--font-body);
-  color: var(--color-warm);
-  font-weight: 500;
+  border-top: 1px solid #E8E2D8;
+  margin: 1.25rem 0;
 }
 
 .cs__hero-image {
@@ -424,13 +433,14 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .cs__hero-grid {
+  .cs__hero-bar {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .cs__metrics-card {
     width: 100%;
+    min-width: auto;
   }
 
   .cs__impact-grid {
@@ -442,6 +452,10 @@
   .cs__two-col {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .cs__meta-items {
+    gap: 1.25rem;
   }
 
   .cs__image-placeholder--tall { height: 400px; }
