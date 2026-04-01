@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Writing.css';
 
@@ -66,15 +67,18 @@ function Writing() {
           <div className="wp__featured-flex">
             <div className="wp__featured-left fade-up">
               <p className="wp__featured-label">Featured</p>
-              <h2 className="wp__featured-title">Stay out of the way</h2>
+              <Link to="/blog/shadow-system-problem" style={{ textDecoration: 'none' }}>
+                <h2 className="wp__featured-title">The Shadow System Problem</h2>
+              </Link>
               <p className="wp__featured-desc">
-                I don&rsquo;t hate complexity &mdash; I hate being slowed down when I
-                know what I need. Turns out, a four-year-old in the bathtub will change
-                how you think about UX.
+                Most product teams think shadow systems mean users don&rsquo;t
+                understand the tool. Actually, shadow systems mean users understand
+                it perfectly &mdash; they just understand it&rsquo;s not built for
+                them.
               </p>
               <div className="wp__featured-meta">
                 <span className="wp__featured-date">February 2025</span>
-                <a href="#" className="wp__featured-link">Read essay &rarr;</a>
+                <Link to="/blog/shadow-system-problem" className="wp__featured-link">Read essay &rarr;</Link>
               </div>
             </div>
             <div className="wp__featured-right fade-up">
