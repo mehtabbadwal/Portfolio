@@ -382,6 +382,25 @@
   color: var(--color-warm);
 }
 
+/* External Links */
+.cs__ext-link {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  transition: text-decoration 0.2s ease;
+}
+
+.cs__ext-link:hover {
+  text-decoration: underline;
+}
+
+.cs__ext-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 /* Divider */
 .cs__divider {
   border: none;

@@ -293,7 +293,7 @@ function Qubera() {
           <div className="cs__next-inner fade-up">
             <p className="cs__label">Next Project</p>
             <h3 className="cs__next-title">Fluidra Pro</h3>
-            <Link to="/case-studies/fluidra-pro" className="cs__next-link">
+            <Link to="/case-studies/fluidra" className="cs__next-link">
               Read case study &rarr;
             </Link>
           </div>

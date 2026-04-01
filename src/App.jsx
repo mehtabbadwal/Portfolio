@@ -7,6 +7,7 @@ import Writing from './pages/Writing';
 import HPEChatbot from './pages/case-studies/HPEChatbot';
 import HPEPFA from './pages/case-studies/HPEPFA';
 import Qubera from './pages/case-studies/Qubera';
+import FluidraPro from './pages/case-studies/FluidraPro';
 import ComingSoon from './pages/ComingSoon';
 import MehtabLLM from './components/MehtabLLM';
 import FloatingChatButton from './components/FloatingChatButton';
@@ -23,6 +24,7 @@ function App() {
           <Route path="case-studies/hpe-chatbot" element={<HPEChatbot />} />
           <Route path="case-studies/hpe-pfa" element={<HPEPFA />} />
           <Route path="case-studies/qubera" element={<Qubera />} />
+          <Route path="case-studies/fluidra" element={<FluidraPro />} />
           <Route path="case-studies/:slug" element={<ComingSoon title="Case Study" />} />
         </Route>
       </Routes>
