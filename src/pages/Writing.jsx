@@ -3,28 +3,36 @@ import './Writing.css';
 
 const articles = [
   {
-    date: 'MAR 31',
+    date: 'JAN 16',
     author: 'MEHTAB BADWAL',
     readTime: 5,
-    tag: 'AI + UX',
-    title: 'How to be an idea factory',
-    description: 'Behind every breakthrough is a designer who learned to produce ideas on demand, not wait for inspiration.',
+    title: 'When AI Shifts Control',
+    description: 'As AI becomes embedded in everyday products, something subtle shifts in the user experience: control moves quietly from human judgment to system suggestion.',
+    image: null,
   },
   {
-    date: 'JAN 13',
+    date: 'OCT 21',
     author: 'MEHTAB BADWAL',
-    readTime: 3,
-    tag: 'BEHAVIORAL DESIGN',
-    title: 'Writing is building now',
-    description: 'The line between writing and building has collapsed. Words are products.',
+    readTime: 6,
+    title: 'Designing for Dignity in Healthcare',
+    description: "Healthcare design isn\u2019t just about completing tasks. It\u2019s about preserving dignity when people feel most vulnerable.",
+    image: null,
   },
   {
-    date: 'OCT 30',
+    date: 'OCT 16',
     author: 'MEHTAB BADWAL',
-    readTime: 4,
-    tag: 'DECISION MAKING',
-    title: 'It\u2019s the opposite of death by a thousand paper cuts',
-    description: 'Small wins compound. Here\u2019s how to design for them.',
+    readTime: 7,
+    title: "Why Users Don\u2019t Say What They Feel",
+    description: 'Most user research asks people what they think about an interface. But much of what drives behavior happens before thought \u2014 in instinct, rhythm, and physical reaction.',
+    image: null,
+  },
+  {
+    date: 'NOV 13',
+    author: 'MEHTAB BADWAL',
+    readTime: 5,
+    title: 'The Weight of Choice',
+    description: "Choice doesn\u2019t exhaust us because there are too many options. It exhausts us because each decision feels heavier than it needs to.",
+    image: null,
   },
 ];
 
@@ -49,7 +57,7 @@ function Writing() {
                 of something else entirely.
               </p>
             </div>
-            <p className="wp__count fade-up">4 essays</p>
+            <p className="wp__count fade-up">5 essays</p>
           </div>
         </div>
       </section>
@@ -60,11 +68,11 @@ function Writing() {
           <div className="wp__featured-flex">
             <div className="wp__featured-left fade-up">
               <p className="wp__featured-label">Featured</p>
-              <h2 className="wp__featured-title">Stay Out of My Way</h2>
+              <h2 className="wp__featured-title">Stay out of the way</h2>
               <p className="wp__featured-desc">
-                I was giving my son a bath when I realized I was out of groceries.
-                What happened next taught me more about intent-driven design than
-                most design frameworks ever did.
+                I don&rsquo;t hate complexity &mdash; I hate being slowed down when I
+                know what I need. Turns out, a four-year-old in the bathtub will change
+                how you think about UX.
               </p>
               <div className="wp__featured-meta">
                 <span className="wp__featured-date">February 2025</span>
@@ -85,7 +93,11 @@ function Writing() {
             {articles.map((a, i) => (
               <a href="#" key={i} className={`wp__card fade-up stagger-${i + 1}`}>
                 <div className="wp__card-image">
-                  <span>Article image</span>
+                  {a.image ? (
+                    <img src={a.image} alt={a.title} className="wp__card-img" />
+                  ) : (
+                    <span>Article image</span>
+                  )}
                 </div>
                 <div className="wp__card-body">
                   <div className="wp__card-meta">
@@ -120,7 +132,7 @@ function Writing() {
             </div>
             <div className="wp__about-stats fade-up">
               <div className="wp__stat">
-                <span className="wp__stat-value">4</span>
+                <span className="wp__stat-value">5</span>
                 <span className="wp__stat-label">essays published</span>
               </div>
               <div className="wp__stat">
