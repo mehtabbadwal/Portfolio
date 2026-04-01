@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
 
@@ -113,26 +114,33 @@ function Projects() {
           </div>
 
           <div className="projects__grid case-studies-grid">
-            {caseStudies.map((cs, i) => (
-              <a href={`#${cs.slug}`} key={cs.slug} className={`cs-card fade-up stagger-${Math.min(i + 1, 5)}`}>
-                <div className="cs-card__meta">
-                  <span className="cs-card__year">{cs.year}</span>
-                  <span className="cs-card__dot" />
-                  <span className="cs-card__tag">{cs.tag}</span>
-                </div>
-                <h3 className="cs-card__title">{cs.title}</h3>
-                <p className="cs-card__desc">{cs.description}</p>
-                <div className="cs-card__metrics">
-                  {cs.metrics.map((m) => (
-                    <div key={m.label} className="cs-card__metric">
-                      <span className="cs-card__metric-value">{m.value}</span>
-                      <span className="cs-card__metric-label">{m.label}</span>
-                    </div>
-                  ))}
-                </div>
-                <span className="cs-card__cta">Read case study &rarr;</span>
-              </a>
-            ))}
+            {caseStudies.map((cs, i) => {
+              const hasPage = ['hpe-chatbot', 'hpe-pfa'].includes(cs.slug);
+              const CardTag = hasPage ? Link : 'a';
+              const cardProps = hasPage
+                ? { to: `/case-studies/${cs.slug}` }
+                : { href: `#${cs.slug}` };
+              return (
+                <CardTag {...cardProps} key={cs.slug} className={`cs-card fade-up stagger-${Math.min(i + 1, 5)}`}>
+                  <div className="cs-card__meta">
+                    <span className="cs-card__year">{cs.year}</span>
+                    <span className="cs-card__dot" />
+                    <span className="cs-card__tag">{cs.tag}</span>
+                  </div>
+                  <h3 className="cs-card__title">{cs.title}</h3>
+                  <p className="cs-card__desc">{cs.description}</p>
+                  <div className="cs-card__metrics">
+                    {cs.metrics.map((m) => (
+                      <div key={m.label} className="cs-card__metric">
+                        <span className="cs-card__metric-value">{m.value}</span>
+                        <span className="cs-card__metric-label">{m.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <span className="cs-card__cta">Read case study &rarr;</span>
+                </CardTag>
+              );
+            })}
           </div>
         </div>
       </section>
