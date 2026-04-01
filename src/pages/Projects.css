@@ -1,0 +1,443 @@
+/* ── Projects Page ── */
+.projects {
+  background: var(--color-bg);
+}
+
+.projects__label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+  color: var(--color-light);
+  margin-bottom: 1.25rem;
+}
+
+/* ── Selected Work ── */
+.projects__work {
+  background: var(--color-bg);
+}
+
+.projects__work-header {
+  margin-bottom: 3.75rem;
+}
+
+.projects__heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--color-dark);
+  margin-bottom: 1.5rem;
+}
+
+.projects__intro {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-warm);
+  max-width: 640px;
+}
+
+.projects__filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3.75rem;
+  flex-wrap: wrap;
+}
+
+.projects__filter {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.5rem 0.875rem;
+  border-radius: 2rem;
+  border: none;
+  background: transparent;
+  color: var(--color-warm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.projects__filter--active {
+  background: var(--color-dark);
+  color: var(--color-bg);
+  font-weight: 500;
+}
+
+.projects__filter:hover:not(.projects__filter--active) {
+  background: #EAE4D8;
+}
+
+/* Case Study Grid */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.cs-card {
+  display: block;
+  border-top: 1px solid #E8E2D8;
+  padding-top: 2.5rem;
+  transition: transform 0.2s ease;
+}
+
+.cs-card:hover {
+  transform: translateY(-4px);
+}
+
+.cs-card__meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.cs-card__year {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-warm);
+}
+
+.cs-card__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.cs-card__tag {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+  color: var(--color-warm);
+  background: #EAE4D8;
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+}
+
+.cs-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-dark);
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.cs-card__desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-warm);
+  margin-bottom: 1.5rem;
+}
+
+.cs-card__metrics {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cs-card__metric-value {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+.cs-card__metric-label {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--color-light);
+}
+
+.cs-card__cta {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+/* ── Claude Skills ── */
+.projects__skills {
+  background: #2C1810;
+}
+
+.projects__skills .projects__label {
+  color: var(--color-light);
+}
+
+.projects__skills-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.2;
+  color: #F4F0E8;
+  margin-bottom: 1.5rem;
+}
+
+.projects__skills-intro {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #C4B5A8;
+  margin-bottom: 1.25rem;
+}
+
+.projects__skills-note {
+  display: flex;
+  gap: 0.625rem;
+  align-items: flex-start;
+}
+
+.projects__skills-note-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+.projects__skills-note p {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #C4B5A8;
+}
+
+.projects__skills-header {
+  margin-bottom: 3.75rem;
+  max-width: 900px;
+}
+
+.projects__skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Skill Card */
+.skill-card {
+  background: #3A2F28;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skill-card__placeholder {
+  width: 100%;
+  height: 200px;
+  background: #4A3F38;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #7A6A60;
+}
+
+.skill-card__placeholder span {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--color-light);
+  font-style: italic;
+}
+
+.skill-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #F4F0E8;
+  line-height: 1.3;
+}
+
+.skill-card__hook {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-accent);
+}
+
+.skill-card__desc {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #C4B5A8;
+}
+
+.skill-card__how {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #9A8A7D;
+  font-style: italic;
+  padding: 0.75rem;
+  background: #2C1810;
+  border-radius: 6px;
+  border-left: 2px solid var(--color-accent);
+}
+
+.skill-card__tag {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+  color: var(--color-light);
+  background: #2C1810;
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.skill-card__download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.skill-card__download:hover {
+  background: #A34E30;
+}
+
+.skill-card__file {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: #9A8A7D;
+  text-align: center;
+  margin-top: -0.5rem;
+}
+
+/* ── Why These Exist ── */
+.projects__why {
+  background: var(--color-bg);
+}
+
+.projects__why-grid {
+  display: flex;
+  gap: 5rem;
+}
+
+.projects__why-left,
+.projects__why-right {
+  flex: 1;
+}
+
+.projects__why-right {
+  background: #EAE4D8;
+  padding: 2.5rem;
+  border-radius: 12px;
+}
+
+.projects__why-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-warm);
+  margin-bottom: 2rem;
+}
+
+/* ── Bottom CTA ── */
+.projects__cta {
+  background: var(--color-bg);
+  padding-bottom: 5rem;
+}
+
+.projects__cta-divider {
+  border: none;
+  border-top: 1px solid #E8E2D8;
+  margin-bottom: 3.75rem;
+}
+
+.projects__cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects__cta-heading {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--color-dark);
+  max-width: 620px;
+}
+
+.projects__cta-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.projects__cta-resume {
+  border-color: var(--color-dark);
+  color: var(--color-dark);
+}
+
+.projects__cta-resume:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .projects__grid,
+  .projects__skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__why-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .projects__cta-inner {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .projects__cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .projects__cta-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
