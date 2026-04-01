@@ -26,36 +26,22 @@ function HPEChatbot() {
 
           {/* Horizontal Card */}
           <div className="cs__hero-card fade-up">
-            <div className="cs__hero-card-col">
-              <div className="cs__hero-card-field">
-                <span className="cs__hero-card-label">Role</span>
-                <span className="cs__hero-card-value">Senior Product Designer</span>
-              </div>
-              <div className="cs__hero-card-field">
-                <span className="cs__hero-card-label">Timeline</span>
-                <span className="cs__hero-card-value">3 weeks</span>
-              </div>
+            <div className="cs__hero-card-meta">
+              {[
+                ['Role', 'Senior Product Designer'],
+                ['Timeline', '3 weeks'],
+                ['Company', 'Hewlett Packard Enterprise'],
+                ['Scope', 'End-to-end conversational design'],
+                ['Team', 'Lead UX, PM, Engineers'],
+              ].map(([label, value]) => (
+                <div key={label} className="cs__hero-card-field">
+                  <span className="cs__hero-card-label">{label}</span>
+                  <span className="cs__hero-card-value">{value}</span>
+                </div>
+              ))}
             </div>
-            <div className="cs__hero-card-divider" />
-            <div className="cs__hero-card-col">
-              <div className="cs__hero-card-field">
-                <span className="cs__hero-card-label">Company</span>
-                <span className="cs__hero-card-value">Hewlett Packard Enterprise</span>
-              </div>
-              <div className="cs__hero-card-field">
-                <span className="cs__hero-card-label">Scope</span>
-                <span className="cs__hero-card-value">End-to-end conversational design</span>
-              </div>
-            </div>
-            <div className="cs__hero-card-divider" />
-            <div className="cs__hero-card-col">
-              <div className="cs__hero-card-field">
-                <span className="cs__hero-card-label">Team</span>
-                <span className="cs__hero-card-value">Lead UX, PM, Engineers</span>
-              </div>
-            </div>
-            <div className="cs__hero-card-divider" />
-            <div className="cs__hero-card-col cs__hero-card-col--impact">
+
+            <div className="cs__hero-card-impact">
               <span className="cs__hero-card-label">Impact</span>
               <div className="cs__hero-card-metrics">
                 <div className="cs__hero-card-metric">
