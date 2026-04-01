@@ -65,30 +65,22 @@ const skills = [
   {
     title: 'Design System Skill',
     hook: 'From component chaos to systematic clarity.',
-    description: 'Helps you build, audit, and document a design system \u2014 from component specs to token structure. Describe what you\u2019re working on and it thinks through the architecture with you.',
     howToUse: 'Go in with specifics. "Build a design system" is too vague. Show up with your product context, component needs, or audit requirements \u2014 then it structures the work.',
-    tag: 'DESIGN SYSTEMS',
   },
   {
     title: 'UX Research Skill',
     hook: 'Turn raw observations into behavioral insights faster.',
-    description: 'Helps you plan research, write interview guides, synthesize findings, and turn raw observations into behavioral insights. Built around the questions researchers actually ask in practice.',
     howToUse: 'Go in with intent. "Research my product" won\u2019t get you far. Show up with a specific behavior you\u2019re trying to understand \u2014 then it does serious work.',
-    tag: 'UX RESEARCH',
   },
   {
     title: 'UI Designer Skill',
     hook: 'Visual systems that scale with your product.',
-    description: 'Helps you create polished, production-ready UI designs with proper visual hierarchy, spacing, and component systems. Takes your wireframes and product context to deliver pixel-perfect screens.',
     howToUse: 'Go in with context. "Make it look good" won\u2019t cut it. Show up with your wireframes, brand constraints, or platform requirements \u2014 then it delivers polish.',
-    tag: 'UI DESIGN',
   },
   {
     title: 'UX Designer Skill',
     hook: 'Flow decisions backed by behavioral logic.',
-    description: 'Helps you design user flows, information architecture, and interaction patterns grounded in psychology and real user behavior. Challenges assumptions and thinks through edge cases.',
     howToUse: 'Go in with the problem. "Design a flow" is too open. Show up with the user decision you\u2019re trying to support \u2014 then it applies behavioral logic.',
-    tag: 'UX DESIGN',
   },
 ];
 
@@ -176,9 +168,7 @@ function Projects() {
                 </div>
                 <h3 className="skill-card__title">{s.title}</h3>
                 <p className="skill-card__hook">{s.hook}</p>
-                <p className="skill-card__desc">{s.description}</p>
                 <p className="skill-card__how">{s.howToUse}</p>
-                <span className="skill-card__tag">For {s.tag}</span>
                 <a href="#" className="skill-card__download">
                   <span>&darr;</span> Download skill
                 </a>
