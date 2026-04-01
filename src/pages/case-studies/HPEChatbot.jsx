@@ -309,35 +309,6 @@ function HPEChatbot() {
         </div>
       </section>
 
-      {/* ── Impact ── */}
-      <section className="cs__narrative section">
-        <div className="container">
-          <p className="cs__label fade-up">Impact</p>
-          <div className="cs__impact-grid fade-up">
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">32%</span>
-              <span className="cs__impact-label">reduction in escalations</span>
-              <span className="cs__impact-detail">From 78% to 46% in the first month</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">3x</span>
-              <span className="cs__impact-label">increase in chatbot usage</span>
-              <span className="cs__impact-detail">Among users who had previously bypassed it</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">&lt;2 min</span>
-              <span className="cs__impact-label">resolution time</span>
-              <span className="cs__impact-detail">Down from 8+ minutes</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">~$150K</span>
-              <span className="cs__impact-label">projected annual savings</span>
-              <span className="cs__impact-detail">From reduced agent workload</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Reflections ── */}
       <section className="cs__narrative section">
         <div className="container">
