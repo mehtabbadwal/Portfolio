@@ -82,10 +82,6 @@ function ShadowSystemProblem() {
         rational response to a product that answered the wrong question.
       </Paragraph>
 
-      <SectionBreak>
-        The design mistake we make constantly
-      </SectionBreak>
-
       <Paragraph>
         The design mistake here is one we make constantly in B2B: we conflate
         visibility with usefulness.
@@ -107,10 +103,6 @@ function ShadowSystemProblem() {
         And designing a single interface that tries to serve both equally usually ends
         up serving neither particularly well.
       </Paragraph>
-
-      <SectionBreak>
-        So what does this mean practically?
-      </SectionBreak>
 
       <Paragraph>
         The framework I find most useful here is what I&rsquo;d call the two-job
