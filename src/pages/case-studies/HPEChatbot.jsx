@@ -101,30 +101,38 @@ function HPEChatbot() {
       {/* ── Context ── */}
       <section className="cs__context section">
         <div className="container">
-          <p className="cs__label fade-up">Context</p>
           <div className="cs__context-grid">
             <div className="cs__context-story fade-up">
+              <p className="cs__label">Context</p>
+              <h2 className="cs__section-heading">
+                A chatbot with a 78% escalation rate isn&rsquo;t a chatbot. It&rsquo;s a detour.
+              </h2>
               <p>
-                HPE&rsquo;s enterprise support chatbot had a 78% escalation rate. Nearly
-                four out of five users who started a chat ended up requesting a human agent
-                &mdash; often within the first two messages. The chatbot wasn&rsquo;t broken
-                in the technical sense. It answered questions. But the way it answered them
-                felt like a system talking at you, not with you.
+                A network admin needs to know which devices have expired contracts in the
+                APJ region. They open the chatbot and get this: Click &lsquo;Asset
+                Management&rsquo; &rarr; Click &lsquo;Contracts&rsquo; &rarr; Click
+                &lsquo;View All Documentation&rsquo; &rarr; Here are 15 articles and videos
+                &rarr; (gives up and calls an agent). What should take 10 seconds took 10+
+                minutes. Most users didn&rsquo;t get that far.
               </p>
-              <p>
-                It gave link dumps instead of answers. It didn&rsquo;t acknowledge when it
-                didn&rsquo;t know something. And when users got frustrated, it had no way
-                to recover &mdash; just a dead end and a &ldquo;Contact Support&rdquo; button.
-              </p>
-            </div>
-            <blockquote className="cs__pullquote fade-up">
-              <span className="cs__pullquote-mark">&ldquo;</span>
               <p>
                 The chatbot wasn&rsquo;t failing because the AI was bad. It was failing
-                because the conversation was designed like a menu system pretending to be
-                a dialogue.
+                because it was designed like a menu system pretending to be a conversation.
+                The temptation &mdash; and the stakeholder pressure &mdash; was to hide its
+                limitations. Make it look smarter than it was. The insight that changed
+                everything: users don&rsquo;t need perfect AI. They need to feel in control.
               </p>
-            </blockquote>
+            </div>
+            <div className="cs__context-quote-wrap fade-up">
+              <blockquote className="cs__pullquote">
+                <span className="cs__pullquote-mark">&ldquo;</span>
+                <p>
+                  I don&rsquo;t even click the chatbot icon anymore. It&rsquo;s faster to
+                  just call support.
+                </p>
+                <cite className="cs__pullquote-cite">User interview</cite>
+              </blockquote>
+            </div>
           </div>
         </div>
       </section>
@@ -132,23 +140,57 @@ function HPEChatbot() {
       {/* ── Users ── */}
       <section className="cs__users section">
         <div className="container">
-          <p className="cs__label fade-up">Who Uses This</p>
+          <p className="cs__label fade-up">Users</p>
+          <h2 className="cs__section-heading fade-up">
+            Technical professionals troubleshooting live issues. When a network is down,
+            seconds matter.
+          </h2>
           <div className="cs__users-grid">
             <div className="cs__user-card fade-up stagger-1">
-              <h3>IT Administrators</h3>
+              <span className="cs__user-tag">Network Admin</span>
+              <h3>Network Administrator</h3>
               <p>
-                Managing HPE infrastructure across multiple sites. Need fast, accurate
-                answers to configuration and troubleshooting questions without waiting
-                in a support queue.
+                Technical professionals troubleshooting live issues when they reach for the
+                chatbot. They ask questions the way they&rsquo;d ask a colleague. When they
+                can&rsquo;t get a direct answer, they don&rsquo;t wait &mdash; they call someone.
               </p>
+              <div className="cs__user-details">
+                <div className="cs__user-detail">
+                  <span className="cs__user-detail-label">Environment</span>
+                  <span className="cs__user-detail-value">Enterprise desktop</span>
+                </div>
+                <div className="cs__user-detail">
+                  <span className="cs__user-detail-label">Main Task</span>
+                  <span className="cs__user-detail-value">Resolve IT issues fast</span>
+                </div>
+                <div className="cs__user-detail">
+                  <span className="cs__user-detail-label">Pain Point</span>
+                  <span className="cs__user-detail-value">Menus that didn&rsquo;t match how they thought about their problem</span>
+                </div>
+              </div>
             </div>
             <div className="cs__user-card fade-up stagger-2">
-              <h3>Channel Partners</h3>
+              <span className="cs__user-tag">Customer Success</span>
+              <h3>Customer Success Manager</h3>
               <p>
-                Reselling HPE products to their own clients. Need quick access to
-                product specs, pricing, and compatibility information while on calls
-                with customers.
+                Managing enterprise accounts and fielding customer questions about contract
+                status, device inventory, and service coverage. Needs accurate answers
+                quickly &mdash; not search results to sift through.
               </p>
+              <div className="cs__user-details">
+                <div className="cs__user-detail">
+                  <span className="cs__user-detail-label">Environment</span>
+                  <span className="cs__user-detail-value">Desktop and mobile</span>
+                </div>
+                <div className="cs__user-detail">
+                  <span className="cs__user-detail-label">Main Task</span>
+                  <span className="cs__user-detail-value">Answer customer questions accurately and fast</span>
+                </div>
+                <div className="cs__user-detail">
+                  <span className="cs__user-detail-label">Pain Point</span>
+                  <span className="cs__user-detail-value">Link dumps instead of direct answers</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -157,37 +199,60 @@ function HPEChatbot() {
       {/* ── Decisions ── */}
       <section className="cs__decisions section">
         <div className="container">
-          <p className="cs__label fade-up">Key Decisions</p>
-          <h2 className="cs__decisions-heading fade-up">
-            Three design decisions that changed the outcome.
+          <p className="cs__label fade-up">Decisions</p>
+          <h2 className="cs__section-heading fade-up">
+            Three decisions that went against the room &mdash; each one right for the same reason.
           </h2>
-          <div className="cs__decisions-grid">
-            <div className="cs__decision-card fade-up stagger-1">
+          <div className="cs__decisions-list">
+            <div className="cs__decision fade-up">
               <span className="cs__decision-num">01</span>
-              <h3>Surface uncertainty instead of hiding it</h3>
-              <p>
-                When the AI isn&rsquo;t confident, it says so &mdash; and offers to connect
-                you with a human. Users trusted the chatbot more when it was honest about
-                what it didn&rsquo;t know.
-              </p>
+              <div className="cs__decision-body">
+                <h3>Keep Classic mode alive</h3>
+                <p>
+                  The product team wanted to sunset the old chatbot and force everyone onto the
+                  new AI version. I pushed back. Users who don&rsquo;t trust AI won&rsquo;t
+                  suddenly trust it because we removed their alternative. They&rsquo;ll just
+                  stop using the chatbot entirely. The escape route was what made people willing
+                  to try. The safety net enabled the risk-taking.
+                </p>
+              </div>
+              <div className="cs__decision-alt">
+                <span className="cs__decision-alt-label">The Alternative</span>
+                <p>Force migration to AI mode. Would have driven users to phone support instead &mdash; worsening the exact problem we were trying to solve.</p>
+              </div>
             </div>
-            <div className="cs__decision-card fade-up stagger-2">
+            <div className="cs__decision fade-up">
               <span className="cs__decision-num">02</span>
-              <h3>Keep Classic mode as an escape route</h3>
-              <p>
-                Instead of forcing everyone into the new AI experience, we kept the old
-                menu-based system available. The escape route made people willing to try
-                the new thing.
-              </p>
+              <div className="cs__decision-body">
+                <h3>Surface uncertainty, don&rsquo;t hide it</h3>
+                <p>
+                  We discovered users trusted answers more when they saw a processing indicator
+                  than when responses appeared instantly. Instant felt suspicious. &ldquo;Too
+                  good to be true&rdquo; was how one tester put it. We cited sources directly
+                  instead of linking to 50-page PDFs. Transparency increased trust &mdash; it
+                  didn&rsquo;t decrease it.
+                </p>
+              </div>
+              <div className="cs__decision-alt">
+                <span className="cs__decision-alt-label">The Alternative</span>
+                <p>Polish responses to appear more authoritative. Would have felt like a black box &mdash; exactly what erodes trust in AI systems.</p>
+              </div>
             </div>
-            <div className="cs__decision-card fade-up stagger-3">
+            <div className="cs__decision fade-up">
               <span className="cs__decision-num">03</span>
-              <h3>Answer directly, cite the source</h3>
-              <p>
-                Instead of link dumps, the AI reads documentation and gives a direct
-                answer with a source citation. Users can verify without leaving the
-                conversation.
-              </p>
+              <div className="cs__decision-body">
+                <h3>Replace menus with conversation</h3>
+                <p>
+                  We removed menus entirely. Users type questions like they&rsquo;d ask a
+                  colleague. Testing surfaced something unexpected: users preferred occasionally
+                  rephrasing over clicking through five menu levels. Rephrase is effort they
+                  choose. Navigation is effort imposed on them.
+                </p>
+              </div>
+              <div className="cs__decision-alt">
+                <span className="cs__decision-alt-label">The Alternative</span>
+                <p>Improve the menu categories and hierarchy. Would have optimized the wrong interaction entirely.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -196,23 +261,29 @@ function HPEChatbot() {
       {/* ── Reality ── */}
       <section className="cs__reality section">
         <div className="container">
-          <p className="cs__label fade-up">What Actually Happened</p>
+          <p className="cs__label fade-up">Reality</p>
+          <h2 className="cs__section-heading fade-up">How it actually went.</h2>
           <div className="cs__reality-grid">
             <div className="cs__reality-card fade-up stagger-1">
-              <h3>The pushback</h3>
+              <div className="cs__reality-accent" />
+              <h3>Two projects, one designer, one release cycle</h3>
               <p>
-                Stakeholders wanted the AI to always sound confident. &ldquo;Users don&rsquo;t
-                want to hear &lsquo;I&rsquo;m not sure.&rsquo;&rdquo; But testing showed the
-                opposite &mdash; users escalated less when the AI was transparent about its
-                limits.
+                This project ran simultaneously with HPE PFA on different release tracks.
+                Priority was managed through the product roadmap in collaboration with
+                individual PMs. Every requirement started with a scope conversation &mdash;
+                what looked small on a brief often expanded once the user flows were mapped.
+                Catching that early was the difference between delivering and scrambling.
               </p>
             </div>
             <div className="cs__reality-card fade-up stagger-2">
-              <h3>The surprise</h3>
+              <div className="cs__reality-accent" />
+              <h3>Three weeks inside an active product cycle</h3>
               <p>
-                Classic mode usage dropped to 15% within six weeks. Not because we forced
-                migration &mdash; but because once people trusted the new system, they
-                didn&rsquo;t need the safety net anymore.
+                To prototype conversational patterns fast enough, I built test flows using
+                Claude and Cursor. That wasn&rsquo;t in the original plan. We tested 50
+                common queries across all three user types &mdash; 78% correct on first
+                attempt, 94% after clarification. That pace was only possible because of how
+                we tested: each session answered one specific question, not everything at once.
               </p>
             </div>
           </div>
@@ -222,25 +293,43 @@ function HPEChatbot() {
       {/* ── Outcome ── */}
       <section className="cs__outcome section">
         <div className="container">
-          <p className="cs__label fade-up">Outcome</p>
           <div className="cs__outcome-grid">
-            <p className="cs__outcome-desc fade-up">
-              The redesign launched to HPE&rsquo;s full enterprise customer base. Within
-              the first month, escalation rates dropped from 78% to 46%. Chatbot usage
-              tripled. Average resolution time fell to under two minutes.
-            </p>
+            <div className="cs__outcome-left fade-up">
+              <p className="cs__label">Outcome</p>
+              <h2 className="cs__section-heading">
+                What changed for users &mdash; and for the business.
+              </h2>
+              <p className="cs__outcome-desc">
+                32% reduction in escalations &mdash; from 78% to 46% &mdash; in the first
+                month. Users who had previously bypassed the chatbot entirely started using
+                it. Resolution time dropped from 8+ minutes to under 2 minutes. The
+                mode-switching data was the most interesting finding. Users who switched to
+                Classic weren&rsquo;t abandoning the product &mdash; many switched back to
+                AI mode within the same session after confirming it could handle their query
+                type. The escape route became a trust-building mechanism.
+              </p>
+            </div>
             <div className="cs__outcome-metrics fade-up">
               <div className="cs__outcome-metric">
-                <span className="cs__outcome-value">78% &rarr; 46%</span>
-                <span className="cs__outcome-label">escalation rate</span>
+                <span className="cs__outcome-big-value">32%</span>
+                <div>
+                  <span className="cs__outcome-metric-label">Fewer escalations</span>
+                  <span className="cs__outcome-metric-detail">From 78% to 46% in first month</span>
+                </div>
               </div>
               <div className="cs__outcome-metric">
-                <span className="cs__outcome-value">3x</span>
-                <span className="cs__outcome-label">chatbot usage increase</span>
+                <span className="cs__outcome-big-value">3x</span>
+                <div>
+                  <span className="cs__outcome-metric-label">Chatbot usage</span>
+                  <span className="cs__outcome-metric-detail">Among users who previously bypassed it</span>
+                </div>
               </div>
               <div className="cs__outcome-metric">
-                <span className="cs__outcome-value">&lt;2 min</span>
-                <span className="cs__outcome-label">average resolution</span>
+                <span className="cs__outcome-big-value">2 min</span>
+                <div>
+                  <span className="cs__outcome-metric-label">Resolution time</span>
+                  <span className="cs__outcome-metric-detail">Down from 8+ minutes</span>
+                </div>
               </div>
             </div>
           </div>
@@ -250,24 +339,24 @@ function HPEChatbot() {
       {/* ── Hindsight ── */}
       <section className="cs__hindsight section">
         <div className="container">
-          <p className="cs__label fade-up">In Hindsight</p>
           <div className="cs__hindsight-grid">
             <div className="cs__hindsight-left fade-up">
+              <p className="cs__label">Hindsight</p>
               <p>
-                The biggest lesson: trust is a design material. Every interaction either
-                builds or erodes it. The chatbot didn&rsquo;t need to be smarter &mdash;
-                it needed to be more honest about what it could and couldn&rsquo;t do.
-              </p>
-              <p>
-                If I did this again, I&rsquo;d push harder on the feedback loop &mdash;
-                letting users rate answers and feeding that back into the AI&rsquo;s
-                confidence scoring.
+                I came into this project thinking the challenge was conversational flow. The
+                real challenge was trust. What I&rsquo;d do differently: establish baseline
+                metrics before launch, not after &mdash; we reconstructed pre-launch data
+                from support logs and it was messy. And I&rsquo;d design uncertainty as a
+                first-class pattern from day one. &ldquo;I&rsquo;m not sure, but here&rsquo;s
+                what I found&rdquo; should have been core, not an afterthought. AI
+                doesn&rsquo;t need to be perfect to be useful. It needs to be honest.
               </p>
             </div>
             <div className="cs__hindsight-next fade-up">
               <p className="cs__label">Next Project</p>
+              <h3 className="cs__next-title">HPE Premium Account Family</h3>
               <Link to="/case-studies/hpe-pfa" className="cs__next-link">
-                HPE Premium Account Family &rarr;
+                Read case study &rarr;
               </Link>
             </div>
           </div>
