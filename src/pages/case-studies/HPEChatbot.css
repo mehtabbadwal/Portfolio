@@ -100,7 +100,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 3rem;
-  row-gap: 1rem;
+  row-gap: 0.875rem;
   align-items: baseline;
 }
 
@@ -110,19 +110,17 @@
 
 .cs__hero-card-label {
   font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.88px;
-  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 400;
   color: var(--color-light);
   white-space: nowrap;
 }
 
 .cs__hero-card-value {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-dark);
+  color: #4A3E38;
 }
 
 .cs__hero-card-impact {
@@ -131,6 +129,10 @@
 
 .cs__hero-card-impact > .cs__hero-card-label {
   display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
   margin-bottom: 1.25rem;
 }
 
