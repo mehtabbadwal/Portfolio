@@ -115,7 +115,7 @@ function Projects() {
 
           <div className="projects__grid case-studies-grid">
             {caseStudies.map((cs, i) => {
-              const hasPage = ['hpe-chatbot', 'hpe-pfa'].includes(cs.slug);
+              const hasPage = ['hpe-chatbot', 'hpe-pfa', 'fluidra-rewards'].includes(cs.slug);
               const CardTag = hasPage ? Link : 'a';
               const cardProps = hasPage
                 ? { to: `/case-studies/${cs.slug}` }
