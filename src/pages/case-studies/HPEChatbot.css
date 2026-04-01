@@ -30,11 +30,11 @@
 /* ── Hero ── */
 .cs__hero {
   padding-top: 5rem;
-  padding-bottom: 3.75rem;
+  padding-bottom: 0;
 }
 
 .cs__hero-top {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .cs__hero-meta {
@@ -46,22 +46,19 @@
 
 .cs__hero-year {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: var(--color-warm);
 }
 
-.cs__hero-dot {
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--color-accent);
+.cs__hero-meta-dot {
+  color: var(--color-light);
 }
 
 .cs__hero-tag {
   font-family: var(--font-body);
   font-size: 0.6875rem;
   font-weight: 500;
-  letter-spacing: 0.44px;
+  letter-spacing: 0.88px;
   text-transform: uppercase;
   color: var(--color-warm);
   background: #EAE4D8;
@@ -71,12 +68,12 @@
 
 .cs__hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-size: clamp(2.5rem, 4.5vw, 3.25rem);
   font-weight: 400;
   font-style: italic;
   line-height: 1.2;
   color: var(--color-dark);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .cs__hero-subtitle {
@@ -85,26 +82,33 @@
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-warm);
-  max-width: 800px;
 }
 
-/* Hero Bar */
-.cs__hero-bar {
+/* Horizontal Card */
+.cs__hero-card {
+  background: #EDEADE;
+  border-radius: 16px;
+  padding: 2.25rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 2fr;
+  gap: 0 2rem;
+  align-items: start;
+  margin-bottom: 5rem;
+}
+
+.cs__hero-card-col {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 3.75rem;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
-.cs__meta-items {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  flex: 1;
-  max-width: 700px;
+.cs__hero-card-divider {
+  width: 1px;
+  background: #D8D2C8;
+  align-self: stretch;
 }
 
-.cs__meta-item-label {
+.cs__hero-card-label {
   display: block;
   font-family: var(--font-body);
   font-size: 0.6875rem;
@@ -112,45 +116,26 @@
   letter-spacing: 0.88px;
   text-transform: uppercase;
   color: var(--color-light);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.625rem;
 }
 
-.cs__meta-item-value {
+.cs__hero-card-value {
   font-family: var(--font-body);
   font-size: 0.9375rem;
   font-weight: 500;
-  color: var(--color-warm);
+  color: var(--color-dark);
 }
 
-/* Metrics Card */
-.cs__metrics-card {
-  background: #EAE4D8;
-  border-radius: 12px;
-  padding: 1.5rem;
-  min-width: 280px;
-  flex-shrink: 0;
-  border: 1px solid #E8E2D8;
+.cs__hero-card-col--impact {
+  gap: 1.25rem;
 }
 
-.cs__metrics-label {
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.88px;
-  text-transform: uppercase;
-  color: var(--color-light);
-  margin-bottom: 1.25rem;
+.cs__hero-card-metrics {
+  display: flex;
+  gap: 2rem;
 }
 
-.cs__metric {
-  margin-bottom: 1.25rem;
-}
-
-.cs__metric:last-of-type {
-  margin-bottom: 0;
-}
-
-.cs__metric-value {
+.cs__hero-card-metric-value {
   display: block;
   font-family: var(--font-heading);
   font-size: 2rem;
@@ -160,16 +145,10 @@
   margin-bottom: 0.25rem;
 }
 
-.cs__metric-text {
+.cs__hero-card-metric-text {
   font-family: var(--font-body);
   font-size: 0.8125rem;
   color: var(--color-warm);
-}
-
-.cs__metric-divider {
-  border: none;
-  border-top: 1px solid #E8E2D8;
-  margin: 1.25rem 0;
 }
 
 .cs__hero-image {
@@ -433,14 +412,19 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .cs__hero-bar {
-    flex-direction: column;
-    gap: 2rem;
+  .cs__hero-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .cs__metrics-card {
+  .cs__hero-card-divider {
     width: 100%;
-    min-width: auto;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .cs__hero-card-metrics {
+    flex-wrap: wrap;
   }
 
   .cs__impact-grid {
@@ -452,10 +436,6 @@
   .cs__two-col {
     flex-direction: column;
     gap: 2rem;
-  }
-
-  .cs__meta-items {
-    gap: 1.25rem;
   }
 
   .cs__image-placeholder--tall { height: 400px; }
