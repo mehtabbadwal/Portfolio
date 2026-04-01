@@ -3,22 +3,28 @@ import './Writing.css';
 
 const articles = [
   {
-    date: 'January 2026',
+    date: 'MAR 31',
+    author: 'MEHTAB BADWAL',
+    readTime: 5,
     tag: 'AI + UX',
-    title: 'When AI Changes Who\u2019s in Control',
-    description: 'As AI becomes more embedded in everyday products, something subtle changes in the user experience \u2014 often without being explicitly designed for.',
+    title: 'How to be an idea factory',
+    description: 'Behind every breakthrough is a designer who learned to produce ideas on demand, not wait for inspiration.',
   },
   {
-    date: 'October 2025',
+    date: 'JAN 13',
+    author: 'MEHTAB BADWAL',
+    readTime: 3,
     tag: 'BEHAVIORAL DESIGN',
-    title: 'Why Users Don\u2019t Say What They Feel',
-    description: 'Much of what drives user behavior happens before conscious thought \u2014 in instinct, emotion, and physical reaction.',
+    title: 'Writing is building now',
+    description: 'The line between writing and building has collapsed. Words are products.',
   },
   {
-    date: 'November 2024',
+    date: 'OCT 30',
+    author: 'MEHTAB BADWAL',
+    readTime: 4,
     tag: 'DECISION MAKING',
-    title: 'The Paradox of Choice in UX',
-    description: 'Too much freedom can paralyze users. Designing lighter, reversible choices restores ease, flow, and confidence.',
+    title: 'It\u2019s the opposite of death by a thousand paper cuts',
+    description: 'Small wins compound. Here\u2019s how to design for them.',
   },
 ];
 
@@ -89,7 +95,9 @@ function Writing() {
                   <div className="wp__card-meta">
                     <span className="wp__card-date">{a.date}</span>
                     <span className="wp__card-dot" />
-                    <span className="wp__card-tag">{a.tag}</span>
+                    <span className="wp__card-date">{a.author}</span>
+                    <span className="wp__card-dot" />
+                    <span className="wp__card-date">{a.readTime} min read</span>
                   </div>
                   <h3 className="wp__card-title">{a.title}</h3>
                   <p className="wp__card-desc">{a.description}</p>
