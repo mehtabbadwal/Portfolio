@@ -62,6 +62,68 @@ const BlogPost = ({
         </div>
       </section>
 
+      {/* Share Section */}
+      <div style={{
+        maxWidth: '680px',
+        margin: '0 auto',
+        padding: '0 2.5rem 3.75rem',
+      }}>
+        <div style={{
+          borderTop: '1px solid #E8E2D8',
+          paddingTop: '2.5rem',
+        }}>
+          <button
+            onClick={() => {
+              if (navigator.share) {
+                navigator.share({
+                  title: title,
+                  text: `${title} by ${author}`,
+                  url: window.location.href,
+                }).catch(() => {});
+              } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                  const btn = document.activeElement;
+                  const orig = btn.textContent;
+                  btn.textContent = 'Link copied!';
+                  btn.style.color = '#2C2420';
+                  setTimeout(() => {
+                    btn.textContent = orig;
+                    btn.style.color = '#7A6A60';
+                  }, 2000);
+                }).catch(() => {});
+              }
+            }}
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.9375rem',
+              fontWeight: 500,
+              color: '#7A6A60',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              transition: 'color 0.2s ease',
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#2C2420'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = '#7A6A60'; }}
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
+              <path
+                d="M10 6L14 2M14 2H10.5M14 2V5.5M6 10L2 14M2 14H5.5M2 14V10.5M14 10V13.5C14 13.7761 13.7761 14 13.5 14H10.5M2 6V2.5C2 2.22386 2.22386 2 2.5 2H5.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Share this article
+          </button>
+        </div>
+      </div>
+
       {/* Navigation Footer */}
       <section className="cs__next section">
         <div className="container">
