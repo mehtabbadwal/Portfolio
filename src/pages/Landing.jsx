@@ -196,7 +196,7 @@ function Landing() {
             </div>
             <div className="featured__image">
               <img
-                src={`${import.meta.env.BASE_URL}hpe-chatbot-hero.webp`}
+                src={`${import.meta.env.BASE_URL}hpe-chatbot-hero.svg`}
                 alt="HPE Chatbot interface showing conversational AI design"
                 className="featured__img"
               />
