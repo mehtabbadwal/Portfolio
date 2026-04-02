@@ -803,10 +803,16 @@
 
 @media (max-width: 1024px) {
   .hero__grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero__content {
+    order: 1;
   }
 
   .hero__photo {
+    order: 2;
     width: 100%;
     max-width: none;
   }
