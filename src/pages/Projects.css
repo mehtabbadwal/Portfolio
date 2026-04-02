@@ -146,7 +146,6 @@
 .cs-card__metrics {
   display: flex;
   gap: 2rem;
-  margin-bottom: 1.25rem;
   flex-wrap: wrap;
 }
 

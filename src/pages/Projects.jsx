@@ -137,7 +137,6 @@ function Projects() {
                       </div>
                     ))}
                   </div>
-                  <span className="cs-card__cta">Read case study &rarr;</span>
                 </CardTag>
               );
             })}
