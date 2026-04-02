@@ -303,7 +303,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
     const handleOpenEvent = () => open();
     window.addEventListener('open-chatbot', handleOpenEvent);
 
-    const API_URL = 'https://adorable-youtiao-e521ef.netlify.app/.netlify/functions/chat';
+    const API_URL = 'https://mehtab-chatbot.mehtabbadwal.workers.dev';
 
     async function send() {
       const text = inputEl.value.trim();
