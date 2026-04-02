@@ -190,8 +190,9 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">What kind of work do you do?</span></button>
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Tell me about your AI work</span></button>
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">How do you approach a new problem?</span></button>
+              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">How can I reach you?</span></button>
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Are you open to new roles?</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">What do you do outside of work?</span></button>
+              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Can I see your resume?</span></button>
             </div>
           </div>
           <div class="mllm-convo" id="mllm-convo" style="display:none;"></div>
