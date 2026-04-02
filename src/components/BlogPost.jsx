@@ -15,9 +15,13 @@ const BlogPost = ({
 
   return (
     <div className="cs" ref={pageRef} style={{ minHeight: '100vh' }}>
-      {/* Back Link */}
-      <section className="cs__hero section" style={{ paddingBottom: 0 }}>
-        <div className="container">
+      {/* Back Link + Header — aligned to body width */}
+      <section className="section" style={{ paddingBottom: 0 }}>
+        <div style={{
+          maxWidth: '680px',
+          margin: '0 auto',
+          padding: '0 2.5rem',
+        }}>
           <Link to="/writing" className="cs__back fade-up">&larr; Back to Writing</Link>
 
           {/* Title */}
