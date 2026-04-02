@@ -22,7 +22,7 @@ function Header() {
         </Link>
         <div className="header__right">
           <nav className="header__nav">
-            <NavLink to="/work">Projects</NavLink>
+            <NavLink to="/work">Work</NavLink>
             <NavLink to="/writing">Writing</NavLink>
             <NavLink to="/about">About</NavLink>
           </nav>

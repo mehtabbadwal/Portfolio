@@ -187,6 +187,36 @@ Wants: meaningful problems, collaborative team, no micromanagement.
 
 Contact: mehtabbadwal@gmail.com — open to opportunities.`;
 
+    // FAQ responses — zero API calls
+    const FAQ_MAP = [
+      { keys: ['email', 'contact', 'reach', 'get in touch'], answer: "You can reach me at mehtabbadwal@gmail.com or connect on LinkedIn. Always happy to talk design, research, or how systems actually work in the real world." },
+      { keys: ['resume', 'cv', 'download resume'], answer: "My resume is available in the navigation. Fair warning: it's the formal version. The real story is in the case studies." },
+      { keys: ['tools', 'software', 'what do you use', 'design tools'], answer: "I live in Figma for design, but the real work happens in research sessions and synthesis. I use whatever method gets me closest to understanding why people do what they do — interviews, usability testing, behavioral frameworks. The tools change, the questions don't." },
+      { keys: ['experience', 'years', 'how long', 'how many years'], answer: "I've been doing this for 6+ years across enterprise software, AI products, and B2B SaaS. Long enough to know that most problems aren't UX problems — they're systems problems that show up in the interface." },
+      { keys: ['process', 'approach', 'methodology', 'how do you design', 'how do you work'], answer: "Research first, always. I start with understanding behavior — what people actually do, not what they say they'll do. Then I build from there: insights → prototypes → testing → iteration. Every decision needs a behavioral framework behind it, or it's just decoration." },
+      { keys: ['hire', 'available', 'looking for work', 'open to opportunities', 'hiring'], answer: "Yes! I'm looking for senior UX roles where research and systems thinking actually matter. If that sounds like your team, email me at mehtabbadwal@gmail.com." },
+      { keys: ['location', 'where', 'based', 'live', 'san diego'], answer: "I'm based in sunny San Diego, where the sun and ocean remind me that good design, like good weather, should just work without making you think about it." },
+      { keys: ['case study', 'case studies', 'projects', 'portfolio', 'work', 'examples'], answer: "Check out the Work page — I've got case studies on AI chatbots that didn't try to be smarter than users, research tools that analysts actually wanted to use, and field service platforms built around a 40-minute reality check." },
+      { keys: ['industries', 'sectors', 'domains', 'what industries'], answer: "Enterprise software, AI products, field service, B2B SaaS. Basically anywhere the buyer isn't the user and someone's trying to solve an organizational problem with an interface." },
+      { keys: ['freelance', 'consulting', 'contract', 'part time'], answer: "I'm focused on full-time senior roles, but I'll consider the right consulting project. If you've got something interesting, reach out at mehtabbadwal@gmail.com." },
+    ];
+
+    function checkFAQ(text) {
+      const lower = text.toLowerCase();
+      for (const faq of FAQ_MAP) {
+        if (faq.keys.some(k => lower.includes(k))) return faq.answer;
+      }
+      return null;
+    }
+
+    function isPortfolioRelated(text) {
+      const lower = text.toLowerCase();
+      const offTopic = ['weather', 'news', 'stock', 'recipe', 'joke', 'math', 'translate', 'movie', 'game', 'sports', 'crypto'];
+      if (offTopic.some(k => lower.includes(k))) return false;
+      const onTopic = ['design', 'ux', 'ui', 'portfolio', 'work', 'case', 'project', 'mehtab', 'experience', 'contact', 'research', 'product', 'user', 'hpe', 'qubera', 'fluidra', 'buildrooms'];
+      return onTopic.some(k => lower.includes(k)) || text.length < 50;
+    }
+
     let history = [];
     let loading = false;
     let isOpen = false;
@@ -322,6 +352,31 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       history.push({ role: 'user', content: text });
       messages.scrollTop = messages.scrollHeight;
 
+      // Check FAQ first (free, instant)
+      const faqAnswer = checkFAQ(text);
+      if (faqAnswer) {
+        const faqEl = document.createElement('div');
+        faqEl.className = 'mllm-msg-assistant';
+        faqEl.textContent = faqAnswer;
+        convo.appendChild(faqEl);
+        history.push({ role: 'assistant', content: faqAnswer });
+        messages.scrollTop = messages.scrollHeight;
+        sendBtn.disabled = !inputEl.value.trim();
+        return;
+      }
+
+      // Check relevance (block off-topic)
+      if (!isPortfolioRelated(text)) {
+        const offEl = document.createElement('div');
+        offEl.className = 'mllm-msg-assistant';
+        offEl.textContent = "I can only help with questions about my design work and portfolio. What would you like to know?";
+        convo.appendChild(offEl);
+        history.push({ role: 'assistant', content: offEl.textContent });
+        messages.scrollTop = messages.scrollHeight;
+        sendBtn.disabled = !inputEl.value.trim();
+        return;
+      }
+
       loading = true;
       const assistantEl = document.createElement('div');
       assistantEl.className = 'mllm-msg-assistant streaming';
@@ -329,14 +384,15 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       convo.appendChild(assistantEl);
 
       try {
+        const recentMessages = history.slice(-4);
         const res = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             model: 'claude-sonnet-4-20250514',
-            max_tokens: 300,
+            max_tokens: 500,
             system: SYSTEM,
-            messages: history
+            messages: recentMessages
           })
         });
 
