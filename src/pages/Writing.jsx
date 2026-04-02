@@ -28,6 +28,7 @@ const articles = [
     title: 'Designing for Dignity in Healthcare',
     description: "Healthcare design isn\u2019t just about completing tasks. It\u2019s about preserving dignity when people feel most vulnerable.",
     image: null,
+    slug: 'designing-for-dignity',
   },
   {
     date: 'OCT 16',

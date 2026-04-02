@@ -12,6 +12,10 @@ function WhenAIShiftsControl() {
         title: 'Stay out of the way',
         url: '/blog/stay-out-of-the-way',
       }}
+      nextPost={{
+        title: 'Designing for Dignity in Healthcare',
+        url: '/blog/designing-for-dignity',
+      }}
     >
       <Paragraph>
         As AI becomes more embedded in everyday products, something subtle changes in
