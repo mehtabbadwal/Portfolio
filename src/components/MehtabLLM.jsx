@@ -11,7 +11,8 @@ export default function MehtabLLM() {
       }
       #mehtab-sidebar {
         position: fixed; top: 0; right: 0;
-        width: 420px; height: 100vh;
+        width: 420px; height: 100vh; height: 100dvh;
+        max-height: -webkit-fill-available;
         background: #FAF8F5; z-index: 300;
         display: flex; flex-direction: column;
         transform: translateX(100%);
@@ -116,6 +117,7 @@ export default function MehtabLLM() {
       .mllm-input-area {
         padding: 14px 20px 20px; border-top: 1px solid #EAE4D8;
         flex-shrink: 0; background: #FAF8F5;
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
       }
       .mllm-input-wrap {
         display: flex; align-items: flex-end; background: #F0EBE4;
@@ -127,7 +129,7 @@ export default function MehtabLLM() {
       #mllm-input {
         flex: 1; background: none; border: none; outline: none;
         font-family: 'Inter', 'Satoshi Variable', sans-serif;
-        font-size: 15px; font-weight: 400; color: #2C2420;
+        font-size: 16px; font-weight: 400; color: #2C2420;
         resize: none; min-height: 20px; max-height: 80px; line-height: 1.6;
       }
       #mllm-input::placeholder {
@@ -155,9 +157,16 @@ export default function MehtabLLM() {
         #mehtab-sidebar {
           width: 100%;
           border-left: none;
+          height: 100vh; height: 100dvh;
+          max-height: -webkit-fill-available;
         }
         body.sidebar-open {
           overflow: hidden;
+          position: fixed;
+          width: 100%;
+        }
+        .mllm-input-area {
+          padding-bottom: max(20px, env(safe-area-inset-bottom));
         }
       }
     `;
@@ -457,8 +466,27 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       sendBtn.disabled = !inputEl.value.trim();
     }
 
+    // Handle mobile keyboard visibility
+    const handleViewportResize = () => {
+      if (isOpen && isMobile() && window.visualViewport) {
+        const vv = window.visualViewport;
+        sidebar.style.height = vv.height + 'px';
+        sidebar.style.top = vv.offsetTop + 'px';
+        messages.scrollTop = messages.scrollHeight;
+      }
+    };
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', handleViewportResize);
+      window.visualViewport.addEventListener('scroll', handleViewportResize);
+    }
+
     return () => {
       window.removeEventListener('open-chatbot', handleOpenEvent);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener('resize', handleViewportResize);
+        window.visualViewport.removeEventListener('scroll', handleViewportResize);
+      }
       try { document.head.removeChild(style); } catch {}
     };
   }, []);
