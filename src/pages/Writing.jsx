@@ -19,6 +19,7 @@ const articles = [
     title: 'When AI Shifts Control',
     description: 'As AI becomes embedded in everyday products, something subtle shifts in the user experience: control moves quietly from human judgment to system suggestion.',
     image: null,
+    slug: 'when-ai-shifts-control',
   },
   {
     date: 'OCT 21',
