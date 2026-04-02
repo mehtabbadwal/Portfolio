@@ -195,7 +195,11 @@ function Landing() {
               <span className="featured__cta">Read case study &rarr;</span>
             </div>
             <div className="featured__image">
-              <div className="featured__placeholder"><span>HPE Chatbot</span></div>
+              <img
+                src={`${import.meta.env.BASE_URL}hpe-chatbot-hero.webp`}
+                alt="HPE Chatbot interface showing conversational AI design"
+                className="featured__img"
+              />
             </div>
           </Link>
 
