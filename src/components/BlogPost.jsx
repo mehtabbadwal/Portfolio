@@ -37,21 +37,35 @@ const BlogPost = ({
             letterSpacing: '0.88px',
             textTransform: 'uppercase',
             color: 'var(--color-light)',
-            marginBottom: heroImage ? '3.75rem' : '2.5rem',
+            marginBottom: '3.75rem',
           }}>
             {date} &middot; {author} &middot; {readTime} min read
           </div>
 
-          {/* Hero Image (optional) */}
-          {heroImage && (
-            <div className="cs__hero-image fade-up" style={{ marginBottom: '3.75rem' }}>
+          {/* Hero Image — always visible */}
+          <div className="cs__hero-image fade-up" style={{
+            marginBottom: '3.75rem',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+            {heroImage ? (
               <img
                 src={heroImage}
                 alt={title}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
-            </div>
-          )}
+            ) : (
+              <span style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.9375rem',
+                color: 'var(--color-light)',
+                fontStyle: 'italic',
+              }}>
+                Hero image
+              </span>
+            )}
+          </div>
         </div>
       </section>
 
@@ -66,16 +80,21 @@ const BlogPost = ({
         </div>
       </section>
 
-      {/* Share Section */}
+      {/* Share + Navigation Footer — combined */}
       <div style={{
         maxWidth: '680px',
         margin: '0 auto',
-        padding: '0 2.5rem 3.75rem',
+        padding: '0 2.5rem',
       }}>
         <div style={{
           borderTop: '1px solid #E8E2D8',
           paddingTop: '2.5rem',
+          paddingBottom: '3.75rem',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
         }}>
+          {/* Left: Share button */}
           <button
             onClick={() => {
               if (navigator.share) {
@@ -123,35 +142,24 @@ const BlogPost = ({
                 strokeLinejoin="round"
               />
             </svg>
-            Share this article
+            Share
           </button>
-        </div>
-      </div>
 
-      {/* Navigation Footer */}
-      <section className="cs__next section">
-        <div className="container">
-          <hr className="cs__divider" />
-          <div className="cs__next-inner fade-up" style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-            {prevPost ? (
+          {/* Right: Navigation links */}
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            {prevPost && (
               <Link to={prevPost.url} className="cs__next-link" style={{ color: '#7A6A60' }}>
                 &larr; {prevPost.title}
               </Link>
-            ) : <div />}
-            {nextPost ? (
-              <div style={{ textAlign: 'right' }}>
-                <Link to={nextPost.url} className="cs__next-link">
-                  {nextPost.title} &rarr;
-                </Link>
-              </div>
-            ) : <div />}
+            )}
+            {nextPost && (
+              <Link to={nextPost.url} className="cs__next-link">
+                {nextPost.title} &rarr;
+              </Link>
+            )}
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
