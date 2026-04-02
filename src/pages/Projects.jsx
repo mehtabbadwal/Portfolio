@@ -176,10 +176,12 @@ function Projects() {
                 <h3 className="skill-card__title">{s.title}</h3>
                 <p className="skill-card__hook">{s.hook}</p>
                 <p className="skill-card__how">{s.howToUse}</p>
-                <a href="#" className="skill-card__download">
-                  <span>&darr;</span> Download skill
-                </a>
-                <p className="skill-card__file">Google Drive &middot; .txt file</p>
+                <div className="skill-card__footer">
+                  <a href="#" className="skill-card__download">
+                    <span>&darr;</span> Download skill
+                  </a>
+                  <p className="skill-card__file">Google Drive &middot; .txt file</p>
+                </div>
               </div>
             ))}
           </div>

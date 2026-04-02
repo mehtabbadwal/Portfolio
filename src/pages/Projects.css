@@ -297,6 +297,14 @@
   font-style: italic;
   padding-left: 1rem;
   border-left: 3px solid var(--color-accent);
+  flex: 1;
+}
+
+.skill-card__footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .skill-card__tag {
@@ -336,7 +344,6 @@
   font-size: 0.75rem;
   color: #9A8A7D;
   text-align: center;
-  margin-top: -0.5rem;
 }
 
 /* ── Why These Exist ── */
