@@ -4,10 +4,14 @@ function ShadowSystemProblem() {
   return (
     <BlogPost
       title="The Shadow System Problem"
-      date="FEB 10"
+      date="MAR 8"
       author="MEHTAB BADWAL"
       readTime="8"
       heroImage={null}
+      prevPost={{
+        title: 'Stay out of the way',
+        url: '/blog/stay-out-of-the-way',
+      }}
       nextPost={{
         title: 'When AI Shifts Control',
         url: '/blog/when-ai-shifts-control',

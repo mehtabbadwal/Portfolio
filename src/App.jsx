@@ -10,6 +10,7 @@ import Qubera from './pages/case-studies/Qubera';
 import FluidraPro from './pages/case-studies/FluidraPro';
 import FluidraRewards from './pages/case-studies/FluidraRewards';
 import ShadowSystemProblem from './pages/blog/ShadowSystemProblem';
+import StayOutOfTheWay from './pages/blog/StayOutOfTheWay';
 import ComingSoon from './pages/ComingSoon';
 import MehtabLLM from './components/MehtabLLM';
 import FloatingChatButton from './components/FloatingChatButton';
@@ -29,6 +30,7 @@ function App() {
           <Route path="case-studies/fluidra" element={<FluidraPro />} />
           <Route path="case-studies/fluidra-rewards" element={<FluidraRewards />} />
           <Route path="blog/shadow-system-problem" element={<ShadowSystemProblem />} />
+          <Route path="blog/stay-out-of-the-way" element={<StayOutOfTheWay />} />
           <Route path="case-studies/:slug" element={<ComingSoon title="Case Study" />} />
         </Route>
       </Routes>

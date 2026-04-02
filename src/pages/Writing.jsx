@@ -4,6 +4,15 @@ import './Writing.css';
 
 const articles = [
   {
+    date: 'MAR 1',
+    author: 'MEHTAB BADWAL',
+    readTime: 4,
+    title: 'Stay out of the way',
+    description: "Design shouldn\u2019t assume how much time a person has. It should adapt to the fact that the answer changes moment to moment.",
+    image: null,
+    slug: 'stay-out-of-the-way',
+  },
+  {
     date: 'JAN 16',
     author: 'MEHTAB BADWAL',
     readTime: 5,
@@ -56,7 +65,7 @@ function Writing() {
               products we build. It starts with observation. Usually in the middle
               of something else entirely.
             </p>
-            <p className="wp__count fade-up">5 essays</p>
+            <p className="wp__count fade-up">6 essays</p>
           </div>
         </div>
       </section>
@@ -77,7 +86,7 @@ function Writing() {
                 them.
               </p>
               <div className="wp__featured-meta">
-                <span className="wp__featured-date">February 2025</span>
+                <span className="wp__featured-date">March 2025</span>
                 <Link to="/blog/shadow-system-problem" className="wp__featured-link">Read essay &rarr;</Link>
               </div>
             </div>
@@ -92,8 +101,13 @@ function Writing() {
       <section className="wp__articles section">
         <div className="container">
           <div className="wp__articles-grid">
-            {articles.map((a, i) => (
-              <a href="#" key={i} className={`wp__card fade-up stagger-${i + 1}`}>
+            {articles.map((a, i) => {
+              const CardTag = a.slug ? Link : 'a';
+              const cardProps = a.slug
+                ? { to: `/blog/${a.slug}` }
+                : { href: '#' };
+              return (
+              <CardTag {...cardProps} key={i} className={`wp__card fade-up stagger-${i + 1}`}>
                 <div className="wp__card-image">
                   {a.image ? (
                     <img src={a.image} alt={a.title} className="wp__card-img" />
@@ -113,8 +127,9 @@ function Writing() {
                   <p className="wp__card-desc">{a.description}</p>
                   <span className="wp__card-cta">Read essay &rarr;</span>
                 </div>
-              </a>
-            ))}
+              </CardTag>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -134,7 +149,7 @@ function Writing() {
             </div>
             <div className="wp__about-stats fade-up">
               <div className="wp__stat">
-                <span className="wp__stat-value">5</span>
+                <span className="wp__stat-value">6</span>
                 <span className="wp__stat-label">essays published</span>
               </div>
               <div className="wp__stat">
