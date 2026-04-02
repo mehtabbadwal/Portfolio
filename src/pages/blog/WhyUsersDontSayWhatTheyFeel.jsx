@@ -12,6 +12,10 @@ function WhyUsersDontSayWhatTheyFeel() {
         title: 'Designing for Dignity in Healthcare',
         url: '/blog/designing-for-dignity',
       }}
+      nextPost={{
+        title: 'The Weight of Choice',
+        url: '/blog/the-weight-of-choice',
+      }}
     >
       <Paragraph>
         Most user research asks people what they think about an interface. But the
