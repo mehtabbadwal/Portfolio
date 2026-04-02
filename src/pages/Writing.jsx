@@ -37,6 +37,7 @@ const articles = [
     title: "Why Users Don\u2019t Say What They Feel",
     description: 'Most user research asks people what they think about an interface. But much of what drives behavior happens before thought \u2014 in instinct, rhythm, and physical reaction.',
     image: null,
+    slug: 'why-users-dont-say-what-they-feel',
   },
   {
     date: 'NOV 13',

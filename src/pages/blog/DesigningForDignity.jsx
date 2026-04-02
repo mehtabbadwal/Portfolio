@@ -12,6 +12,10 @@ function DesigningForDignity() {
         title: 'When AI Shifts Control',
         url: '/blog/when-ai-shifts-control',
       }}
+      nextPost={{
+        title: "Why Users Don\u2019t Say What They Feel",
+        url: '/blog/why-users-dont-say-what-they-feel',
+      }}
     >
       <Paragraph>
         Healthcare interfaces often focus on efficiency. Fill out this form. Click

@@ -13,6 +13,7 @@ import ShadowSystemProblem from './pages/blog/ShadowSystemProblem';
 import StayOutOfTheWay from './pages/blog/StayOutOfTheWay';
 import WhenAIShiftsControl from './pages/blog/WhenAIShiftsControl';
 import DesigningForDignity from './pages/blog/DesigningForDignity';
+import WhyUsersDontSayWhatTheyFeel from './pages/blog/WhyUsersDontSayWhatTheyFeel';
 import ComingSoon from './pages/ComingSoon';
 import MehtabLLM from './components/MehtabLLM';
 import FloatingChatButton from './components/FloatingChatButton';
@@ -35,6 +36,7 @@ function App() {
           <Route path="blog/stay-out-of-the-way" element={<StayOutOfTheWay />} />
           <Route path="blog/when-ai-shifts-control" element={<WhenAIShiftsControl />} />
           <Route path="blog/designing-for-dignity" element={<DesigningForDignity />} />
+          <Route path="blog/why-users-dont-say-what-they-feel" element={<WhyUsersDontSayWhatTheyFeel />} />
           <Route path="case-studies/:slug" element={<ComingSoon title="Case Study" />} />
         </Route>
       </Routes>
