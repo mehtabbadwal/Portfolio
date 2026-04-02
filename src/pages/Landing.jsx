@@ -212,7 +212,15 @@ function Landing() {
                 className={`project-card fade-up stagger-${i + 1}`}
               >
                 <div className="project-card__image">
-                  <div className="project-card__placeholder"><span>{project.title}</span></div>
+                  {project.slug === 'hpe-pfa' ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}pfa-hero.webp`}
+                      alt="HPE PFA interface showing power user workflow optimization"
+                      className="project-card__img"
+                    />
+                  ) : (
+                    <div className="project-card__placeholder"><span>{project.title}</span></div>
+                  )}
                 </div>
                 <div className="project-card__body">
                   <div className="project-card__meta">
