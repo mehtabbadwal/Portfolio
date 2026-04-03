@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
@@ -14,6 +15,7 @@ const caseStudies = [
       { value: '2 min', label: 'avg resolution' },
     ],
     slug: 'hpe-chatbot',
+    categories: ['Enterprise', 'AI Products'],
   },
   {
     year: '2025',
@@ -25,6 +27,7 @@ const caseStudies = [
       { value: '3 wks', label: 'MVP shipped' },
     ],
     slug: 'hpe-pfa',
+    categories: ['Enterprise'],
   },
   {
     year: '2024',
@@ -36,6 +39,7 @@ const caseStudies = [
       { value: '30%', label: 'faster decisions' },
     ],
     slug: 'qubera',
+    categories: ['AI Products', '0\u21921'],
   },
   {
     year: '2023',
@@ -47,6 +51,7 @@ const caseStudies = [
       { value: '25%', label: 'task efficiency' },
     ],
     slug: 'fluidra',
+    categories: ['Mobile'],
   },
   {
     year: '2024',
@@ -59,6 +64,7 @@ const caseStudies = [
       { value: '55', label: 'screens shipped' },
     ],
     slug: 'fluidra-rewards',
+    categories: ['Mobile', '0\u21921'],
   },
 ];
 
@@ -93,6 +99,11 @@ const filters = ['All', 'Enterprise', 'AI Products', '0\u21921', 'Mobile'];
 
 function Projects() {
   const pageRef = useScrollReveal();
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredStudies = activeFilter === 'All'
+    ? caseStudies
+    : caseStudies.filter(cs => cs.categories.includes(activeFilter));
 
   return (
     <div className="projects" ref={pageRef}>
@@ -109,16 +120,21 @@ function Projects() {
             </p>
           </div>
 
-          <div className="projects__filters fade-up">
-            {filters.map((f, i) => (
-              <button key={f} className={`projects__filter ${i === 0 ? 'projects__filter--active' : ''}`}>
+          <div className="projects__filters fade-up" role="group" aria-label="Filter projects by category">
+            {filters.map((f) => (
+              <button
+                key={f}
+                className={`projects__filter ${activeFilter === f ? 'projects__filter--active' : ''}`}
+                onClick={() => setActiveFilter(f)}
+                aria-pressed={activeFilter === f}
+              >
                 {f}
               </button>
             ))}
           </div>
 
           <div className="projects__grid case-studies-grid">
-            {caseStudies.map((cs, i) => {
+            {filteredStudies.map((cs, i) => {
               const hasPage = ['hpe-chatbot', 'hpe-pfa', 'qubera', 'fluidra', 'fluidra-rewards'].includes(cs.slug);
               const CardTag = hasPage ? Link : 'a';
               const cardProps = hasPage
