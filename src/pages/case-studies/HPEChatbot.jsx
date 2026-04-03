@@ -66,15 +66,6 @@ function HPEChatbot() {
         </div>
       </section>
 
-      {/* ── Before/After ── */}
-      <section className="cs__fullwidth-image section">
-        <div className="container">
-          <div className="cs__image-placeholder cs__image-placeholder--tall fade-up">
-            <span>Before/After comparison &mdash; Menu-driven vs. AI-powered conversation</span>
-          </div>
-        </div>
-      </section>
-
       {/* ── Problem ── */}
       <section className="cs__narrative section">
         <div className="container">
