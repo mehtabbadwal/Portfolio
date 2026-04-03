@@ -245,24 +245,6 @@
   gap: 1rem;
 }
 
-.skill-card__placeholder {
-  width: 100%;
-  height: 120px;
-  background: #4A3F38;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px dashed #7A6A60;
-}
-
-.skill-card__placeholder span {
-  font-family: var(--font-body);
-  font-size: 0.8125rem;
-  color: var(--color-light);
-  font-style: italic;
-}
-
 .skill-card__title {
   font-family: var(--font-heading);
   font-size: 1.125rem;

@@ -190,9 +190,6 @@ function Projects() {
           <div className="projects__skills-grid skills-grid">
             {skills.map((s, i) => (
               <div key={s.title} className={`skill-card fade-up stagger-${Math.min(i + 1, 4)}`}>
-                <div className="skill-card__placeholder">
-                  <span>Animation placeholder</span>
-                </div>
                 <h3 className="skill-card__title">{s.title}</h3>
                 <p className="skill-card__hook">{s.hook}</p>
                 <p className="skill-card__how">{s.howToUse.split('\n').map((line, j) => (
