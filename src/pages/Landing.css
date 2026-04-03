@@ -327,7 +327,6 @@
   object-position: center;
   display: block;
   transition: transform 0.4s ease;
-  mix-blend-mode: multiply;
 }
 
 .featured:hover .featured__img {
@@ -373,10 +372,6 @@
   display: block;
   border-radius: 8px;
   transition: transform 0.4s ease;
-}
-
-.project-card__img--blend {
-  mix-blend-mode: multiply;
 }
 
 .project-card:hover .project-card__img {

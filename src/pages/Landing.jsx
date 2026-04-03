@@ -30,7 +30,6 @@ const projectCards = [
     ],
     slug: 'hpe-chatbot',
     image: 'hpe-chatbot-hero.svg',
-    blendMode: true,
   },
   {
     title: 'HPE PFA',
@@ -66,7 +65,7 @@ const projectCards = [
       { value: '25%', label: 'task efficiency' },
     ],
     slug: 'fluidra',
-    image: null,
+    image: 'fluidra-service-hero.webp',
   },
 ];
 
@@ -188,7 +187,7 @@ function Landing() {
                     <img
                       src={`${import.meta.env.BASE_URL}${project.image}`}
                       alt={`${project.title} interface`}
-                      className={`project-card__img${project.blendMode ? ' project-card__img--blend' : ''}`}
+                      className="project-card__img"
                     />
                   ) : (
                     <div className="project-card__placeholder"><span>{project.title}</span></div>
