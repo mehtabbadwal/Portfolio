@@ -27,7 +27,7 @@ const caseStudies = [
       { value: '3 wks', label: 'MVP shipped' },
     ],
     slug: 'hpe-pfa',
-    categories: ['Enterprise'],
+    categories: ['Enterprise', '0\u21921'],
   },
   {
     year: '2024',
@@ -64,7 +64,7 @@ const caseStudies = [
       { value: '55', label: 'screens shipped' },
     ],
     slug: 'fluidra-rewards',
-    categories: ['Mobile', '0\u21921'],
+    categories: ['Mobile'],
   },
 ];
 
