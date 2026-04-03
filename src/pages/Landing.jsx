@@ -218,6 +218,12 @@ function Landing() {
                       alt="HPE PFA interface showing power user workflow optimization"
                       className="project-card__img"
                     />
+                  ) : project.slug === 'qubera' ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}qubera-hero.webp`}
+                      alt="Qubera AI analytics interface showing automated data extraction"
+                      className="project-card__img"
+                    />
                   ) : (
                     <div className="project-card__placeholder"><span>{project.title}</span></div>
                   )}
