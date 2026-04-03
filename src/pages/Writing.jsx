@@ -60,14 +60,12 @@ function Writing() {
         <div className="container">
           <p className="wp__label fade-up">Mind Meets Design</p>
           <h1 className="wp__title fade-up">
-            Writing about why people do what they do and what it means
-            for the products we build.
+            Why people do what they do&mdash;and why design often misses it.
           </h1>
           <div className="wp__header-flex">
             <p className="wp__intro fade-up">
-              I write about why people do what they do and what it means for the
-              products we build. It starts with observation. Usually in the middle
-              of something else entirely.
+              It starts with observation.<br />
+              Everything else follows.
             </p>
             <p className="wp__count fade-up">6 essays</p>
           </div>
