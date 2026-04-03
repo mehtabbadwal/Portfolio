@@ -226,7 +226,23 @@
 
 .projects__skills-header {
   margin-bottom: 3.75rem;
-  max-width: 900px;
+}
+
+.projects__skills-ctas {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.projects__skills-cta {
+  border-color: #7A6A60;
+  color: #C4B5A8;
+  font-size: 0.8125rem;
+}
+
+.projects__skills-cta:hover {
+  border-color: #C4B5A8;
+  color: #F4F0E8;
 }
 
 .projects__skills-grid {
@@ -336,36 +352,6 @@
   text-align: center;
 }
 
-/* ── Why These Exist ── */
-.projects__why {
-  background: var(--color-bg);
-}
-
-.projects__why-grid {
-  display: flex;
-  gap: 5rem;
-}
-
-.projects__why-left,
-.projects__why-right {
-  flex: 1;
-}
-
-.projects__why-right {
-  background: #EAE4D8;
-  padding: 2.5rem;
-  border-radius: 12px;
-}
-
-.projects__why-body {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.75;
-  color: var(--color-warm);
-  margin-bottom: 2rem;
-}
-
 /* ── Bottom CTA ── */
 .projects__cta {
   background: var(--color-bg);
@@ -431,9 +417,8 @@
 }
 
 @media (max-width: 768px) {
-  .projects__why-grid {
+  .projects__skills-ctas {
     flex-direction: column;
-    gap: 2rem;
   }
 
   .projects__cta-inner {

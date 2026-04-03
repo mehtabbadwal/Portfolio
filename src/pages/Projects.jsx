@@ -173,17 +173,24 @@ function Projects() {
               Tools I built for designers who think in systems.
             </h2>
             <p className="projects__skills-intro">
-              These are Claude skills I built and use in my own workflow. Each one is a
-              prompt system &mdash; paste it into Claude, describe what you&rsquo;re working
-              on, and it does the thinking with you. No setup. No API key. Just download
-              and use.
+              I built these Claude skills because I kept doing the same thinking over
+              and over &mdash; setting up design systems, structuring research plans,
+              writing component specs. These skills don&rsquo;t replace the thinking.
+              They give it a better starting point.
             </p>
             <div className="projects__skills-note">
               <span className="projects__skills-note-dot" />
               <p>
-                A Claude skill is a structured prompt system. Open Claude, paste the skill,
-                describe your design problem. That&rsquo;s it.
+                Download the ZIP, add it to Claude, and start using it.
               </p>
+            </div>
+            <div className="projects__skills-ctas fade-up">
+              <a href="mailto:mehtabbadwal@gmail.com" className="btn projects__skills-cta">
+                Email me
+              </a>
+              <a href="https://www.linkedin.com/in/mehtabbadwal/" target="_blank" rel="noopener noreferrer" className="btn projects__skills-cta">
+                Message me on LinkedIn
+              </a>
             </div>
           </div>
 
@@ -204,33 +211,6 @@ function Projects() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Why These Exist + Skill Request ── */}
-      <section className="projects__why projects-section section">
-        <div className="container">
-          <div className="projects__why-grid two-column-cta">
-            <div className="projects__why-left fade-up">
-              <p className="projects__label">Why These Exist</p>
-              <p className="projects__why-body">
-                I started building Claude skills because I kept doing the same thinking
-                over and over &mdash; setting up design systems, structuring research plans,
-                writing component specs. These skills don&rsquo;t replace the thinking. They
-                give it a better starting point.
-              </p>
-            </div>
-            <div className="projects__why-right fade-up">
-              <p className="projects__label">Have a Skill Request?</p>
-              <p className="projects__why-body">
-                If there&rsquo;s a design workflow you&rsquo;d want a skill for, let me know.
-                I build these when I find a gap worth closing.
-              </p>
-              <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
-                mehtabbadwal@gmail.com
-              </a>
-            </div>
           </div>
         </div>
       </section>
