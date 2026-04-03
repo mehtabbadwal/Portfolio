@@ -65,23 +65,23 @@ const caseStudies = [
 const skills = [
   {
     title: 'Design System Skill',
-    hook: 'From component chaos to systematic clarity.',
-    howToUse: 'Go in with specifics. "Build a design system" is too vague. Show up with your product context, component needs, or audit requirements \u2014 then it structures the work.',
+    hook: 'A design system process AI can actually follow.',
+    howToUse: "Knows what to build first, what to clarify before starting, and how to handle failures mid-way.\nBuilt through real use \u2014 not theory.",
   },
   {
     title: 'UX Research Skill',
-    hook: 'Turn raw observations into behavioral insights faster.',
-    howToUse: 'Go in with intent. "Research my product" won\u2019t get you far. Show up with a specific behavior you\u2019re trying to understand \u2014 then it does serious work.',
+    hook: "Understand why users aren\u2019t doing what you expected.",
+    howToUse: "You\u2019ll either get a clear direction grounded in behavior \u2014 or proof that your approach already works.\nBoth are useful.",
   },
   {
     title: 'UI Designer Skill',
-    hook: 'Visual systems that scale with your product.',
-    howToUse: 'Go in with context. "Make it look good" won\u2019t cut it. Show up with your wireframes, brand constraints, or platform requirements \u2014 then it delivers polish.',
+    hook: 'Make visual decisions that actually hold.',
+    howToUse: "Not decoration. Structure.\nIt works through spacing, scale, and hierarchy \u2014 and calls out what feels off, even when you can\u2019t name it.",
   },
   {
     title: 'UX Designer Skill',
-    hook: 'Flow decisions backed by behavioral logic.',
-    howToUse: 'Go in with the problem. "Design a flow" is too open. Show up with the user decision you\u2019re trying to support \u2014 then it applies behavioral logic.',
+    hook: "Design for who\u2019s actually using the product.",
+    howToUse: "It won\u2019t move until it understands the user, their role, and their state of mind.\nThe same problem gets a different answer depending on who\u2019s asking it.",
   },
 ];
 
@@ -175,12 +175,14 @@ function Projects() {
                 </div>
                 <h3 className="skill-card__title">{s.title}</h3>
                 <p className="skill-card__hook">{s.hook}</p>
-                <p className="skill-card__how">{s.howToUse}</p>
+                <p className="skill-card__how">{s.howToUse.split('\n').map((line, j) => (
+                  <span key={j}>{line}{j < s.howToUse.split('\n').length - 1 && <br />}</span>
+                ))}</p>
                 <div className="skill-card__footer">
                   <a href="#" className="skill-card__download">
                     <span>&darr;</span> Download skill
                   </a>
-                  <p className="skill-card__file">Google Drive &middot; .txt file</p>
+                  <p className="skill-card__file">Google Drive &middot; ZIP file with skill.md + references</p>
                 </div>
               </div>
             ))}
