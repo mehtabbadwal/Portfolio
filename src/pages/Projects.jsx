@@ -65,8 +65,10 @@ const caseStudies = [
 const skills = [
   {
     title: 'Design System Skill',
-    hook: 'From component chaos to systematic clarity.',
-    howToUse: 'Go in with specifics. "Build a design system" is too vague. Show up with your product context, component needs, or audit requirements \u2014 then it structures the work.',
+    hook: 'Guide AI to build a design system that actually holds.',
+    howToUse: 'It defines what to build first, what questions to answer before touching Figma, and how to recover when things break.
+Built on a real product — not a template.
+That\u2019s what makes it reliable.',
   },
   {
     title: 'UX Research Skill',
