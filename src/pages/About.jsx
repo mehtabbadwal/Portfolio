@@ -187,7 +187,7 @@ function About() {
                 <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
                   mehtabbadwal@gmail.com
                 </a>
-                <a href="/resume" target="_blank" rel="noopener noreferrer" className="btn about__resume-btn">
+                <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="btn about__resume-btn">
                   Resume
                 </a>
               </div>

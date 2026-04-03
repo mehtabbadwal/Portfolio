@@ -11,7 +11,7 @@ function Footer() {
             <Link to="/work">Projects</Link>
             <Link to="/writing">Writing</Link>
             <Link to="/about">About</Link>
-            <a href="/resume" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer">Resume</a>
           </nav>
         </div>
       </div>

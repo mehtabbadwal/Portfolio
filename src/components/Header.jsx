@@ -40,7 +40,7 @@ function Header() {
                 <circle cx="4" cy="4" r="2" />
               </svg>
             </a>
-            <a href="/resume" target="_blank" rel="noopener noreferrer" className="header__resume">
+            <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="header__resume" aria-label="Download Mehtab Badwal's resume">
               Resume
             </a>
           </div>
@@ -62,7 +62,7 @@ function Header() {
           <NavLink to="/work" onClick={() => setMenuOpen(false)}>Work</NavLink>
           <NavLink to="/writing" onClick={() => setMenuOpen(false)}>Writing</NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
-          <a href="/resume" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a>
+          <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a>
         </nav>
       </div>
     </header>
