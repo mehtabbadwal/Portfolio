@@ -114,6 +114,11 @@ export default function MehtabLLM() {
       .mllm-followup:hover .mllm-followup-text { color: #C4603E; }
       .mllm-followup-arrow { font-size: 12px; color: #B0A090; flex-shrink: 0; }
       .mllm-followup-text { font-size: 13px; color: #7A6A60; font-weight: 400; }
+      .mllm-followup-label {
+        font-size: 13px; color: #B0A090; font-weight: 400;
+        margin: 0 0 4px; padding: 0;
+        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+      }
       .mllm-input-area {
         padding: 14px 20px 20px; border-top: 1px solid #EAE4D8;
         flex-shrink: 0; background: #FAF8F5;
@@ -345,6 +350,37 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
 
     const API_URL = 'https://long-surf-14cfmehtab-chatbot.mehtabbadwal.workers.dev';
 
+    const MENU_OPTIONS = [
+      'What kind of work do you do?',
+      'Tell me about your AI work',
+      'How do you approach a new problem?',
+      'How can I reach you?',
+      'Are you open to new roles?',
+      'Can I see your resume?',
+    ];
+
+    function appendMenu() {
+      // Remove any existing menu in convo
+      const old = convo.querySelector('.mllm-followups');
+      if (old) old.remove();
+
+      const div = document.createElement('div');
+      div.className = 'mllm-followups';
+      const label = document.createElement('p');
+      label.className = 'mllm-followup-label';
+      label.textContent = 'What else would you like to know?';
+      div.appendChild(label);
+      MENU_OPTIONS.forEach(q => {
+        const btn = document.createElement('button');
+        btn.className = 'mllm-followup';
+        btn.innerHTML = '<span class="mllm-followup-arrow">↳</span><span class="mllm-followup-text">' + q + '</span>';
+        btn.addEventListener('click', () => { inputEl.value = q; send(); });
+        div.appendChild(btn);
+      });
+      convo.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
     async function send() {
       const text = inputEl.value.trim();
       if (!text || loading) return;
@@ -370,7 +406,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
         faqEl.textContent = faqAnswer;
         convo.appendChild(faqEl);
         history.push({ role: 'assistant', content: faqAnswer });
-        messages.scrollTop = messages.scrollHeight;
+        appendMenu();
         sendBtn.disabled = !inputEl.value.trim();
         return;
       }
@@ -382,7 +418,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
         offEl.textContent = "I can only help with questions about my design work and portfolio. What would you like to know?";
         convo.appendChild(offEl);
         history.push({ role: 'assistant', content: offEl.textContent });
-        messages.scrollTop = messages.scrollHeight;
+        appendMenu();
         sendBtn.disabled = !inputEl.value.trim();
         return;
       }
@@ -417,44 +453,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
         assistantEl.classList.remove('streaming');
         assistantEl.textContent = fullText;
         history.push({ role: 'assistant', content: fullText });
-        messages.scrollTop = messages.scrollHeight;
-
-        // Generate follow-up questions
-        try {
-          const fRes = await fetch(API_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              model: 'claude-sonnet-4-20250514',
-              max_tokens: 100,
-              system: 'Generate 3 short follow-up questions. One per line. No numbers. No arrows. Under 9 words each.',
-              messages: [{ role: 'user', content: 'Answer: "' + fullText + '"' }]
-            })
-          });
-
-          if (fRes.ok) {
-            const fData = await fRes.json();
-            const questions = (fData.content?.[0]?.text || '')
-              .split('\n').map(q => q.trim())
-              .filter(q => q.length > 4).slice(0, 3);
-
-            if (questions.length) {
-              const div = document.createElement('div');
-              div.className = 'mllm-followups';
-              questions.forEach(q => {
-                const btn = document.createElement('button');
-                btn.className = 'mllm-followup';
-                btn.innerHTML = '<span class="mllm-followup-arrow">↳</span><span class="mllm-followup-text">' + q + '</span>';
-                btn.addEventListener('click', () => { inputEl.value = q; send(); });
-                div.appendChild(btn);
-              });
-              convo.appendChild(div);
-              messages.scrollTop = messages.scrollHeight;
-            }
-          }
-        } catch (e) {
-          console.log('Follow-ups failed:', e);
-        }
+        appendMenu();
 
       } catch (err) {
         console.error('Chat error:', err);
