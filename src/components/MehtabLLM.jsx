@@ -201,26 +201,51 @@ Wants: meaningful problems, collaborative team, no micromanagement.
 
 Contact: mehtabbadwal@gmail.com — open to opportunities.`;
 
-    // FAQ responses — zero API calls
+    // FAQ responses — zero API calls, with topic for smart follow-ups
     const FAQ_MAP = [
-      { keys: ['email', 'contact', 'reach', 'get in touch'], answer: "You can reach me at mehtabbadwal@gmail.com or connect on LinkedIn. Always happy to talk design, research, or how systems actually work in the real world." },
-      { keys: ['resume', 'cv', 'download resume'], answer: "My resume is available in the navigation. Fair warning: it's the formal version. The real story is in the case studies." },
-      { keys: ['tools', 'software', 'what do you use', 'design tools'], answer: "I live in Figma for design, but the real work happens in research sessions and synthesis. I use whatever method gets me closest to understanding why people do what they do — interviews, usability testing, behavioral frameworks. The tools change, the questions don't." },
-      { keys: ['experience', 'years', 'how long', 'how many years'], answer: "I've been doing this for 6+ years across enterprise software, AI products, and B2B SaaS. Long enough to know that most problems aren't UX problems — they're systems problems that show up in the interface." },
-      { keys: ['process', 'approach', 'methodology', 'how do you design', 'how do you work'], answer: "Research first, always. I start with understanding behavior — what people actually do, not what they say they'll do. Then I build from there: insights → prototypes → testing → iteration. Every decision needs a behavioral framework behind it, or it's just decoration." },
-      { keys: ['hire', 'available', 'looking for work', 'open to opportunities', 'hiring'], answer: "Yes! I'm looking for senior UX roles where research and systems thinking actually matter. If that sounds like your team, email me at mehtabbadwal@gmail.com." },
-      { keys: ['location', 'where', 'based', 'live', 'san diego'], answer: "I'm based in sunny San Diego, where the sun and ocean remind me that good design, like good weather, should just work without making you think about it." },
-      { keys: ['case study', 'case studies', 'projects', 'portfolio', 'work', 'examples'], answer: "Check out the Work page — I've got case studies on AI chatbots that didn't try to be smarter than users, research tools that analysts actually wanted to use, and field service platforms built around a 40-minute reality check." },
-      { keys: ['industries', 'sectors', 'domains', 'what industries'], answer: "Enterprise software, AI products, field service, B2B SaaS. Basically anywhere the buyer isn't the user and someone's trying to solve an organizational problem with an interface." },
-      { keys: ['freelance', 'consulting', 'contract', 'part time'], answer: "I'm focused on full-time senior roles, but I'll consider the right consulting project. If you've got something interesting, reach out at mehtabbadwal@gmail.com." },
+      { keys: ['email', 'contact', 'reach', 'get in touch'], topic: 'contact', answer: "You can reach me at mehtabbadwal@gmail.com or connect on LinkedIn. Always happy to talk design, research, or how systems actually work in the real world." },
+      { keys: ['resume', 'cv', 'download resume'], topic: 'resume', answer: "My resume is available in the navigation. Fair warning: it's the formal version. The real story is in the case studies." },
+      { keys: ['tools', 'software', 'what do you use', 'design tools'], topic: 'work', answer: "I live in Figma for design, but the real work happens in research sessions and synthesis. I use whatever method gets me closest to understanding why people do what they do — interviews, usability testing, behavioral frameworks. The tools change, the questions don't." },
+      { keys: ['experience', 'years', 'how long', 'how many years'], topic: 'work', answer: "I've been doing this for 6+ years across enterprise software, AI products, and B2B SaaS. Long enough to know that most problems aren't UX problems — they're systems problems that show up in the interface." },
+      { keys: ['process', 'approach', 'methodology', 'how do you design', 'how do you work'], topic: 'approach', answer: "Research first, always. I start with understanding behavior — what people actually do, not what they say they'll do. Then I build from there: insights → prototypes → testing → iteration. Every decision needs a behavioral framework behind it, or it's just decoration." },
+      { keys: ['hire', 'available', 'looking for work', 'open to opportunities', 'hiring'], topic: 'hiring', answer: "Yes! I'm looking for senior UX roles where research and systems thinking actually matter. If that sounds like your team, email me at mehtabbadwal@gmail.com." },
+      { keys: ['location', 'where', 'based', 'live', 'san diego'], topic: 'contact', answer: "I'm based in sunny San Diego, where the sun and ocean remind me that good design, like good weather, should just work without making you think about it." },
+      { keys: ['case study', 'case studies', 'projects', 'portfolio', 'work', 'examples'], topic: 'work', answer: "Check out the Work page — I've got case studies on AI chatbots that didn't try to be smarter than users, research tools that analysts actually wanted to use, and field service platforms built around a 40-minute reality check." },
+      { keys: ['industries', 'sectors', 'domains', 'what industries'], topic: 'work', answer: "Enterprise software, AI products, field service, B2B SaaS. Basically anywhere the buyer isn't the user and someone's trying to solve an organizational problem with an interface." },
+      { keys: ['freelance', 'consulting', 'contract', 'part time'], topic: 'hiring', answer: "I'm focused on full-time senior roles, but I'll consider the right consulting project. If you've got something interesting, reach out at mehtabbadwal@gmail.com." },
+      { keys: ['outside', 'hobbies', 'personal', 'free time', 'fun'], topic: 'outside', answer: "I write poems, paint, and spend time at the ocean in San Diego. My son asks better questions than most stakeholders — he's my favorite research partner. I also have a fashion design background, which still shapes how I think about form and intention." },
     ];
+
+    // Smart follow-up questions based on topic
+    const FOLLOW_UP_MAP = {
+      work: ['Tell me about a challenging project', 'How do you measure design success?', "What's your approach to user research?"],
+      ai: ['What AI tools do you use?', 'How do you design for AI uncertainty?', 'Any advice for designers entering AI?'],
+      approach: ['How do you handle stakeholder disagreements?', "What's your research process?", 'How do you prioritize features?'],
+      contact: ["What's the best way to reach you?", 'Are you open to new opportunities?', 'Can I see your resume?'],
+      hiring: ['What kind of roles interest you?', "What's your ideal team culture?", 'Tell me about your experience'],
+      resume: ["What's your biggest accomplishment?", 'Tell me about your AI work', 'How many years of experience?'],
+      outside: ['What inspires your design work?', 'How do you stay sharp?', 'Any design books you recommend?'],
+      default: ['Tell me about your design process', 'What industries have you worked in?', 'Are you available for new roles?'],
+    };
 
     function checkFAQ(text) {
       const lower = text.toLowerCase();
       for (const faq of FAQ_MAP) {
-        if (faq.keys.some(k => lower.includes(k))) return faq.answer;
+        if (faq.keys.some(k => lower.includes(k))) return faq;
       }
       return null;
+    }
+
+    function detectTopic(text) {
+      const lower = text.toLowerCase();
+      if (lower.includes('ai') || lower.includes('artificial intelligence')) return 'ai';
+      if (lower.includes('contact') || lower.includes('email') || lower.includes('reach')) return 'contact';
+      if (lower.includes('hire') || lower.includes('job') || lower.includes('role') || lower.includes('opportunity')) return 'hiring';
+      if (lower.includes('resume') || lower.includes('cv')) return 'resume';
+      if (lower.includes('outside') || lower.includes('hobbies') || lower.includes('personal')) return 'outside';
+      if (lower.includes('approach') || lower.includes('process') || lower.includes('methodology')) return 'approach';
+      if (lower.includes('work') || lower.includes('project') || lower.includes('case')) return 'work';
+      return 'default';
     }
 
     function isPortfolioRelated(text) {
@@ -266,6 +291,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">How can I reach you?</span></button>
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Are you open to new roles?</span></button>
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Can I see your resume?</span></button>
+              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">What do you do outside of work?</span></button>
             </div>
           </div>
           <div class="mllm-convo" id="mllm-convo" style="display:none;"></div>
@@ -350,27 +376,18 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
 
     const API_URL = 'https://long-surf-14cfmehtab-chatbot.mehtabbadwal.workers.dev';
 
-    const MENU_OPTIONS = [
-      'What kind of work do you do?',
-      'Tell me about your AI work',
-      'How do you approach a new problem?',
-      'How can I reach you?',
-      'Are you open to new roles?',
-      'Can I see your resume?',
-    ];
-
-    function appendMenu() {
-      // Remove any existing menu in convo
+    function appendMenu(topic) {
       const old = convo.querySelector('.mllm-followups');
       if (old) old.remove();
 
+      const questions = FOLLOW_UP_MAP[topic] || FOLLOW_UP_MAP.default;
       const div = document.createElement('div');
       div.className = 'mllm-followups';
       const label = document.createElement('p');
       label.className = 'mllm-followup-label';
-      label.textContent = 'What else would you like to know?';
+      label.textContent = 'Want to know more?';
       div.appendChild(label);
-      MENU_OPTIONS.forEach(q => {
+      questions.forEach(q => {
         const btn = document.createElement('button');
         btn.className = 'mllm-followup';
         btn.innerHTML = '<span class="mllm-followup-arrow">↳</span><span class="mllm-followup-text">' + q + '</span>';
@@ -399,14 +416,14 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       messages.scrollTop = messages.scrollHeight;
 
       // Check FAQ first (free, instant)
-      const faqAnswer = checkFAQ(text);
-      if (faqAnswer) {
+      const faqResult = checkFAQ(text);
+      if (faqResult) {
         const faqEl = document.createElement('div');
         faqEl.className = 'mllm-msg-assistant';
-        faqEl.textContent = faqAnswer;
+        faqEl.textContent = faqResult.answer;
         convo.appendChild(faqEl);
-        history.push({ role: 'assistant', content: faqAnswer });
-        appendMenu();
+        history.push({ role: 'assistant', content: faqResult.answer });
+        appendMenu(faqResult.topic);
         sendBtn.disabled = !inputEl.value.trim();
         return;
       }
@@ -418,7 +435,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
         offEl.textContent = "I can only help with questions about my design work and portfolio. What would you like to know?";
         convo.appendChild(offEl);
         history.push({ role: 'assistant', content: offEl.textContent });
-        appendMenu();
+        appendMenu('default');
         sendBtn.disabled = !inputEl.value.trim();
         return;
       }
@@ -453,7 +470,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
         assistantEl.classList.remove('streaming');
         assistantEl.textContent = fullText;
         history.push({ role: 'assistant', content: fullText });
-        appendMenu();
+        appendMenu(detectTopic(text));
 
       } catch (err) {
         console.error('Chat error:', err);
