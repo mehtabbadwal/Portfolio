@@ -367,8 +367,8 @@
 
 .project-card__img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 280px;
+  object-fit: contain;
   object-position: center;
   display: block;
   border-radius: 8px;
@@ -385,7 +385,7 @@
 
 .project-card__placeholder {
   width: 100%;
-  height: 200px;
+  height: 280px;
   background: #D6CFBF;
   border-radius: 8px;
   display: flex;
