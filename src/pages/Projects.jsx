@@ -3,6 +3,16 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
 
+const FILTER_LABELS = {
+  All: 'All',
+  Enterprise: 'Enterprise',
+  'AI Products': 'AI Products',
+  'zero-to-one': '0\u21921',
+  Mobile: 'Mobile',
+};
+
+const filters = Object.keys(FILTER_LABELS);
+
 const caseStudies = [
   {
     year: '2025',
@@ -27,7 +37,7 @@ const caseStudies = [
       { value: '3 wks', label: 'MVP shipped' },
     ],
     slug: 'hpe-pfa',
-    categories: ['Enterprise', '0\u21921'],
+    categories: ['Enterprise', 'zero-to-one'],
   },
   {
     year: '2024',
@@ -39,7 +49,7 @@ const caseStudies = [
       { value: '30%', label: 'faster decisions' },
     ],
     slug: 'qubera',
-    categories: ['AI Products', '0\u21921'],
+    categories: ['AI Products', 'zero-to-one'],
   },
   {
     year: '2023',
@@ -95,8 +105,6 @@ const skills = [
   },
 ];
 
-const filters = ['All', 'Enterprise', 'AI Products', '0\u21921', 'Mobile'];
-
 function Projects() {
   const pageRef = useScrollReveal();
   const [activeFilter, setActiveFilter] = useState('All');
@@ -128,7 +136,7 @@ function Projects() {
                 onClick={() => setActiveFilter(f)}
                 aria-pressed={activeFilter === f}
               >
-                {f}
+                {FILTER_LABELS[f]}
               </button>
             ))}
           </div>
