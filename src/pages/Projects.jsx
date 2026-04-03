@@ -67,21 +67,25 @@ const skills = [
     title: 'Design System Skill',
     hook: 'A design system process AI can actually follow.',
     howToUse: "Knows what to build first, what to clarify before starting, and how to handle failures mid-way.\nBuilt through real use \u2014 not theory.",
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1H7SkGFd78dgdBRn6XtnLYD2cA04AWLjM',
   },
   {
     title: 'UX Research Skill',
     hook: "Understand why users aren\u2019t doing what you expected.",
     howToUse: "You\u2019ll either get a clear direction grounded in behavior \u2014 or proof that your approach already works.\nBoth are useful.",
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=13bZW0OC0BiBt4s83e_hWSAcEOUBt6qDC',
   },
   {
     title: 'UI Designer Skill',
     hook: 'Make visual decisions that actually hold.',
     howToUse: "Not decoration. Structure.\nIt works through spacing, scale, and hierarchy \u2014 and calls out what feels off, even when you can\u2019t name it.",
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1QYkoH_Ob8sV_x_pkQdBvCCjrBD5Ndwzl',
   },
   {
     title: 'UX Designer Skill',
     hook: "Design for who\u2019s actually using the product.",
     howToUse: "It won\u2019t move until it understands the user, their role, and their state of mind.\nThe same problem gets a different answer depending on who\u2019s asking it.",
+    downloadUrl: 'https://drive.google.com/uc?export=download&id=1RsYfjgEEXn6pkaIl0ncFFEm4wvBfmdrf',
   },
 ];
 
@@ -179,7 +183,8 @@ function Projects() {
                   <span key={j}>{line}{j < s.howToUse.split('\n').length - 1 && <br />}</span>
                 ))}</p>
                 <div className="skill-card__footer">
-                  <a href="#" className="skill-card__download">
+                  <p className="skill-card__free">Free skill</p>
+                  <a href={s.downloadUrl} className="skill-card__download">
                     <span>&darr;</span> Download skill
                   </a>
                   <p className="skill-card__file">Google Drive &middot; ZIP file with skill.md + references</p>

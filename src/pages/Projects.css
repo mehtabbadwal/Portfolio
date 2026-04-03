@@ -305,6 +305,16 @@
   gap: 0.5rem;
 }
 
+.skill-card__free {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+  color: #9A8A7D;
+  margin: 0;
+}
+
 .skill-card__tag {
   font-family: var(--font-body);
   font-size: 0.6875rem;
