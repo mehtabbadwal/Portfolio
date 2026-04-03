@@ -17,20 +17,21 @@ const philosophyCards = [
   },
 ];
 
-const featuredProject = {
-  year: '2025',
-  tags: ['Enterprise Systems', 'Conversational AI'],
-  title: 'HPE Chatbot',
-  description: 'The fix wasn\u2019t smarter AI. It was more honest AI.',
-  metrics: [
-    { value: '32%', label: 'fewer escalations' },
-    { value: '3x', label: 'chatbot usage' },
-    { value: '2 min', label: 'avg resolution time' },
-  ],
-  slug: 'hpe-chatbot',
-};
-
 const projectCards = [
+  {
+    title: 'HPE Chatbot',
+    year: '2025',
+    category: 'Enterprise Systems \u00B7 Conversational AI',
+    description: 'The fix wasn\u2019t smarter AI. It was more honest AI.',
+    metrics: [
+      { value: '32%', label: 'fewer escalations' },
+      { value: '3x', label: 'chatbot usage' },
+      { value: '2 min', label: 'avg resolution time' },
+    ],
+    slug: 'hpe-chatbot',
+    image: 'hpe-chatbot-hero.svg',
+    blendMode: true,
+  },
   {
     title: 'HPE PFA',
     year: '2025',
@@ -41,6 +42,7 @@ const projectCards = [
       { value: '3 wks', label: 'MVP shipped' },
     ],
     slug: 'hpe-pfa',
+    image: 'pfa-hero.svg',
   },
   {
     title: 'Qubera',
@@ -52,6 +54,7 @@ const projectCards = [
       { value: '30%', label: 'faster decisions' },
     ],
     slug: 'qubera',
+    image: 'qubera-hero.webp',
   },
   {
     title: 'Fluidra',
@@ -63,6 +66,7 @@ const projectCards = [
       { value: '25%', label: 'task efficiency' },
     ],
     slug: 'fluidra',
+    image: null,
   },
 ];
 
@@ -171,40 +175,8 @@ function Landing() {
             <Link to="/work" className="work__view-all">View all work &rarr;</Link>
           </div>
 
-          {/* Featured */}
-          <Link to={`/case-studies/${featuredProject.slug}`} className="featured fade-up">
-            <div className="featured__body">
-              <div className="featured__meta">
-                <span className="featured__year">{featuredProject.year}</span>
-                <span className="featured__dot" />
-                {featuredProject.tags.map((t, i) => (
-                  <span key={t} className="featured__tag">
-                    {t}{i < featuredProject.tags.length - 1 && <span className="featured__dot" />}
-                  </span>
-                ))}
-              </div>
-              <p className="featured__quote">{featuredProject.description}</p>
-              <div className="featured__metrics">
-                {featuredProject.metrics.map((m) => (
-                  <div key={m.label} className="metric">
-                    <span className="metric__value">{m.value}</span>
-                    <span className="metric__label">{m.label}</span>
-                  </div>
-                ))}
-              </div>
-              <span className="featured__cta">Read case study &rarr;</span>
-            </div>
-            <div className="featured__image">
-              <img
-                src={`${import.meta.env.BASE_URL}hpe-chatbot-hero.svg`}
-                alt="HPE Chatbot interface showing conversational AI design"
-                className="featured__img"
-              />
-            </div>
-          </Link>
-
-          {/* Grid */}
-          <div className="work__grid">
+          {/* 2x2 Grid — All Equal Cards */}
+          <div className="work__grid work__grid--2x2">
             {projectCards.map((project, i) => (
               <Link
                 to={`/case-studies/${project.slug}`}
@@ -212,17 +184,11 @@ function Landing() {
                 className={`project-card fade-up stagger-${i + 1}`}
               >
                 <div className="project-card__image">
-                  {project.slug === 'hpe-pfa' ? (
+                  {project.image ? (
                     <img
-                      src={`${import.meta.env.BASE_URL}pfa-hero.svg`}
-                      alt="HPE PFA interface showing power user workflow optimization"
-                      className="project-card__img"
-                    />
-                  ) : project.slug === 'qubera' ? (
-                    <img
-                      src={`${import.meta.env.BASE_URL}qubera-hero.webp`}
-                      alt="Qubera AI analytics interface showing automated data extraction"
-                      className="project-card__img"
+                      src={`${import.meta.env.BASE_URL}${project.image}`}
+                      alt={`${project.title} interface`}
+                      className={`project-card__img${project.blendMode ? ' project-card__img--blend' : ''}`}
                     />
                   ) : (
                     <div className="project-card__placeholder"><span>{project.title}</span></div>
@@ -234,8 +200,8 @@ function Landing() {
                     <span className="project-card__dot" />
                     <span className="project-card__cat">{project.category}</span>
                   </div>
-                  <p className="project-card__desc">{project.description}</p>
                   <h3 className="project-card__title">{project.title}</h3>
+                  <p className="project-card__desc">{project.description}</p>
                   <div className="project-card__metrics">
                     {project.metrics.map((m) => (
                       <div key={m.label} className="metric metric--small">
