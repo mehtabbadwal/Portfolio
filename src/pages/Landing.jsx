@@ -214,7 +214,7 @@ function Landing() {
                 <div className="project-card__image">
                   {project.slug === 'hpe-pfa' ? (
                     <img
-                      src={`${import.meta.env.BASE_URL}pfa-hero.webp`}
+                      src={`${import.meta.env.BASE_URL}pfa-hero.svg`}
                       alt="HPE PFA interface showing power user workflow optimization"
                       className="project-card__img"
                     />

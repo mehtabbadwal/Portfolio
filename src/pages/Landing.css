@@ -367,6 +367,7 @@
   display: block;
   border-radius: 8px;
   transition: transform 0.4s ease;
+  mix-blend-mode: multiply;
 }
 
 .project-card:hover .project-card__img {
