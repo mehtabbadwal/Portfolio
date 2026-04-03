@@ -62,7 +62,7 @@ function Qubera() {
           </div>
 
           <div className="cs__hero-image fade-up">
-            <span>AI-powered research dashboard for financial analysts</span>
+            <img src={`${import.meta.env.BASE_URL}qubera-hero.webp`} alt="AI-powered research dashboard" className="cs__hero-img" />
           </div>
         </div>
       </section>

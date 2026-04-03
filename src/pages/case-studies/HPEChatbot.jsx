@@ -61,7 +61,7 @@ function HPEChatbot() {
           </div>
 
           <div className="cs__hero-image fade-up">
-            <span>Hero image &mdash; project overview</span>
+            <img src={`${import.meta.env.BASE_URL}hpe-chatbot-hero.svg`} alt="HPE Chatbot project overview" className="cs__hero-img" />
           </div>
         </div>
       </section>

@@ -71,7 +71,7 @@ function FluidraPro() {
           </div>
 
           <div className="cs__hero-image fade-up">
-            <span>Redesigned Fluidra Pro app interface</span>
+            <img src={`${import.meta.env.BASE_URL}fluidra-service-hero.webp`} alt="Redesigned Fluidra Pro app interface" className="cs__hero-img" />
           </div>
         </div>
       </section>

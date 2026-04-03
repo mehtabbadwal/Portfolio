@@ -64,7 +64,7 @@ function HPEPFA() {
           </div>
 
           <div className="cs__hero-image fade-up">
-            <span>Unified family dashboard &mdash; before and after</span>
+            <img src={`${import.meta.env.BASE_URL}pfa-hero.svg`} alt="Unified family dashboard" className="cs__hero-img" />
           </div>
         </div>
       </section>
