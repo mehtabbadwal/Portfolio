@@ -269,9 +269,11 @@ function HPEChatbot() {
                 work. You can verify everything.
               </p>
             </div>
-            <div className="cs__image-placeholder cs__image-placeholder--medium">
-              <span>Trust through transparency &mdash; optional feedback, quick ratings, and always-available human support</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}chatbot-trust.webp`}
+              alt="Trust through transparency — optional feedback, quick ratings, and always-available human support"
+              className="cs__solution-img"
+            />
           </div>
 
           {/* Decision 4 */}
