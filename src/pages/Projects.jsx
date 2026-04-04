@@ -1,17 +1,6 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import './Projects.css';
-
-const FILTER_LABELS = {
-  All: 'All',
-  Enterprise: 'Enterprise',
-  'AI Products': 'AI Products',
-  'zero-to-one': '0\u21921',
-  Mobile: 'Mobile',
-};
-
-const filters = Object.keys(FILTER_LABELS);
 
 const caseStudies = [
   {
@@ -107,11 +96,6 @@ const skills = [
 
 function Projects() {
   const pageRef = useScrollReveal();
-  const [activeFilter, setActiveFilter] = useState('All');
-
-  const filteredStudies = activeFilter === 'All'
-    ? caseStudies
-    : caseStudies.filter(cs => cs.categories.includes(activeFilter));
 
   return (
     <div className="projects" ref={pageRef}>
@@ -128,21 +112,10 @@ function Projects() {
             </p>
           </div>
 
-          <div className="projects__filters fade-up" role="group" aria-label="Filter projects by category">
-            {filters.map((f) => (
-              <button
-                key={f}
-                className={`projects__filter ${activeFilter === f ? 'projects__filter--active' : ''}`}
-                onClick={() => setActiveFilter(f)}
-                aria-pressed={activeFilter === f}
-              >
-                {FILTER_LABELS[f]}
-              </button>
-            ))}
-          </div>
+          <p className="projects__focus fade-up">Focus: Enterprise &bull; AI Products &bull; 0&rarr;1 &bull; Mobile</p>
 
           <div className="projects__grid case-studies-grid">
-            {filteredStudies.map((cs, i) => {
+            {caseStudies.map((cs, i) => {
               const hasPage = ['hpe-chatbot', 'hpe-pfa', 'qubera', 'fluidra', 'fluidra-rewards'].includes(cs.slug);
               const CardTag = hasPage ? Link : 'a';
               const cardProps = hasPage
