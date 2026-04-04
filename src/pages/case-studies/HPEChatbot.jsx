@@ -283,9 +283,11 @@ function HPEChatbot() {
               Mobile and tablet adoption was nearly zero &mdash; users avoided the chatbot
               on smaller screens.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Network admins troubleshoot on-site from mobile while CSMs work from desktop</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}chatbot-mobile.webp`}
+              alt="Network admins troubleshoot on-site from mobile while CSMs work from desktop"
+              className="cs__solution-img"
+            />
           </div>
         </div>
       </section>
