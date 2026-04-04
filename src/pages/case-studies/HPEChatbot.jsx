@@ -245,9 +245,11 @@ function HPEChatbot() {
               indicator than when responses appeared instantly. Instant felt suspicious.
               &ldquo;Too good to be true&rdquo; was how one tester put it.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>AI reads and explains documentation in seconds &mdash; no more hunting through 50-page PDFs</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}chatbot-cite-sources.webp`}
+              alt="AI reads and explains documentation in seconds — no more hunting through 50-page PDFs"
+              className="cs__solution-img"
+            />
           </div>
 
           {/* Decision 3 */}
