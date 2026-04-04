@@ -149,30 +149,6 @@ function HPEChatbot() {
         </div>
       </section>
 
-      {/* ── Reality ── */}
-      <section className="cs__narrative section">
-        <div className="container">
-          <p className="cs__label fade-up">Reality</p>
-          <div className="cs__prose fade-up">
-            <p className="cs__body cs__body--emphasis">
-              Three weeks. Two simultaneous projects. One designer.
-            </p>
-            <p className="cs__body">
-              I was splitting time between this chatbot redesign and HPE PFA, managing
-              priorities through the product roadmap with individual PMs. The timeline was
-              tight enough that I built test flows using Claude and Cursor just to move
-              fast enough &mdash; that wasn&rsquo;t in the original plan.
-            </p>
-            <p className="cs__body">
-              We tested 50 common queries across all user types. 78% correct on first
-              attempt, 94% after clarification. Each session answered one specific
-              question, not everything at once. That pace was the only reason we shipped
-              on time.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* ── Risky Decision ── */}
       <section className="cs__narrative section">
         <div className="container">
@@ -303,6 +279,30 @@ function HPEChatbot() {
               Prototyping with Claude and Cursor let us test conversational patterns in
               hours instead of days, which was the only reason the 3-week timeline was
               possible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Reality ── */}
+      <section className="cs__narrative section">
+        <div className="container">
+          <p className="cs__label fade-up">Reality</p>
+          <div className="cs__prose fade-up">
+            <p className="cs__body cs__body--emphasis">
+              Three weeks. Two simultaneous projects. One designer.
+            </p>
+            <p className="cs__body">
+              I was splitting time between this chatbot redesign and HPE PFA, managing
+              priorities through the product roadmap with individual PMs. The timeline was
+              tight enough that I built test flows using Claude and Cursor just to move
+              fast enough &mdash; that wasn&rsquo;t in the original plan.
+            </p>
+            <p className="cs__body">
+              We tested 50 common queries across all user types. 78% correct on first
+              attempt, 94% after clarification. Each session answered one specific
+              question, not everything at once. That pace was the only reason we shipped
+              on time.
             </p>
           </div>
         </div>
