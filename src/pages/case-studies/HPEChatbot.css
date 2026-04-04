@@ -175,6 +175,13 @@
   display: block;
 }
 
+.cs__hero-image--transparent {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .cs__hero-image span {
   font-family: var(--font-body);
   font-size: 0.9375rem;

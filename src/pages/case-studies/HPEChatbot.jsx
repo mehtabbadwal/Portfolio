@@ -203,7 +203,7 @@ function HPEChatbot() {
               why users lost trust.
             </p>
           </div>
-          <div className="cs__hero-image fade-up" style={{ marginTop: '2.5rem' }}>
+          <div className="cs__hero-image cs__hero-image--transparent fade-up" style={{ marginTop: '2.5rem' }}>
             <img src={`${import.meta.env.BASE_URL}chatbot-transition.webp`} alt="Chatbot transition from menu-driven to AI-powered interaction" className="cs__hero-img" />
           </div>
         </div>
