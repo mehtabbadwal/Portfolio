@@ -224,9 +224,11 @@ function HPEChatbot() {
               rephrasing over clicking through five menu levels. Rephrase is effort they
               choose. Navigation is effort imposed on them.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Natural conversation replaces rigid menus &mdash; personalized greeting, context awareness, and intelligent suggestions</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}chatbot-natural-conversation.webp`}
+              alt="Natural conversation replaces rigid menus — personalized greeting, context awareness, and intelligent suggestions"
+              className="cs__solution-img"
+            />
           </div>
 
           {/* Decision 2 */}
