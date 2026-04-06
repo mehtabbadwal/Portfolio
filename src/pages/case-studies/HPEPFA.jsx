@@ -184,17 +184,6 @@ function HPEPFA() {
             />
           </div>
 
-          <div className="cs__decision-block fade-up">
-            <h3 className="cs__decision-title">Version 3 &mdash; Balanced.</h3>
-            <p className="cs__body">
-              Comprehensive but organized. All the information CSMs need upfront, with
-              enough visual hierarchy to scan it quickly.
-            </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Version 3 &mdash; Balanced information density</span>
-            </div>
-          </div>
-
           <div className="cs__prose fade-up" style={{ marginTop: '2.5rem' }}>
             <p className="cs__body cs__body--emphasis">
               The conclusion wasn&rsquo;t obvious before I did the work: the right
