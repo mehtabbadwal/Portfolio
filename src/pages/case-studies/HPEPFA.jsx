@@ -96,14 +96,12 @@ function HPEPFA() {
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2.5rem' }}>
-            <div className="cs__image-placeholder cs__image-placeholder--medium fade-up" style={{ flex: 1, marginTop: 0 }}>
-              <span>Original system architecture &mdash; individual account navigation</span>
-            </div>
-            <div className="cs__image-placeholder cs__image-placeholder--medium fade-up" style={{ flex: 1, marginTop: 0 }}>
-              <span>New architecture &mdash; unified account management layer</span>
-            </div>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}pfa-architecture.svg`}
+            alt="PFA Architecture comparison"
+            className="cs__solution-img"
+            style={{ marginTop: '2.5rem' }}
+          />
         </div>
       </section>
 
