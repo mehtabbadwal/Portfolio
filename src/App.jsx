@@ -21,7 +21,7 @@ import FloatingChatButton from './components/FloatingChatButton';
 
 function App() {
   return (
-    <BrowserRouter basename="/Portfolio/">
+    <BrowserRouter basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
