@@ -207,9 +207,11 @@ function HPEPFA() {
               accounts, their statuses, asset counts, and engagement details in a single
               view. No more tab-juggling. ~75% reduction in navigation clicks.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Family dashboard &mdash; all accounts in one view</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-dashboard.svg`}
+              alt="Family dashboard — all accounts in one view"
+              className="cs__solution-img"
+            />
           </div>
 
           {/* Feature 2 */}
