@@ -148,7 +148,7 @@ function HPEPFA() {
       {/* ── Three Versions ── */}
       <section className="cs__narrative section">
         <div className="container">
-          <p className="cs__label fade-up">Three Versions, One Answer</p>
+          <p className="cs__label fade-up">Finding the Balance</p>
           <div className="cs__prose fade-up">
             <p className="cs__body">
               I explored three directions to find the balance.
