@@ -143,9 +143,11 @@ function Qubera() {
             <p className="cs__body cs__body--emphasis">
               This single feature reduced data extraction time by 85%.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Default view with auto-extracted financial metrics</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}qubera-landing.webp`}
+              alt="Default view with auto-extracted financial metrics"
+              className="cs__solution-img"
+            />
           </div>
 
           <div className="cs__decision-block fade-up">
@@ -160,9 +162,11 @@ function Qubera() {
               questions and get targeted answers instead of reading entire documents to find
               one data point.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Focused chat interface with document selection</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}qubera-focused.webp`}
+              alt="Focused chat interface with document selection"
+              className="cs__solution-img"
+            />
           </div>
 
           <div className="cs__decision-block fade-up">
@@ -187,9 +191,11 @@ function Qubera() {
               personalized question sets &mdash; we designed for that extensibility even
               though we didn&rsquo;t ship it in V1.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Intelligent Questions with pre-answered insights</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}qubera-smart-insight.webp`}
+              alt="Intelligent Questions with pre-answered insights"
+              className="cs__solution-img"
+            />
           </div>
 
           <div className="cs__decision-block fade-up">
@@ -200,9 +206,11 @@ function Qubera() {
               having to read the full release first. If something warrants deeper attention,
               it&rsquo;s one click away.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Press release center with sentiment analysis</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}qubera-press-center.webp`}
+              alt="Press release center with sentiment analysis"
+              className="cs__solution-img"
+            />
           </div>
         </div>
       </section>
