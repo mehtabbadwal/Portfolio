@@ -255,9 +255,11 @@ function HPEPFA() {
               accounts, add optional details. System auto-generates the Engagement ID.
               No overwhelming forms &mdash; just what&rsquo;s needed to get started.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--medium">
-              <span>Family creation flow &mdash; 3 simple steps</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-family-creation.svg`}
+              alt="Family creation flow — 3 simple steps"
+              className="cs__solution-img"
+            />
           </div>
 
           {/* Feature 4 */}
@@ -268,9 +270,11 @@ function HPEPFA() {
               relationships, and managing engagement parameters &mdash; all in one
               place.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Family settings &mdash; detailed configuration panel</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-family-settings.webp`}
+              alt="Family settings — detailed configuration panel"
+              className="cs__solution-img"
+            />
           </div>
         </div>
       </section>
@@ -295,35 +299,6 @@ function HPEPFA() {
               exactly what I&rsquo;ve been asking for. I can finally see everything I
               need without hunting for it.&rdquo;
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Impact ── */}
-      <section className="cs__narrative section">
-        <div className="container">
-          <p className="cs__label fade-up">Impact</p>
-          <div className="cs__impact-grid fade-up">
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">75%</span>
-              <span className="cs__impact-label">reduction in clicks</span>
-              <span className="cs__impact-detail">To access related accounts</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">Eliminated</span>
-              <span className="cs__impact-label">context switching</span>
-              <span className="cs__impact-detail">Across 15+ screens for multi-account customers</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">Strong adoption</span>
-              <span className="cs__impact-label">across CSM teams</span>
-              <span className="cs__impact-detail">Post-launch</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">3 weeks</span>
-              <span className="cs__impact-label">MVP shipped</span>
-              <span className="cs__impact-detail">With full engineering specs and UAT-validated designs</span>
-            </div>
           </div>
         </div>
       </section>
