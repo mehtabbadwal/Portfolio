@@ -163,9 +163,11 @@ function HPEPFA() {
               multi-step workflows. I&rsquo;d moved the problem around without solving
               it.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Version 1 &mdash; Card-based layout (too simple)</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-version-one.svg`}
+              alt="Version 1 — Card-based layout (too simple)"
+              className="cs__solution-img"
+            />
           </div>
 
           <div className="cs__decision-block fade-up">
@@ -175,9 +177,11 @@ function HPEPFA() {
               showed it to the team, I got concerned looks. Even technical users found
               it overwhelming and hard to scan.
             </p>
-            <div className="cs__image-placeholder cs__image-placeholder--large">
-              <span>Version 2 &mdash; Maximum density (too overwhelming)</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-version-two.svg`}
+              alt="Version 2 — Maximum density (too overwhelming)"
+              className="cs__solution-img"
+            />
           </div>
 
           <div className="cs__decision-block fade-up">
