@@ -233,35 +233,6 @@ function Qubera() {
         </div>
       </section>
 
-      {/* ── Impact ── */}
-      <section className="cs__narrative section">
-        <div className="container">
-          <p className="cs__label fade-up">Impact</p>
-          <div className="cs__impact-grid fade-up">
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">85%</span>
-              <span className="cs__impact-label">reduction in extraction time</span>
-              <span className="cs__impact-detail">In data extraction time</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">30%</span>
-              <span className="cs__impact-label">faster decision-making</span>
-              <span className="cs__impact-detail">For analysts</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">6 wks</span>
-              <span className="cs__impact-label">MVP designed and shipped</span>
-              <span className="cs__impact-detail">End-to-end</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">Active</span>
-              <span className="cs__impact-label">institutional interest</span>
-              <span className="cs__impact-detail">Product positioned for launch</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── Reflections ── */}
       <section className="cs__narrative section">
         <div className="container">
