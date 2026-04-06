@@ -131,7 +131,7 @@ function Landing() {
           </div>
           <div className="hero__photo fade-up stagger-3">
             <img
-              src="/Portfolio/hero-photo.jpeg"
+              src="/hero-photo.jpeg"
               alt="Mehtab Badwal - UX Designer"
               className="hero__photo-img"
             />

@@ -30,7 +30,7 @@ function About() {
             </div>
             <div className="about__opening-photo fade-up">
               <img
-                src="/Portfolio/chapter-01-photo.webp"
+                src="/chapter-01-photo.webp"
                 alt="Looking out at the ocean"
                 className="about__opening-img"
               />
@@ -115,7 +115,7 @@ function About() {
             </div>
             <div className="about__work-photo fade-up">
               <img
-                src="/Portfolio/chapter-03-books.jpeg"
+                src="/chapter-03-books.jpeg"
                 alt="Books on reading and reflection"
                 className="about__work-img"
               />
@@ -132,17 +132,17 @@ function About() {
           <p className="about__chapter-label fade-up">Chapter 04 &mdash; Outside Work</p>
           <div className="about__photos fade-up">
             <img
-              src="/Portfolio/ocean-sunset.webp"
+              src="/ocean-sunset.webp"
               alt="Ocean sunset in San Diego"
               className="about__photo-img"
             />
             <img
-              src="/Portfolio/holi-family.webp"
+              src="/holi-family.webp"
               alt="Family celebrating Holi festival"
               className="about__photo-img"
             />
             <img
-              src="/Portfolio/hands-artwork.webp"
+              src="/hands-artwork.webp"
               alt="Street art mural with hands and eyes"
               className="about__photo-img"
             />
