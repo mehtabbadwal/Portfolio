@@ -222,22 +222,29 @@ function HPEPFA() {
               crash it. CSMs select one root account at a time &mdash; keeping focus on
               one customer while keeping the interface fast.
             </p>
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-empty-state.svg`}
+              alt="No root account selected — empty state"
+              className="cs__solution-img"
+              style={{ marginTop: '1.5rem' }}
+            />
             <div className="cs__callout" style={{ marginTop: '1.5rem' }}>
               <h4>From there, two paths:</h4>
               <p>1. Families do not exist &rarr; Create a family.</p>
               <p style={{ marginTop: '0.25rem' }}>2. Families exist &rarr; Manage family.</p>
             </div>
-            <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2.5rem' }}>
-              <div className="cs__image-placeholder fade-up" style={{ flex: 1, height: '350px', marginTop: 0 }}>
-                <span>No root account selected &mdash; empty state</span>
-              </div>
-              <div className="cs__image-placeholder fade-up" style={{ flex: 1, height: '350px', marginTop: 0 }}>
-                <span>Root account selected &mdash; no families yet</span>
-              </div>
-              <div className="cs__image-placeholder fade-up" style={{ flex: 1, height: '350px', marginTop: 0 }}>
-                <span>Root account with families &mdash; manage view</span>
-              </div>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-no-families.svg`}
+              alt="Root account selected — no families yet"
+              className="cs__solution-img"
+              style={{ marginTop: '2rem' }}
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}pfa-manage-view.svg`}
+              alt="Root account with families — manage view"
+              className="cs__solution-img"
+              style={{ marginTop: '2rem' }}
+            />
           </div>
 
           {/* Feature 3 */}
