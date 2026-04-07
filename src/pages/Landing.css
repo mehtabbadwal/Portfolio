@@ -792,8 +792,9 @@
 }
 
 .cta__heading {
-  font-size: 1.75rem;
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
   line-height: 1.25;
+  white-space: nowrap;
   margin-bottom: 1rem;
 }
 
