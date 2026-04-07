@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AnimatedDivider } from './AnimatedDivider';
+import { MetricCounter } from '../components/MetricCounter';
 import './Projects.css';
 
 const caseStudies = [
@@ -134,7 +135,7 @@ function Projects() {
                   <div className="cs-card__metrics">
                     {cs.metrics.map((m) => (
                       <div key={m.label} className="cs-card__metric">
-                        <span className="cs-card__metric-value">{m.value}</span>
+                        <MetricCounter value={m.value} className="cs-card__metric-value" />
                         <span className="cs-card__metric-label">{m.label}</span>
                       </div>
                     ))}

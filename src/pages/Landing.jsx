@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { HeroSketch } from './HeroSketch';
 import { AnimatedDivider } from './AnimatedDivider';
+import { MetricCounter } from '../components/MetricCounter';
 import './Landing.css';
 
 const philosophyCards = [
@@ -207,7 +208,7 @@ function Landing() {
                   <div className="project-card__metrics">
                     {project.metrics.map((m) => (
                       <div key={m.label} className="metric metric--small">
-                        <span className="metric__value">{m.value}</span>
+                        <MetricCounter value={m.value} className="metric__value" />
                         <span className="metric__label">{m.label}</span>
                       </div>
                     ))}
