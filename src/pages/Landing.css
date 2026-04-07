@@ -112,16 +112,19 @@
 .philosophy-card--1 {
   background: #EDE6D6;
   transform: rotate(2.5deg);
+  transition-delay: 0ms;
 }
 
 .philosophy-card--2 {
   background: #F0E8DC;
   transform: rotate(-5.96deg);
+  transition-delay: 120ms;
 }
 
 .philosophy-card--3 {
   background: #EAE0CE;
   transform: rotate(3.53deg);
+  transition-delay: 240ms;
 }
 
 .philosophy-card__accent {
