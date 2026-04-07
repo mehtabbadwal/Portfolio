@@ -994,3 +994,60 @@
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ── Hero Sketch ── */
+.hero__sketch {
+  margin-top: var(--space-lg);
+}
+
+.sketch-grid-v {
+  stroke: #2C2420;
+  stroke-width: 0.75;
+  opacity: 0.2;
+  stroke-dasharray: 78;
+  stroke-dashoffset: 78;
+  animation: sketchDraw 0.45s ease forwards;
+}
+
+.sketch-grid-h {
+  stroke: #2C2420;
+  stroke-width: 0.75;
+  opacity: 0.2;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  animation: sketchDraw 0.45s ease forwards;
+}
+
+.sketch-grid-v--1, .sketch-grid-h--1 { animation-delay: 0.1s; }
+.sketch-grid-v--2, .sketch-grid-h--2 { animation-delay: 0.17s; }
+.sketch-grid-v--3, .sketch-grid-h--3 { animation-delay: 0.24s; }
+.sketch-grid-v--4, .sketch-grid-h--4 { animation-delay: 0.31s; }
+
+.sketch-circle {
+  stroke: #2C2420;
+  stroke-width: 1.25;
+  opacity: 0.5;
+  stroke-dasharray: 290;
+  stroke-dashoffset: 290;
+  animation: sketchDraw 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards;
+}
+
+.sketch-dot {
+  fill: #C4603E;
+  opacity: 0;
+  transform-origin: 75px 36px;
+  animation: sketchDot 0.3s ease 0.95s forwards;
+}
+
+@keyframes sketchDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes sketchDot {
+  from { opacity: 0; transform: scale(0); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .hero__sketch { display: none; }
+}
