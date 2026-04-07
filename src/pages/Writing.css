@@ -345,3 +345,7 @@
     text-align: left;
   }
 }
+
+.wp__about .animated-divider {
+  margin-bottom: 3rem;
+}
