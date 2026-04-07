@@ -7,7 +7,7 @@ function WhenAIShiftsControl() {
       date="JAN 16"
       author="MEHTAB BADWAL"
       readTime="5"
-      heroImage={null}
+      heroImage="/ai-control.svg"
       prevPost={{
         title: 'Stay out of the way',
         url: '/blog/stay-out-of-the-way',
