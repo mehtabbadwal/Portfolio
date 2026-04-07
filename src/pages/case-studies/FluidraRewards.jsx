@@ -71,10 +71,12 @@ function FluidraRewards() {
             </div>
           </div>
 
-          <div className="cs__hero-image fade-up">
-            <div className="cs__image-placeholder cs__image-placeholder--large" style={{ marginTop: 0 }}>
-              <span>Fluidra Pro rewards integration dashboard</span>
-            </div>
+          <div className="cs__hero-image cs__hero-image--transparent fade-up" style={{ marginTop: '2.5rem' }}>
+            <img
+              src={`${import.meta.env.BASE_URL}fluidra-rewards-hero.webp`}
+              alt="Fluidra Pro rewards integration dashboard"
+              className="cs__hero-img"
+            />
           </div>
         </div>
       </section>
