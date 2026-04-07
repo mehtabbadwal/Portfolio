@@ -213,23 +213,24 @@ function FluidraPro() {
             </a>
           </div>
 
-          <div className="cs__screens-triple fade-up" style={{ marginTop: '2rem' }}>
-            <div className="cs__image-placeholder" style={{ height: '300px', marginTop: 0 }}>
-              <span>Typography &mdash; Open Sans font system</span>
-            </div>
-            <div className="cs__image-placeholder" style={{ height: '300px', marginTop: 0 }}>
-              <span>Color palette &mdash; optimized for outdoor visibility</span>
-            </div>
-            <a
-              href="https://www.figma.com/design/S9lPwWUHvXyjcT01tBlkPf/Atlantis-Design-System?node-id=4-29&t=Lvvf39WiB7nPvHek-1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cs__image-placeholder"
-              style={{ height: '300px', marginTop: 0 }}
-            >
-              <span>Component library</span>
-            </a>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-font.webp`}
+            alt="Typography — Open Sans font system"
+            className="cs__solution-img"
+            style={{ marginTop: '2rem' }}
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-color.webp`}
+            alt="Color palette — optimized for outdoor visibility"
+            className="cs__solution-img"
+            style={{ marginTop: '2rem' }}
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-components.webp`}
+            alt="Component library"
+            className="cs__solution-img"
+            style={{ marginTop: '2rem' }}
+          />
         </div>
       </section>
 
