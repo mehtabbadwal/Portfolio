@@ -12,7 +12,7 @@ export function HeroSketch() {
         <line className="sketch-grid-h sketch-grid-h--4" x1="20" y1="120" x2="131" y2="120" />
         <path
           className="sketch-circle"
-          d="M 155 18 C 192 16, 218 38, 217 70 C 216 102, 193 130, 158 131 C 121 132, 88 108, 89 75 C 90 42, 118 20, 155 18"
+          d="M 118 15 C 149 13, 172 38, 171 67 C 170 97, 149 121, 118 121 C 88 121, 66 97, 67 67 C 68 38, 89 15, 118 15"
           fill="none"
         />
         <circle className="sketch-dot" cx="94" cy="52" r="4.5" />

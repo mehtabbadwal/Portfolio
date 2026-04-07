@@ -1027,8 +1027,8 @@
   stroke: #2C2420;
   stroke-width: 1.25;
   opacity: 0.5;
-  stroke-dasharray: 360;
-  stroke-dashoffset: 360;
+  stroke-dasharray: 335;
+  stroke-dashoffset: 335;
   animation: sketchDraw 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards;
 }
 
