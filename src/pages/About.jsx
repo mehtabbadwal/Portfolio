@@ -1,4 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { AnimatedDivider } from './AnimatedDivider';
 import './About.css';
 
 function About() {
@@ -39,7 +40,7 @@ function About() {
         </div>
       </section>
 
-      <hr className="about__divider container" />
+      <AnimatedDivider />
 
       {/* ── Chapter 02 — How I Think ── */}
       <section className="about__chapter section">
@@ -85,7 +86,7 @@ function About() {
         </div>
       </section>
 
-      <hr className="about__divider container" />
+      <AnimatedDivider />
 
       {/* ── Chapter 03 — How I Work Now ── */}
       <section className="about__chapter section">
@@ -124,7 +125,7 @@ function About() {
         </div>
       </section>
 
-      <hr className="about__divider container" />
+      <AnimatedDivider />
 
       {/* ── Chapter 04 — Outside Work ── */}
       <section className="about__chapter section">
@@ -169,7 +170,7 @@ function About() {
         </div>
       </section>
 
-      <hr className="about__divider container" />
+      <AnimatedDivider />
 
       {/* ── Chapter 05 — Where I'm Headed ── */}
       <section className="about__chapter section">

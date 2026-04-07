@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { AnimatedDivider } from './AnimatedDivider';
 import './Writing.css';
 
 const articles = [
@@ -139,7 +140,7 @@ function Writing() {
       {/* ── About Section ── */}
       <section className="wp__about section">
         <div className="container">
-          <hr className="wp__about-divider" />
+          <AnimatedDivider />
           <div className="wp__about-flex">
             <div className="wp__about-left fade-up">
               <p className="wp__label">About Mind Meets Design</p>

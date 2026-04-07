@@ -301,7 +301,7 @@ function Landing() {
       {/* ── CTA ── */}
       <section className="cta section">
         <div className="container">
-          <hr className="cta__divider" />
+          <AnimatedDivider />
           <div className="cta__grid">
             <div className="cta__content">
               <h2 className="cta__heading fade-up">

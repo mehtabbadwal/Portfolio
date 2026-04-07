@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { AnimatedDivider } from '../AnimatedDivider';
 import './HPEChatbot.css';
 
 function FluidraRewards() {
@@ -412,7 +413,7 @@ function FluidraRewards() {
       {/* ── Next Project ── */}
       <section className="cs__next section">
         <div className="container">
-          <hr className="cs__divider" />
+          <AnimatedDivider />
           <div className="cs__next-inner fade-up" style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
             <Link to="/work" className="cs__next-link" style={{ color: '#7A6A60' }}>
               &larr; Check all my projects

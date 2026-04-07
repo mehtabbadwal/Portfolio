@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import { AnimatedDivider } from '../AnimatedDivider';
 import './HPEChatbot.css';
 
 function HPEPFA() {
@@ -333,7 +334,7 @@ function HPEPFA() {
       {/* ── Next Project ── */}
       <section className="cs__next section">
         <div className="container">
-          <hr className="cs__divider" />
+          <AnimatedDivider />
           <div className="cs__next-inner fade-up">
             <p className="cs__label">Next Project</p>
             <h3 className="cs__next-title">Qubera</h3>

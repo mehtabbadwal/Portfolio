@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { AnimatedDivider } from './AnimatedDivider';
 import './Projects.css';
 
 const caseStudies = [
@@ -199,7 +200,7 @@ function Projects() {
       {/* ── Bottom CTA ── */}
       <section className="projects__cta projects-section">
         <div className="container">
-          <hr className="projects__cta-divider" />
+          <AnimatedDivider />
           <div className="projects__cta-inner">
             <p className="projects__cta-heading">
               If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
