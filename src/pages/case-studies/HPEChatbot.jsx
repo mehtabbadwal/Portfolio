@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { AnimatedDivider } from '../AnimatedDivider';
 import { ScrollProgress } from '../../components/ScrollProgress';
+import { MetricCounter } from '../../components/MetricCounter';
 import './HPEChatbot.css';
 
 function HPEChatbot() {
@@ -48,15 +49,15 @@ function HPEChatbot() {
               <span className="cs__hero-card-label">Impact</span>
               <div className="cs__hero-card-metrics">
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">32%</span>
+                  <MetricCounter value="32%" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">fewer escalations</span>
                 </div>
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">3x</span>
+                  <MetricCounter value="3x" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">chatbot usage</span>
                 </div>
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">2 min</span>
+                  <MetricCounter value="2 min" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">avg resolution time</span>
                 </div>
               </div>

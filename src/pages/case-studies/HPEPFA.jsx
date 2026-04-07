@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { AnimatedDivider } from '../AnimatedDivider';
 import { ScrollProgress } from '../../components/ScrollProgress';
+import { MetricCounter } from '../../components/MetricCounter';
 import './HPEChatbot.css';
 
 function HPEPFA() {
@@ -51,7 +52,7 @@ function HPEPFA() {
               <span className="cs__hero-card-label">Impact</span>
               <div className="cs__hero-card-metrics">
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">75%</span>
+                  <MetricCounter value="75%" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">reduction in clicks</span>
                 </div>
                 <div className="cs__hero-card-metric">

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { AnimatedDivider } from '../AnimatedDivider';
 import { ScrollProgress } from '../../components/ScrollProgress';
+import { MetricCounter } from '../../components/MetricCounter';
 import './HPEChatbot.css';
 
 function FluidraPro() {
@@ -58,11 +59,11 @@ function FluidraPro() {
               <span className="cs__hero-card-label">Impact</span>
               <div className="cs__hero-card-metrics">
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">+40%</span>
+                  <MetricCounter value="+40%" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">user engagement</span>
                 </div>
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">+25%</span>
+                  <MetricCounter value="+25%" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">service efficiency</span>
                 </div>
                 <div className="cs__hero-card-metric">

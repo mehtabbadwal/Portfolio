@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { AnimatedDivider } from '../AnimatedDivider';
 import { ScrollProgress } from '../../components/ScrollProgress';
+import { MetricCounter } from '../../components/MetricCounter';
 import './HPEChatbot.css';
 
 function Qubera() {
@@ -49,15 +50,15 @@ function Qubera() {
               <span className="cs__hero-card-label">Impact</span>
               <div className="cs__hero-card-metrics">
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">85%</span>
+                  <MetricCounter value="85%" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">faster extraction</span>
                 </div>
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">30%</span>
+                  <MetricCounter value="30%" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">faster decisions</span>
                 </div>
                 <div className="cs__hero-card-metric">
-                  <span className="cs__hero-card-metric-value">6 wks</span>
+                  <MetricCounter value="6 wks" className="cs__hero-card-metric-value" />
                   <span className="cs__hero-card-metric-text">MVP to launch</span>
                 </div>
               </div>
