@@ -231,31 +231,7 @@ function FluidraPro() {
             className="cs__solution-img"
             style={{ marginTop: '2rem' }}
           />
-        </div>
-      </section>
-
-      {/* ── Impact ── */}
-      <section className="cs__narrative section">
-        <div className="container">
-          <p className="cs__label fade-up">Impact</p>
-          <div className="cs__impact-grid fade-up">
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">+40%</span>
-              <span className="cs__impact-label">user engagement</span>
-              <span className="cs__impact-detail">Post-launch</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">+25%</span>
-              <span className="cs__impact-label">service efficiency</span>
-              <span className="cs__impact-detail">Measured in field</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">Live</span>
-              <span className="cs__impact-label">on App Store</span>
-              <span className="cs__impact-detail">Since January 2024</span>
-            </div>
-          </div>
-          <div className="cs__ext-links fade-up">
+          <div className="cs__ext-links fade-up" style={{ marginTop: '2rem' }}>
             <a
               href="https://apps.apple.com/us/app/fluidra-pro/id1538621105"
               target="_blank"
