@@ -19,7 +19,7 @@ export function useScrollReveal(threshold = 0.15) {
           }
         });
       },
-      { threshold }
+      { threshold, rootMargin: '0px 0px -100px 0px' }
     );
 
     targets.forEach((t) => observer.observe(t));
