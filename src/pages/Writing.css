@@ -143,11 +143,29 @@
   overflow: hidden;
   border: 1px solid #E8E2D8;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
 }
 
 .wp__card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(44, 36, 32, 0.08);
+}
+
+.wp__card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #C4603E;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wp__card:hover::after {
+  transform: scaleX(1);
 }
 
 .wp__card-image {
