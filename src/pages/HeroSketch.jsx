@@ -15,7 +15,7 @@ export function HeroSketch() {
           d="M 118 15 C 149 13, 172 38, 171 67 C 170 97, 149 121, 118 121 C 88 121, 66 97, 67 67 C 68 38, 89 15, 118 15"
           fill="none"
         />
-        <circle className="sketch-dot" cx="94" cy="52" r="4.5" />
+        <circle className="sketch-dot" cx="94" cy="18" r="4.5" />
       </svg>
     </div>
   );

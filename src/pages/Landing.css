@@ -1035,7 +1035,7 @@
 .sketch-dot {
   fill: #C4603E;
   opacity: 0;
-  transform-origin: 94px 52px;
+  transform-origin: 94px 18px;
   animation: sketchDot 0.3s ease 0.95s forwards;
 }
 
