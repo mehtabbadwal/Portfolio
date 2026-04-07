@@ -374,7 +374,7 @@
 
 .projects__cta-heading {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
   font-weight: 300;
   font-style: italic;
   line-height: 1.3;
