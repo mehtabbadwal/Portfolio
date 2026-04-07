@@ -172,14 +172,12 @@ function FluidraPro() {
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2.5rem' }}>
-            <div className="cs__image-placeholder cs__image-placeholder--large fade-up" style={{ flex: 1, marginTop: 0 }}>
-              <span>Schedule screen redesign &mdash; before</span>
-            </div>
-            <div className="cs__image-placeholder cs__image-placeholder--large fade-up" style={{ flex: 1, marginTop: 0 }}>
-              <span>Schedule screen redesign &mdash; after</span>
-            </div>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-redesign.svg`}
+            alt="Schedule screen redesign — before and after"
+            className="cs__solution-img"
+            style={{ marginTop: '2.5rem' }}
+          />
 
           <div className="cs__prose fade-up" style={{ marginTop: '2.5rem' }}>
             <p className="cs__body">Four changes came directly from testing:</p>
