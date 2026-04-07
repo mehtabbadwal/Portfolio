@@ -10,7 +10,7 @@ const articles = [
     readTime: 4,
     title: 'Stay out of the way',
     description: "Design shouldn\u2019t assume how much time a person has. It should adapt to the fact that the answer changes moment to moment.",
-    image: null,
+    image: '/stay-out-of-way.svg',
     slug: 'stay-out-of-the-way',
   },
   {
