@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { HeroSketch } from './HeroSketch';
 import './Landing.css';
 
 const philosophyCards = [
@@ -128,6 +129,7 @@ function Landing() {
             <Link to="/about" className="hero__learn-more fade-up stagger-5">
               Or learn more about me &rarr;
             </Link>
+            <HeroSketch />
           </div>
           <div className="hero__photo fade-up stagger-3">
             <img
