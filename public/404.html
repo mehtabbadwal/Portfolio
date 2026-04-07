@@ -4,18 +4,10 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // GitHub Pages SPA redirect
-      // Redirects from 404.html to index.html with path preserved
-      var pathSegments = window.location.pathname.split('/').filter(function(s) { return s; });
-      var repo = pathSegments[0]; // Repository name (Portfolio)
-
-      // Store the path for the router
-      sessionStorage.setItem('redirect', window.location.pathname);
-
-      // Redirect to index.html
-      window.location.replace(
-        window.location.origin + '/' + repo + '/index.html'
-      );
+      // SPA redirect for GitHub Pages (root domain, no subfolder)
+      // Stores the requested path and redirects to index.html
+      sessionStorage.setItem('redirect', window.location.pathname + window.location.search);
+      window.location.replace(window.location.origin + '/');
     </script>
   </head>
   <body>
