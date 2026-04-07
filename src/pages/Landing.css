@@ -1051,3 +1051,26 @@
 @media (max-width: 768px) {
   .hero__sketch { display: none; }
 }
+
+/* ── Animated Divider ── */
+.animated-divider {
+  height: 1px;
+  background: transparent;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.animated-divider::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #E8E2D8;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-divider.divider--visible::after {
+  transform: scaleX(1);
+}
