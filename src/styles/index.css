@@ -183,3 +183,19 @@ ul { list-style: none; }
 .stagger-3 { transition-delay: 0.2s; }
 .stagger-4 { transition-delay: 0.3s; }
 .stagger-5 { transition-delay: 0.4s; }
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100vh;
+  background: #E8E2D8;
+  z-index: 100;
+}
+
+.scroll-progress__bar {
+  width: 100%;
+  background: #C4603E;
+  transition: height 0.1s linear;
+}
