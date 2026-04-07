@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { HeroSketch } from './HeroSketch';
+import { AnimatedDivider } from './AnimatedDivider';
 import './Landing.css';
 
 const philosophyCards = [
@@ -166,7 +167,7 @@ function Landing() {
         </div>
       </section>
 
-      <hr className="divider container" />
+      <AnimatedDivider />
 
       {/* ── Selected Work ── */}
       <section id="selected-work" className="work section">
@@ -219,7 +220,7 @@ function Landing() {
         </div>
       </section>
 
-      <hr className="divider container" />
+      <AnimatedDivider />
 
       {/* ── Testimonials ── */}
       <section className="testimonials section">
@@ -251,7 +252,7 @@ function Landing() {
         </div>
       </section>
 
-      <hr className="divider container" />
+      <AnimatedDivider />
 
       {/* ── Writing ── */}
       <section className="writing section">
@@ -295,7 +296,7 @@ function Landing() {
         </div>
       </section>
 
-      <hr className="divider container" />
+      <AnimatedDivider />
 
       {/* ── CTA ── */}
       <section className="cta section">
