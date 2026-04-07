@@ -367,6 +367,11 @@
   margin-bottom: 3.75rem;
 }
 
+.projects__cta .animated-divider {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
 .projects__cta-inner {
   display: flex;
   flex-direction: column;
