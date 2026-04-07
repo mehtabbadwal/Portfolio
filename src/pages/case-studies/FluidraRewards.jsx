@@ -12,12 +12,14 @@ function FluidraRewards() {
         <div className="container">
           <Link to="/work" className="cs__back fade-up">&larr; Work</Link>
 
-          <div className="cs__hero-image fade-up" style={{ marginBottom: '3rem' }}>
-            <span>Fluidra Pro rewards integration dashboard</span>
-          </div>
-
-          <div className="cs__prose fade-up" style={{ marginBottom: '2rem' }}>
-            <p className="cs__body">
+          <div className="cs__hero-top fade-up">
+            <div className="cs__hero-meta">
+              <span className="cs__hero-year">2024</span>
+              <span className="cs__hero-meta-dot">&bull;</span>
+              <span className="cs__hero-tag">Mobile &middot; Platform</span>
+            </div>
+            <h1 className="cs__hero-title">Fluidra Rewards Integration</h1>
+            <p className="cs__hero-subtitle">
               Pool professionals were logging into two separate apps to do one job. I
               led the end-to-end design of integrating Fluidra Rewards into Fluidra Pro
               &mdash; consolidating two products into one coherent platform across web,
@@ -25,10 +27,8 @@ function FluidraRewards() {
             </p>
           </div>
 
-          <span className="cs__hero-year fade-up" style={{ display: 'block', marginBottom: '2rem' }}>2024</span>
-
-          {/* Horizontal Card — metadata only, no impact */}
-          <div className="cs__hero-card fade-up" style={{ marginBottom: '3rem' }}>
+          {/* Horizontal Card — metadata + impact */}
+          <div className="cs__hero-card fade-up">
             <div className="cs__hero-card-meta">
               {[
                 ['Role', 'Product Designer, UX Research, Design System'],
@@ -42,27 +42,40 @@ function FluidraRewards() {
                 </div>
               ))}
             </div>
+
+            <div className="cs__hero-card-impact">
+              <span className="cs__hero-card-label">Impact</span>
+              <div className="cs__hero-card-metrics">
+                <div className="cs__hero-card-metric">
+                  <span className="cs__hero-card-metric-value">30%</span>
+                  <span className="cs__hero-card-metric-text">increase in user interaction</span>
+                </div>
+                <div className="cs__hero-card-metric">
+                  <span className="cs__hero-card-metric-value">20%</span>
+                  <span className="cs__hero-card-metric-text">improvement in user retention</span>
+                </div>
+                <div className="cs__hero-card-metric">
+                  <span className="cs__hero-card-metric-value">On schedule</span>
+                  <span className="cs__hero-card-metric-text">despite mid-project rebrand</span>
+                </div>
+              </div>
+              <a
+                href="https://www.fluidrapro.com/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cs__ext-link"
+                style={{ marginTop: '1.25rem', display: 'inline-block' }}
+              >
+                View Live App &rarr;
+              </a>
+            </div>
           </div>
 
-          <a
-            href="https://www.fluidrapro.com/en"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="fade-up"
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '0.9375rem',
-              fontWeight: 500,
-              color: '#C4603E',
-              display: 'inline-block',
-              marginBottom: '2rem',
-              transition: 'opacity 0.2s ease',
-            }}
-          >
-            View Live &rarr;
-          </a>
-
-          <h1 className="cs__hero-title fade-up">Fluidra Rewards Integration</h1>
+          <div className="cs__hero-image fade-up">
+            <div className="cs__image-placeholder cs__image-placeholder--large" style={{ marginTop: 0 }}>
+              <span>Fluidra Pro rewards integration dashboard</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -216,35 +229,6 @@ function FluidraRewards() {
               carried since: when your information architecture is solid, visual changes
               are manageable. When the structure is wrong, no polish fixes it.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Impact ── */}
-      <section className="cs__narrative section">
-        <div className="container">
-          <p className="cs__label fade-up">Impact</p>
-          <div className="cs__impact-grid fade-up">
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">30%</span>
-              <span className="cs__impact-label">increase</span>
-              <span className="cs__impact-detail">In user interaction</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">20%</span>
-              <span className="cs__impact-label">improvement</span>
-              <span className="cs__impact-detail">In user retention from loyalty integration</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">On schedule</span>
-              <span className="cs__impact-label">Launched</span>
-              <span className="cs__impact-detail">Despite mid-project rebrand</span>
-            </div>
-            <div className="cs__impact-card">
-              <span className="cs__impact-value">55</span>
-              <span className="cs__impact-label">screens</span>
-              <span className="cs__impact-detail">Across three platforms</span>
-            </div>
           </div>
         </div>
       </section>
