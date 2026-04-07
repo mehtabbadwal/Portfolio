@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { AnimatedDivider } from '../AnimatedDivider';
+import { ScrollProgress } from '../../components/ScrollProgress';
 import './HPEChatbot.css';
 
 function FluidraRewards() {
@@ -8,6 +9,7 @@ function FluidraRewards() {
 
   return (
     <div className="cs" ref={pageRef}>
+      <ScrollProgress />
       {/* ── Hero ── */}
       <section className="cs__hero section">
         <div className="container">
