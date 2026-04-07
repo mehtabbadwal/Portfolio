@@ -298,34 +298,36 @@ function FluidraPro() {
       <section className="cs__narrative section">
         <div className="container">
           <p className="cs__label fade-up">Final Designs</p>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <div style={{ flex: 1 }} className="fade-up">
+          <div className="cs__final-designs fade-up">
+            <div className="cs__final-design-item">
               <a
-                href="https://www.mehtabbadwal.com/s/Before.jpg"
+                href={`${import.meta.env.BASE_URL}fluidra-before.webp`}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="cs__final-design-link"
               >
-                <div className="cs__image-placeholder" style={{ height: '600px', marginTop: 0, cursor: 'pointer' }}>
-                  <span>Before (click to view full size)</span>
-                </div>
+                <img
+                  src={`${import.meta.env.BASE_URL}fluidra-before.webp`}
+                  alt="Fluidra Pro — Before redesign"
+                  className="cs__solution-img"
+                />
               </a>
-              <p className="cs__body" style={{ fontSize: '0.8125rem', color: '#B0A090', marginTop: '0.5rem' }}>
-                (click on the image to view)
-              </p>
+              <p className="cs__final-design-caption">See Before high-res &rarr;</p>
             </div>
-            <div style={{ flex: 1 }} className="fade-up">
+            <div className="cs__final-design-item">
               <a
-                href="https://www.mehtabbadwal.com/s/After.jpg"
+                href={`${import.meta.env.BASE_URL}fluidra-after.webp`}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="cs__final-design-link"
               >
-                <div className="cs__image-placeholder" style={{ height: '600px', marginTop: 0, cursor: 'pointer' }}>
-                  <span>After (click to view full size)</span>
-                </div>
+                <img
+                  src={`${import.meta.env.BASE_URL}fluidra-after.webp`}
+                  alt="Fluidra Pro — After redesign"
+                  className="cs__solution-img"
+                />
               </a>
-              <p className="cs__body" style={{ fontSize: '0.8125rem', color: '#B0A090', marginTop: '0.5rem' }}>
-                (click on the image to view)
-              </p>
+              <p className="cs__final-design-caption">See After high-res &rarr;</p>
             </div>
           </div>
         </div>

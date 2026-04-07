@@ -458,6 +458,37 @@
   color: #A34E30;
 }
 
+/* ── Final Designs comparison ── */
+.cs__final-designs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.cs__final-design-item {
+  width: 100%;
+}
+
+.cs__final-design-link {
+  display: block;
+}
+
+.cs__final-design-link img {
+  transition: opacity 0.2s ease;
+}
+
+.cs__final-design-link:hover img {
+  opacity: 0.9;
+}
+
+.cs__final-design-caption {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--color-light);
+  margin-top: 0.75rem;
+}
+
 /* ── Responsive ── */
 @media (max-width: 1024px) {
   .cs__hero-card {
