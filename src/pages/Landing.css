@@ -1004,8 +1004,8 @@
   stroke: #2C2420;
   stroke-width: 0.75;
   opacity: 0.2;
-  stroke-dasharray: 78;
-  stroke-dashoffset: 78;
+  stroke-dasharray: 105;
+  stroke-dashoffset: 105;
   animation: sketchDraw 0.45s ease forwards;
 }
 
@@ -1013,8 +1013,8 @@
   stroke: #2C2420;
   stroke-width: 0.75;
   opacity: 0.2;
-  stroke-dasharray: 90;
-  stroke-dashoffset: 90;
+  stroke-dasharray: 111;
+  stroke-dashoffset: 111;
   animation: sketchDraw 0.45s ease forwards;
 }
 
@@ -1027,15 +1027,15 @@
   stroke: #2C2420;
   stroke-width: 1.25;
   opacity: 0.5;
-  stroke-dasharray: 290;
-  stroke-dashoffset: 290;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
   animation: sketchDraw 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.35s forwards;
 }
 
 .sketch-dot {
   fill: #C4603E;
   opacity: 0;
-  transform-origin: 75px 36px;
+  transform-origin: 94px 52px;
   animation: sketchDot 0.3s ease 0.95s forwards;
 }
 
