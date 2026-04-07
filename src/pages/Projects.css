@@ -357,6 +357,7 @@
 /* ── Bottom CTA ── */
 .projects__cta {
   background: var(--color-bg);
+  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
