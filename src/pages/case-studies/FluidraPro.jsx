@@ -121,14 +121,18 @@ function FluidraPro() {
               building user loyalty, and meeting business goals.
             </p>
           </div>
-          <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2.5rem' }}>
-            <div className="cs__image-placeholder cs__image-placeholder--medium fade-up" style={{ flex: 1, marginTop: 0 }}>
-              <span>Problem evaluation &mdash; user feedback analysis</span>
-            </div>
-            <div className="cs__image-placeholder cs__image-placeholder--medium fade-up" style={{ flex: 1, marginTop: 0 }}>
-              <span>Problem evaluation &mdash; data analytics</span>
-            </div>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-problem-eval-one.webp`}
+            alt="Problem evaluation — user feedback analysis"
+            className="cs__solution-img"
+            style={{ marginTop: '2.5rem' }}
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-problem-eval-two.webp`}
+            alt="Problem evaluation — data analytics"
+            className="cs__solution-img"
+            style={{ marginTop: '2rem' }}
+          />
         </div>
       </section>
 
