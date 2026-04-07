@@ -190,9 +190,11 @@ function FluidraPro() {
             </p>
           </div>
 
-          <div className="cs__image-placeholder cs__image-placeholder--medium fade-up">
-            <span>Usability study results comparison</span>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-usability.svg`}
+            alt="Usability study results comparison"
+            className="cs__solution-img"
+          />
 
           {/* Design System */}
           <div className="cs__prose fade-up" style={{ marginTop: '2.5rem' }}>
