@@ -7,7 +7,7 @@ function ShadowSystemProblem() {
       date="MAR 8"
       author="MEHTAB BADWAL"
       readTime="8"
-      heroImage={null}
+      heroImage="/shadow-system.svg"
       prevPost={{
         title: 'Stay out of the way',
         url: '/blog/stay-out-of-the-way',

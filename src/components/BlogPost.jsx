@@ -42,30 +42,16 @@ const BlogPost = ({
             {date} &middot; {author} &middot; {readTime} min read
           </div>
 
-          {/* Hero Image — always visible */}
-          <div className="cs__hero-image fade-up" style={{
-            marginBottom: '3.75rem',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-            {heroImage ? (
+          {/* Hero Image */}
+          {heroImage && (
+            <div className="cs__hero-image fade-up" style={{ marginBottom: '3.75rem' }}>
               <img
                 src={heroImage}
                 alt={title}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
               />
-            ) : (
-              <span style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.9375rem',
-                color: 'var(--color-light)',
-                fontStyle: 'italic',
-              }}>
-                Hero image
-              </span>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </section>
 

@@ -94,7 +94,11 @@ function Writing() {
               </div>
             </div>
             <div className="wp__featured-right fade-up">
-              <span className="wp__featured-image-label">Featured article image</span>
+              <img
+                src="/shadow-system.svg"
+                alt="The Shadow System Problem"
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
             </div>
           </div>
         </div>
