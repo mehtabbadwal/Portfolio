@@ -772,7 +772,12 @@
 .cta__divider {
   border: none;
   border-top: 1px solid #D6CFBF;
-  margin-bottom: 4rem;
+  margin-top: 0;
+  margin-bottom: 3.5rem;
+}
+
+.cta .animated-divider {
+  margin-bottom: 3.5rem;
 }
 
 .cta__grid {
@@ -787,9 +792,8 @@
 }
 
 .cta__heading {
-  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-size: 1.75rem;
   line-height: 1.25;
-  white-space: nowrap;
   margin-bottom: 1rem;
 }
 
@@ -885,10 +889,6 @@
     max-width: 400px;
     margin: 0 auto;
     display: block;
-  }
-
-  .cta__heading {
-    white-space: normal;
   }
 
   .featured__image {
