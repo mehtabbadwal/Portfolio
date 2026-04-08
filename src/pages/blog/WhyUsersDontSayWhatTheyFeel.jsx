@@ -7,7 +7,7 @@ function WhyUsersDontSayWhatTheyFeel() {
       date="OCT 16"
       author="MEHTAB BADWAL"
       readTime="7"
-      heroImage={null}
+      heroImage="/writing-don't-say.svg"
       prevPost={{
         title: 'Designing for Dignity in Healthcare',
         url: '/blog/designing-for-dignity',
