@@ -7,7 +7,7 @@ function DesigningForDignity() {
       date="OCT 21"
       author="MEHTAB BADWAL"
       readTime="6"
-      heroImage={null}
+      heroImage="/writing-healthcare.svg"
       prevPost={{
         title: 'When AI Shifts Control',
         url: '/blog/when-ai-shifts-control',
