@@ -470,7 +470,10 @@
 }
 
 @media (max-width: 768px) {
-  .needle-sketch { display: none; }
+  .needle-sketch svg {
+    width: 260px;
+    height: auto;
+  }
 }
 
 /* ── Wave Sketch ── */
@@ -499,5 +502,8 @@
 }
 
 @media (max-width: 768px) {
-  .wave-sketch { display: none; }
+  .wave-sketch svg {
+    width: 100%;
+    height: auto;
+  }
 }
