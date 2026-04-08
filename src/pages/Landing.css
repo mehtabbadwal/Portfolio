@@ -905,6 +905,7 @@
   /* Hero mobile */
   .hero__grid {
     gap: 2rem;
+    grid-template-columns: 1fr;
   }
 
   .hero__photo {
@@ -929,10 +930,6 @@
   .hero__learn-more {
     margin-top: 1rem;
     text-align: center;
-  }
-
-  .hero__photo {
-    order: -1;
   }
 
   .philosophy__heading {
