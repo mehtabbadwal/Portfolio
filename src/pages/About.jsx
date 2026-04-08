@@ -1,6 +1,7 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AnimatedDivider } from './AnimatedDivider';
 import { PatternSketch } from '../components/PatternSketch';
+import { WaveSketch } from '../components/WaveSketch';
 import './About.css';
 
 function About() {
@@ -155,6 +156,7 @@ function About() {
               <p className="about__outside-quote">
                 I live in San Diego. The ocean helps.
               </p>
+              <WaveSketch />
               <p className="about__outside-body">
                 I have a child who asks better questions than most stakeholders. I make
                 art, I write &mdash; Mind Meets Design is where I think out loud about
