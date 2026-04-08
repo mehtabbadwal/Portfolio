@@ -10,6 +10,7 @@ const caseStudies = [
     tag: 'ENTERPRISE SYSTEMS',
     title: 'HPE Agentic Chatbot',
     description: 'The fix wasn\u2019t smarter AI. It was more honest AI.',
+    image: 'hpe-chatbot-hero.svg',
     metrics: [
       { value: '32%', label: 'fewer escalations' },
       { value: '3x', label: 'chatbot usage' },
@@ -23,6 +24,7 @@ const caseStudies = [
     tag: 'ENTERPRISE SYSTEMS',
     title: 'HPE Premium Account Family',
     description: 'For power users, a cleaner interface is actually slower. So I built a denser one.',
+    image: 'pfa-hero.svg',
     metrics: [
       { value: '75%', label: 'fewer clicks' },
       { value: '3 wks', label: 'MVP shipped' },
@@ -35,6 +37,7 @@ const caseStudies = [
     tag: 'AI PRODUCT',
     title: 'Qubera \u2014 AI Research Tool',
     description: 'Analysts knew what questions to ask. The tool just made them ask manually, every time.',
+    image: 'qubera-hero.webp',
     metrics: [
       { value: '85%', label: 'faster extraction' },
       { value: '30%', label: 'faster decisions' },
@@ -47,6 +50,7 @@ const caseStudies = [
     tag: 'MOBILE \u00B7 FIELD SERVICE',
     title: 'Fluidra Pro Redesign',
     description: 'Built around the 40-minute window, not the system.',
+    image: 'fluidra-service-hero.webp',
     metrics: [
       { value: '40%', label: 'feature adoption' },
       { value: '25%', label: 'task efficiency' },
@@ -59,6 +63,7 @@ const caseStudies = [
     tag: 'MOBILE \u00B7 PLATFORM',
     title: 'Fluidra Rewards Integration',
     description: 'Two products, two logins, one job. The answer was an architecture problem, not a design problem.',
+    image: 'fluidra-rewards-hero.webp',
     metrics: [
       { value: '30%', label: 'user interaction' },
       { value: '20%', label: 'user retention' },
@@ -125,6 +130,15 @@ function Projects() {
                 : { href: `#${cs.slug}` };
               return (
                 <CardTag {...cardProps} key={cs.slug} className={`cs-card fade-up stagger-${Math.min(i + 1, 5)}`}>
+                  {cs.image && (
+                    <div className="cs-card__image">
+                      <img
+                        src={`${import.meta.env.BASE_URL}${cs.image}`}
+                        alt={cs.title}
+                        className="cs-card__img"
+                      />
+                    </div>
+                  )}
                   <div className="cs-card__meta">
                     <span className="cs-card__year">{cs.year}</span>
                     <span className="cs-card__dot" />
