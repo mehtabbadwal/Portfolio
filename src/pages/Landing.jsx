@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { HeroSketch } from './HeroSketch';
 import { AnimatedDivider } from './AnimatedDivider';
 import { MetricCounter } from '../components/MetricCounter';
 import { SnailAnimation } from '../components/SnailAnimation';
@@ -132,7 +131,6 @@ function Landing() {
             <Link to="/about" className="hero__learn-more fade-up stagger-5">
               Or learn more about me &rarr;
             </Link>
-            <HeroSketch />
             <SnailAnimation />
           </div>
           <div className="hero__photo fade-up stagger-3">
