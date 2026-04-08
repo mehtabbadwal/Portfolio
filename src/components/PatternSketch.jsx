@@ -24,29 +24,31 @@ export function PatternSketch() {
       <svg viewBox="0 0 400 80" width="400" height="80" xmlns="http://www.w3.org/2000/svg">
 
         {/* ── Needle ── */}
-        {/* Needle body — tapered, horizontal */}
+        {/* Needle body — long tapered shape */}
         <path
           className="needle-sketch__needle"
-          d="M 10 40 C 12 38, 20 37, 50 39 C 56 39.5, 62 40, 65 40 C 62 40, 56 40.5, 50 41 C 20 43, 12 42, 10 40 Z"
+          d="M 2 40 L 72 38.5 L 72 41.5 L 2 40 Z"
           fill="none"
         />
-        {/* Needle tip — sharp left point */}
+
+        {/* Needle sharp tip */}
         <path
           className="needle-sketch__needle-tip"
-          d="M 10 40 L 4 40"
+          d="M 2 40 L 0 40"
           fill="none"
         />
-        {/* Needle eye — oval on right end */}
+
+        {/* Needle eye — clear oval cutout near right end */}
         <ellipse
           className="needle-sketch__eye"
-          cx="60" cy="40" rx="5" ry="3.5"
+          cx="64" cy="40" rx="6" ry="4"
         />
 
         {/* ── Thread ── */}
-        {/* Exits eye, loops confidently, trails right */}
+        {/* Thread exits from eye */}
         <path
           className="needle-sketch__thread"
-          d="M 65 40 C 90 40, 115 40, 135 30 C 155 20, 168 8, 185 10 C 205 12, 218 36, 205 50 C 192 64, 172 62, 162 50 C 152 38, 165 18, 182 22 C 202 28, 225 46, 265 42 C 295 39, 330 38, 400 38"
+          d="M 70 40 C 95 40, 118 40, 138 30 C 158 20, 170 8, 187 10 C 207 12, 220 36, 207 50 C 194 64, 174 62, 164 50 C 154 38, 167 18, 184 22 C 204 28, 228 46, 268 42 C 298 39, 332 38, 400 38"
           fill="none"
         />
 
