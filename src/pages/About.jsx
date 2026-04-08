@@ -1,7 +1,6 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AnimatedDivider } from './AnimatedDivider';
 import { PatternSketch } from '../components/PatternSketch';
-import { HandSystemSketch } from '../components/HandSystemSketch';
 import './About.css';
 
 function About() {
@@ -68,7 +67,6 @@ function About() {
                 The space between what&rsquo;s expected and what&rsquo;s actually needed
                 is where the interesting work is.
               </p>
-              <HandSystemSketch />
             </div>
             <div className="about__think-right">
               <ul className="about__principles">
