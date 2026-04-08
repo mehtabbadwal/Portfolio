@@ -1,5 +1,6 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AnimatedDivider } from './AnimatedDivider';
+import { PatternSketch } from '../components/PatternSketch';
 import './About.css';
 
 function About() {
@@ -28,6 +29,7 @@ function About() {
                 That&rsquo;s still how I think about design &mdash; getting the structure
                 right so everything else can breathe.
               </p>
+              <PatternSketch />
             </div>
             <div className="about__opening-photo fade-up">
               <img
