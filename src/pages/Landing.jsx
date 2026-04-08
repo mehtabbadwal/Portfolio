@@ -3,6 +3,7 @@ import { useScrollReveal } from '../hooks/useScrollReveal';
 import { HeroSketch } from './HeroSketch';
 import { AnimatedDivider } from './AnimatedDivider';
 import { MetricCounter } from '../components/MetricCounter';
+import { SnailAnimation } from '../components/SnailAnimation';
 import './Landing.css';
 
 const philosophyCards = [
@@ -132,6 +133,7 @@ function Landing() {
               Or learn more about me &rarr;
             </Link>
             <HeroSketch />
+            <SnailAnimation />
           </div>
           <div className="hero__photo fade-up stagger-3">
             <img
