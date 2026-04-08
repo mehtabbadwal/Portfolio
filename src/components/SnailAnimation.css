@@ -8,7 +8,7 @@
 .snail-outer {
   display: inline-block;
   opacity: 0;
-  animation: snailWalkIn 18s linear 0.5s forwards;
+  animation: snailWalkIn 18s linear 0.2s forwards;
 }
 
 .snail-body {
