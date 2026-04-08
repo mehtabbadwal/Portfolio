@@ -76,12 +76,10 @@ function Writing() {
       {/* ── Featured ── */}
       <section className="wp__featured section">
         <div className="container">
-          <div className="wp__featured-flex">
-            <div className="wp__featured-left fade-up">
+          <Link to="/blog/shadow-system-problem" className="wp__featured-card fade-up">
+            <div className="wp__featured-left">
               <p className="wp__featured-label">Featured</p>
-              <Link to="/blog/shadow-system-problem" style={{ textDecoration: 'none' }}>
-                <h2 className="wp__featured-title">The Shadow System Problem</h2>
-              </Link>
+              <h2 className="wp__featured-title">The Shadow System Problem</h2>
               <p className="wp__featured-desc">
                 Most product teams think shadow systems mean users don&rsquo;t
                 understand the tool. Actually, shadow systems mean users understand
@@ -90,17 +88,17 @@ function Writing() {
               </p>
               <div className="wp__featured-meta">
                 <span className="wp__featured-date">March 2025</span>
-                <Link to="/blog/shadow-system-problem" className="wp__featured-link">Read essay &rarr;</Link>
+                <span className="wp__featured-link">Read &rarr;</span>
               </div>
             </div>
-            <div className="wp__featured-right fade-up">
+            <div className="wp__featured-right">
               <img
                 src="/shadow-system.svg"
                 alt="The Shadow System Problem"
                 style={{ width: '100%', height: 'auto', display: 'block' }}
               />
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
@@ -132,7 +130,6 @@ function Writing() {
                   </div>
                   <h3 className="wp__card-title">{a.title}</h3>
                   <p className="wp__card-desc">{a.description}</p>
-                  <span className="wp__card-cta">Read essay &rarr;</span>
                 </div>
               </CardTag>
               );
