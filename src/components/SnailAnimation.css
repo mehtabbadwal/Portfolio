@@ -50,7 +50,5 @@
 }
 
 @media (max-width: 768px) {
-  .snail-wrapper {
-    height: 80px;
-  }
+  .snail-wrapper { display: none; }
 }
