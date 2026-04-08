@@ -46,7 +46,7 @@ const articles = [
     readTime: 5,
     title: 'The Weight of Choice',
     description: "Choice doesn\u2019t exhaust us because there are too many options. It exhausts us because each decision feels heavier than it needs to.",
-    image: null,
+    image: '/writing-weight-choice.svg',
     slug: 'the-weight-of-choice',
   },
 ];

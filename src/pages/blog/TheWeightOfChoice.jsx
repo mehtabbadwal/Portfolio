@@ -7,7 +7,7 @@ function TheWeightOfChoice() {
       date="NOV 13"
       author="MEHTAB BADWAL"
       readTime="5"
-      heroImage={null}
+      heroImage="/writing-weight-choice.svg"
       prevPost={{
         title: "Why Users Don\u2019t Say What They Feel",
         url: '/blog/why-users-dont-say-what-they-feel',
