@@ -993,6 +993,10 @@
     text-align: left;
   }
 
+  .cta__heading {
+    white-space: normal;
+  }
+
   .cta__actions {
     flex-direction: column;
   }
