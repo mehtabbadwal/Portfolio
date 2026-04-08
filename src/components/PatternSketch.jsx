@@ -21,34 +21,58 @@ export function PatternSketch() {
 
   return (
     <div className="pattern-sketch" ref={ref} aria-hidden="true">
-      <svg viewBox="0 0 260 155" width="260" height="155" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 180 220" width="180" height="220" xmlns="http://www.w3.org/2000/svg">
 
-        {/* Main sleeve cap outline */}
-        <path
-          className="pattern-sketch__outline"
-          d="M 35 140 C 32 110, 28 85, 42 58 C 58 28, 100 8, 130 6 C 160 8, 202 28, 218 58 C 232 85, 228 110, 225 140 L 35 140 Z"
-          fill="none"
-        />
+        {/* Center front — straight left edge */}
+        <line className="pattern-sketch__outline pattern-sketch__outline--1"
+          x1="30" y1="30" x2="30" y2="195" />
 
-        {/* Grain line — vertical center arrow */}
-        <line className="pattern-sketch__grain" x1="130" y1="28" x2="130" y2="125" />
-        {/* Arrow heads */}
-        <polyline className="pattern-sketch__arrow" points="124,38 130,26 136,38" fill="none" />
-        <polyline className="pattern-sketch__arrow" points="124,115 130,127 136,115" fill="none" />
+        {/* Neckline — curves from center front up to shoulder */}
+        <path className="pattern-sketch__outline pattern-sketch__outline--2"
+          d="M 30 30 C 30 20, 52 14, 75 18"
+          fill="none" />
 
-        {/* Notch mark on left seam */}
-        <line className="pattern-sketch__notch" x1="38" y1="90" x2="50" y2="87" />
+        {/* Shoulder seam — angled line to armhole */}
+        <line className="pattern-sketch__outline pattern-sketch__outline--3"
+          x1="75" y1="18" x2="130" y2="42" />
 
-        {/* Notch mark on right seam */}
-        <line className="pattern-sketch__notch" x1="222" y1="90" x2="210" y2="87" />
+        {/* Armscye — armhole curve sweeping down */}
+        <path className="pattern-sketch__outline pattern-sketch__outline--4"
+          d="M 130 42 C 148 58, 150 88, 142 115"
+          fill="none" />
 
-        {/* Corner fold marks — bottom left */}
-        <line className="pattern-sketch__fold" x1="35" y1="130" x2="48" y2="130" />
-        <line className="pattern-sketch__fold" x1="35" y1="130" x2="35" y2="143" />
+        {/* Side seam — slight inward curve */}
+        <path className="pattern-sketch__outline pattern-sketch__outline--5"
+          d="M 142 115 C 138 145, 134 168, 132 195"
+          fill="none" />
 
-        {/* Corner fold marks — bottom right */}
-        <line className="pattern-sketch__fold" x1="225" y1="130" x2="212" y2="130" />
-        <line className="pattern-sketch__fold" x1="225" y1="130" x2="225" y2="143" />
+        {/* Waist line — bottom */}
+        <line className="pattern-sketch__outline pattern-sketch__outline--6"
+          x1="30" y1="195" x2="132" y2="195" />
+
+        {/* Grain line */}
+        <line className="pattern-sketch__grain"
+          x1="80" y1="55" x2="80" y2="175" />
+
+        {/* Grain arrow top */}
+        <polyline className="pattern-sketch__arrow pattern-sketch__arrow--1"
+          points="75,65 80,53 85,65" fill="none" />
+
+        {/* Grain arrow bottom */}
+        <polyline className="pattern-sketch__arrow pattern-sketch__arrow--2"
+          points="75,165 80,177 85,165" fill="none" />
+
+        {/* Shoulder notch — terracotta */}
+        <line className="pattern-sketch__notch"
+          x1="100" y1="29" x2="103" y2="36" />
+
+        {/* Side seam notch — terracotta */}
+        <line className="pattern-sketch__notch"
+          x1="142" y1="115" x2="134" y2="116" />
+
+        {/* Corner seam allowance marks — bottom left */}
+        <line className="pattern-sketch__fold" x1="30" y1="185" x2="40" y2="185" />
+        <line className="pattern-sketch__fold" x1="30" y1="185" x2="30" y2="197" />
 
       </svg>
     </div>
