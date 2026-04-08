@@ -1,0 +1,55 @@
+.snail-wrapper {
+  margin-top: var(--space-lg);
+  height: 100px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.snail-outer {
+  display: inline-block;
+  opacity: 0;
+  animation: snailWalkIn 5s cubic-bezier(0.25, 0, 0.4, 1) 0.5s forwards;
+}
+
+.snail-body {
+  animation: snailBob 1.2s ease-in-out infinite;
+  animation-delay: 5.5s;
+  transform-origin: 60px 68px;
+}
+
+.snail-antenna--left {
+  animation: snailWiggleL 1.8s ease-in-out infinite;
+  animation-delay: 5.7s;
+  transform-origin: 92px 49px;
+}
+
+.snail-antenna--right {
+  animation: snailWiggleR 1.8s ease-in-out infinite;
+  animation-delay: 6s;
+  transform-origin: 95px 48px;
+}
+
+@keyframes snailWalkIn {
+  0%   { transform: translateX(-180px); opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: translateX(20px); opacity: 1; }
+}
+
+@keyframes snailBob {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-2px); }
+}
+
+@keyframes snailWiggleL {
+  0%, 100% { transform: rotate(0deg); }
+  40%       { transform: rotate(-6deg); }
+}
+
+@keyframes snailWiggleR {
+  0%, 100% { transform: rotate(0deg); }
+  40%       { transform: rotate(6deg); }
+}
+
+@media (max-width: 768px) {
+  .snail-wrapper { display: none; }
+}
