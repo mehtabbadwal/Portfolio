@@ -350,33 +350,127 @@
   }
 }
 
-/* ── Thread Sketch ── */
-.thread-sketch {
+/* ── Needle Thread Sketch ── */
+.needle-sketch {
   margin-top: 2rem;
   opacity: 0;
 }
 
-.thread-sketch--visible {
+.needle-sketch--visible {
   opacity: 1;
 }
 
-.thread-sketch__line {
+/* Needle body */
+.needle-sketch__needle {
   stroke: #2C2420;
-  stroke-width: 1.5;
-  opacity: 0.18;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 580;
-  stroke-dashoffset: 580;
-  transition: stroke-dashoffset 1.6s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
+  stroke-width: 1;
+  opacity: 0.3;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  transition: stroke-dashoffset 0.3s ease 0.1s;
 }
 
-.thread-sketch--visible .thread-sketch__line {
+.needle-sketch--visible .needle-sketch__needle {
   stroke-dashoffset: 0;
 }
 
+/* Needle tip */
+.needle-sketch__needle-tip {
+  stroke: #2C2420;
+  stroke-width: 1;
+  opacity: 0.3;
+  stroke-dasharray: 8;
+  stroke-dashoffset: 8;
+  transition: stroke-dashoffset 0.15s ease 0.35s;
+}
+
+.needle-sketch--visible .needle-sketch__needle-tip {
+  stroke-dashoffset: 0;
+}
+
+/* Eye */
+.needle-sketch__eye {
+  stroke: #2C2420;
+  stroke-width: 0.75;
+  fill: none;
+  opacity: 0.3;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  transition: stroke-dashoffset 0.2s ease 0.45s;
+}
+
+.needle-sketch--visible .needle-sketch__eye {
+  stroke-dashoffset: 0;
+}
+
+/* Thread */
+.needle-sketch__thread {
+  stroke: #2C2420;
+  stroke-width: 1;
+  opacity: 0.2;
+  stroke-linecap: round;
+  stroke-dasharray: 820;
+  stroke-dashoffset: 820;
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.6s;
+}
+
+.needle-sketch--visible .needle-sketch__thread {
+  stroke-dashoffset: 0;
+}
+
+/* Knot */
+.needle-sketch__knot {
+  fill: #C4603E;
+  opacity: 0;
+  transform-origin: 183px 36px;
+  transform: scale(0);
+  transition: opacity 0.2s ease 1.85s, transform 0.2s ease 1.85s;
+}
+
+.needle-sketch--visible .needle-sketch__knot {
+  opacity: 0.85;
+  transform: scale(1);
+}
+
+/* Ripple circles */
+.needle-sketch__ripple {
+  stroke: #2C2420;
+  opacity: 0;
+  stroke-width: 0.75;
+  transform-origin: 355px 40px;
+  transform: scale(0);
+}
+
+.needle-sketch__ripple--inner {
+  transition: opacity 0.25s ease 2.05s, transform 0.25s ease 2.05s;
+}
+
+.needle-sketch__ripple--outer {
+  transition: opacity 0.25s ease 2.25s, transform 0.25s ease 2.25s;
+}
+
+.needle-sketch--visible .needle-sketch__ripple--inner,
+.needle-sketch--visible .needle-sketch__ripple--outer {
+  opacity: 0.2;
+  transform: scale(1);
+}
+
+/* Tap dot */
+.needle-sketch__tap {
+  fill: #C4603E;
+  opacity: 0;
+  transform-origin: 355px 40px;
+  transform: scale(0);
+  transition: opacity 0.2s ease 2.45s, transform 0.2s ease 2.45s;
+}
+
+.needle-sketch--visible .needle-sketch__tap {
+  opacity: 0.85;
+  transform: scale(1);
+}
+
 @media (max-width: 768px) {
-  .thread-sketch { display: none; }
+  .needle-sketch { display: none; }
 }
 
 /* ── Wave Sketch ── */
