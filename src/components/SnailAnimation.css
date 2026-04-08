@@ -29,8 +29,8 @@
 @keyframes snailWalkIn {
   0%   { transform: translateX(-180px); opacity: 0; }
   6%   { opacity: 1; }
-  85%  { transform: translateX(20px); opacity: 1; }
-  100% { transform: translateX(20px); opacity: 1; }
+  85%  { transform: translateX(200px); opacity: 1; }
+  100% { transform: translateX(200px); opacity: 1; }
 }
 
 @keyframes snailBob {
