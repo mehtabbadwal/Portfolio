@@ -127,34 +127,26 @@ function FluidraRewards() {
             </p>
           </div>
 
-          <div style={{ display: 'flex', gap: '1.5rem', marginTop: '2.5rem' }}>
-            <div style={{ flex: 1 }} className="fade-up">
-              <p style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.8125rem',
-                fontWeight: 500,
-                color: '#7A6A60',
-                marginBottom: '0.75rem',
-              }}>
+          <div className="cs__final-designs fade-up" style={{ marginTop: '2.5rem' }}>
+            <div className="cs__final-design-item">
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 500, color: '#7A6A60', marginBottom: '0.75rem' }}>
                 Fluidra Pro - Rewards App
               </p>
-              <div className="cs__image-placeholder cs__image-placeholder--medium" style={{ marginTop: 0 }}>
-                <span>Original Fluidra Rewards interface</span>
-              </div>
+              <img
+                src={`${import.meta.env.BASE_URL}fluidra-rewards-dashold.webp`}
+                alt="Original Fluidra Rewards interface"
+                className="cs__solution-img"
+              />
             </div>
-            <div style={{ flex: 1 }} className="fade-up">
-              <p style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.8125rem',
-                fontWeight: 500,
-                color: '#7A6A60',
-                marginBottom: '0.75rem',
-              }}>
+            <div className="cs__final-design-item">
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 500, color: '#7A6A60', marginBottom: '0.75rem' }}>
                 Fluidra Pro - Service App
               </p>
-              <div className="cs__image-placeholder cs__image-placeholder--medium" style={{ marginTop: 0 }}>
-                <span>Original Fluidra Pro service interface</span>
-              </div>
+              <img
+                src={`${import.meta.env.BASE_URL}fluidra-rewards-schedold.webp`}
+                alt="Original Fluidra Pro service interface"
+                className="cs__solution-img"
+              />
             </div>
           </div>
         </div>
@@ -185,9 +177,12 @@ function FluidraRewards() {
       <section className="cs__narrative section">
         <div className="container">
           <p className="cs__label fade-up">Web Design</p>
-          <div className="cs__image-placeholder cs__image-placeholder--tall fade-up">
-            <span>Web dashboard design &mdash; role-aware widgets</span>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-rewards-web.webp`}
+            alt="Web dashboard design — role-aware widgets"
+            className="cs__solution-img fade-up"
+            style={{ marginTop: '1.5rem' }}
+          />
         </div>
       </section>
 
@@ -195,26 +190,18 @@ function FluidraRewards() {
       <section className="cs__narrative section">
         <div className="container">
           <p className="cs__label fade-up">App Design</p>
-          <div style={{ display: 'flex', gap: '1.5rem', marginTop: '0.5rem' }}>
-            <a
-              href="https://www.mehtabbadwal.com/s/App.png"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cs__image-placeholder cs__image-placeholder--large fade-up"
-              style={{ flex: 1, marginTop: 0, textDecoration: 'none', cursor: 'pointer' }}
-            >
-              <span>App design overview</span>
-            </a>
-            <a
-              href="https://www.mehtabbadwal.com/s/App-2.png"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cs__image-placeholder cs__image-placeholder--large fade-up"
-              style={{ flex: 1, marginTop: 0, textDecoration: 'none', cursor: 'pointer' }}
-            >
-              <span>App screens detail</span>
-            </a>
-          </div>
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-rewards-app-one.webp`}
+            alt="App design overview"
+            className="cs__solution-img fade-up"
+            style={{ marginTop: '1.5rem' }}
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-rewards-app-two.webp`}
+            alt="App screens detail"
+            className="cs__solution-img fade-up"
+            style={{ marginTop: '2rem' }}
+          />
         </div>
       </section>
 
@@ -252,10 +239,14 @@ function FluidraRewards() {
             href="https://www.figma.com/design/S9lPwWUHvXyjcT01tBlkPf/Atlantis-Design-System?node-id=102-9605&t=7BHXo181bx6vsdwd-1"
             target="_blank"
             rel="noopener noreferrer"
-            className="cs__image-placeholder cs__image-placeholder--large fade-up"
-            style={{ textDecoration: 'none', cursor: 'pointer' }}
+            className="cs__final-design-link fade-up"
+            style={{ display: 'block', marginTop: '1.5rem' }}
           >
-            <span>Atlantis Design System &mdash; Fluidra&rsquo;s new visual identity</span>
+            <img
+              src={`${import.meta.env.BASE_URL}fluidra-rewards-design-system.webp`}
+              alt="Atlantis Design System — Fluidra's new visual identity"
+              className="cs__solution-img"
+            />
           </a>
           <a
             href="https://www.figma.com/design/S9lPwWUHvXyjcT01tBlkPf/Atlantis-Design-System?node-id=102-9605&t=7BHXo181bx6vsdwd-1"
@@ -292,15 +283,12 @@ function FluidraRewards() {
               two-factor authentication screens.
             </p>
           </div>
-          <a
-            href="https://www.mehtabbadwal.com/s/Section-2.png"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cs__image-placeholder cs__image-placeholder--tall fade-up"
-            style={{ textDecoration: 'none', cursor: 'pointer' }}
-          >
-            <span>High-fidelity user flow &mdash; onboarding and 2FA</span>
-          </a>
+          <img
+            src={`${import.meta.env.BASE_URL}fluidra-rewards-dev-off.webp`}
+            alt="High-fidelity user flow — onboarding and 2FA"
+            className="cs__solution-img fade-up"
+            style={{ marginTop: '1.5rem' }}
+          />
         </div>
       </section>
 
