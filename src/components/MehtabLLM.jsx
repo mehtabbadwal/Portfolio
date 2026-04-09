@@ -199,7 +199,9 @@ Personally: empathetic, writes poems, paints, San Diego ocean, reflects there. C
 
 Wants: meaningful problems, collaborative team, no micromanagement.
 
-Contact: mehtabbadwal@gmail.com — open to opportunities.`;
+Contact: mehtabbadwal@gmail.com — open to opportunities.
+
+THIS PORTFOLIO: Designed and vibe-coded by Mehtab. No developer, no template. You held the design intent and used Claude Code as the hands that wrote the code. It wasn't clean — Claude broke things, the website broke, the chatbot failed twice, half a day to get it working. You came out understanding how developers think. Not to become one, but because you can't debug what you don't understand. There's a "This Site" page in the nav with the full story. Direct people there if they ask how the site was built or what vibe coding means.`;
 
     // FAQ responses — zero API calls, with topic for smart follow-ups
     const FAQ_MAP = [
@@ -213,6 +215,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       { keys: ['case study', 'case studies', 'projects', 'portfolio', 'work', 'examples'], topic: 'work', answer: "Check out the Work page — I've got case studies on AI chatbots that didn't try to be smarter than users, research tools that analysts actually wanted to use, and field service platforms built around a 40-minute reality check." },
       { keys: ['industries', 'sectors', 'domains', 'what industries'], topic: 'work', answer: "Enterprise software, AI products, field service, B2B SaaS. Basically anywhere the buyer isn't the user and someone's trying to solve an organizational problem with an interface." },
       { keys: ['freelance', 'consulting', 'contract', 'part time'], topic: 'hiring', answer: "I'm focused on full-time senior roles, but I'll consider the right consulting project. If you've got something interesting, reach out at mehtabbadwal@gmail.com." },
+      { keys: ['vibe cod', 'built this', 'build this', 'this site', 'how did you make', 'how was this made', 'portfolio built', 'coded this'], topic: 'thissite', answer: "I vibe-coded it — I held every design decision and used Claude Code to write the code. It wasn't smooth. Things broke, the chatbot failed twice, half a day just to get it working. But I came out understanding how developers actually think. The full story is on the This Site page in the nav." },
       { keys: ['outside', 'hobbies', 'personal', 'free time', 'fun'], topic: 'outside', answer: "I write poems, paint, and spend time at the ocean in San Diego. My son asks better questions than most stakeholders — he's my favorite research partner. I also have a fashion design background, which still shapes how I think about form and intention." },
     ];
 
@@ -225,6 +228,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
       hiring: ['What kind of roles interest you?', "What's your ideal team culture?", 'Tell me about your experience'],
       resume: ["What's your biggest accomplishment?", 'Tell me about your AI work', 'How many years of experience?'],
       outside: ['What inspires your design work?', 'How do you stay sharp?', 'Any design books you recommend?'],
+      thissite: ['How long did the portfolio take?', 'What was the hardest part to build?', 'Tell me about the chatbot'],
       default: ['Tell me about your design process', 'What industries have you worked in?', 'Are you available for new roles?'],
     };
 
@@ -292,6 +296,7 @@ Contact: mehtabbadwal@gmail.com — open to opportunities.`;
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Are you open to new roles?</span></button>
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Can I see your resume?</span></button>
               <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">What do you do outside of work?</span></button>
+              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">How did you build this portfolio?</span></button>
             </div>
           </div>
           <div class="mllm-convo" id="mllm-convo" style="display:none;"></div>
