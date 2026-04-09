@@ -127,8 +127,8 @@ function FluidraRewards() {
             </p>
           </div>
 
-          <div className="cs__final-designs fade-up" style={{ marginTop: '2.5rem' }}>
-            <div className="cs__final-design-item">
+          <div className="cs__challenge-images fade-up">
+            <div className="cs__challenge-image-item">
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 500, color: '#7A6A60', marginBottom: '0.75rem' }}>
                 Fluidra Pro - Rewards App
               </p>
@@ -136,9 +136,10 @@ function FluidraRewards() {
                 src={`${import.meta.env.BASE_URL}fluidra-rewards-dashold.webp`}
                 alt="Original Fluidra Rewards interface"
                 className="cs__solution-img"
+                style={{ marginTop: 0 }}
               />
             </div>
-            <div className="cs__final-design-item">
+            <div className="cs__challenge-image-item">
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8125rem', fontWeight: 500, color: '#7A6A60', marginBottom: '0.75rem' }}>
                 Fluidra Pro - Service App
               </p>
@@ -146,6 +147,7 @@ function FluidraRewards() {
                 src={`${import.meta.env.BASE_URL}fluidra-rewards-schedold.webp`}
                 alt="Original Fluidra Pro service interface"
                 className="cs__solution-img"
+                style={{ marginTop: 0 }}
               />
             </div>
           </div>
