@@ -6,7 +6,10 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer__inner">
-          <span className="footer__copy">&copy; 2026 Mehtab Badwal</span>
+          <span className="footer__copy">
+            &copy; 2026 Mehtab Badwal &nbsp;·&nbsp; Designed and vibe-coded by Mehtab &nbsp;·&nbsp;{' '}
+            <Link to="/this-site" style={{ color: 'inherit', textDecoration: 'underline' }}>This Site →</Link>
+          </span>
           <nav className="footer__nav">
             <Link to="/work">Projects</Link>
             <Link to="/writing">Writing</Link>
