@@ -190,18 +190,18 @@ function FluidraRewards() {
       <section className="cs__narrative section">
         <div className="container">
           <p className="cs__label fade-up">App Design</p>
-          <img
-            src={`${import.meta.env.BASE_URL}fluidra-rewards-app-one.webp`}
-            alt="App design overview"
-            className="cs__solution-img fade-up"
-            style={{ marginTop: '1.5rem' }}
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}fluidra-rewards-app-two.webp`}
-            alt="App screens detail"
-            className="cs__solution-img fade-up"
-            style={{ marginTop: '2rem' }}
-          />
+          <div className="cs__app-design-row fade-up">
+            <img
+              src={`${import.meta.env.BASE_URL}fluidra-rewards-app-one.webp`}
+              alt="App design overview"
+              className="cs__solution-img"
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}fluidra-rewards-app-two.webp`}
+              alt="App screens detail"
+              className="cs__solution-img"
+            />
+          </div>
         </div>
       </section>
 

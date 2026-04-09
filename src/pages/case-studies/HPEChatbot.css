@@ -322,6 +322,29 @@
   border-radius: 8px;
 }
 
+.cs__app-design-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+}
+
+.cs__app-design-row .cs__solution-img {
+  flex: 1;
+  width: 50%;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .cs__app-design-row {
+    flex-direction: column;
+  }
+
+  .cs__app-design-row .cs__solution-img {
+    width: 100%;
+  }
+}
+
 .cs__decision-block {
   margin-bottom: 3.75rem;
 }
