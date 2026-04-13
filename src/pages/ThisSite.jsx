@@ -62,7 +62,7 @@ function ThisSite() {
 
           <div style={{ margin: '40px 0' }}>
             <img
-              src="/assets/images/this-site-claude-code.jpg"
+              src="/assets/images/this-site-claude-code.png"
               alt="A Claude Code session mid-build — the actual process behind this portfolio"
               style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #E8E2D8' }}
             />
