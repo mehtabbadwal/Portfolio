@@ -13,8 +13,8 @@ function ShadowSystemProblem() {
         url: '/blog/stay-out-of-the-way',
       }}
       nextPost={{
-        title: 'When AI Shifts Control',
-        url: '/blog/when-ai-shifts-control',
+        title: 'The Colleague Problem',
+        url: '/blog/the-colleague-problem',
       }}
     >
       <Paragraph>

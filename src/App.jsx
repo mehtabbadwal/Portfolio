@@ -10,6 +10,7 @@ import Qubera from './pages/case-studies/Qubera';
 import FluidraPro from './pages/case-studies/FluidraPro';
 import FluidraRewards from './pages/case-studies/FluidraRewards';
 import ShadowSystemProblem from './pages/blog/ShadowSystemProblem';
+import TheColleagueProblem from './pages/blog/TheColleagueProblem';
 import StayOutOfTheWay from './pages/blog/StayOutOfTheWay';
 import WhenAIShiftsControl from './pages/blog/WhenAIShiftsControl';
 import DesigningForDignity from './pages/blog/DesigningForDignity';
@@ -35,6 +36,7 @@ function App() {
           <Route path="case-studies/fluidra" element={<FluidraPro />} />
           <Route path="case-studies/fluidra-rewards" element={<FluidraRewards />} />
           <Route path="blog/shadow-system-problem" element={<ShadowSystemProblem />} />
+          <Route path="blog/the-colleague-problem" element={<TheColleagueProblem />} />
           <Route path="blog/stay-out-of-the-way" element={<StayOutOfTheWay />} />
           <Route path="blog/when-ai-shifts-control" element={<WhenAIShiftsControl />} />
           <Route path="blog/designing-for-dignity" element={<DesigningForDignity />} />

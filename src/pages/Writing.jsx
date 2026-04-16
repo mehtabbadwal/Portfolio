@@ -5,6 +5,15 @@ import './Writing.css';
 
 const articles = [
   {
+    date: 'APR 16',
+    author: 'MEHTAB BADWAL',
+    readTime: 7,
+    title: 'The Colleague Problem',
+    description: "In enterprise software, the most common onboarding flow isn\u2019t the one you designed. It\u2019s the colleague three desks away \u2014 and that\u2019s a design signal worth reading.",
+    image: '/colleague-problem.svg',
+    slug: 'the-colleague-problem',
+  },
+  {
     date: 'MAR 1',
     author: 'MEHTAB BADWAL',
     readTime: 4,
@@ -68,7 +77,7 @@ function Writing() {
               It starts with observation.<br />
               Everything else follows.
             </p>
-            <p className="wp__count fade-up">6 essays</p>
+            <p className="wp__count fade-up">7 essays</p>
           </div>
         </div>
       </section>
@@ -153,7 +162,7 @@ function Writing() {
             </div>
             <div className="wp__about-stats fade-up">
               <div className="wp__stat">
-                <span className="wp__stat-value">6</span>
+                <span className="wp__stat-value">7</span>
                 <span className="wp__stat-label">essays published</span>
               </div>
               <div className="wp__stat">
