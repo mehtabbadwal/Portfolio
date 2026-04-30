@@ -871,14 +871,13 @@
 
 .cta__heading {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-size: clamp(1.625rem, 3vw, 2.5rem);
   font-weight: 300;
   font-style: italic;
-  line-height: 1.15;
-  letter-spacing: -0.8px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
   color: var(--color-dark);
   margin: 0;
-  max-width: 18ch;
 }
 
 .cta__heading-accent {
