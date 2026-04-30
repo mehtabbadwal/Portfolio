@@ -139,25 +139,13 @@ function Landing() {
           {/* Vertical Stack */}
           <div className="work-list">
             {projectCards.map((project, i) => (
-              <div className={`work-item-row fade-up stagger-${i + 1}`} key={project.slug}>
-                <span className="work-item-row__number">0{i + 1}</span>
               <Link
                 to={`/case-studies/${project.slug}`}
                 key={project.slug}
-                className="project-card"
+                className={`work-card fade-up stagger-${i + 1}`}
               >
-                <div className="project-card__image">
-                  {project.image ? (
-                    <img
-                      src={`${import.meta.env.BASE_URL}${project.image}`}
-                      alt={`${project.title} interface`}
-                      className="project-card__img"
-                    />
-                  ) : (
-                    <div className="project-card__placeholder"><span>{project.title}</span></div>
-                  )}
-                </div>
-                <div className="project-card__body">
+                <span className="work-card__number">0{i + 1}</span>
+                <div className="work-card__body">
                   <p className="project-card__desc">{project.description}</p>
                   <h3 className="project-card__title">{project.title}</h3>
                   <div className="project-card__meta">
@@ -175,8 +163,20 @@ function Landing() {
                   </div>
                   <span className="project-card__cta">Read case study &rarr;</span>
                 </div>
+                <div className="work-card__image">
+                  {project.image ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${project.image}`}
+                      alt={`${project.title} interface`}
+                      className="work-card__img"
+                    />
+                  ) : (
+                    <div className="project-card__placeholder">
+                      <span>{project.title}</span>
+                    </div>
+                  )}
+                </div>
               </Link>
-              </div>
             ))}
           </div>
         </div>
