@@ -99,7 +99,7 @@ export default function FloatingChatButton() {
           gap: '8px',
           cursor: 'pointer',
           fontSize: '14px',
-          fontFamily: 'Satoshi Variable, sans-serif',
+          fontFamily: 'var(--font-body)',
           fontWeight: '500',
           boxShadow: '0 4px 16px rgba(44, 36, 32, 0.15), 0 2px 8px rgba(44, 36, 32, 0.1)',
           transition: 'all 0.3s ease',
@@ -126,7 +126,7 @@ export default function FloatingChatButton() {
         </svg>
 
         <span className="button-text">
-          <span style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#C4603E' }}>Ask </span>
+          <span style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', color: '#C4603E' }}>Ask </span>
           <span style={{ letterSpacing: '0.01em' }}>Mehtab</span>
         </span>
       </button>

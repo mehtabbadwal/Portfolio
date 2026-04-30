@@ -18,7 +18,7 @@ export default function MehtabLLM() {
         transform: translateX(100%);
         transition: transform 0.32s cubic-bezier(0.16,1,0.3,1);
         border-left: 1px solid #D6CFBF;
-        font-family: 'Inter', 'Satoshi Variable', -apple-system, sans-serif;
+        font-family: var(--font-body);
         color: #2C2420;
         line-height: 1.6;
         box-shadow: -4px 0 24px rgba(44,36,32,0.08);
@@ -31,16 +31,16 @@ export default function MehtabLLM() {
         justify-content: space-between;
       }
       .mllm-brand {
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
         font-size: 15px; font-weight: 500; color: #2C2420;
       }
       .mllm-brand em {
         font-style: italic; color: #C4603E;
-        font-family: Georgia, 'Fraunces', serif;
+        font-family: var(--font-heading);
         font-weight: 400;
       }
       .mllm-brand-sub {
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
         font-size: 13px; color: #7A6A60;
         margin-top: 3px; font-weight: 400;
       }
@@ -49,7 +49,7 @@ export default function MehtabLLM() {
         width: 32px; height: 32px; border: none; background: none;
         cursor: pointer; border-radius: 8px; display: flex;
         align-items: center; justify-content: center; color: #B0A090;
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
       }
       .mllm-icon-btn:hover { background: #EAE4D8; color: #2C2420; }
       .mllm-icon-btn svg { width: 15px; height: 15px; }
@@ -65,7 +65,7 @@ export default function MehtabLLM() {
       .mllm-empty-prompt {
         font-size: 26px; font-weight: 400; color: #2C2420;
         line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 28px;
-        font-family: Georgia, 'Fraunces', serif; font-style: italic;
+        font-family: var(--font-heading); font-style: italic;
       }
       .mllm-starters { display: flex; flex-direction: column; }
       .mllm-starter {
@@ -74,7 +74,7 @@ export default function MehtabLLM() {
         cursor: pointer; background: none; border-left: none;
         border-right: none; border-bottom: none;
         text-align: left; width: 100%;
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
       }
       .mllm-starter:last-child { border-bottom: 1px solid #EAE4D8; }
       .mllm-starter:hover .mllm-starter-text { color: #C4603E; }
@@ -86,13 +86,13 @@ export default function MehtabLLM() {
       }
       .mllm-msg-user {
         align-self: flex-end; background: #EAE4D8; color: #2C2420;
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
         font-size: 15px; font-weight: 400; line-height: 1.6;
         padding: 10px 16px;
         border-radius: 18px; border-bottom-right-radius: 4px; max-width: 85%;
       }
       .mllm-msg-assistant {
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
         font-size: 15px; font-weight: 400; color: #2C2420; line-height: 1.7;
       }
       .mllm-msg-assistant.streaming::after {
@@ -108,7 +108,7 @@ export default function MehtabLLM() {
         border-top: 1px solid #EAE4D8; cursor: pointer; background: none;
         border-left: none; border-right: none; border-bottom: none;
         text-align: left; width: 100%;
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
       }
       .mllm-followup:last-child { border-bottom: 1px solid #EAE4D8; }
       .mllm-followup:hover .mllm-followup-text { color: #C4603E; }
@@ -117,7 +117,7 @@ export default function MehtabLLM() {
       .mllm-followup-label {
         font-size: 13px; color: #B0A090; font-weight: 400;
         margin: 0 0 4px; padding: 0;
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
       }
       .mllm-input-area {
         padding: 14px 20px 20px; border-top: 1px solid #EAE4D8;
@@ -133,12 +133,12 @@ export default function MehtabLLM() {
       .mllm-input-wrap:focus-within { border-color: #B0A090; }
       #mllm-input {
         flex: 1; background: none; border: none; outline: none;
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
         font-size: 16px; font-weight: 400; color: #2C2420;
         resize: none; min-height: 20px; max-height: 80px; line-height: 1.6;
       }
       #mllm-input::placeholder {
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
         color: #B0A090; font-weight: 400;
       }
       #mllm-send {
@@ -154,7 +154,7 @@ export default function MehtabLLM() {
       #mllm-send svg { width: 14px; height: 14px; fill: #F4F0E8; }
       .mllm-footer {
         text-align: center;
-        font-family: 'Inter', 'Satoshi Variable', sans-serif;
+        font-family: var(--font-body);
         font-size: 11px; font-weight: 400;
         color: #B0A090; margin-top: 10px;
       }

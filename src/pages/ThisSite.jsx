@@ -11,7 +11,7 @@ function ThisSite() {
           </Link>
 
           <h1 style={{
-            fontFamily: 'Fraunces, Georgia, serif',
+            fontFamily: 'var(--font-heading)',
             fontStyle: 'italic',
             fontSize: '42px',
             fontWeight: 400,
@@ -22,7 +22,7 @@ function ThisSite() {
             This site is the project.
           </h1>
 
-          <p style={{ fontSize: '13px', color: '#B0A090', fontFamily: 'Satoshi Variable, sans-serif', marginBottom: '48px', letterSpacing: '0.04em' }}>
+          <p style={{ fontSize: '13px', color: '#B0A090', fontFamily: 'var(--font-body)', marginBottom: '48px', letterSpacing: '0.04em' }}>
             APR 2026 · MEHTAB BADWAL · 3 MIN READ
           </p>
 
@@ -32,7 +32,7 @@ function ThisSite() {
             `Claude broke things. My website broke. The chatbot failed on the first build, then the second. I spent half a day just getting it to work, and more time after that figuring out token optimization so it wouldn't cost a dollar per conversation. There were moments where I had no idea what was wrong, only that something was — and I had to learn enough about how the pieces fit together to even ask the right question.`,
             `That's what I didn't expect: I came out of this understanding things developers actually deal with. Not because I want to be a developer, but because you can't debug what you don't understand. And understanding the build layer makes me a sharper collaborator and a more grounded systems thinker.`,
           ].map((text, i) => (
-            <p key={i} style={{ fontSize: '18px', lineHeight: 1.75, color: '#2C2420', fontFamily: 'Satoshi Variable, sans-serif', marginBottom: '24px' }}>
+            <p key={i} style={{ fontSize: '18px', lineHeight: 1.75, color: '#2C2420', fontFamily: 'var(--font-body)', marginBottom: '24px' }}>
               {text}
             </p>
           ))}
@@ -41,7 +41,7 @@ function ThisSite() {
             borderLeft: '4px solid #C4603E',
             paddingLeft: '24px',
             margin: '40px 0',
-            fontFamily: 'Fraunces, Georgia, serif',
+            fontFamily: 'var(--font-heading)',
             fontStyle: 'italic',
             fontSize: '24px',
             fontWeight: 400,
@@ -55,7 +55,7 @@ function ThisSite() {
             `Every detail here has my voice in it. The cream palette instead of white — that's an accessibility call for high-sunlight conditions, not an aesthetic preference. The sparse subheadings in my writing because structure can interrupt thought. The 2x2 case study grid so screenshots are actually legible at the size they deserve.`,
             `Even the blog post images took real thought. They're not illustrations of the article — they serve a different purpose entirely. Each one needed warmth, a little playfulness, the right metaphor. Human, but not literal. Getting that right took longer than writing some of the posts.`,
           ].map((text, i) => (
-            <p key={i} style={{ fontSize: '18px', lineHeight: 1.75, color: '#2C2420', fontFamily: 'Satoshi Variable, sans-serif', marginBottom: '24px' }}>
+            <p key={i} style={{ fontSize: '18px', lineHeight: 1.75, color: '#2C2420', fontFamily: 'var(--font-body)', marginBottom: '24px' }}>
               {text}
             </p>
           ))}
@@ -66,7 +66,7 @@ function ThisSite() {
               alt="A Claude Code session mid-build — the actual process behind this portfolio"
               style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #E8E2D8' }}
             />
-            <p style={{ fontSize: '13px', color: '#B0A090', marginTop: '10px', fontFamily: 'Satoshi Variable, sans-serif' }}>
+            <p style={{ fontSize: '13px', color: '#B0A090', marginTop: '10px', fontFamily: 'var(--font-body)' }}>
               The actual process. Not as clean as the output suggests.
             </p>
           </div>
@@ -76,7 +76,7 @@ function ThisSite() {
             `I'm still learning. This site will keep changing. If you have feedback on any of it — the design, the writing, the approach — I'm genuinely open to it. That's not a disclaimer. It's how I work.`,
             `And if you want to ask me about any of it, the chatbot's right there.`,
           ].map((text, i) => (
-            <p key={i} style={{ fontSize: '18px', lineHeight: 1.75, color: '#2C2420', fontFamily: 'Satoshi Variable, sans-serif', marginBottom: '24px' }}>
+            <p key={i} style={{ fontSize: '18px', lineHeight: 1.75, color: '#2C2420', fontFamily: 'var(--font-body)', marginBottom: '24px' }}>
               {text}
             </p>
           ))}
