@@ -4,21 +4,6 @@ import { AnimatedDivider } from './AnimatedDivider';
 import { MetricCounter } from '../components/MetricCounter';
 import './Landing.css';
 
-const philosophyCards = [
-  {
-    number: '01',
-    statement: 'The conventional answer is a starting point, not a destination.',
-  },
-  {
-    number: '02',
-    statement: 'Clarity is not the same as simplicity.',
-  },
-  {
-    number: '03',
-    statement: 'Design for the moment, not the average.',
-  },
-];
-
 const projectCards = [
   {
     title: 'HPE Chatbot',
@@ -141,33 +126,6 @@ function Landing() {
           </div>
         </div>
       </section>
-
-      {/* ── Philosophy ── */}
-      <section className="philosophy section">
-        <div className="container">
-          <p className="section-label section-label--line fade-up">How I Think</p>
-          <h2 className="philosophy__heading fade-up">
-            Most design problems already have a standard answer.
-          </h2>
-          <div className="philosophy__cards">
-            {philosophyCards.map((card, i) => (
-              <div key={i} className={`philosophy-card philosophy-card--${i + 1} fade-up stagger-${i + 1}`}>
-                <div className="philosophy-card__accent" />
-                <p className="philosophy-card__statement">&ldquo;{card.statement}&rdquo;</p>
-                <span className="philosophy-card__number">{card.number}</span>
-              </div>
-            ))}
-          </div>
-          <button
-            className="philosophy__footer fade-up"
-            onClick={() => document.getElementById('selected-work').scrollIntoView({ behavior: 'smooth' })}
-          >
-            See how this shows up in the work &darr;
-          </button>
-        </div>
-      </section>
-
-      <AnimatedDivider />
 
       {/* ── Selected Work ── */}
       <section id="selected-work" className="work section">
