@@ -190,6 +190,55 @@ function Landing() {
 
       <AnimatedDivider />
 
+      {/* ── Practice ── */}
+      <section className="practice section">
+        <div className="container">
+          <div className="practice__header fade-up">
+            <p className="section-label">Practice</p>
+            <span className="section-rule" aria-hidden="true" />
+          </div>
+
+          <div className="practice__grid">
+            <div className="practice__col fade-up stagger-1">
+              <p className="practice__col-title">Frameworks I think with</p>
+              <ul className="practice__list">
+                <li>Fogg Behavior Model</li>
+                <li>Hick&rsquo;s Law</li>
+                <li>Norman</li>
+                <li>Mental Models</li>
+                <li>Kahneman</li>
+                <li>Strategic Design</li>
+              </ul>
+            </div>
+
+            <div className="practice__col fade-up stagger-2">
+              <p className="practice__col-title">Tools I build with</p>
+              <ul className="practice__list">
+                <li>Figma</li>
+                <li>Claude Code</li>
+                <li>Jira</li>
+                <li>Notion</li>
+                <li>Lovable</li>
+              </ul>
+            </div>
+
+            <div className="practice__col fade-up stagger-3">
+              <p className="practice__col-title">Domains I work in</p>
+              <ul className="practice__list">
+                <li>Enterprise</li>
+                <li>AI</li>
+                <li>Field Service</li>
+                <li>Fintech</li>
+                <li>Startups</li>
+                <li>Marketing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <AnimatedDivider />
+
       {/* ── Testimonials ── */}
       <section className="testimonials section">
         <div className="container">
