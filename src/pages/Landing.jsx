@@ -133,13 +133,6 @@ function Landing() {
               <Link to="/work" className="btn btn--filled">See the work &rarr;</Link>
               <a href="mailto:mehtabbadwal@gmail.com" className="btn">Let&rsquo;s talk</a>
             </div>
-
-            <div className="hero__status fade-up stagger-5">
-              <span className="green-dot" />
-              <span>Open to senior &amp; staff UX roles</span>
-              <span className="hero__status-sep">&middot;</span>
-              <span>San Diego</span>
-            </div>
           </div>
 
           <div className="hero__photo hero__photo--small fade-up stagger-3">
@@ -151,7 +144,6 @@ function Landing() {
           </div>
         </div>
 
-        {/* Hero closing edge */}
         <div className="container">
           <div className="hero__edge fade-up">
             <p className="hero__edge-quote">
