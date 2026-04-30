@@ -493,8 +493,10 @@
 }
 
 .project-card__desc {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
   font-size: 1.125rem;
-  font-weight: 500;
   line-height: 1.4;
   color: var(--color-dark);
   min-height: 75px;

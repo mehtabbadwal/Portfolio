@@ -158,13 +158,13 @@ function Landing() {
                   )}
                 </div>
                 <div className="project-card__body">
+                  <p className="project-card__desc">{project.description}</p>
+                  <h3 className="project-card__title">{project.title}</h3>
                   <div className="project-card__meta">
                     <span className="project-card__year">{project.year}</span>
                     <span className="project-card__dot" />
                     <span className="project-card__cat">{project.category}</span>
                   </div>
-                  <h3 className="project-card__title">{project.title}</h3>
-                  <p className="project-card__desc">{project.description}</p>
                   <div className="project-card__metrics">
                     {project.metrics.map((m) => (
                       <div key={m.label} className="metric metric--small">
