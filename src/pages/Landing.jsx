@@ -264,30 +264,47 @@ function Landing() {
       {/* ── CTA ── */}
       <section className="cta section">
         <div className="container">
-          <AnimatedDivider />
+          <div className="cta__header fade-up">
+            <p className="section-label">Work with Mehtab</p>
+            <span className="section-rule" aria-hidden="true" />
+          </div>
+
           <div className="cta__grid">
             <div className="cta__content">
               <h2 className="cta__heading fade-up">
-                If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
+                If the depth <span className="cta__heading-accent">resonates &mdash;</span> let&rsquo;s talk.
               </h2>
               <p className="cta__sub fade-up">
-                Currently open to senior and staff UX roles in enterprise, AI, or anything in between.
+                I work best where the behavioral layer actually matters &mdash; where the obvious answer keeps not landing.
               </p>
               <div className="cta__actions fade-up">
                 <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent cta__email">
-                  mehtabbadwal@gmail.com
+                  Let&rsquo;s talk &rarr;
                 </a>
                 <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="btn cta__resume">
-                  Resume
+                  View resume
                 </a>
               </div>
+              <p className="cta__no-hard-feelings fade-up">
+                If not &mdash; no hard feelings. Someone else will.
+              </p>
             </div>
-            <div className="cta__status fade-up">
-              <div className="cta__badge">
-                <span className="green-dot green-dot--lg" />
-                <span>Open to opportunities</span>
+
+            <div className="cta__side fade-up">
+              <div className="cta__status">
+                <div className="cta__badge">
+                  <span className="green-dot green-dot--lg" />
+                  <span>Open to senior &amp; staff UX roles</span>
+                </div>
+                <p className="cta__location">San Diego &middot; open to remote</p>
               </div>
-              <p className="cta__location">Based in San Diego, CA</p>
+
+              <nav className="cta__quicklinks">
+                <Link to="/work">Selected Work <span aria-hidden="true">&rarr;</span></Link>
+                <Link to="/writing">Mind Meets Design <span aria-hidden="true">&rarr;</span></Link>
+                <Link to="/about">About <span aria-hidden="true">&rarr;</span></Link>
+                <a href="https://linkedin.com/in/mehtabbadwal" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&rarr;</span></a>
+              </nav>
             </div>
           </div>
         </div>
