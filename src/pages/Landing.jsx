@@ -298,13 +298,6 @@ function Landing() {
                 </div>
                 <p className="cta__location">San Diego &middot; open to remote</p>
               </div>
-
-              <nav className="cta__quicklinks">
-                <Link to="/work">Selected Work <span aria-hidden="true">&rarr;</span></Link>
-                <Link to="/writing">Mind Meets Design <span aria-hidden="true">&rarr;</span></Link>
-                <Link to="/about">About <span aria-hidden="true">&rarr;</span></Link>
-                <a href="https://linkedin.com/in/mehtabbadwal" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&rarr;</span></a>
-              </nav>
             </div>
           </div>
         </div>
