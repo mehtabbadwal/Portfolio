@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AnimatedDivider } from './AnimatedDivider';
 import { MetricCounter } from '../components/MetricCounter';
+import { SnailAnimation } from '../components/SnailAnimation';
 import './Landing.css';
 
 const philosophyCards = [
@@ -110,46 +111,34 @@ function Landing() {
   return (
     <div className="landing" ref={pageRef}>
       {/* ── Hero ── */}
-      <section className="hero hero--editorial section">
+      <section className="hero section">
         <div className="container hero__grid">
           <div className="hero__content">
             <div className="hero__accent-line fade-up stagger-1" />
-
-            <h1 className="hero__headline-lead fade-up stagger-1">
-              Most designers bring skills.
-              <span className="hero__headline-lead-accent"> I bring understanding.</span>
-            </h1>
-
-            <p className="hero__sub-statement fade-up stagger-2">
-              Hidden behaviors. Emotional friction. The reason a well-built product still doesn&rsquo;t land.
+            <h1 className="hero__name fade-up stagger-1">Mehtab Badwal</h1>
+            <p className="hero__headline fade-up stagger-2">
+              I design how products think &mdash; so users don&rsquo;t have to.
             </p>
-
-            <p className="hero__intro fade-up stagger-3">
-              <span className="hero__intro-name">I&rsquo;m Mehtab.</span> Came to UX through fashion.
-              Six years in enterprise, AI, and 0&rarr;1 products.
+            <p className="hero__tagline fade-up stagger-3">Designer. Behaviorist. Builder.</p>
+            <p className="hero__desc fade-up stagger-3">
+              Six years designing complex products &mdash; enterprise systems, AI tools,
+              things built from scratch. The context always changes. People don&rsquo;t.
             </p>
-
             <div className="hero__actions fade-up stagger-4">
-              <Link to="/work" className="btn btn--filled">See the work &rarr;</Link>
-              <a href="mailto:mehtabbadwal@gmail.com" className="btn">Let&rsquo;s talk</a>
+              <Link to="/work" className="btn btn--filled">View my work</Link>
+              <a href="mailto:mehtabbadwal@gmail.com" className="btn">Get in touch</a>
             </div>
+            <Link to="/about" className="hero__learn-more fade-up stagger-5">
+              Or learn more about me &rarr;
+            </Link>
+            <SnailAnimation />
           </div>
-
-          <div className="hero__photo hero__photo--small fade-up stagger-3">
+          <div className="hero__photo fade-up stagger-3">
             <img
               src="/hero-photo.jpeg"
               alt="Mehtab Badwal - UX Designer"
               className="hero__photo-img"
             />
-          </div>
-        </div>
-
-        <div className="container">
-          <div className="hero__edge fade-up">
-            <p className="hero__edge-quote">
-              The context always changes. <span>People don&rsquo;t.</span>
-            </p>
-            <span className="hero__edge-marker">01 / Hero</span>
           </div>
         </div>
       </section>
