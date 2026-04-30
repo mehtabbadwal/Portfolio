@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import './SideStepper.css';
 
 const sections = [
-  { id: 'approach', number: '01', label: 'Approach' },
-  { id: 'selected-work', number: '02', label: 'Work' },
-  { id: 'practice', number: '03', label: 'Practice' },
-  { id: 'people', number: '04', label: 'People' },
-  { id: 'writing', number: '05', label: 'Writing' },
-  { id: 'connect', number: '06', label: 'Connect' },
+  { id: 'approach', number: '01', label: 'Approach', dark: false },
+  { id: 'selected-work', number: '02', label: 'Work', dark: false },
+  { id: 'practice', number: '03', label: 'Practice', dark: false },
+  { id: 'people', number: '04', label: 'People', dark: true },
+  { id: 'writing', number: '05', label: 'Writing', dark: true },
+  { id: 'connect', number: '06', label: 'Connect', dark: false },
 ];
 
 function SideStepper() {
@@ -41,8 +41,14 @@ function SideStepper() {
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  const activeSection = sections.find((s) => s.id === activeId);
+  const isDark = activeSection?.dark || false;
+
   return (
-    <nav className="side-stepper" aria-label="Page sections">
+    <nav
+      className={`side-stepper ${isDark ? 'side-stepper--dark' : ''}`}
+      aria-label="Page sections"
+    >
       {sections.map(({ id, number, label }) => (
         <button
           key={id}

@@ -64,6 +64,27 @@
   color: var(--color-accent);
 }
 
+/* Dark-mode treatment when over People (testimonials) or Writing sections */
+.side-stepper--dark .side-stepper__line {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.side-stepper--dark .side-stepper__step.is-active .side-stepper__line {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.side-stepper--dark .side-stepper__label {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.side-stepper--dark .side-stepper__step:hover .side-stepper__line {
+  background: var(--color-accent);
+}
+
+.side-stepper--dark .side-stepper__step:hover .side-stepper__label {
+  color: var(--color-accent);
+}
+
 @media (max-width: 1280px) {
   .side-stepper {
     display: none;
