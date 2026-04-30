@@ -251,6 +251,8 @@
 
 .work-card .project-card__desc {
   min-height: auto;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.25;
 }
 
 .work-card__image {
@@ -262,8 +264,8 @@
 .work-card__img {
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: contain;
-  object-position: center;
+  object-fit: cover;
+  object-position: top center;
   display: block;
   transition: transform 0.4s ease;
 }
