@@ -187,8 +187,16 @@
 .work__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0;
   margin-bottom: var(--space-lg);
+}
+
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+  margin: 0 1rem;
+  min-width: 24px;
 }
 
 .work__view-all {

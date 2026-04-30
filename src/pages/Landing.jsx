@@ -132,6 +132,7 @@ function Landing() {
         <div className="container">
           <div className="work__header fade-up">
             <p className="section-label">Selected Work</p>
+            <span className="section-rule" aria-hidden="true" />
             <Link to="/work" className="work__view-all">View all work &rarr;</Link>
           </div>
 
