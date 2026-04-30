@@ -210,6 +210,28 @@
   color: #A34E30;
 }
 
+.work-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.work-item-row {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.work-item-row__number {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-light);
+  padding-top: 1.75rem;
+}
+
 /* Featured project */
 .featured {
   display: grid;
@@ -970,6 +992,16 @@
 
   .work__grid {
     grid-template-columns: 1fr;
+  }
+
+  .work-item-row {
+    grid-template-columns: 40px 1fr;
+    gap: 1rem;
+  }
+
+  .work-item-row__number {
+    font-size: 1.25rem;
+    padding-top: 1.75rem;
   }
 
   .project-card__desc {

@@ -136,13 +136,15 @@ function Landing() {
             <Link to="/work" className="work__view-all">View all work &rarr;</Link>
           </div>
 
-          {/* 2x2 Grid — All Equal Cards */}
-          <div className="work__grid work__grid--2x2">
+          {/* Vertical Stack */}
+          <div className="work-list">
             {projectCards.map((project, i) => (
+              <div className={`work-item-row fade-up stagger-${i + 1}`} key={project.slug}>
+                <span className="work-item-row__number">0{i + 1}</span>
               <Link
                 to={`/case-studies/${project.slug}`}
                 key={project.slug}
-                className={`project-card fade-up stagger-${i + 1}`}
+                className="project-card"
               >
                 <div className="project-card__image">
                   {project.image ? (
@@ -174,6 +176,7 @@ function Landing() {
                   <span className="project-card__cta">Read case study &rarr;</span>
                 </div>
               </Link>
+              </div>
             ))}
           </div>
         </div>
