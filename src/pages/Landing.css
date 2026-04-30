@@ -46,7 +46,7 @@
   line-height: 1.55;
   color: var(--color-dark);
   max-width: 44ch;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .hero__bio {
@@ -941,6 +941,10 @@
   .hero__learn-more {
     margin-top: 1rem;
     text-align: center;
+  }
+
+  .hero__photo-img {
+    max-width: 100%;
   }
 
   .philosophy__heading {
