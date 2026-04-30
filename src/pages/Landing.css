@@ -235,6 +235,24 @@
   text-decoration: none;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+  overflow: hidden;
+}
+
+.work-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #C4603E;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-card:hover::after {
+  transform: scaleX(1);
 }
 
 .work-card:hover {
