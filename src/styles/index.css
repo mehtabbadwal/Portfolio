@@ -10,6 +10,7 @@
 
   --font-heading: 'Fraunces', serif;
   --font-body: 'Satoshi', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -84,12 +85,40 @@ ul { list-style: none; }
 }
 
 .section-label {
-  font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-mono);
   font-size: 0.6875rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
   color: var(--color-light);
+}
+
+.section-label::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.section-label--line {
+  display: flex;
+  width: 100%;
+}
+
+.section-label--line::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.35;
+  margin-left: 0.875rem;
+  align-self: center;
+  max-width: 480px;
 }
 
 .btn {

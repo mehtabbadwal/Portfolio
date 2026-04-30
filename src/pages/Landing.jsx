@@ -146,7 +146,7 @@ function Landing() {
       {/* ── Philosophy ── */}
       <section className="philosophy section">
         <div className="container">
-          <p className="section-label fade-up">How I Think</p>
+          <p className="section-label section-label--line fade-up">How I Think</p>
           <h2 className="philosophy__heading fade-up">
             Most design problems already have a standard answer.
           </h2>
