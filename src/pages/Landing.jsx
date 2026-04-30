@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { AnimatedDivider } from './AnimatedDivider';
 import { MetricCounter } from '../components/MetricCounter';
+import SideStepper from '../components/SideStepper';
 import './Landing.css';
 
 const projectCards = [
@@ -100,8 +101,9 @@ function Landing() {
 
   return (
     <div className="landing" ref={pageRef}>
+      <SideStepper />
       {/* ── Hero ── */}
-      <section className="hero section">
+      <section id="approach" className="hero section">
         <div className="container hero__grid">
           <div className="hero__content">
             <div className="hero__accent-line fade-up stagger-1" />
@@ -189,7 +191,7 @@ function Landing() {
       </section>
 
       {/* ── Practice ── */}
-      <section className="practice section">
+      <section id="practice" className="practice section">
         <div className="container">
           <div className="practice__header fade-up">
             <p className="section-label">Practice</p>
@@ -238,7 +240,7 @@ function Landing() {
       <AnimatedDivider />
 
       {/* ── Testimonials ── */}
-      <section className="testimonials section">
+      <section id="people" className="testimonials section">
         <div className="container">
           <div className="testimonials__header fade-up">
             <p className="section-label">From the people I&rsquo;ve built with</p>
@@ -271,7 +273,7 @@ function Landing() {
       <AnimatedDivider />
 
       {/* ── Writing ── */}
-      <section className="writing section">
+      <section id="writing" className="writing section">
         <div className="container">
           <div className="writing__header fade-up">
             <p className="section-label">Mind Meets Design</p>
@@ -309,7 +311,7 @@ function Landing() {
       <AnimatedDivider />
 
       {/* ── CTA ── */}
-      <section className="cta section">
+      <section id="connect" className="cta section">
         <div className="container">
           <div className="cta__header fade-up">
             <p className="section-label">Work with Mehtab</p>
