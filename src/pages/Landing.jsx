@@ -230,7 +230,6 @@ function Landing() {
           <div className="writing__header fade-up">
             <p className="section-label">Mind Meets Design</p>
             <span className="section-rule section-rule--terracotta" aria-hidden="true" />
-            <Link to="/writing" className="writing__view-all">Explore all writing &rarr;</Link>
           </div>
 
           <div className="writing__list">
