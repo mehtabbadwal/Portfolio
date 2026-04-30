@@ -188,8 +188,6 @@ function Landing() {
         </div>
       </section>
 
-      <AnimatedDivider />
-
       {/* ── Practice ── */}
       <section className="practice section">
         <div className="container">
