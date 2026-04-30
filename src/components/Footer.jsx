@@ -9,10 +9,11 @@ function Footer() {
           <div className="footer__brand">
             <p className="footer__name">Mehtab Badwal</p>
             <p className="footer__tagline">Designer who reads people before screens.</p>
-            <div className="footer__status">
-              <span className="green-dot" />
-              <span>Open to senior &amp; staff UX roles &middot; San Diego</span>
-            </div>
+            <p className="footer__legal">&copy; 2026 Mehtab Badwal. All rights reserved.</p>
+            <p className="footer__legal">
+              Designed and vibe-coded by Mehtab &nbsp;&middot;&nbsp;{' '}
+              <Link to="/this-site">This Site &rarr;</Link>
+            </p>
           </div>
 
           <div className="footer__col">
@@ -34,14 +35,6 @@ function Footer() {
               Etsy <span className="footer__col-note">digital goods</span>
             </a>
           </div>
-        </div>
-
-        <div className="footer__bottom">
-          <span>&copy; 2026 Mehtab Badwal</span>
-          <span>
-            Designed and vibe-coded by Mehtab &nbsp;&middot;&nbsp;{' '}
-            <Link to="/this-site">This Site &rarr;</Link>
-          </span>
         </div>
       </div>
     </footer>
