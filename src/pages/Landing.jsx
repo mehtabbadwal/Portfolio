@@ -58,19 +58,16 @@ const projectCards = [
 
 const testimonials = [
   {
-    quote: 'She notices the friction points that others overlook and finds ways to make interactions feel more natural.',
+    quote: 'We have spoken about philosophy, psychology, neuro-economics that shape our everyday lives. All of these elements show up subtly in her work. She notices the friction points that others overlook and finds ways to make interactions feel more natural.',
     author: 'Navya Nayaki Yelloji',
-    role: 'Senior Product Manager \u00B7 HPE',
+    role: 'Sr. Product Manager \u00B7 HPE',
+    relationship: 'Worked together on the same team',
   },
   {
-    quote: 'Her proactive approach consistently moved projects forward, especially when navigating complex system models with varied user goals.',
-    author: 'Geoffrey Pay',
-    role: 'Lead Product Designer \u00B7 HPE',
-  },
-  {
-    quote: 'Her ability to translate complex user requirements into seamless UI designs was impressive and significantly enhanced the user experience.',
-    author: 'Brian Liss',
-    role: 'Lead Engineer \u00B7 Fluidra',
+    quote: 'Mehtab is a kind, empathetic person and a fierce advocate for the user.',
+    author: 'Jennifer Cline',
+    role: 'UX Manager \u00B7 Senior UX Architect \u00B7 Fluidra',
+    relationship: 'Managed Mehtab directly',
   },
 ];
 
@@ -189,6 +186,7 @@ function Landing() {
         <div className="container">
           <div className="testimonials__header fade-up">
             <p className="section-label">From the people I&rsquo;ve built with</p>
+            <span className="section-rule section-rule--dark" aria-hidden="true" />
             <div className="testimonials__accent" />
           </div>
           <div className="testimonials__grid">
@@ -199,6 +197,7 @@ function Landing() {
                 <footer className="testimonial__author">
                   <strong>{t.author}</strong>
                   <span>{t.role}</span>
+                  <span className="testimonial__relationship">{t.relationship}</span>
                 </footer>
               </blockquote>
             ))}
