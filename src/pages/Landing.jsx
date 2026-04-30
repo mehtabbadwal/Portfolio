@@ -73,16 +73,25 @@ const testimonials = [
 
 const articles = [
   {
-    title: 'When AI Changes Who\u2019s in Control',
-    excerpt: 'As AI becomes more embedded in products, something subtle shifts in the user experience \u2014 often without being designed for.',
+    title: 'The Shadow System Problem',
+    excerpt: 'Users don\u2019t build workarounds because they don\u2019t understand the tool. They build them because they understand it perfectly.',
+    date: 'MAR 2025',
+    readTime: '8 min read',
+    slug: 'shadow-system-problem',
+  },
+  {
+    title: 'The Colleague Problem',
+    excerpt: 'The most common onboarding flow isn\u2019t the one you designed. It\u2019s the colleague three desks away.',
+    date: 'APR 2025',
+    readTime: '7 min read',
+    slug: 'the-colleague-problem',
   },
   {
     title: 'Why Users Don\u2019t Say What They Feel',
-    excerpt: 'Much of what drives user behavior happens before conscious thought \u2014 in instinct, emotion, and physical reaction.',
-  },
-  {
-    title: 'The Paradox of Choice in UX',
-    excerpt: 'Too much freedom can paralyze users. Designing lighter, reversible choices restores ease, flow, and confidence.',
+    excerpt: 'Most research asks what people think. But much of what drives behavior happens before thought \u2014 in instinct, emotion, and physical reaction.',
+    date: 'OCT 2024',
+    readTime: '7 min read',
+    slug: 'why-users-dont-say-what-they-feel',
   },
 ];
 
@@ -224,36 +233,30 @@ function Landing() {
             <Link to="/writing" className="writing__view-all">Explore all writing &rarr;</Link>
           </div>
 
-          <div className="writing__columns">
-            {/* Left — Featured */}
-            <Link to="/writing" className="writing__featured fade-up">
-              <span className="writing__mark">&ldquo;</span>
-              <p className="writing__quote">
-                I was giving my son a bath when I realized I was out of groceries.
-              </p>
-              <p className="writing__quote-sub">
-                When a platform consolidates everything, it takes on more responsibility &mdash;
-                to understand intent, not just expose options.
-              </p>
-              <div className="writing__featured-meta">
-                <div className="writing__meta-line" />
-                <div className="writing__meta-text">
-                  <strong>&ldquo;Stay Out of My Way&rdquo;</strong>
-                  <span>Mind Meets Design &middot; Feb 2025</span>
+          <div className="writing__list">
+            {articles.map((article, i) => (
+              <Link
+                to={`/blog/${article.slug}`}
+                key={article.slug}
+                className={`writing-item fade-up stagger-${i + 1}`}
+              >
+                <span className="writing-item__number">0{i + 1}</span>
+                <div className="writing-item__body">
+                  <h3 className="writing-item__title">{article.title}</h3>
+                  <p className="writing-item__excerpt">{article.excerpt}</p>
                 </div>
-              </div>
-            </Link>
+                <div className="writing-item__meta">
+                  <span className="writing-item__date">{article.date}</span>
+                  <span className="writing-item__read-time">{article.readTime}</span>
+                  <span className="writing-item__arrow" aria-hidden="true">&rarr;</span>
+                </div>
+              </Link>
+            ))}
+          </div>
 
-            {/* Right — Article list */}
-            <div className="writing__list">
-              {articles.map((a, i) => (
-                <Link to="/writing" key={i} className={`writing__item fade-up stagger-${i + 1}`}>
-                  <h3 className="writing__item-title">{a.title}</h3>
-                  <p className="writing__item-excerpt">{a.excerpt}</p>
-                  <span className="writing__item-link">Read &rarr;</span>
-                </Link>
-              ))}
-            </div>
+          <div className="writing__footer fade-up">
+            <p className="writing__footer-text">7 essays published. More on the way.</p>
+            <Link to="/writing" className="writing__view-all">All essays &rarr;</Link>
           </div>
         </div>
       </section>
