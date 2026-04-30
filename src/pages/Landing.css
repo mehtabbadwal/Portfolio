@@ -203,6 +203,10 @@
   background: rgba(255, 255, 255, 0.15);
 }
 
+.section-rule--terracotta {
+  background: rgba(255, 255, 255, 0.25);
+}
+
 .work__view-all {
   font-size: 0.8125rem;
   font-weight: 500;
@@ -691,8 +695,12 @@
 .writing__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0;
   margin-bottom: 2.5rem;
+}
+
+.writing .section-label {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .writing__label {
