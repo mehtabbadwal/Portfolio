@@ -79,6 +79,30 @@
   border-radius: 12px;
 }
 
+.hero__photo--small .hero__photo-img {
+  width: 220px !important;
+  height: 260px !important;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(15%) contrast(1.02);
+}
+
+.hero__status-sep {
+  margin: 0 0.4rem;
+  color: var(--color-light);
+}
+
+.hero__edge {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+}
+
+.hero__edge-quote span {
+  color: var(--color-accent) !important;
+}
+
 /* ── Philosophy ── */
 .philosophy {
   background: var(--color-bg);
