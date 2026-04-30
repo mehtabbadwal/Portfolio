@@ -6,8 +6,9 @@
 
 .footer__main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-xl);
+  align-items: start;
 }
 
 .footer__brand {
