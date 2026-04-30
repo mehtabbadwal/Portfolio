@@ -253,8 +253,8 @@ function Landing() {
           </div>
 
           <div className="writing__footer fade-up">
-            <p className="writing__footer-text">7 essays published. More on the way.</p>
-            <Link to="/writing" className="writing__view-all">All essays &rarr;</Link>
+            <p className="writing__footer-text">7 pieces published. More on the way.</p>
+            <Link to="/writing" className="writing__view-all">All pieces &rarr;</Link>
           </div>
         </div>
       </section>
