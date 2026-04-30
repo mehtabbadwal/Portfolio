@@ -206,7 +206,6 @@ function Landing() {
                 <footer className="testimonial__author">
                   <strong>{t.author}</strong>
                   <span>{t.role}</span>
-                  <span className="testimonial__relationship">{t.relationship}</span>
                 </footer>
               </blockquote>
             ))}
