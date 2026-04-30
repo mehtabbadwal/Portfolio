@@ -651,10 +651,10 @@
 
 .testimonial__relationship {
   font-family: var(--font-mono);
-  font-size: 0.5625rem;
+  font-size: 0.5rem;
   font-weight: 400;
   letter-spacing: 0.04em;
-  color: rgba(244, 240, 232, 0.35);
+  color: rgba(244, 240, 232, 0.22);
   margin-top: 0.25rem;
 }
 
