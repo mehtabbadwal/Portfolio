@@ -110,8 +110,8 @@ function Contact() {
               >
                 <span className="contact__secondary-link-label">
                   <span className="contact__chatbot-sparkle" aria-hidden="true">
-                    <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 0L9.5 6.5L16 8L9.5 9.5L8 16L6.5 9.5L0 8L6.5 6.5L8 0Z" fill="currentColor" />
+                    <svg width="13" height="13" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 0 C10 0 11.5 7.5 13 9 C14.5 10.5 20 10 20 10 C20 10 14.5 11.5 13 13 C11.5 14.5 10 20 10 20 C10 20 8.5 14.5 7 13 C5.5 11.5 0 10 0 10 C0 10 5.5 8.5 7 9 C8.5 9.5 10 0 10 0Z" fill="currentColor" />
                     </svg>
                   </span>
                   Ask AI Mehtab
