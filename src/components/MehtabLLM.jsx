@@ -376,7 +376,16 @@ THIS PORTFOLIO: Vibe-coded — Mehtab held all design decisions and used Claude 
     window.mllmOpen = open;
     window.mllmClose = close;
 
-    const handleOpenEvent = () => open();
+    const handleOpenEvent = (e) => {
+      open();
+      const msg = e && e.detail && e.detail.message;
+      if (msg) {
+        setTimeout(() => {
+          inputEl.value = msg;
+          send();
+        }, 380);
+      }
+    };
     window.addEventListener('open-chatbot', handleOpenEvent);
 
     const API_URL = 'https://long-surf-14cfmehtab-chatbot.mehtabbadwal.workers.dev';

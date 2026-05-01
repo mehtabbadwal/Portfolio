@@ -337,6 +337,20 @@ function Landing() {
               <p className="cta__no-hard-feelings fade-up">
                 If not &mdash; no hard feelings. Someone else will.
               </p>
+              <p className="cta__chatbot-line fade-up">
+                Not ready to write an email?{' '}
+                <button
+                  type="button"
+                  className="cta__chatbot-link"
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-chatbot'))}
+                >
+                  Talk to AI me &rarr;
+                </button>
+                <br />
+                <span className="cta__chatbot-sub">
+                  It knows my work, speaks in my voice, and won&rsquo;t pretend to know what it doesn&rsquo;t.
+                </span>
+              </p>
             </div>
 
             <div className="cta__side fade-up">
