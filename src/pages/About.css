@@ -1,7 +1,6 @@
 /* ── About Hero ── */
 .about__hero {
   padding: 5rem 0 4.5rem;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .about__hero-label {
