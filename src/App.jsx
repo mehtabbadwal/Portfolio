@@ -17,6 +17,7 @@ import DesigningForDignity from './pages/blog/DesigningForDignity';
 import WhyUsersDontSayWhatTheyFeel from './pages/blog/WhyUsersDontSayWhatTheyFeel';
 import TheWeightOfChoice from './pages/blog/TheWeightOfChoice';
 import ThisSite from './pages/ThisSite';
+import Contact from './pages/Contact';
 import ComingSoon from './pages/ComingSoon';
 import MehtabLLM from './components/MehtabLLM';
 import FloatingChatButton from './components/FloatingChatButton';
@@ -43,6 +44,7 @@ function App() {
           <Route path="blog/why-users-dont-say-what-they-feel" element={<WhyUsersDontSayWhatTheyFeel />} />
           <Route path="blog/the-weight-of-choice" element={<TheWeightOfChoice />} />
           <Route path="this-site" element={<ThisSite />} />
+          <Route path="contact" element={<Contact />} />
           <Route path="case-studies/:slug" element={<ComingSoon title="Case Study" />} />
         </Route>
       </Routes>
