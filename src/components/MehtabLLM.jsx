@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { STARTERS } from './chatStarters';
 
 export default function MehtabLLM() {
   useEffect(() => {
@@ -289,14 +290,7 @@ THIS PORTFOLIO: Vibe-coded — Mehtab held all design decisions and used Claude 
           <div class="mllm-empty" id="mllm-empty">
             <p class="mllm-empty-prompt">What would you like to know?</p>
             <div class="mllm-starters">
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">What kind of work do you do?</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Tell me about your AI work</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">How do you approach a new problem?</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">How can I reach you?</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Are you open to new roles?</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">Can I see your resume?</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">What do you do outside of work?</span></button>
-              <button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">How did you build this site?</span></button>
+              ${STARTERS.map(s => `<button class="mllm-starter"><span class="mllm-arrow">↳</span><span class="mllm-starter-text">${s.text}</span></button>`).join('')}
             </div>
           </div>
           <div class="mllm-convo" id="mllm-convo" style="display:none;"></div>
