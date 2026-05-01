@@ -18,11 +18,11 @@
   font-family: var(--font-heading);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
-  line-height: 1.08;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--color-dark);
-  max-width: 22ch;
+  max-width: 28ch;
   margin: 0;
 }
 
