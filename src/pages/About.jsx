@@ -9,26 +9,47 @@ function About() {
 
   return (
     <div className="about" ref={pageRef}>
-      {/* ── Chapter 01 — Opening ── */}
+
+      {/* ── Hero headline ── */}
+      <section className="about__hero">
+        <div className="container">
+          <p className="about__hero-label fade-up">About</p>
+          <h1 className="about__hero-headline fade-up">
+            I came to UX through fashion, family, and a long habit of{' '}
+            <span className="about__hero-headline--accent">
+              watching how people behave when no one&rsquo;s watching.
+            </span>
+          </h1>
+        </div>
+      </section>
+
+      {/* ── Section 01 — How I Got Here ── */}
       <section className="about__chapter section">
         <div className="container">
-          <p className="about__chapter-label fade-up">Chapter 01 &mdash; Opening</p>
+          <div className="about__section-header fade-up">
+            <span className="about__section-dot" aria-hidden="true" />
+            <p className="about__section-label">How I Got Here</p>
+            <span className="about__section-line" aria-hidden="true" />
+          </div>
           <div className="about__opening">
             <div className="about__opening-content">
-              <p className="about__opening-heading fade-up">
-                I&rsquo;ve spent six years working with early-stage startups in fintech,
-                edtech, and SaaS &mdash; translating dense systems into experiences that
-                felt intuitive without sacrificing depth. The work usually started with
-                clarity, not aesthetics.
+              <p className="about__opening-subhead fade-up">
+                Fashion was my first design education &mdash;{' '}
+                <span className="about__opening-subhead--accent">
+                  and my first lesson in how people actually decide.
+                </span>
               </p>
               <p className="about__opening-body fade-up">
-                Before UX, I worked in fashion &mdash; pattern-making, production, quality
-                assurance. The precision mattered there too. The cleaner the system, the
-                less noise got in the way.
+                Before UX, I worked in fashion. The technical part &mdash; pattern-making,
+                production &mdash; mattered. But the part that stayed with me was watching{' '}
+                <strong>how people relate to what they put on themselves.</strong>{' '}
+                What they reach for when they&rsquo;re nervous. What they avoid when they
+                don&rsquo;t want to be seen. The gap between who they&rsquo;re trying to
+                project and who they actually are.
               </p>
-              <p className="about__opening-italic fade-up">
-                That&rsquo;s still how I think about design &mdash; getting the structure
-                right so everything else can breathe.
+              <p className="about__opening-body fade-up">
+                UX gave me a different vocabulary for the same observation.
+                The clothes became interfaces. The lens stayed the same.
               </p>
               <PatternSketch />
             </div>
@@ -45,10 +66,14 @@ function About() {
 
       <AnimatedDivider />
 
-      {/* ── Chapter 02 — How I Think ── */}
+      {/* ── Section 02 — How I Think ── */}
       <section className="about__chapter section">
         <div className="container">
-          <p className="about__chapter-label fade-up">Chapter 02 &mdash; How I Think</p>
+          <div className="about__section-header fade-up">
+            <span className="about__section-dot" aria-hidden="true" />
+            <p className="about__section-label">How I Think</p>
+            <span className="about__section-line" aria-hidden="true" />
+          </div>
           <blockquote className="about__big-quote fade-up">
             Most design problems I&rsquo;ve worked on already had a standard solution.
             The hard part was figuring out whether that solution was actually right,
@@ -91,10 +116,14 @@ function About() {
 
       <AnimatedDivider />
 
-      {/* ── Chapter 03 — How I Work Now ── */}
+      {/* ── Section 03 — How I Work Now ── */}
       <section className="about__chapter section">
         <div className="container">
-          <p className="about__chapter-label fade-up">Chapter 03 &mdash; How I Work Now</p>
+          <div className="about__section-header fade-up">
+            <span className="about__section-dot" aria-hidden="true" />
+            <p className="about__section-label">How I Work Now</p>
+            <span className="about__section-line" aria-hidden="true" />
+          </div>
           <div className="about__work-grid">
             <div className="about__work-content">
               <p className="about__work-primary fade-up">
@@ -130,10 +159,14 @@ function About() {
 
       <AnimatedDivider />
 
-      {/* ── Chapter 04 — Outside Work ── */}
+      {/* ── Section 04 — Outside Work ── */}
       <section className="about__chapter section">
         <div className="container">
-          <p className="about__chapter-label fade-up">Chapter 04 &mdash; Outside Work</p>
+          <div className="about__section-header fade-up">
+            <span className="about__section-dot" aria-hidden="true" />
+            <p className="about__section-label">Outside Work</p>
+            <span className="about__section-line" aria-hidden="true" />
+          </div>
           <div className="about__photos fade-up">
             <img
               src="/ocean-sunset.webp"
@@ -176,10 +209,14 @@ function About() {
 
       <AnimatedDivider />
 
-      {/* ── Chapter 05 — Where I'm Headed ── */}
+      {/* ── Section 05 — Where I'm Headed ── */}
       <section className="about__chapter section">
         <div className="container">
-          <p className="about__chapter-label fade-up">Chapter 05 &mdash; Where I&rsquo;m Headed</p>
+          <div className="about__section-header fade-up">
+            <span className="about__section-dot" aria-hidden="true" />
+            <p className="about__section-label">Where I&rsquo;m Headed</p>
+            <span className="about__section-line" aria-hidden="true" />
+          </div>
           <div className="about__headed-grid">
             <div className="about__headed-content fade-up">
               <p className="about__headed-quote">
@@ -216,6 +253,7 @@ function About() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
