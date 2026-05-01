@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { DOCK_STARTERS } from './chatStarters';
 
 const STORAGE_KEY = 'mb_dock_collapsed';
+const SESSION_AUTOCOLLAPSED_KEY = 'mb_dock_autocollapsed';
+const AUTOCOLLAPSE_THRESHOLD_PX = 400;
 const ROTATION_MS = 9000;
 
 export default function FloatingChatButton() {
@@ -47,6 +49,25 @@ export default function FloatingChatButton() {
       window.removeEventListener('chatbot-closed', onClose);
     };
   }, []);
+
+  // Auto-collapse on first scroll past threshold (once per session)
+  useEffect(() => {
+    if (isMobile) return;
+    if (sessionStorage.getItem(SESSION_AUTOCOLLAPSED_KEY) === '1') return;
+
+    const onScroll = () => {
+      if (window.scrollY > AUTOCOLLAPSE_THRESHOLD_PX) {
+        sessionStorage.setItem(SESSION_AUTOCOLLAPSED_KEY, '1');
+        if (localStorage.getItem(STORAGE_KEY) === null) {
+          setCollapsed(true);
+        }
+        window.removeEventListener('scroll', onScroll);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [isMobile]);
 
   // Rotate chip pairs while panel is visible
   useEffect(() => {
@@ -136,18 +157,21 @@ export default function FloatingChatButton() {
 
           .mb-dock__close {
             position: absolute;
-            top: 6px; right: 6px;
-            width: 20px; height: 20px;
-            border: none; background: transparent;
-            color: #8A7A6E; cursor: pointer; padding: 0;
-            border-radius: 5px;
+            top: 7px; right: 7px;
+            width: 24px; height: 24px;
+            border: none;
+            background: rgba(244, 240, 232, 0.1);
+            color: rgba(244, 240, 232, 0.75);
+            cursor: pointer; padding: 0;
+            border-radius: 6px;
             display: flex; align-items: center; justify-content: center;
             transition: background 0.15s, color 0.15s;
-            opacity: 0.6;
+            opacity: 1;
           }
-          .mb-dock__panel:hover .mb-dock__close,
-          .mb-dock__panel:focus-within .mb-dock__close { opacity: 1; }
-          .mb-dock__close:hover { background: rgba(244,240,232,0.08); color: #F4F0E8; }
+          .mb-dock__close:hover {
+            background: rgba(244, 240, 232, 0.18);
+            color: #F4F0E8;
+          }
 
           .mb-dock__form {
             display: flex; align-items: center; gap: 6px;
@@ -266,8 +290,8 @@ export default function FloatingChatButton() {
         <div className="mb-dock">
           <div className="mb-dock__panel" role="region" aria-label="Ask AI Mehtab">
             <button className="mb-dock__close" onClick={collapse} aria-label="Collapse">
-              <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 6h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6h6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
               </svg>
             </button>
 
