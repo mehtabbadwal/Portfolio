@@ -50,7 +50,9 @@ export default function FloatingChatButton() {
     };
   }, []);
 
-  // Auto-collapse on first scroll past threshold (once per session)
+  // Auto-collapse on first scroll past threshold (once per session).
+  // We do NOT write to localStorage here — so user's manual preference
+  // is preserved, and a fresh page load will open the dock again.
   useEffect(() => {
     if (isMobile) return;
     if (sessionStorage.getItem(SESSION_AUTOCOLLAPSED_KEY) === '1') return;
@@ -58,9 +60,7 @@ export default function FloatingChatButton() {
     const onScroll = () => {
       if (window.scrollY > AUTOCOLLAPSE_THRESHOLD_PX) {
         sessionStorage.setItem(SESSION_AUTOCOLLAPSED_KEY, '1');
-        if (localStorage.getItem(STORAGE_KEY) === null) {
-          setCollapsed(true);
-        }
+        setCollapsed(true);
         window.removeEventListener('scroll', onScroll);
       }
     };
