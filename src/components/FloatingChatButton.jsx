@@ -2,7 +2,6 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import { DOCK_STARTERS } from './chatStarters';
 
 const STORAGE_KEY = 'mb_dock_collapsed';
-const SESSION_AUTOCOLLAPSED_KEY = 'mb_dock_autocollapsed';
 const AUTOCOLLAPSE_THRESHOLD_PX = 400;
 const ROTATION_MS = 9000;
 
@@ -50,24 +49,22 @@ export default function FloatingChatButton() {
     };
   }, []);
 
-  // Auto-collapse on first scroll past threshold (once per session).
-  // We do NOT write to localStorage here — so user's manual preference
-  // is preserved, and a fresh page load will open the dock again.
+  // Auto-collapse the open dock whenever the user scrolls past the threshold.
+  // No session flag — if the user reopens the dock and scrolls again, it collapses again.
+  // We don't write to localStorage here, so manual preference set elsewhere is preserved.
   useEffect(() => {
     if (isMobile) return;
-    if (sessionStorage.getItem(SESSION_AUTOCOLLAPSED_KEY) === '1') return;
+    if (collapsed) return; // only watch scroll while dock is open
 
     const onScroll = () => {
       if (window.scrollY > AUTOCOLLAPSE_THRESHOLD_PX) {
-        sessionStorage.setItem(SESSION_AUTOCOLLAPSED_KEY, '1');
         setCollapsed(true);
-        window.removeEventListener('scroll', onScroll);
       }
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, [isMobile]);
+  }, [isMobile, collapsed]);
 
   // Rotate chip pairs while panel is visible
   useEffect(() => {
@@ -276,7 +273,7 @@ export default function FloatingChatButton() {
         <div className="mb-dock">
           <button
             className="mb-dock__btn"
-            onClick={() => (isMobile ? openSidebar() : expand())}
+            onClick={openSidebar}
             aria-label="Open Ask AI Mehtab"
           >
             <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
