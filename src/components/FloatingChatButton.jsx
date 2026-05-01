@@ -51,23 +51,14 @@ export default function FloatingChatButton() {
   }, []);
 
   // Auto-collapse on first scroll past threshold (once per session).
+  // We do NOT write to localStorage here — so user's manual preference
+  // is preserved, and a fresh page load will open the dock again.
   useEffect(() => {
-    console.log('[dock] scroll-effect mount. isMobile=', isMobile, 'sessionFlag=', sessionStorage.getItem(SESSION_AUTOCOLLAPSED_KEY));
-    if (isMobile) {
-      console.log('[dock] skipping: isMobile=true');
-      return;
-    }
-    if (sessionStorage.getItem(SESSION_AUTOCOLLAPSED_KEY) === '1') {
-      console.log('[dock] skipping: already auto-collapsed this session');
-      return;
-    }
-
-    console.log('[dock] attaching scroll listener');
+    if (isMobile) return;
+    if (sessionStorage.getItem(SESSION_AUTOCOLLAPSED_KEY) === '1') return;
 
     const onScroll = () => {
-      console.log('[dock] scroll fired. scrollY=', window.scrollY);
       if (window.scrollY > AUTOCOLLAPSE_THRESHOLD_PX) {
-        console.log('[dock] threshold passed → collapsing');
         sessionStorage.setItem(SESSION_AUTOCOLLAPSED_KEY, '1');
         setCollapsed(true);
         window.removeEventListener('scroll', onScroll);
@@ -75,10 +66,7 @@ export default function FloatingChatButton() {
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => {
-      console.log('[dock] cleanup: removing scroll listener');
-      window.removeEventListener('scroll', onScroll);
-    };
+    return () => window.removeEventListener('scroll', onScroll);
   }, [isMobile]);
 
   // Rotate chip pairs while panel is visible
