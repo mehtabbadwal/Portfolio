@@ -109,8 +109,7 @@ export default function FloatingChatButton() {
 
           .mb-dock {
             position: fixed;
-            top: 50%; right: 22px;
-            transform: translateY(-50%);
+            bottom: 22px; right: 22px;
             z-index: 1000;
             font-family: var(--font-body);
           }
@@ -243,8 +242,7 @@ export default function FloatingChatButton() {
 
           @media (max-width: 768px) {
             .mb-dock {
-              top: auto; bottom: 18px; right: 18px;
-              transform: none;
+              bottom: 18px; right: 18px;
             }
           }
         `}
