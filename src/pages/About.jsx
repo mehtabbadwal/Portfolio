@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { PatternSketch } from '../components/PatternSketch';
 import './About.css';
@@ -207,6 +208,9 @@ function About() {
                   It&rsquo;s where most of the good ideas actually come from.
                 </span>
               </blockquote>
+              <Link to="/writing" className="about__outside-read-more">
+                Read more about how I see the work &rarr;
+              </Link>
             </div>
           </div>
         </div>
