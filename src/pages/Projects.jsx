@@ -9,7 +9,7 @@ const caseStudies = [
     year: '2025',
     tag: 'ENTERPRISE SYSTEMS',
     title: 'HPE Agentic Chatbot',
-    description: 'The fix wasn\u2019t smarter AI. It was more honest AI.',
+    description: 'The fix wasn’t smarter AI. It was more honest AI.',
     image: 'hpe-chatbot-hero.svg',
     metrics: [
       { value: '32%', label: 'fewer escalations' },
@@ -35,7 +35,7 @@ const caseStudies = [
   {
     year: '2024',
     tag: 'AI PRODUCT',
-    title: 'Qubera \u2014 AI Research Tool',
+    title: 'Qubera — AI Research Tool',
     description: 'Analysts knew what questions to ask. The tool just made them ask manually, every time.',
     image: 'qubera-hero.webp',
     metrics: [
@@ -47,7 +47,7 @@ const caseStudies = [
   },
   {
     year: '2023',
-    tag: 'MOBILE \u00B7 FIELD SERVICE',
+    tag: 'MOBILE · FIELD SERVICE',
     title: 'Fluidra Pro Redesign',
     description: 'Built around the 40-minute window, not the system.',
     image: 'fluidra-service-hero.webp',
@@ -60,7 +60,7 @@ const caseStudies = [
   },
   {
     year: '2024',
-    tag: 'MOBILE \u00B7 PLATFORM',
+    tag: 'MOBILE · PLATFORM',
     title: 'Fluidra Rewards Integration',
     description: 'Two products, two logins, one job. The answer was an architecture problem, not a design problem.',
     image: 'fluidra-rewards-hero.webp',
@@ -78,25 +78,25 @@ const skills = [
   {
     title: 'Design System Skill',
     hook: 'A design system process AI can actually follow.',
-    howToUse: "Knows what to build first, what to clarify before starting, and how to handle failures mid-way.\nBuilt through real use \u2014 not theory.",
+    howToUse: "Knows what to build first, what to clarify before starting, and how to handle failures mid-way.\nBuilt through real use — not theory.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1H7SkGFd78dgdBRn6XtnLYD2cA04AWLjM',
   },
   {
     title: 'UX Research Skill',
-    hook: "Understand why users aren\u2019t doing what you expected.",
-    howToUse: "You\u2019ll either get a clear direction grounded in behavior \u2014 or proof that your approach already works.\nBoth are useful.",
+    hook: "Understand why users aren’t doing what you expected.",
+    howToUse: "You’ll either get a clear direction grounded in behavior — or proof that your approach already works.\nBoth are useful.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=13bZW0OC0BiBt4s83e_hWSAcEOUBt6qDC',
   },
   {
     title: 'UI Designer Skill',
     hook: 'Make visual decisions that actually hold.',
-    howToUse: "Not decoration. Structure.\nIt works through spacing, scale, and hierarchy \u2014 and calls out what feels off, even when you can\u2019t name it.",
+    howToUse: "Not decoration. Structure.\nIt works through spacing, scale, and hierarchy — and calls out what feels off, even when you can’t name it.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1QYkoH_Ob8sV_x_pkQdBvCCjrBD5Ndwzl',
   },
   {
     title: 'UX Designer Skill',
-    hook: "Design for who\u2019s actually using the product.",
-    howToUse: "It won\u2019t move until it understands the user, their role, and their state of mind.\nThe same problem gets a different answer depending on who\u2019s asking it.",
+    hook: "Design for who’s actually using the product.",
+    howToUse: "It won’t move until it understands the user, their role, and their state of mind.\nThe same problem gets a different answer depending on who’s asking it.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1RsYfjgEEXn6pkaIl0ncFFEm4wvBfmdrf',
   },
 ];
@@ -111,15 +111,11 @@ function Projects() {
         <div className="container">
           <div className="projects__work-header fade-up">
             <p className="projects__label">Selected Work</p>
-            <h1 className="projects__heading">Work that started with behavior.</h1>
-            <p className="projects__intro">
-              Five projects across enterprise, AI, and field environments. Each one
-              started with a question about behavior, not about what the interface
-              should look like.
-            </p>
+            <h1 className="projects__heading">
+              Five products. The question I asked before{' '}
+              <em className="projects__heading-accent">each one wasn&rsquo;t about the interface.</em>
+            </h1>
           </div>
-
-          <p className="projects__focus fade-up">Focus: Enterprise &bull; AI Products &bull; 0&rarr;1 &bull; Mobile</p>
 
           <div className="projects__grid case-studies-grid">
             {caseStudies.map((cs, i) => {
@@ -139,20 +135,23 @@ function Projects() {
                       />
                     </div>
                   )}
-                  <div className="cs-card__meta">
-                    <span className="cs-card__year">{cs.year}</span>
-                    <span className="cs-card__dot" />
-                    <span className="cs-card__tag">{cs.tag}</span>
-                  </div>
-                  <h3 className="cs-card__title">{cs.title}</h3>
-                  <p className="cs-card__desc">{cs.description}</p>
-                  <div className="cs-card__metrics">
-                    {cs.metrics.map((m) => (
-                      <div key={m.label} className="cs-card__metric">
-                        <MetricCounter value={m.value} className="cs-card__metric-value" />
-                        <span className="cs-card__metric-label">{m.label}</span>
-                      </div>
-                    ))}
+                  <div className="cs-card__content">
+                    <div className="cs-card__meta">
+                      <span className="cs-card__year">{cs.year}</span>
+                      <span className="cs-card__sep"> &middot; </span>
+                      <span className="cs-card__tag">{cs.tag}</span>
+                      <span className="cs-card__sep"> &middot; </span>
+                      <span className="cs-card__name">{cs.title}</span>
+                    </div>
+                    <p className="cs-card__desc">{cs.description}</p>
+                    <div className="cs-card__metrics">
+                      {cs.metrics.map((m) => (
+                        <div key={m.label} className="cs-card__metric">
+                          <MetricCounter value={m.value} className="cs-card__metric-value" />
+                          <span className="cs-card__metric-label">{m.label}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </CardTag>
               );
@@ -182,9 +181,9 @@ function Projects() {
               </p>
             </div>
             <div className="projects__skills-ctas fade-up">
-              <Link to="/contact" className="btn projects__skills-cta">
+              <a href="mailto:mehtabbadwal@gmail.com" className="btn projects__skills-cta">
                 Email me
-              </Link>
+              </a>
               <a href="https://www.linkedin.com/in/mehtabbadwal/" target="_blank" rel="noopener noreferrer" className="btn projects__skills-cta">
                 Message me on LinkedIn
               </a>
@@ -221,9 +220,9 @@ function Projects() {
               If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
             </p>
             <div className="projects__cta-actions">
-              <Link to="/contact" className="btn btn--accent">
+              <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
                 mehtabbadwal@gmail.com
-              </Link>
+              </a>
               <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="btn projects__cta-resume">
                 Resume
               </a>
