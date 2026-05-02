@@ -111,11 +111,15 @@ function Projects() {
         <div className="container">
           <div className="projects__work-header fade-up">
             <p className="projects__label">Selected Work</p>
-            <h1 className="projects__heading">
-              Five products. The question I asked before{' '}
-              <em className="projects__heading-accent">each one wasn&rsquo;t about the interface.</em>
-            </h1>
+            <h1 className="projects__heading">Work that started with behavior.</h1>
+            <p className="projects__intro">
+              Five projects across enterprise, AI, and field environments. Each one
+              started with a question about behavior, not about what the interface
+              should look like.
+            </p>
           </div>
+
+          <p className="projects__focus fade-up">Focus: Enterprise &bull; AI Products &bull; 0&rarr;1 &bull; Mobile</p>
 
           <div className="projects__grid case-studies-grid">
             {caseStudies.map((cs, i) => {
@@ -135,23 +139,20 @@ function Projects() {
                       />
                     </div>
                   )}
-                  <div className="cs-card__content">
-                    <div className="cs-card__meta">
-                      <span className="cs-card__year">{cs.year}</span>
-                      <span className="cs-card__sep"> &middot; </span>
-                      <span className="cs-card__tag">{cs.tag}</span>
-                      <span className="cs-card__sep"> &middot; </span>
-                      <span className="cs-card__name">{cs.title}</span>
-                    </div>
-                    <p className="cs-card__desc">{cs.description}</p>
-                    <div className="cs-card__metrics">
-                      {cs.metrics.map((m) => (
-                        <div key={m.label} className="cs-card__metric">
-                          <MetricCounter value={m.value} className="cs-card__metric-value" />
-                          <span className="cs-card__metric-label">{m.label}</span>
-                        </div>
-                      ))}
-                    </div>
+                  <div className="cs-card__meta">
+                    <span className="cs-card__year">{cs.year}</span>
+                    <span className="cs-card__dot" />
+                    <span className="cs-card__tag">{cs.tag}</span>
+                  </div>
+                  <h3 className="cs-card__title">{cs.title}</h3>
+                  <p className="cs-card__desc">{cs.description}</p>
+                  <div className="cs-card__metrics">
+                    {cs.metrics.map((m) => (
+                      <div key={m.label} className="cs-card__metric">
+                        <MetricCounter value={m.value} className="cs-card__metric-value" />
+                        <span className="cs-card__metric-label">{m.label}</span>
+                      </div>
+                    ))}
                   </div>
                 </CardTag>
               );
