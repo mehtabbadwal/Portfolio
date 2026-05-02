@@ -195,9 +195,9 @@ function About() {
                 I make things &mdash; essays at{' '}
                 <a href="/writing" className="about__outside-link">Mind Meets Design</a>,
                 poems on{' '}
-                <a href="https://mehtabbadwal.substack.com" target="_blank" rel="noopener noreferrer" className="about__outside-link">Substack</a>{' '}
+                <a href="https://mehtabbadwal.substack.com/" target="_blank" rel="noopener noreferrer" className="about__outside-link">Substack</a>{' '}
                 when something needs fewer words, small design objects on{' '}
-                <a href="https://etsy.com/shop/mehtabbadwal" target="_blank" rel="noopener noreferrer" className="about__outside-link">Etsy</a>.
+                <a href="https://memoirsofmehtab.etsy.com" target="_blank" rel="noopener noreferrer" className="about__outside-link">Etsy</a>.
                 I read and reflect more than I probably should.
               </p>
             </div>

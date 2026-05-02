@@ -119,9 +119,9 @@ function Landing() {
             </p>
             <div className="hero__actions fade-up stagger-4">
               <Link to="/work" className="btn btn--filled">See the work &rarr;</Link>
-              <a href="mailto:mehtabbadwal@gmail.com" className="btn">Let&rsquo;s talk</a>
+              <Link to="/contact" className="btn">Let&rsquo;s talk</Link>
             </div>
-            <Link to="/about" className="hero__learn-more fade-up stagger-5">
+            <Link to="/writing" className="hero__learn-more fade-up stagger-5">
               Or read more about how I see the work &rarr;
             </Link>
           </div>
@@ -327,9 +327,9 @@ function Landing() {
                 I work best where the behavioral layer actually matters &mdash; where the obvious answer keeps not landing.
               </p>
               <div className="cta__actions fade-up">
-                <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent cta__email">
+                <Link to="/contact" className="btn btn--accent cta__email">
                   Let&rsquo;s talk &rarr;
-                </a>
+                </Link>
                 <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="btn cta__resume">
                   View resume
                 </a>

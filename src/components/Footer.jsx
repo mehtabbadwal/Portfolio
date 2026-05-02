@@ -25,11 +25,11 @@ function Footer() {
             <span className="footer__sep" aria-hidden="true">·</span>
             <a href="https://linkedin.com/in/mehtabbadwal" target="_blank" rel="noopener noreferrer" className="footer__link">LinkedIn</a>
             <span className="footer__sep" aria-hidden="true">·</span>
-            <a href="https://mehtabbadwal.substack.com" target="_blank" rel="noopener noreferrer" className="footer__link">
+            <a href="https://mehtabbadwal.substack.com/" target="_blank" rel="noopener noreferrer" className="footer__link">
               Substack <em className="footer__note">poetry</em>
             </a>
             <span className="footer__sep" aria-hidden="true">·</span>
-            <a href="https://etsy.com/shop/mehtabbadwal" target="_blank" rel="noopener noreferrer" className="footer__link">
+            <a href="https://memoirsofmehtab.etsy.com" target="_blank" rel="noopener noreferrer" className="footer__link">
               Etsy <em className="footer__note">digital goods</em>
             </a>
           </nav>

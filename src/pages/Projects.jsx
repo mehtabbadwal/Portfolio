@@ -182,9 +182,9 @@ function Projects() {
               </p>
             </div>
             <div className="projects__skills-ctas fade-up">
-              <a href="mailto:mehtabbadwal@gmail.com" className="btn projects__skills-cta">
+              <Link to="/contact" className="btn projects__skills-cta">
                 Email me
-              </a>
+              </Link>
               <a href="https://www.linkedin.com/in/mehtabbadwal/" target="_blank" rel="noopener noreferrer" className="btn projects__skills-cta">
                 Message me on LinkedIn
               </a>
@@ -221,9 +221,9 @@ function Projects() {
               If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
             </p>
             <div className="projects__cta-actions">
-              <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
+              <Link to="/contact" className="btn btn--accent">
                 mehtabbadwal@gmail.com
-              </a>
+              </Link>
               <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="btn projects__cta-resume">
                 Resume
               </a>
