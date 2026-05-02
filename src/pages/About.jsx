@@ -216,51 +216,6 @@ function About() {
         </div>
       </section>
 
-      {/* ── Section 05 — Where I'm Headed ── */}
-      <section className="about__chapter section">
-        <div className="container">
-          <div className="about__section-header fade-up">
-            <span className="about__section-dot" aria-hidden="true" />
-            <p className="about__section-label">Where I&rsquo;m Headed</p>
-            <span className="about__section-line" aria-hidden="true" />
-          </div>
-          <div className="about__headed-grid">
-            <div className="about__headed-content fade-up">
-              <p className="about__headed-quote">
-                Senior or Staff UX roles &mdash; enterprise, AI, startups, or anything in between.
-              </p>
-              <p className="about__headed-body">
-                Complexity doesn&rsquo;t intimidate me. Unclear problems are the interesting ones.
-              </p>
-              <div className="about__headed-actions">
-                <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
-                  mehtabbadwal@gmail.com
-                </a>
-                <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="btn about__resume-btn">
-                  Resume
-                </a>
-              </div>
-            </div>
-            <div className="about__headed-right fade-up">
-              <ul className="about__principles">
-                <li>
-                  <span className="about__principle-dot" />
-                  Meaningful problems that change lives through clarity, not simplicity.
-                </li>
-                <li>
-                  <span className="about__principle-dot" />
-                  A team that actually uses what each person is good at rather than averaging everyone out.
-                </li>
-                <li>
-                  <span className="about__principle-dot" />
-                  No micromanagement. A problem that&rsquo;s genuinely hard to solve.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }
