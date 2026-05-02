@@ -663,3 +663,50 @@
     gap: 3rem;
   }
 }
+
+/* ── Section 03 — How I Work Now (updated) ── */
+.about__work-headline {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-dark);
+  margin: 0 0 2rem;
+}
+
+.about__work-headline--accent {
+  color: var(--color-accent);
+}
+
+.about__work-body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--color-warm);
+  margin: 0 0 1.25rem;
+}
+
+.about__work-body:last-of-type {
+  margin-bottom: 0;
+}
+
+.about__work-body strong {
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.about__work-caption {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-light);
+  margin: 1rem 0 0;
+}
+
+.about__work-caption--accent {
+  color: var(--color-accent);
+}

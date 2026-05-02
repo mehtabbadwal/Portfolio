@@ -124,32 +124,35 @@ function About() {
           </div>
           <div className="about__work-grid">
             <div className="about__work-content">
-              <p className="about__work-primary fade-up">
-                Right now I&rsquo;m working with a startup &mdash; leading product and UX
-                from strategy to screen. Information architecture, user flows, feature
-                decisions, design system, user testing. The full stack of what it takes
-                to build something real.
+              <h2 className="about__work-headline fade-up">
+                Speed matters less to me than clarity.{' '}
+                <span className="about__work-headline--accent">
+                  I&rsquo;d rather slow down once than ship the wrong thing fast.
+                </span>
+              </h2>
+              <p className="about__work-body fade-up">
+                Right now I&rsquo;m leading product and UX at a startup &mdash; full
+                stack, strategy to screen. The kind of work where decisions get made
+                quickly and you live with the consequences.
               </p>
-              <p className="fade-up">
-                I&rsquo;ve also built AI into how I work. Speed matters less to me than
-                clarity, and having something that will question every assumption without
-                getting tired of it has changed what I can produce alone. I&rsquo;ve built
-                custom workflows in Claude for design system creation, UX review, and
-                copywriting.
+              <p className="about__work-body fade-up">
+                I&rsquo;ve built AI into how I work, but not for the obvious reasons.{' '}
+                <strong>Having something that will question every assumption without
+                getting tired of it</strong> has changed what I can produce alone.
+                Custom Claude workflows for design system creation, UX review,
+                copywriting. Not to move faster &mdash; to think harder.
               </p>
-              <div className="about__tags fade-up">
-                <span className="about__tag">AI Workflow Design</span>
-                <span className="about__tag">Design Systems</span>
-                <span className="about__tag">0&rarr;1 Strategy</span>
-                <span className="about__tag">Claude Skills</span>
-              </div>
             </div>
             <div className="about__work-photo fade-up">
               <img
                 src="/chapter-03-books.jpeg"
-                alt="Books on reading and reflection"
+                alt="Three books on reading people"
                 className="about__work-img"
               />
+              <p className="about__work-caption">
+                Three of the books still teaching me{' '}
+                <span className="about__work-caption--accent">how to read people.</span>
+              </p>
             </div>
           </div>
         </div>
