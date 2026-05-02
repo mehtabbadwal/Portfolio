@@ -1,5 +1,4 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { AnimatedDivider } from './AnimatedDivider';
 import { PatternSketch } from '../components/PatternSketch';
 import { WaveSketch } from '../components/WaveSketch';
 import './About.css';
@@ -64,8 +63,6 @@ function About() {
         </div>
       </section>
 
-      <AnimatedDivider />
-
       {/* ── Section 02 — How I Think ── */}
       <section className="about__chapter section">
         <div className="container">
@@ -74,47 +71,48 @@ function About() {
             <p className="about__section-label">How I Think</p>
             <span className="about__section-line" aria-hidden="true" />
           </div>
-          <blockquote className="about__big-quote fade-up">
-            Most design problems I&rsquo;ve worked on already had a standard solution.
-            The hard part was figuring out whether that solution was actually right,
-            for this person, in this moment.
-          </blockquote>
           <div className="about__think-grid fade-up">
             <div className="about__think-left">
-              <p>
-                Sometimes it was. Often it wasn&rsquo;t.
-              </p>
-              <p>
-                A denser interface for power users who needed speed. An honest AI over
-                a polished one. A field app reorganized around a 40-minute window, not
-                the system.
-              </p>
-              <p className="about__think-emphasis">
-                The space between what&rsquo;s expected and what&rsquo;s actually needed
-                is where the interesting work is.
+              <h2 className="about__think-headline">
+                What I&rsquo;m really doing on every project, under the wireframes
+                and user flows, is{' '}
+                <span className="about__think-headline--accent">
+                  reading what people don&rsquo;t say out loud.
+                </span>
+              </h2>
+              <p className="about__think-body">
+                Most design briefs ask for an interface. The interesting work is
+                figuring out what&rsquo;s actually getting in the way &mdash; what
+                people are working around, what they&rsquo;ve stopped expecting,
+                what they&rsquo;re not telling each other.
               </p>
             </div>
             <div className="about__think-right">
-              <ul className="about__principles">
-                <li>
-                  <span className="about__principle-dot" />
-                  The interesting problems usually start where the brief ends.
+              <ol className="about__observations">
+                <li className="about__observation about__observation--first">
+                  <span className="about__observation-num">01</span>
+                  <p className="about__observation-text">
+                    The interesting problems usually start where the brief ends.
+                  </p>
                 </li>
-                <li>
-                  <span className="about__principle-dot" />
-                  Users know when a system is hiding something. They always know.
+                <li className="about__observation">
+                  <span className="about__observation-num">02</span>
+                  <p className="about__observation-text">
+                    Users build workarounds when a product almost works.
+                  </p>
                 </li>
-                <li>
-                  <span className="about__principle-dot" />
-                  The first version of a brief is almost never the real problem.
+                <li className="about__observation">
+                  <span className="about__observation-num">03</span>
+                  <p className="about__observation-text">
+                    You can read a product&rsquo;s priorities by what it makes
+                    you do without thinking about it.
+                  </p>
                 </li>
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
       </section>
-
-      <AnimatedDivider />
 
       {/* ── Section 03 — How I Work Now ── */}
       <section className="about__chapter section">
@@ -156,8 +154,6 @@ function About() {
           </div>
         </div>
       </section>
-
-      <AnimatedDivider />
 
       {/* ── Section 04 — Outside Work ── */}
       <section className="about__chapter section">
@@ -206,8 +202,6 @@ function About() {
           </div>
         </div>
       </section>
-
-      <AnimatedDivider />
 
       {/* ── Section 05 — Where I'm Headed ── */}
       <section className="about__chapter section">
