@@ -311,10 +311,14 @@
   font-family: var(--font-heading);
   font-weight: 300;
   font-style: italic;
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 2.5vw, 1.875rem);
   line-height: 1.3;
   color: var(--color-dark);
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.75rem;
+}
+
+.about__outside-quote--accent {
+  color: var(--color-accent);
 }
 
 .about__outside-body {
@@ -326,12 +330,19 @@
 }
 
 .about__outside-closing {
-  font-family: var(--font-body);
-  font-size: 0.9375rem;
-  font-weight: 400;
+  font-family: var(--font-heading);
   font-style: italic;
-  line-height: 1.7;
-  color: var(--color-light);
+  font-weight: 300;
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  line-height: 1.55;
+  color: var(--color-dark);
+  border-left: 2px solid var(--color-accent);
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.about__outside-closing--accent {
+  color: var(--color-accent);
 }
 
 /* ── Chapter 05 — Where I'm Headed ── */
@@ -711,4 +722,24 @@
 
 .about__work-caption--accent {
   color: var(--color-accent);
+}
+
+/* ── Section 04 outside link style ── */
+.about__outside-link {
+  color: var(--color-warm);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(122, 106, 96, 0.4);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.about__outside-link:hover {
+  color: var(--color-accent);
+  text-decoration-color: var(--color-accent);
+}
+
+.about__outside-body strong {
+  color: var(--color-dark);
+  font-weight: 500;
 }

@@ -1,6 +1,5 @@
 import { useScrollReveal } from '../hooks/useScrollReveal';
 import { PatternSketch } from '../components/PatternSketch';
-import { WaveSketch } from '../components/WaveSketch';
 import './About.css';
 
 function About() {
@@ -186,21 +185,28 @@ function About() {
           <div className="about__outside-bottom">
             <div className="about__outside-left fade-up">
               <p className="about__outside-quote">
-                I live in San Diego. The ocean helps.
+                I live in San Diego.{' '}
+                <span className="about__outside-quote--accent">The ocean helps.</span>
               </p>
-              <WaveSketch />
               <p className="about__outside-body">
-                I have a child who asks better questions than most stakeholders. I make
-                art, I write &mdash; Mind Meets Design is where I think out loud about
-                behavior, design, and why people do what they do. I read and reflect more
-                than I probably should.
+                I have a child who asks{' '}
+                <strong>better questions than most stakeholders.</strong>{' '}
+                I make things &mdash; essays at{' '}
+                <a href="/writing" className="about__outside-link">Mind Meets Design</a>,
+                poems on{' '}
+                <a href="https://mehtabbadwal.substack.com" target="_blank" rel="noopener noreferrer" className="about__outside-link">Substack</a>{' '}
+                when something needs fewer words, small design objects on{' '}
+                <a href="https://etsy.com/shop/mehtabbadwal" target="_blank" rel="noopener noreferrer" className="about__outside-link">Etsy</a>.
+                I read and reflect more than I probably should.
               </p>
             </div>
             <div className="about__outside-right fade-up">
-              <p className="about__outside-closing">
-                None of this is separate from the work. It&rsquo;s where most of the
-                good ideas actually come from.
-              </p>
+              <blockquote className="about__outside-closing">
+                None of this is separate from the work.{' '}
+                <span className="about__outside-closing--accent">
+                  It&rsquo;s where most of the good ideas actually come from.
+                </span>
+              </blockquote>
             </div>
           </div>
         </div>
