@@ -479,7 +479,8 @@
 .projects__list {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .projects__card {
@@ -488,16 +489,11 @@
   gap: 4rem;
   align-items: start;
   padding: 3rem 0;
-  border-top: 1px solid var(--color-border);
   position: relative;
   overflow: hidden;
   transition: background 0.25s ease;
   text-decoration: none;
   color: inherit;
-}
-
-.projects__card:last-child {
-  border-bottom: 1px solid var(--color-border);
 }
 
 .projects__card::after {
