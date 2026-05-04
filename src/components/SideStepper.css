@@ -46,7 +46,7 @@
 
 .side-stepper__step.is-active .side-stepper__line {
   background: var(--color-dark);
-  width: 20px;
+  width: 14px;
 }
 
 .side-stepper__step.is-active .side-stepper__label {
