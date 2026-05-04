@@ -1,0 +1,117 @@
+/* ── This Site Article Page ── */
+.this-site {
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+.this-site__article {
+  padding: 5rem 0 6rem;
+}
+
+.this-site__container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Back link */
+.this-site__back {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-light);
+  text-decoration: none;
+  margin-bottom: 3rem;
+  transition: color 0.2s ease;
+}
+
+.this-site__back:hover {
+  color: var(--color-accent);
+}
+
+/* Header */
+.this-site__header {
+  margin-bottom: 3rem;
+}
+
+.this-site__title {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: var(--color-dark);
+  margin: 0 0 1rem 0;
+}
+
+.this-site__meta {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-light);
+  margin: 0;
+}
+
+/* Body */
+.this-site__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.this-site__p {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-dark);
+  margin: 0 0 1.5rem 0;
+}
+
+.this-site__p:last-child {
+  margin-bottom: 0;
+}
+
+/* Blockquote */
+.this-site__quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.375rem, 2vw, 1.625rem);
+  line-height: 1.4;
+  color: var(--color-dark);
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+/* Figure / image */
+.this-site__figure {
+  margin: 2.5rem 0;
+}
+
+.this-site__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.this-site__caption {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--color-light);
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .this-site__article {
+    padding: 4rem 0 5rem;
+  }
+
+  .this-site__container {
+    padding: 0 1.25rem;
+  }
+}
