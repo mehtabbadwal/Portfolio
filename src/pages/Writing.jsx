@@ -68,14 +68,19 @@ function Writing() {
       {/* ── Header ── */}
       <section className="wp__header section">
         <div className="container">
-          <p className="wp__label fade-up">Mind Meets Design</p>
+          <div className="wp__section-header fade-up">
+            <p className="section-label">Mind Meets Design</p>
+            <span className="section-rule" aria-hidden="true" />
+          </div>
           <h1 className="wp__title fade-up">
-            Why people do what they do&mdash;and why design often misses it.
+            It starts with observation.{' '}
+            <span className="wp__title--accent">Everything else follows.</span>
           </h1>
           <div className="wp__header-flex">
             <p className="wp__intro fade-up">
-              It starts with observation.<br />
-              Everything else follows.
+              I write when something I notice in daily life connects to something
+              I&rsquo;ve been thinking about in design. It&rsquo;s not a content
+              strategy. It&rsquo;s just what happens when you pay attention.
             </p>
             <p className="wp__count fade-up">7 essays</p>
           </div>
