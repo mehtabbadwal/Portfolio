@@ -127,32 +127,6 @@ function Writing() {
         </div>
       </section>
 
-      {/* ── About Section ── */}
-      <section className="wp__about section">
-        <div className="container">
-          <div className="wp__about-flex">
-            <div className="wp__about-left fade-up">
-              <p className="section-label" style={{ marginBottom: '1rem' }}>About Mind Meets Design</p>
-              <p className="wp__about-body">
-                I write when something I notice in daily life connects to something
-                I&rsquo;ve been thinking about in design. It&rsquo;s not a content strategy.
-                It&rsquo;s just what happens when you pay attention.
-              </p>
-            </div>
-            <div className="wp__about-stats fade-up">
-              <div className="wp__stat">
-                <span className="wp__stat-value">7</span>
-                <span className="wp__stat-label">essays published</span>
-              </div>
-              <div className="wp__stat">
-                <span className="wp__stat-value">2025</span>
-                <span className="wp__stat-label">writing since</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }
