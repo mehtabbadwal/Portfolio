@@ -9,7 +9,7 @@ const caseStudies = [
     year: '2025',
     tag: 'ENTERPRISE SYSTEMS',
     title: 'HPE Agentic Chatbot',
-    description: 'The fix wasn’t smarter AI. It was more honest AI.',
+    description: "The fix wasn't smarter AI. It was more honest AI.",
     image: 'hpe-chatbot-hero.svg',
     metrics: [
       { value: '32%', label: 'fewer escalations' },
@@ -77,26 +77,34 @@ const caseStudies = [
 const skills = [
   {
     title: 'Design System Skill',
+    category: 'Design System',
+    tags: 'Tokens, Components, Audits',
     hook: 'A design system process AI can actually follow.',
-    howToUse: "Knows what to build first, what to clarify before starting, and how to handle failures mid-way.\nBuilt through real use — not theory.",
+    howToUse: "Knows what to build first, what to clarify before starting, and how to handle failures mid-way. Built through real use — not theory.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1H7SkGFd78dgdBRn6XtnLYD2cA04AWLjM',
   },
   {
     title: 'UX Research Skill',
-    hook: "Understand why users aren’t doing what you expected.",
-    howToUse: "You’ll either get a clear direction grounded in behavior — or proof that your approach already works.\nBoth are useful.",
+    category: 'UX Research',
+    tags: 'Synthesis, Frameworks, Gaps',
+    hook: "Understand why users aren't doing what you expected.",
+    howToUse: "You'll either get a clear direction grounded in behavior — or proof that your approach already works. Both are useful.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=13bZW0OC0BiBt4s83e_hWSAcEOUBt6qDC',
   },
   {
     title: 'UI Designer Skill',
+    category: 'UI Design',
+    tags: 'Hierarchy, Spacing, Decisions',
     hook: 'Make visual decisions that actually hold.',
-    howToUse: "Not decoration. Structure.\nIt works through spacing, scale, and hierarchy — and calls out what feels off, even when you can’t name it.",
+    howToUse: "Not decoration. Structure. It works through spacing, scale, and hierarchy — and calls out what feels off, even when you can't name it.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1QYkoH_Ob8sV_x_pkQdBvCCjrBD5Ndwzl',
   },
   {
     title: 'UX Designer Skill',
-    hook: "Design for who’s actually using the product.",
-    howToUse: "It won’t move until it understands the user, their role, and their state of mind.\nThe same problem gets a different answer depending on who’s asking it.",
+    category: 'UX Design',
+    tags: 'Roles, Context, Behavior',
+    hook: "Design for who's actually using the product.",
+    howToUse: "It won't move until it understands the user, their role, and their state of mind. The same problem gets a different answer depending on who's asking it.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1RsYfjgEEXn6pkaIl0ncFFEm4wvBfmdrf',
   },
 ];
@@ -178,45 +186,38 @@ function Projects() {
               <span className="section-rule" aria-hidden="true" />
             </div>
             <h2 className="projects__skills-heading">
-              Tools I built for designers who think in systems.
+              The same way of reading, written down for designers and AIs to use.
             </h2>
             <p className="projects__skills-intro">
-              I built these Claude skills because I kept doing the same thinking over
-              and over &mdash; setting up design systems, structuring research plans,
-              writing component specs. These skills don&rsquo;t replace the thinking.
-              They give it a better starting point.
+              Most of what I do isn&rsquo;t tools or process &mdash; it&rsquo;s a
+              way of reading problems. These skills are that reading, packaged.
+              They give designers a better starting point.{' '}
+              <strong>They&rsquo;re free.</strong>
             </p>
-            <div className="projects__skills-note">
-              <span className="projects__skills-note-dot" />
-              <p>
-                Download the ZIP, add it to Claude, and start using it.
-              </p>
-            </div>
-            <div className="projects__skills-ctas fade-up">
-              <a href="mailto:mehtabbadwal@gmail.com" className="btn projects__skills-cta">
-                Email me
-              </a>
-              <a href="https://www.linkedin.com/in/mehtabbadwal/" target="_blank" rel="noopener noreferrer" className="btn projects__skills-cta">
-                Message me on LinkedIn
-              </a>
-            </div>
           </div>
 
-          <div className="projects__skills-grid skills-grid">
+          <div className="projects__skills-list">
             {skills.map((s, i) => (
-              <div key={s.title} className={`skill-card fade-up stagger-${Math.min(i + 1, 4)}`}>
-                <h3 className="skill-card__title">{s.title}</h3>
-                <p className="skill-card__hook">{s.hook}</p>
-                <p className="skill-card__how">{s.howToUse.split('\n').map((line, j) => (
-                  <span key={j}>{line}{j < s.howToUse.split('\n').length - 1 && <br />}</span>
-                ))}</p>
-                <div className="skill-card__footer">
-                  <p className="skill-card__free">Free skill</p>
-                  <a href={s.downloadUrl} className="skill-card__download">
-                    <span>&darr;</span> Download skill
-                  </a>
-                  <p className="skill-card__file">Google Drive &middot; ZIP file with skill.md + references</p>
+              <div key={s.title} className={`skill-row fade-up stagger-${Math.min(i + 1, 4)}`}>
+                <span className="skill-row__num">0{i + 1}</span>
+                <div className="skill-row__body">
+                  <p className="skill-row__meta">
+                    <span className="skill-row__category">{s.category}</span>
+                    <span className="skill-row__meta-dot" aria-hidden="true" />
+                    <span className="skill-row__tags">{s.tags}</span>
+                  </p>
+                  <h3 className="skill-row__hook">{s.hook}</h3>
+                  <p className="skill-row__desc">{s.howToUse}</p>
                 </div>
+                <a
+                  href={s.downloadUrl}
+                  className="skill-row__download"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="skill-row__download-label">Download &darr;</span>
+                  <span className="skill-row__download-meta">ZIP &middot; skill.md</span>
+                </a>
               </div>
             ))}
           </div>
