@@ -503,6 +503,23 @@
   box-shadow: 0 8px 24px rgba(44, 36, 32, 0.1);
 }
 
+.projects__card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects__card:hover::after {
+  transform: scaleX(1);
+}
+
 .projects__card-image {
   width: 100%;
   height: 280px;
