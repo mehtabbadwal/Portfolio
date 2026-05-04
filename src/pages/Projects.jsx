@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useScrollReveal } from '../hooks/useScrollReveal';
-import { AnimatedDivider } from './AnimatedDivider';
 import { MetricCounter } from '../components/MetricCounter';
 import './Projects.css';
 
@@ -220,26 +219,6 @@ function Projects() {
                 </a>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Bottom CTA ── */}
-      <section className="projects__cta projects-section">
-        <div className="container">
-          <AnimatedDivider />
-          <div className="projects__cta-inner">
-            <p className="projects__cta-heading">
-              If the obvious answer keeps feeling wrong &mdash; let&rsquo;s talk.
-            </p>
-            <div className="projects__cta-actions">
-              <a href="mailto:mehtabbadwal@gmail.com" className="btn btn--accent">
-                mehtabbadwal@gmail.com
-              </a>
-              <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" className="btn projects__cta-resume">
-                Resume
-              </a>
-            </div>
           </div>
         </div>
       </section>
