@@ -120,16 +120,9 @@ function Projects() {
                 each one wasn&rsquo;t about the interface.
               </span>
             </h1>
-            <p className="projects__intro">
-              Five projects across enterprise, AI, and field environments. Each one
-              started with a question about behavior, not about what the interface
-              should look like.
-            </p>
           </div>
 
-          <p className="projects__focus fade-up">Focus: Enterprise &bull; AI Products &bull; 0&rarr;1 &bull; Mobile</p>
-
-          <div className="projects__grid case-studies-grid">
+          <div className="projects__list">
             {caseStudies.map((cs, i) => {
               const hasPage = ['hpe-chatbot', 'hpe-pfa', 'qubera', 'fluidra', 'fluidra-rewards'].includes(cs.slug);
               const CardTag = hasPage ? Link : 'a';
@@ -137,30 +130,37 @@ function Projects() {
                 ? { to: `/case-studies/${cs.slug}` }
                 : { href: `#${cs.slug}` };
               return (
-                <CardTag {...cardProps} key={cs.slug} className={`cs-card fade-up stagger-${Math.min(i + 1, 5)}`}>
-                  {cs.image && (
-                    <div className="cs-card__image">
+                <CardTag {...cardProps} key={cs.slug} className={`projects__card fade-up stagger-${Math.min(i + 1, 5)}`}>
+                  <div className="projects__card-image">
+                    {cs.image ? (
                       <img
                         src={`${import.meta.env.BASE_URL}${cs.image}`}
                         alt={cs.title}
-                        className="cs-card__img"
+                        className="projects__card-img"
                       />
-                    </div>
-                  )}
-                  <div className="cs-card__meta">
-                    <span className="cs-card__year">{cs.year}</span>
-                    <span className="cs-card__dot" />
-                    <span className="cs-card__tag">{cs.tag}</span>
-                  </div>
-                  <h3 className="cs-card__title">{cs.title}</h3>
-                  <p className="cs-card__desc">{cs.description}</p>
-                  <div className="cs-card__metrics">
-                    {cs.metrics.map((m) => (
-                      <div key={m.label} className="cs-card__metric">
-                        <MetricCounter value={m.value} className="cs-card__metric-value" />
-                        <span className="cs-card__metric-label">{m.label}</span>
+                    ) : (
+                      <div className="projects__card-placeholder">
+                        <span>{cs.title}</span>
                       </div>
-                    ))}
+                    )}
+                  </div>
+                  <div className="projects__card-body">
+                    <p className="projects__card-desc">{cs.description}</p>
+                    <h3 className="projects__card-title">{cs.title}</h3>
+                    <div className="projects__card-meta">
+                      <span className="projects__card-year">{cs.year}</span>
+                      <span className="projects__card-dot" />
+                      <span className="projects__card-tag">{cs.tag}</span>
+                    </div>
+                    <div className="projects__card-metrics">
+                      {cs.metrics.map((m) => (
+                        <div key={m.label} className="projects__card-metric">
+                          <MetricCounter value={m.value} className="projects__card-metric-value" />
+                          <span className="projects__card-metric-label">{m.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <span className="projects__card-cta">Read case study &rarr;</span>
                   </div>
                 </CardTag>
               );
