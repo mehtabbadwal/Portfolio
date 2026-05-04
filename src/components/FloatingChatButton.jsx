@@ -22,15 +22,18 @@ export default function FloatingChatButton() {
     return out;
   }, []);
 
-  // Initial state: mobile = always collapsed; desktop = stored pref, default open
+  // Initial state: mobile = always collapsed; desktop = always open on page load.
+  // We only remember the collapsed state if the user manually clicked the minus button
+  // (STORAGE_KEY = 'mb_dock_manually_collapsed'). Scroll-collapse is ephemeral —
+  // it does not write to localStorage, so a page reload resets to open.
   useEffect(() => {
     const mobile = window.matchMedia('(max-width: 768px)').matches;
     setIsMobile(mobile);
     if (mobile) {
       setCollapsed(true);
     } else {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      setCollapsed(stored === '1');
+      const manuallyCollapsed = localStorage.getItem(STORAGE_KEY) === 'manual';
+      setCollapsed(manuallyCollapsed);
     }
     const onResize = () => setIsMobile(window.matchMedia('(max-width: 768px)').matches);
     window.addEventListener('resize', onResize);
@@ -77,12 +80,12 @@ export default function FloatingChatButton() {
 
   const collapse = () => {
     setCollapsed(true);
-    if (!isMobile) localStorage.setItem(STORAGE_KEY, '1');
+    if (!isMobile) localStorage.setItem(STORAGE_KEY, 'manual');
   };
 
   const expand = () => {
     setCollapsed(false);
-    if (!isMobile) localStorage.setItem(STORAGE_KEY, '0');
+    if (!isMobile) localStorage.removeItem(STORAGE_KEY);
     setTimeout(() => inputRef.current?.focus(), 50);
   };
 
