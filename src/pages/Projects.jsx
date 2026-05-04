@@ -110,8 +110,16 @@ function Projects() {
       <section className="projects__work projects-section section">
         <div className="container">
           <div className="projects__work-header fade-up">
-            <p className="projects__label">Selected Work</p>
-            <h1 className="projects__heading">Work that started with behavior.</h1>
+            <div className="projects__section-header">
+              <p className="section-label">Selected Work</p>
+              <span className="section-rule" aria-hidden="true" />
+            </div>
+            <h1 className="projects__heading">
+              Five products. The question I asked before{' '}
+              <span className="projects__heading--accent">
+                each one wasn&rsquo;t about the interface.
+              </span>
+            </h1>
             <p className="projects__intro">
               Five projects across enterprise, AI, and field environments. Each one
               started with a question about behavior, not about what the interface
@@ -165,7 +173,10 @@ function Projects() {
       <section className="projects__skills projects-section section">
         <div className="container">
           <div className="projects__skills-header fade-up">
-            <p className="projects__label">Claude Skills</p>
+            <div className="projects__section-header">
+              <p className="section-label">Claude Skills</p>
+              <span className="section-rule" aria-hidden="true" />
+            </div>
             <h2 className="projects__skills-heading">
               Tools I built for designers who think in systems.
             </h2>

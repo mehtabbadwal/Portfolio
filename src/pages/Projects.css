@@ -3,14 +3,10 @@
   background: var(--color-bg);
 }
 
-.projects__label {
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.88px;
-  text-transform: uppercase;
-  color: var(--color-light);
-  margin-bottom: 1.25rem;
+.projects__section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.75rem;
 }
 
 /* ── Selected Work ── */
@@ -24,12 +20,16 @@
 
 .projects__heading {
   font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 300;
   font-style: italic;
-  line-height: 1.2;
+  line-height: 1.1;
   color: var(--color-dark);
   margin-bottom: 1.5rem;
+}
+
+.projects__heading--accent {
+  color: var(--color-accent);
 }
 
 .projects__intro {
@@ -468,4 +468,9 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+/* Skills section label override — remove bottom margin since section-header handles it */
+.projects__skills .projects__label {
+  margin-bottom: 0;
 }
