@@ -246,21 +246,22 @@ VOICE NOTES (very important):
       { keys: ['outside', 'hobbies', 'personal', 'free time', 'fun'], topic: 'outside', answer: "I write poems, paint, and spend time at the ocean in San Diego. My son asks better questions than most stakeholders — he's my favorite research partner. I also have a fashion design background, which still shapes how I think about form and intention." },
       { keys: ['mind meets design', 'mmd', 'writing', 'blog', 'essays', 'frameworks', 'what do you write'], topic: 'writing', answer: "Mind Meets Design is where my thinking on products gets a place. Essays on what actually makes products better, frameworks for designers, observations from the work. It's not a content strategy — it's just what happens when I pay attention. The Writing page has all of it." },
       { keys: ['rooms', 'what are you working on', 'current role', 'current job', 'what do you do now', 'where do you work', 'tell me about your job', 'these days', 'right now', 'currently', 'production studio'], topic: 'rooms', answer: "I'm leading product and UX at Rooms — an AI product for making things. It's the infrastructure between 'I want to make this' and 'I made this.' Closer to a production studio than a planner. My role goes beyond design: feature strategy, positioning, user testing, voice — figuring out what the product is, what it isn't, and how every interaction reflects that." },
+      { keys: ['ai work', 'ai experience', 'ai products', 'ai design', 'tell me about your ai', 'designing for ai', 'ai project'], topic: 'ai', answer: "Most of my recent work has been AI-adjacent. At HPE I argued against hiding AI uncertainty — the escape route to Classic mode was what made people willing to try the new chatbot. At Qubera I designed an analyst tool where the product pre-answered routine questions so analysts could focus on judgment calls. Now at Rooms I'm leading product and UX on an AI product for making things. The pattern across all of them: AI works when it stays out of the way of human decision-making, and breaks when it tries to replace it." },
     ];
 
     // Smart follow-up questions based on topic
     const FOLLOW_UP_MAP = {
-      work: ['Tell me about a challenging project', 'How do you measure design success?', "What's your approach to user research?"],
-      ai: ['What AI tools do you use?', 'How do you design for AI uncertainty?', 'Any advice for designers entering AI?'],
-      approach: ['How do you handle stakeholder disagreements?', "What's your research process?", 'How do you prioritize features?'],
-      contact: ["What's the best way to reach you?", 'Are you open to new opportunities?', 'Can I see your resume?'],
-      hiring: ['What kind of roles interest you?', "What's your ideal team culture?", 'Tell me about your experience'],
-      resume: ["What's your biggest accomplishment?", 'Tell me about your AI work', 'How many years of experience?'],
-      outside: ['What inspires your design work?', 'How do you stay sharp?', 'Any design books you recommend?'],
-      thissite: ['How long did the portfolio take?', 'What was the hardest part to build?', 'Tell me about the chatbot'],
-      writing: ['What is Mind Meets Design?', 'What frameworks have you written?', 'Tell me about a recent essay'],
-      rooms: ['What does Rooms do?', 'Who is Rooms for?', 'What do you do at Rooms?'],
-      default: ['Tell me about your design process', 'What industries have you worked in?', 'Are you available for new roles?'],
+      work: ['Tell me about Rooms', 'What did you figure out at HPE?', 'How do you approach a new problem?'],
+      ai: ['Tell me about Rooms', 'How do you design for AI uncertainty?', 'What did you learn from the HPE chatbot?'],
+      approach: ['How do you handle stakeholder pushback?', 'What does research look like in your work?', 'Tell me about a hard call you made'],
+      contact: ['Are you open to new roles?', 'Tell me about Rooms', 'Can I see your resume?'],
+      hiring: ['What kind of team are you looking for?', 'Tell me about Rooms', 'What problems do you want to work on?'],
+      resume: ['Tell me about Rooms', 'What did you figure out at HPE?', 'Are you open to new roles?'],
+      outside: ['What is Mind Meets Design?', 'Tell me about your fashion background', 'What are you working on now?'],
+      thissite: ['Tell me about the chatbot', 'What broke during the build?', 'What is Mind Meets Design?'],
+      writing: ['Tell me about Rooms', 'What is Mind Meets Design about?', 'How do you approach a new problem?'],
+      rooms: ['Who is Rooms for?', 'What do you do at Rooms?', 'What is Mind Meets Design?'],
+      default: ['Tell me about Rooms', 'How do you approach a new problem?', 'Are you open to new roles?'],
     };
 
     function checkFAQ(text) {
@@ -416,18 +417,31 @@ VOICE NOTES (very important):
 
     const API_URL = 'https://long-surf-14cfmehtab-chatbot.mehtabbadwal.workers.dev';
 
-    function appendMenu(topic) {
+    function appendMenu(topic, askedText) {
       const old = convo.querySelector('.mllm-followups');
       if (old) old.remove();
 
-      const questions = FOLLOW_UP_MAP[topic] || FOLLOW_UP_MAP.default;
+      const allQuestions = FOLLOW_UP_MAP[topic] || FOLLOW_UP_MAP.default;
+      const askedLower = (askedText || '').toLowerCase().trim();
+      const questions = allQuestions.filter(q => {
+        const qLower = q.toLowerCase().trim();
+        if (!askedLower) return true;
+        if (qLower === askedLower) return false;
+        if (askedLower.includes(qLower) || qLower.includes(askedLower)) return false;
+        return true;
+      });
+
+      const finalQuestions = questions.length > 0
+        ? questions
+        : FOLLOW_UP_MAP.default.filter(q => q.toLowerCase().trim() !== askedLower);
+
       const div = document.createElement('div');
       div.className = 'mllm-followups';
       const label = document.createElement('p');
       label.className = 'mllm-followup-label';
       label.textContent = 'Want to know more?';
       div.appendChild(label);
-      questions.forEach(q => {
+      finalQuestions.forEach(q => {
         const btn = document.createElement('button');
         btn.className = 'mllm-followup';
         btn.innerHTML = '<span class="mllm-followup-arrow">↳</span><span class="mllm-followup-text">' + q + '</span>';
@@ -463,7 +477,7 @@ VOICE NOTES (very important):
         faqEl.textContent = faqResult.answer;
         convo.appendChild(faqEl);
         history.push({ role: 'assistant', content: faqResult.answer });
-        appendMenu(faqResult.topic);
+        appendMenu(faqResult.topic, text);
         sendBtn.disabled = !inputEl.value.trim();
         return;
       }
@@ -475,7 +489,7 @@ VOICE NOTES (very important):
         offEl.textContent = "I can only help with questions about my design work and portfolio. What would you like to know?";
         convo.appendChild(offEl);
         history.push({ role: 'assistant', content: offEl.textContent });
-        appendMenu('default');
+        appendMenu('default', text);
         sendBtn.disabled = !inputEl.value.trim();
         return;
       }
@@ -510,7 +524,7 @@ VOICE NOTES (very important):
         assistantEl.classList.remove('streaming');
         assistantEl.textContent = fullText;
         history.push({ role: 'assistant', content: fullText });
-        appendMenu(detectTopic(text));
+        appendMenu(detectTopic(text), text);
 
       } catch (err) {
         console.error('Chat error:', err);
