@@ -221,6 +221,7 @@ function Projects() {
                   className="skill-row__download"
                   target="_blank"
                   rel="noopener noreferrer"
+                  download={!s.downloadUrl.startsWith('http')}
                 >
                   <span className="skill-row__download-label">Download &darr;</span>
                   <span className="skill-row__download-meta">ZIP &middot; skill.md</span>
