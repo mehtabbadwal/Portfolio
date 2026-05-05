@@ -5,6 +5,16 @@ import './Writing.css';
 const articles = [
   {
     year: '2026',
+    date: 'MAY 5',
+    author: 'MEHTAB BADWAL',
+    readTime: 7,
+    title: 'The Stickiness Trap',
+    description: "High retention in B2B is not the same thing as high satisfaction. It’s simply evidence that the switching cost exceeded the pain threshold — for now.",
+    image: '/the-stickiness-trap.svg',
+    slug: 'the-stickiness-trap',
+  },
+  {
+    year: '2026',
     date: 'APR 16',
     readTime: 7,
     title: 'The Colleague Problem',
