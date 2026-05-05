@@ -106,6 +106,14 @@ const skills = [
     howToUse: "It won't move until it understands the user, their role, and their state of mind. The same problem gets a different answer depending on who's asking it.",
     downloadUrl: 'https://drive.google.com/uc?export=download&id=1RsYfjgEEXn6pkaIl0ncFFEm4wvBfmdrf',
   },
+  {
+    title: 'Motion Designer Skill',
+    category: 'Motion Design',
+    tags: 'Claims, Choreography, Handoff',
+    hook: 'Motion that tells the truth about your product.',
+    howToUse: "Runs a claims audit before touching timing curves. Catches what your animations are implying — and whether those implications are true. Specs Figma annotations, Lottie briefs, Rive state machines, and CSS, engineering-ready.",
+    downloadUrl: `${import.meta.env.BASE_URL}skills/motion-designer.zip`,
+  },
 ];
 
 function Projects() {
