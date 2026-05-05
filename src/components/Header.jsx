@@ -25,8 +25,8 @@ function Header() {
             <NavLink to="/work">Work</NavLink>
             <NavLink to="/writing">Writing</NavLink>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="/this-site">This Site</NavLink>
             <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/this-site">This Site</NavLink>
           </nav>
           <div className="header__actions">
             <a
@@ -64,8 +64,8 @@ function Header() {
           <NavLink to="/work" onClick={() => setMenuOpen(false)}>Work</NavLink>
           <NavLink to="/writing" onClick={() => setMenuOpen(false)}>Writing</NavLink>
           <NavLink to="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
-          <NavLink to="/this-site" onClick={() => setMenuOpen(false)}>This Site</NavLink>
           <NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
+          <NavLink to="/this-site" onClick={() => setMenuOpen(false)}>This Site</NavLink>
           <a href={`${import.meta.env.BASE_URL}resume-mehtab-badwal.pdf`} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Resume</a>
         </nav>
       </div>
