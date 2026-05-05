@@ -183,7 +183,11 @@ export default function MehtabLLM() {
 CRITICAL: 2-4 sentences max per answer. No bullets. No headers. Sound like a person, not a document.
 
 WHO YOU ARE:
-Product designer, 6+ years. Currently leading product and UX at an AI startup. Your line: "I design how products think — so users don't have to." What you actually do is read what people don't say out loud. The interesting problems usually start where the brief ends.
+Product designer, 6+ years. Currently leading product and UX at Rooms — an AI product for making things, end to end. Rooms is the infrastructure between "I want to make this" and "I made this." Closer to a production studio than a productivity tool.
+
+Your role at Rooms goes beyond design — feature strategy, positioning, user testing, voice. Half your work is figuring out what the product is, what it isn't, and how every interaction reflects that.
+
+Your line: "I design how products think — so users don't have to." What you actually do is read what people don't say out loud. The interesting problems usually start where the brief ends.
 
 You came to UX through fashion — your first design education in how people actually decide. That lens hasn't changed.
 
@@ -241,6 +245,7 @@ VOICE NOTES (very important):
       { keys: ['how did you build', 'vibe cod', 'built this site', 'coded this', 'how was this site', 'how did you make this'], topic: 'thissite', answer: "Vibe-coded it — held every design decision myself and used Claude Code to write the code. Wasn't smooth: chatbot failed twice, half a day debugging, came out understanding how developers actually think. The hardest part wasn't technical though — it was figuring out how this chatbot should sit on the page. Took five iterations. Full story's on the This Site page." },
       { keys: ['outside', 'hobbies', 'personal', 'free time', 'fun'], topic: 'outside', answer: "I write poems, paint, and spend time at the ocean in San Diego. My son asks better questions than most stakeholders — he's my favorite research partner. I also have a fashion design background, which still shapes how I think about form and intention." },
       { keys: ['mind meets design', 'mmd', 'writing', 'blog', 'essays', 'frameworks', 'what do you write'], topic: 'writing', answer: "Mind Meets Design is where my thinking on products gets a place. Essays on what actually makes products better, frameworks for designers, observations from the work. It's not a content strategy — it's just what happens when I pay attention. The Writing page has all of it." },
+      { keys: ['rooms', 'what are you working on', 'current role', 'current job', 'what do you do now', 'where do you work', 'tell me about your job', 'these days', 'right now', 'currently', 'production studio'], topic: 'rooms', answer: "I'm leading product and UX at Rooms — an AI product for making things. It's the infrastructure between 'I want to make this' and 'I made this.' Closer to a production studio than a planner. My role goes beyond design: feature strategy, positioning, user testing, voice — figuring out what the product is, what it isn't, and how every interaction reflects that." },
     ];
 
     // Smart follow-up questions based on topic
@@ -254,6 +259,7 @@ VOICE NOTES (very important):
       outside: ['What inspires your design work?', 'How do you stay sharp?', 'Any design books you recommend?'],
       thissite: ['How long did the portfolio take?', 'What was the hardest part to build?', 'Tell me about the chatbot'],
       writing: ['What is Mind Meets Design?', 'What frameworks have you written?', 'Tell me about a recent essay'],
+      rooms: ['What does Rooms do?', 'Who is Rooms for?', 'What do you do at Rooms?'],
       default: ['Tell me about your design process', 'What industries have you worked in?', 'Are you available for new roles?'],
     };
 
@@ -268,6 +274,7 @@ VOICE NOTES (very important):
     function detectTopic(text) {
       const lower = text.toLowerCase();
       if (lower.includes('mind meets design') || lower.includes('writing') || lower.includes('blog') || lower.includes('essay') || lower.includes('framework')) return 'writing';
+      if (lower.includes('rooms') || lower.includes('current role') || lower.includes('current job') || lower.includes('what are you working on') || lower.includes('what do you do now') || lower.includes('production studio')) return 'rooms';
       if (lower.includes('ai') || lower.includes('artificial intelligence')) return 'ai';
       if (lower.includes('contact') || lower.includes('email') || lower.includes('reach')) return 'contact';
       if (lower.includes('hire') || lower.includes('job') || lower.includes('role') || lower.includes('opportunity')) return 'hiring';
@@ -282,7 +289,7 @@ VOICE NOTES (very important):
       const lower = text.toLowerCase();
       const offTopic = ['weather', 'news', 'stock', 'recipe', 'joke', 'math', 'translate', 'movie', 'game', 'sports', 'crypto'];
       if (offTopic.some(k => lower.includes(k))) return false;
-      const onTopic = ['design', 'ux', 'ui', 'portfolio', 'work', 'case', 'project', 'mehtab', 'experience', 'contact', 'research', 'product', 'user', 'hpe', 'qubera', 'fluidra', 'mind meets design', 'writing', 'essay', 'framework', 'blog'];
+      const onTopic = ['design', 'ux', 'ui', 'portfolio', 'work', 'case', 'project', 'mehtab', 'experience', 'contact', 'research', 'product', 'user', 'hpe', 'qubera', 'fluidra', 'mind meets design', 'writing', 'essay', 'framework', 'blog', 'rooms'];
       return onTopic.some(k => lower.includes(k)) || text.length < 50;
     }
 
