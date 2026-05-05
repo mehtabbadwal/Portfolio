@@ -185,7 +185,7 @@ function Projects() {
       </section>
 
       {/* ── Claude Skills ── */}
-      <section className="projects__skills projects-section section">
+      <section id="claude-skills" className="projects__skills projects-section section">
         <div className="container">
           <div className="projects__skills-header fade-up">
             <div className="projects__section-header">
