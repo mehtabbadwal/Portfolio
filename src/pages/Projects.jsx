@@ -124,11 +124,17 @@ function Projects() {
     const hash = window.location.hash;
     if (!hash) return;
     const id = hash.slice(1);
-    const timer = setTimeout(() => {
+    let attempts = 0;
+    const tryScroll = () => {
       const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
-    return () => clearTimeout(timer);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      } else if (attempts < 15) {
+        attempts++;
+        setTimeout(tryScroll, 100);
+      }
+    };
+    setTimeout(tryScroll, 150);
   }, []);
 
   return (
