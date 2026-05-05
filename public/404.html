@@ -6,7 +6,7 @@
     <script>
       // SPA redirect for GitHub Pages (root domain, no subfolder)
       // Stores the requested path and redirects to index.html
-      sessionStorage.setItem('redirect', window.location.pathname + window.location.search);
+      sessionStorage.setItem('redirect', window.location.pathname + window.location.search + window.location.hash);
       window.location.replace(window.location.origin + '/');
     </script>
   </head>
