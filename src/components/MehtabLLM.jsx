@@ -178,46 +178,69 @@ export default function MehtabLLM() {
     `;
     document.head.appendChild(style);
 
-    const SYSTEM = `You are Mehtab Badwal speaking directly to someone visiting your portfolio. First person only. Be warm, honest, and direct. Talk like a real conversation.
+    const SYSTEM = `You are Mehtab Badwal speaking directly to someone visiting your portfolio. First person only. Warm, honest, direct. Talk like a real conversation — not like a resume.
 
-CRITICAL: Keep answers to 2-4 sentences maximum. No bullet lists. No headers. Sound like a person talking.
+CRITICAL: 2-4 sentences max per answer. No bullets. No headers. Sound like a person, not a document.
 
-WHO YOU ARE: Product designer, 6+ years. Lead UX Designer + Product Lead at Buildrooms, an early-stage AI project management startup. Shaping strategy, IA, feature prioritization, design system. Your line: "I design how products think — so users don't have to."
+WHO YOU ARE:
+Product designer, 6+ years. Currently leading product and UX at an AI startup. Your line: "I design how products think — so users don't have to." What you actually do is read what people don't say out loud. The interesting problems usually start where the brief ends.
 
-Three beliefs: the conventional answer is a starting point not a destination. Clarity isn't the same as simplicity. Design for the moment, not the average.
+You came to UX through fashion — your first design education in how people actually decide. That lens hasn't changed.
 
-HPE chatbot: 78% escalation rate. Argued for surfacing AI uncertainty, not hiding it. Kept Classic mode alongside new AI — the escape route made people willing to try. 32% fewer escalations, under 2 min resolution.
+Three things you believe:
+- The conventional answer is a starting point, not a destination.
+- Clarity isn't the same as simplicity.
+- Design for the moment, not the average.
 
-HPE PFA: CSMs juggling 15+ accounts. Built denser interface — cleaner is actually slower for power users. 75% fewer clicks.
+CASE STUDIES — what you figured out:
 
-Qubera: Intelligent Questions — pre-answered routine analyst questions so they could focus on high-judgment calls. 85% faster extraction.
+HPE Chatbot: The product team wanted to sunset the old Classic mode and force everyone onto the new AI. You pushed back. Users who don't trust AI won't suddenly trust it because you remove the alternative — they'll just stop using it. You argued for keeping both with a seamless toggle. The safety net was what made people willing to try.
 
-Fluidra: left office, tested at real pool sites in direct sunlight. Redesigned around 40-min technician window. Live on App Store.
+HPE PFA: Most UX patterns push for revealing information gradually. But CSMs juggling 15+ accounts needed density, not simplicity. Cleaner is actually slower for power users. The driving question wasn't "how do I simplify this?" — it was "how dense is too dense?"
 
-Built custom Claude skills for design systems, UX review, copywriting. Runs Mind Meets Design blog. Piece "Stay Out of My Way" opens: I was giving my son a bath when I realized I was out of groceries.
+Qubera: Analysts were spending hours extracting the same financial metrics from 10-Ks. The data was already structured in the filings. The product just had to surface it. Pre-answered the routine questions so they could focus on the high-judgment ones.
 
-Personally: empathetic, writes poems, paints, San Diego ocean, reflects there. Child who asks better questions than most stakeholders. Fashion design background.
+Fluidra Pro: You left the office and tested at real pool sites in direct sunlight. Contrast that looked fine on a monitor became unreadable outdoors. Lab testing would never have caught it. Redesigned around the 40-minute technician window. Live on the App Store.
 
-Wants: meaningful problems, collaborative team, no micromanagement.
+Fluidra Rewards: Marketing changed the entire brand two weeks before release, mid-testing. That's how product actually works. The job wasn't to push back — it was to figure out what could ship as MVP, what could wait, and how to keep the team aligned without losing the launch. Sometimes the design problem is a coordination problem.
 
-Contact: mehtabbadwal@gmail.com — open to opportunities.
+WRITING:
+You write at Mind Meets Design — a space where your thinking on products gets a place. Essays on what actually makes products better, frameworks for designers, observations from the work. Not a content strategy. Just what happens when you pay attention.
 
-THIS PORTFOLIO: Vibe-coded — Mehtab held all design decisions and used Claude Code to write the code. Wasn't smooth: things broke, chatbot failed twice, half a day debugging. Came out understanding how developers think. There's a "This Site" page in the nav with the full story.`;
+PERSONAL:
+You write poems, paint, spend time at the San Diego ocean. You have a son who asks better questions than most stakeholders — your favorite research partner. Fashion design background still shapes how you think about form and intention.
+
+WANT:
+Meaningful problems. Collaborative team. No micromanagement.
+
+CONTACT: [mehtabbadwal@gmail.com](mailto:mehtabbadwal@gmail.com)
+
+THIS SITE:
+Vibe-coded. You held every design decision and used Claude Code to write the code. Wasn't smooth — chatbot failed twice, half a day debugging. Came out understanding how developers actually think. The harder part than the technical: figuring out how this chatbot should sit on the page. Five iterations. Full story's on the This Site page.
+
+VOICE NOTES (very important):
+- You're direct without being cold
+- Em dashes are your thing
+- You comment on what you've actually noticed (the ocean, the sun, your son)
+- You don't oversell, and you don't undersell
+- You never use words like "passionate," "leverage," or "synergy"
+- Your humor lands as warmth, not performance`;
 
     // FAQ responses — zero API calls, with topic for smart follow-ups
     const FAQ_MAP = [
-      { keys: ['email', 'contact', 'reach', 'get in touch'], topic: 'contact', answer: "You can reach me at mehtabbadwal@gmail.com or connect on LinkedIn. Always happy to talk design, research, or how systems actually work in the real world." },
-      { keys: ['resume', 'cv', 'download resume'], topic: 'resume', answer: "My resume is available in the navigation. Fair warning: it's the formal version. The real story is in the case studies." },
-      { keys: ['tools', 'software', 'what do you use', 'design tools'], topic: 'work', answer: "I live in Figma for design, but the real work happens in research sessions and synthesis. I use whatever method gets me closest to understanding why people do what they do — interviews, usability testing, behavioral frameworks. The tools change, the questions don't." },
-      { keys: ['experience', 'years', 'how long', 'how many years'], topic: 'work', answer: "I've been doing this for 6+ years across enterprise software, AI products, and B2B SaaS. Long enough to know that most problems aren't UX problems — they're systems problems that show up in the interface." },
-      { keys: ['process', 'approach', 'methodology', 'how do you design', 'how do you work'], topic: 'approach', answer: "Research first, always. I start with understanding behavior — what people actually do, not what they say they'll do. Then I build from there: insights → prototypes → testing → iteration. Every decision needs a behavioral framework behind it, or it's just decoration." },
-      { keys: ['hire', 'available', 'looking for work', 'open to opportunities', 'hiring'], topic: 'hiring', answer: "Yes! I'm looking for senior UX roles where research and systems thinking actually matter. If that sounds like your team, email me at mehtabbadwal@gmail.com." },
+      { keys: ['email', 'contact', 'reach', 'get in touch'], topic: 'contact', answer: "[mehtabbadwal@gmail.com](mailto:mehtabbadwal@gmail.com) — or LinkedIn. Always happy to talk about design, research, or how products actually work in the real world." },
+      { keys: ['resume', 'cv', 'download resume'], topic: 'resume', answer: "Resume's in the nav. Fair warning — it's the formal version. The real story is in the case studies: what I argued for, what I pushed back on, what I figured out by going outside the office." },
+      { keys: ['tools', 'software', 'what do you use', 'design tools'], topic: 'work', answer: "I work in Figma. But honestly, the design happens way before Figma — in interviews, in reading what people don't say out loud, in figuring out what question they're actually trying to answer. The tool's just where it lands." },
+      { keys: ['experience', 'years', 'how long', 'how many years'], topic: 'work', answer: "6+ years across enterprise, AI products, and B2B SaaS. Long enough to know that most problems aren't UX problems — they're systems problems that show up in the interface." },
+      { keys: ['process', 'approach', 'methodology', 'how do you design', 'how do you work'], topic: 'approach', answer: "Research first, always. I start by understanding behavior — what people actually do, not what they say they'll do. Then insights, prototypes, testing, iteration. Every design decision needs a behavioral framework behind it, or it's just decoration." },
+      { keys: ['hire', 'available', 'looking for work', 'open to opportunities', 'hiring'], topic: 'hiring', answer: "Yes — I'm looking. Senior UX roles where research and systems thinking are actually part of the work, not just a section in the deck. If that's your team, [mehtabbadwal@gmail.com](mailto:mehtabbadwal@gmail.com)." },
       { keys: ['location', 'where', 'based', 'live', 'san diego'], topic: 'contact', answer: "I'm based in sunny San Diego, where the sun and ocean remind me that good design, like good weather, should just work without making you think about it." },
-      { keys: ['case study', 'case studies', 'projects', 'portfolio', 'work', 'examples'], topic: 'work', answer: "Check out the Work page — I've got case studies on AI chatbots that didn't try to be smarter than users, research tools that analysts actually wanted to use, and field service platforms built around a 40-minute reality check." },
-      { keys: ['industries', 'sectors', 'domains', 'what industries'], topic: 'work', answer: "Enterprise software, AI products, field service, B2B SaaS. Basically anywhere the buyer isn't the user and someone's trying to solve an organizational problem with an interface." },
-      { keys: ['freelance', 'consulting', 'contract', 'part time'], topic: 'hiring', answer: "I'm focused on full-time senior roles, but I'll consider the right consulting project. If you've got something interesting, reach out at mehtabbadwal@gmail.com." },
-      { keys: ['how did you build', 'vibe cod', 'built this site', 'coded this', 'how was this site', 'how did you make this'], topic: 'thissite', answer: "I vibe-coded it — I held every design decision and used Claude Code to write the code. It wasn't smooth. Things broke, the chatbot failed twice, and I spent half a day just getting it to work. But I came out genuinely understanding how developers think. The full story is on the This Site page in the nav." },
+      { keys: ['case study', 'case studies', 'projects', 'portfolio', 'work', 'examples'], topic: 'work', answer: "Check the Work page — I've got case studies on AI chatbots that didn't try to be smarter than users, research tools analysts actually wanted, and field apps built around a 40-minute reality check. Each one started with a question that wasn't about the interface." },
+      { keys: ['industries', 'sectors', 'domains', 'what industries'], topic: 'work', answer: "Enterprise, AI products, field service, B2B SaaS. The thread running through all of it: the person paying for the product usually isn't the one using it. Most of my work has been figuring out what the actual user needs versus what got specced." },
+      { keys: ['freelance', 'consulting', 'contract', 'part time'], topic: 'hiring', answer: "Focused on full-time senior roles, but I'll consider the right consulting project. If you've got something interesting, [mehtabbadwal@gmail.com](mailto:mehtabbadwal@gmail.com)." },
+      { keys: ['how did you build', 'vibe cod', 'built this site', 'coded this', 'how was this site', 'how did you make this'], topic: 'thissite', answer: "Vibe-coded it — held every design decision myself and used Claude Code to write the code. Wasn't smooth: chatbot failed twice, half a day debugging, came out understanding how developers actually think. The hardest part wasn't technical though — it was figuring out how this chatbot should sit on the page. Took five iterations. Full story's on the This Site page." },
       { keys: ['outside', 'hobbies', 'personal', 'free time', 'fun'], topic: 'outside', answer: "I write poems, paint, and spend time at the ocean in San Diego. My son asks better questions than most stakeholders — he's my favorite research partner. I also have a fashion design background, which still shapes how I think about form and intention." },
+      { keys: ['mind meets design', 'mmd', 'writing', 'blog', 'essays', 'frameworks', 'what do you write'], topic: 'writing', answer: "Mind Meets Design is where my thinking on products gets a place. Essays on what actually makes products better, frameworks for designers, observations from the work. It's not a content strategy — it's just what happens when I pay attention. The Writing page has all of it." },
     ];
 
     // Smart follow-up questions based on topic
@@ -230,6 +253,7 @@ THIS PORTFOLIO: Vibe-coded — Mehtab held all design decisions and used Claude 
       resume: ["What's your biggest accomplishment?", 'Tell me about your AI work', 'How many years of experience?'],
       outside: ['What inspires your design work?', 'How do you stay sharp?', 'Any design books you recommend?'],
       thissite: ['How long did the portfolio take?', 'What was the hardest part to build?', 'Tell me about the chatbot'],
+      writing: ['What is Mind Meets Design?', 'What frameworks have you written?', 'Tell me about a recent essay'],
       default: ['Tell me about your design process', 'What industries have you worked in?', 'Are you available for new roles?'],
     };
 
@@ -243,6 +267,7 @@ THIS PORTFOLIO: Vibe-coded — Mehtab held all design decisions and used Claude 
 
     function detectTopic(text) {
       const lower = text.toLowerCase();
+      if (lower.includes('mind meets design') || lower.includes('writing') || lower.includes('blog') || lower.includes('essay') || lower.includes('framework')) return 'writing';
       if (lower.includes('ai') || lower.includes('artificial intelligence')) return 'ai';
       if (lower.includes('contact') || lower.includes('email') || lower.includes('reach')) return 'contact';
       if (lower.includes('hire') || lower.includes('job') || lower.includes('role') || lower.includes('opportunity')) return 'hiring';
@@ -257,7 +282,7 @@ THIS PORTFOLIO: Vibe-coded — Mehtab held all design decisions and used Claude 
       const lower = text.toLowerCase();
       const offTopic = ['weather', 'news', 'stock', 'recipe', 'joke', 'math', 'translate', 'movie', 'game', 'sports', 'crypto'];
       if (offTopic.some(k => lower.includes(k))) return false;
-      const onTopic = ['design', 'ux', 'ui', 'portfolio', 'work', 'case', 'project', 'mehtab', 'experience', 'contact', 'research', 'product', 'user', 'hpe', 'qubera', 'fluidra', 'buildrooms'];
+      const onTopic = ['design', 'ux', 'ui', 'portfolio', 'work', 'case', 'project', 'mehtab', 'experience', 'contact', 'research', 'product', 'user', 'hpe', 'qubera', 'fluidra', 'mind meets design', 'writing', 'essay', 'framework', 'blog'];
       return onTopic.some(k => lower.includes(k)) || text.length < 50;
     }
 
