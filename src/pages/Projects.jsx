@@ -81,7 +81,7 @@ const skills = [
     tags: 'Tokens, Components, Audits',
     hook: 'A design system process AI can actually follow.',
     howToUse: "Knows what to build first, what to clarify before starting, and how to handle failures mid-way. Built through real use — not theory.",
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=1H7SkGFd78dgdBRn6XtnLYD2cA04AWLjM',
+    downloadUrl: `${import.meta.env.BASE_URL}skills/design-system.zip`,
   },
   {
     title: 'UX Research Skill',
@@ -89,7 +89,7 @@ const skills = [
     tags: 'Synthesis, Frameworks, Gaps',
     hook: "Understand why users aren't doing what you expected.",
     howToUse: "You'll either get a clear direction grounded in behavior — or proof that your approach already works. Both are useful.",
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=13bZW0OC0BiBt4s83e_hWSAcEOUBt6qDC',
+    downloadUrl: `${import.meta.env.BASE_URL}skills/ux-research.zip`,
   },
   {
     title: 'UI Designer Skill',
@@ -97,7 +97,7 @@ const skills = [
     tags: 'Hierarchy, Spacing, Decisions',
     hook: 'Make visual decisions that actually hold.',
     howToUse: "Not decoration. Structure. It works through spacing, scale, and hierarchy — and calls out what feels off, even when you can't name it.",
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=1QYkoH_Ob8sV_x_pkQdBvCCjrBD5Ndwzl',
+    downloadUrl: `${import.meta.env.BASE_URL}skills/ui-designer.zip`,
   },
   {
     title: 'UX Designer Skill',
@@ -105,7 +105,7 @@ const skills = [
     tags: 'Roles, Context, Behavior',
     hook: "Design for who's actually using the product.",
     howToUse: "It won't move until it understands the user, their role, and their state of mind. The same problem gets a different answer depending on who's asking it.",
-    downloadUrl: 'https://drive.google.com/uc?export=download&id=1RsYfjgEEXn6pkaIl0ncFFEm4wvBfmdrf',
+    downloadUrl: `${import.meta.env.BASE_URL}skills/ux-designer.zip`,
   },
   {
     title: 'Motion Designer Skill',
