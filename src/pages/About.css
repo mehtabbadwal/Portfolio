@@ -9,7 +9,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--color-light);
+  color: var(--color-warm);
   margin-bottom: 2rem;
 }
 
@@ -41,7 +41,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--color-light);
+  background: var(--color-warm);
   flex-shrink: 0;
 }
 
@@ -51,7 +51,7 @@
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: var(--color-light);
+  color: var(--color-warm);
   white-space: nowrap;
   margin: 0;
 }

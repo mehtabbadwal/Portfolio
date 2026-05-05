@@ -784,3 +784,8 @@
     align-items: flex-start;
   }
 }
+
+/* Claude Skills section sits on dark bg — keep label muted-light for contrast */
+.projects__skills .section-label {
+  color: rgba(244, 240, 232, 0.55);
+}
