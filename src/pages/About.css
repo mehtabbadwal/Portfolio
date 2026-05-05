@@ -1,6 +1,6 @@
 /* ── About Hero ── */
 .about__hero {
-  padding: 5rem 0 4.5rem;
+  padding: 5rem 0 2rem;
 }
 
 .about__hero-label {
@@ -758,4 +758,9 @@
 
 .about__outside-read-more:hover {
   color: var(--color-accent);
+}
+
+/* First chapter sits closer to the hero — no stacked padding */
+.about__hero + .about__chapter {
+  padding-top: 1.5rem;
 }
