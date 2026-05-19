@@ -17,6 +17,7 @@ import DesigningForDignity from './pages/blog/DesigningForDignity';
 import WhyUsersDontSayWhatTheyFeel from './pages/blog/WhyUsersDontSayWhatTheyFeel';
 import TheWeightOfChoice from './pages/blog/TheWeightOfChoice';
 import TheStickinessTrap from './pages/blog/TheStickinessTrap';
+import TheTwoHatProblem from './pages/blog/TheTwoHatProblem';
 import ThisSite from './pages/ThisSite';
 import Contact from './pages/Contact';
 import ComingSoon from './pages/ComingSoon';
@@ -45,6 +46,7 @@ function App() {
           <Route path="blog/why-users-dont-say-what-they-feel" element={<WhyUsersDontSayWhatTheyFeel />} />
           <Route path="blog/the-weight-of-choice" element={<TheWeightOfChoice />} />
           <Route path="blog/the-stickiness-trap" element={<TheStickinessTrap />} />
+          <Route path="blog/the-two-hat-problem" element={<TheTwoHatProblem />} />
           <Route path="this-site" element={<ThisSite />} />
           <Route path="contact" element={<Contact />} />
           <Route path="case-studies/:slug" element={<ComingSoon title="Case Study" />} />

@@ -5,6 +5,15 @@ import './Writing.css';
 const articles = [
   {
     year: '2026',
+    date: 'MAY 19',
+    readTime: 7,
+    title: 'The Two-Hat Problem',
+    description: "Organizational roles and working modes are not the same thing. The gap between the org chart and the actual work is where the friction lives, quietly, for years.",
+    image: '/two-hat-problem.svg',
+    slug: 'the-two-hat-problem',
+  },
+  {
+    year: '2026',
     date: 'MAY 5',
     author: 'MEHTAB BADWAL',
     readTime: 7,
