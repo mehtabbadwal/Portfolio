@@ -119,8 +119,8 @@
 }
 
 .header__resume:hover {
-  border-color: #A34E30;
-  color: #A34E30;
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
 }
 
 .header__linkedin {
@@ -135,8 +135,8 @@
 }
 
 .header__linkedin:hover {
-  border-color: #A34E30;
-  color: #A34E30;
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
 }
 
 /* Hamburger */

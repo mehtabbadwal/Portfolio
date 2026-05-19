@@ -61,7 +61,7 @@
   letter-spacing: 0.88px;
   text-transform: uppercase;
   color: var(--color-warm);
-  background: #EAE4D8;
+  background: var(--color-card);
   padding: 0.25rem 0.625rem;
   border-radius: 4px;
 }
@@ -160,12 +160,12 @@
 
 .cs__hero-image {
   width: 100%;
-  background: #EAE4D8;
+  background: var(--color-card);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #E8E2D8;
+  border: 1px solid var(--color-border-light);
   overflow: hidden;
 }
 
@@ -192,12 +192,12 @@
 /* ── Image Placeholders ── */
 .cs__image-placeholder {
   width: 100%;
-  background: #EAE4D8;
+  background: var(--color-card);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #E8E2D8;
+  border: 1px solid var(--color-border-light);
   margin-top: 2.5rem;
 }
 
@@ -216,7 +216,7 @@
 
 /* ── Narrative Sections ── */
 .cs__narrative {
-  border-top: 1px solid #E8E2D8;
+  border-top: 1px solid var(--color-border-light);
 }
 
 .cs__section-heading {
@@ -242,7 +242,7 @@
   font-family: var(--font-body);
   font-weight: 500;
   color: var(--color-dark);
-  background: #EAE4D8;
+  background: var(--color-card);
   padding: 1rem 1.25rem;
   border-radius: 8px;
   font-size: 0.9375rem;
@@ -277,10 +277,10 @@
 
 /* Pull Quote */
 .cs__pullquote {
-  background: #EAE4D8;
+  background: var(--color-card);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid #E8E2D8;
+  border: 1px solid var(--color-border-light);
   width: 100%;
 }
 
@@ -365,8 +365,8 @@
 
 /* Callout */
 .cs__callout {
-  background: #EAE4D8;
-  border: 1px solid #E8E2D8;
+  background: var(--color-card);
+  border: 1px solid var(--color-border-light);
   border-radius: 12px;
   padding: 2rem;
   margin: 2rem 0;
@@ -398,7 +398,7 @@
 }
 
 .cs__impact-card {
-  border-top: 1px solid #E8E2D8;
+  border-top: 1px solid var(--color-border-light);
   padding-top: 1.5rem;
 }
 
@@ -449,7 +449,7 @@
 /* Divider */
 .cs__divider {
   border: none;
-  border-top: 1px solid #E8E2D8;
+  border-top: 1px solid var(--color-border-light);
   margin-bottom: 3rem;
 }
 
@@ -478,7 +478,7 @@
 }
 
 .cs__next-link:hover {
-  color: #A34E30;
+  color: var(--color-accent-hover);
 }
 
 /* ── Final Designs comparison ── */

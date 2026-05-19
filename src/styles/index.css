@@ -7,6 +7,8 @@
   --color-border: #DDD6CC;
   --color-card: #EAE4D8;
   --color-green: #4CAF50;
+  --color-border-light: #E8E2D8;
+  --color-accent-hover: #A34E30;
 
   --font-heading: 'Fraunces', serif;
   --font-body: 'Satoshi', sans-serif;
@@ -138,8 +140,8 @@ ul { list-style: none; }
 }
 
 .btn:hover {
-  border-color: #A34E30;
-  color: #A34E30;
+  border-color: var(--color-accent-hover);
+  color: var(--color-accent-hover);
   transform: translateY(-2px);
 }
 
@@ -150,8 +152,8 @@ ul { list-style: none; }
 }
 
 .btn--filled:hover {
-  background: #A34E30;
-  border-color: #A34E30;
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
   color: #fff;
 }
 
@@ -166,8 +168,8 @@ ul { list-style: none; }
 }
 
 .btn--accent:hover {
-  background: #a8502f;
-  border-color: #a8502f;
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
 }
 
 .tag {
@@ -219,12 +221,12 @@ ul { list-style: none; }
   left: 4px;
   width: 2px;
   height: 100vh;
-  background: #E8E2D8;
+  background: var(--color-border-light);
   z-index: 100;
 }
 
 .scroll-progress__bar {
   width: 100%;
-  background: #C4603E;
+  background: var(--color-accent);
   transition: height 0.1s linear;
 }

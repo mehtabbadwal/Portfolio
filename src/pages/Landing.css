@@ -79,7 +79,7 @@
 }
 
 .hero__learn-more:hover {
-  color: #A34E30;
+  color: var(--color-accent-hover);
 }
 
 .hero__photo-img {
@@ -124,7 +124,7 @@
 }
 
 .work__view-all:hover {
-  color: #A34E30;
+  color: var(--color-accent-hover);
 }
 
 .work-list {
@@ -138,7 +138,7 @@
   grid-template-columns: 64px 1fr 420px;
   gap: 2.5rem;
   align-items: start;
-  background: #EAE4D8;
+  background: var(--color-card);
   border-radius: 12px;
   padding: 1.75rem;
   text-decoration: none;
@@ -154,7 +154,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: #C4603E;
+  background: var(--color-accent);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -215,7 +215,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   padding: 3rem;
-  background: #EAE4D8;
+  background: var(--color-card);
   border-radius: 12px;
   margin-bottom: 1.5rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -319,7 +319,7 @@
 }
 
 .featured__cta:hover {
-  color: #A34E30;
+  color: var(--color-accent-hover);
 }
 
 .featured__placeholder {
@@ -340,7 +340,7 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 12px;
-  background: #EAE4D8;
+  background: var(--color-card);
 }
 
 .featured__img {
@@ -371,7 +371,7 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  background: #EAE4D8;
+  background: var(--color-card);
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -390,7 +390,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: #C4603E;
+  background: var(--color-accent);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -500,7 +500,7 @@
 }
 
 .project-card__cta:hover {
-  color: #A34E30;
+  color: var(--color-accent-hover);
 }
 
 /* ── Testimonials ── */
@@ -1067,7 +1067,7 @@
 }
 
 .sketch-grid-v {
-  stroke: #2C2420;
+  stroke: var(--color-dark);
   stroke-width: 0.75;
   opacity: 0.2;
   stroke-dasharray: 105;
@@ -1076,7 +1076,7 @@
 }
 
 .sketch-grid-h {
-  stroke: #2C2420;
+  stroke: var(--color-dark);
   stroke-width: 0.75;
   opacity: 0.2;
   stroke-dasharray: 111;
@@ -1090,7 +1090,7 @@
 .sketch-grid-v--4, .sketch-grid-h--4 { animation-delay: 0.31s; }
 
 .sketch-circle {
-  stroke: #2C2420;
+  stroke: var(--color-dark);
   stroke-width: 1.25;
   opacity: 0.5;
   stroke-dasharray: 335;
@@ -1099,7 +1099,7 @@
 }
 
 .sketch-dot {
-  fill: #C4603E;
+  fill: var(--color-accent);
   opacity: 0;
   transform-origin: 94px 18px;
   animation: sketchDot 0.3s ease 0.95s forwards;

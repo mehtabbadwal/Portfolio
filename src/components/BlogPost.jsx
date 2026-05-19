@@ -73,7 +73,7 @@ const BlogPost = ({
         padding: '0 2.5rem',
       }}>
         <div style={{
-          borderTop: '1px solid #E8E2D8',
+          borderTop: '1px solid var(--color-border-light)',
           paddingTop: '2.5rem',
           paddingBottom: '3.75rem',
           display: 'flex',
@@ -94,10 +94,10 @@ const BlogPost = ({
                   const btn = document.activeElement;
                   const orig = btn.textContent;
                   btn.textContent = 'Link copied!';
-                  btn.style.color = '#2C2420';
+                  btn.style.color = 'var(--color-dark)';
                   setTimeout(() => {
                     btn.textContent = orig;
-                    btn.style.color = '#7A6A60';
+                    btn.style.color = 'var(--color-warm)';
                   }, 2000);
                 }).catch(() => {});
               }
@@ -109,15 +109,15 @@ const BlogPost = ({
               fontFamily: 'var(--font-body)',
               fontSize: '0.9375rem',
               fontWeight: 500,
-              color: '#7A6A60',
+              color: 'var(--color-warm)',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
               gap: '0.5rem',
               transition: 'color 0.2s ease',
             }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = '#2C2420'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = '#7A6A60'; }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-dark)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--color-warm)'; }}
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0 }}>
               <path
@@ -134,7 +134,7 @@ const BlogPost = ({
           {/* Right: Navigation links */}
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
             {prevPost && (
-              <Link to={prevPost.url} className="cs__next-link" style={{ color: '#7A6A60' }}>
+              <Link to={prevPost.url} className="cs__next-link" style={{ color: 'var(--color-warm)' }}>
                 &larr; {prevPost.title}
               </Link>
             )}

@@ -111,7 +111,7 @@
 .wp__row-image {
   border-radius: 8px;
   overflow: hidden;
-  background: #EAE4D8;
+  background: var(--color-card);
   flex-shrink: 0;
   padding: 1rem;
 }
