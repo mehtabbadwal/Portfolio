@@ -78,6 +78,54 @@
   color: var(--color-accent);
 }
 
+/* ── Section header reveal animation ── */
+.about__section-header .about__section-dot,
+.about__section-header .about__section-label,
+.about__section-header .about__section-line {
+  opacity: 0;
+  transition: none;
+}
+
+.about__section-header .about__section-line {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.about__section-header.visible .about__section-dot {
+  animation: sh-dot-in 300ms cubic-bezier(0.25, 0.1, 0.25, 1) 100ms forwards;
+}
+
+.about__section-header.visible .about__section-label {
+  animation: sh-label-in 350ms cubic-bezier(0.25, 0.1, 0.25, 1) 200ms forwards;
+}
+
+.about__section-header.visible .about__section-line {
+  animation: sh-line-draw 600ms cubic-bezier(0.25, 0.1, 0.25, 1) 350ms forwards;
+}
+
+@keyframes sh-dot-in {
+  to { opacity: 1; }
+}
+
+@keyframes sh-label-in {
+  to { opacity: 1; }
+}
+
+@keyframes sh-line-draw {
+  to { opacity: 1; transform: scaleX(1); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about__section-header .about__section-dot,
+  .about__section-header .about__section-label,
+  .about__section-header .about__section-line {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+}
+
 @media (max-width: 768px) {
   .about__hero {
     padding: 3.5rem 0 3rem;

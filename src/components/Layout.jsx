@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import PageTransition from './PageTransition';
 
 function Layout() {
   return (
     <>
       <Header />
       <main>
-        <Outlet />
+        <PageTransition>
+          <Outlet />
+        </PageTransition>
       </main>
       <Footer />
     </>
