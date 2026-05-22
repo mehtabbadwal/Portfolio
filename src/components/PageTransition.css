@@ -1,25 +1,21 @@
 .page-transition {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 150ms ease-in, transform 150ms ease-in;
+  transition: opacity 150ms ease-in;
 }
 
 .page-transition--exiting {
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 150ms ease-in, transform 150ms ease-in;
+  transition: opacity 150ms ease-in;
 }
 
 .page-transition--entering {
   opacity: 0;
-  transform: translateY(6px);
   transition: none;
 }
 
 .page-transition--entered {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 250ms ease-out, transform 250ms ease-out;
+  transition: opacity 250ms ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -29,6 +25,5 @@
   .page-transition--entered {
     transition: none;
     opacity: 1;
-    transform: none;
   }
 }
