@@ -8,6 +8,10 @@ function TheTwoHatProblem() {
       author="MEHTAB BADWAL"
       readTime="7"
       heroImage="/two-hat-problem.svg"
+      prevPost={{
+        title: 'The Deskilling Problem',
+        url: '/blog/the-deskilling-problem',
+      }}
       nextPost={{
         title: 'The Stickiness Trap',
         url: '/blog/the-stickiness-trap',

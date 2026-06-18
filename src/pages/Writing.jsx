@@ -5,6 +5,15 @@ import './Writing.css';
 const articles = [
   {
     year: '2026',
+    date: 'JUN 2',
+    readTime: 7,
+    title: 'The Deskilling Problem',
+    description: "We measure AI adoption and report success. But if people genuinely feel more productive while actually slowing down, nobody in the system has a reliable signal for which is which.",
+    image: '/deskilling_problem.svg',
+    slug: 'the-deskilling-problem',
+  },
+  {
+    year: '2026',
     date: 'MAY 19',
     readTime: 7,
     title: 'The Two-Hat Problem',

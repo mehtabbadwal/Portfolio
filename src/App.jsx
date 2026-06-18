@@ -18,6 +18,7 @@ import WhyUsersDontSayWhatTheyFeel from './pages/blog/WhyUsersDontSayWhatTheyFee
 import TheWeightOfChoice from './pages/blog/TheWeightOfChoice';
 import TheStickinessTrap from './pages/blog/TheStickinessTrap';
 import TheTwoHatProblem from './pages/blog/TheTwoHatProblem';
+import TheDeskillingProblem from './pages/blog/TheDeskillingProblem';
 import ThisSite from './pages/ThisSite';
 import Contact from './pages/Contact';
 import ComingSoon from './pages/ComingSoon';
@@ -47,6 +48,7 @@ function App() {
           <Route path="blog/the-weight-of-choice" element={<TheWeightOfChoice />} />
           <Route path="blog/the-stickiness-trap" element={<TheStickinessTrap />} />
           <Route path="blog/the-two-hat-problem" element={<TheTwoHatProblem />} />
+          <Route path="blog/the-deskilling-problem" element={<TheDeskillingProblem />} />
           <Route path="this-site" element={<ThisSite />} />
           <Route path="contact" element={<Contact />} />
           <Route path="case-studies/:slug" element={<ComingSoon title="Case Study" />} />
