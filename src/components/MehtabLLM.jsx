@@ -506,7 +506,7 @@ VOICE NOTES (very important):
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            model: 'claude-sonnet-4-20250514',
+            model: 'claude-haiku-4-5-20251001',
             max_tokens: 500,
             system: SYSTEM,
             messages: recentMessages
@@ -515,11 +515,19 @@ VOICE NOTES (very important):
 
         if (!res.ok) {
           const errorData = await res.json().catch(() => ({}));
-          throw new Error(errorData.error || `HTTP ${res.status}`);
+          throw new Error(errorData.error?.message || errorData.error || `HTTP ${res.status}`);
         }
 
         const data = await res.json();
-        const fullText = data.content?.[0]?.text || 'No response';
+
+        if (data.error) {
+          throw new Error(data.error.message || data.error);
+        }
+
+        const fullText = data.content?.[0]?.text;
+        if (!fullText) {
+          throw new Error(`Empty response from API${data.stop_reason ? ` (stop_reason: ${data.stop_reason})` : ''}`);
+        }
 
         assistantEl.classList.remove('streaming');
         assistantEl.textContent = fullText;
