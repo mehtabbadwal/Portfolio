@@ -1,15 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 // Parses "32%", "+40%", "3x", "2 min", "6 wks" into { prefix, number, suffix }
 // Returns null for non-numeric values like "Eliminated", "Live"
 function parse(value) {
-  const match = String(value).match(/^([+\-]?)(\d+(?:\.\d+)?)(.*)/);
+  const match = String(value).match(/^([+-]?)(\d+(?:\.\d+)?)(.*)/);
   if (!match) return null;
   return { prefix: match[1], number: parseFloat(match[2]), suffix: match[3] };
 }
 
 export function MetricCounter({ value, className }) {
-  const parts = parse(value);
+  const parts = useMemo(() => parse(value), [value]);
   const ref = useRef(null);
   const [display, setDisplay] = useState(parts ? `${parts.prefix}0${parts.suffix}` : value);
   const hasAnimated = useRef(false);
@@ -48,7 +48,7 @@ export function MetricCounter({ value, className }) {
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [parts]);
 
   return <span ref={ref} className={className}>{display}</span>;
 }

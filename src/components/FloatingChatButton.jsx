@@ -6,9 +6,12 @@ const AUTOCOLLAPSE_THRESHOLD_PX = 400;
 const ROTATION_MS = 9000;
 
 export default function FloatingChatButton() {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(() => {
+    if (window.matchMedia('(max-width: 768px)').matches) return true;
+    return localStorage.getItem(STORAGE_KEY) === 'manual';
+  });
   const [chatbotOpen, setChatbotOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => window.matchMedia('(max-width: 768px)').matches);
   const [value, setValue] = useState('');
   const [pairIndex, setPairIndex] = useState(0);
   const inputRef = useRef(null);
@@ -27,14 +30,6 @@ export default function FloatingChatButton() {
   // (STORAGE_KEY = 'mb_dock_manually_collapsed'). Scroll-collapse is ephemeral —
   // it does not write to localStorage, so a page reload resets to open.
   useEffect(() => {
-    const mobile = window.matchMedia('(max-width: 768px)').matches;
-    setIsMobile(mobile);
-    if (mobile) {
-      setCollapsed(true);
-    } else {
-      const manuallyCollapsed = localStorage.getItem(STORAGE_KEY) === 'manual';
-      setCollapsed(manuallyCollapsed);
-    }
     const onResize = () => setIsMobile(window.matchMedia('(max-width: 768px)').matches);
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
@@ -81,12 +76,6 @@ export default function FloatingChatButton() {
   const collapse = () => {
     setCollapsed(true);
     if (!isMobile) localStorage.setItem(STORAGE_KEY, 'manual');
-  };
-
-  const expand = () => {
-    setCollapsed(false);
-    if (!isMobile) localStorage.removeItem(STORAGE_KEY);
-    setTimeout(() => inputRef.current?.focus(), 50);
   };
 
   const openSidebar = () => {

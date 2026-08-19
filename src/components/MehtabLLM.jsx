@@ -557,7 +557,7 @@ VOICE NOTES (very important):
         window.visualViewport.removeEventListener('resize', handleViewportResize);
         window.visualViewport.removeEventListener('scroll', handleViewportResize);
       }
-      try { document.head.removeChild(style); } catch {}
+      try { document.head.removeChild(style); } catch { /* style already removed */ }
     };
   }, []);
 
