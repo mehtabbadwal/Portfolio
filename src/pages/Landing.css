@@ -392,15 +392,6 @@
   color: var(--color-light);
 }
 
-.testimonial__relationship {
-  font-family: var(--font-mono);
-  font-size: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: rgba(244, 240, 232, 0.22);
-  margin-top: 0.25rem;
-}
-
 .testimonials__footer {
   display: flex;
   align-items: center;
@@ -680,10 +671,6 @@
     max-width: 280px;
     margin: 0 auto;
   }
-
-  .featured__image {
-    aspect-ratio: 3 / 2;
-  }
 }
 
 @media (max-width: 768px) {
@@ -726,14 +713,6 @@
   }
 
   /* Sections */
-  .featured {
-    grid-template-columns: 1fr;
-  }
-
-  .work__grid {
-    grid-template-columns: 1fr;
-  }
-
   .work-card {
     grid-template-columns: 40px 1fr;
     gap: 1.25rem;
@@ -746,11 +725,6 @@
 
   .project-card__desc {
     min-height: auto;
-  }
-
-  .project-card__img {
-    object-fit: contain;
-    padding: 0.5rem;
   }
 
   .testimonials__grid {
@@ -797,20 +771,6 @@
   .cta__actions .btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .featured__metrics {
-    gap: 1.5rem;
-    flex-wrap: wrap;
-  }
-
-  .featured__quote {
-    font-size: 1.5rem;
-  }
-
-  .featured__image {
-    order: 2;
-    aspect-ratio: 4 / 3;
   }
 
   .practice__grid {
