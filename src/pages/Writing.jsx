@@ -5,6 +5,15 @@ import './Writing.css';
 const articles = [
   {
     year: '2026',
+    date: 'NOV 4',
+    readTime: 10,
+    title: 'I Asked AI to Write My Portrait. It Saw a Man.',
+    description: "I never told the model my gender. It defaulted to male anyway. The pronoun was the smallest problem: the same unmarked default shapes salary advice, diagnoses, and the tools we design with.",
+    image: '/ai-portrait-hero.jpeg',
+    slug: 'i-asked-ai-to-write-my-portrait',
+  },
+  {
+    year: '2026',
     date: 'JUN 2',
     readTime: 7,
     title: 'The Deskilling Problem',
