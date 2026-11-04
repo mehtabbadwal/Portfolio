@@ -7,7 +7,7 @@ function IAskedAIToWriteMyPortrait() {
       date="NOV 4"
       author="MEHTAB BADWAL"
       readTime="10"
-      heroImage="/ai-portrait-hero.jpg"
+      heroImage="/ai-portrait-hero.jpeg"
       nextPost={{
         title: 'The Deskilling Problem',
         url: '/blog/the-deskilling-problem',

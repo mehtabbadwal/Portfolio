@@ -9,7 +9,7 @@ const articles = [
     readTime: 10,
     title: 'I Asked AI to Write My Portrait. It Saw a Man.',
     description: "I never told the model my gender. It defaulted to male anyway. The pronoun was the smallest problem: the same unmarked default shapes salary advice, diagnoses, and the tools we design with.",
-    image: '/ai-portrait-hero.jpg',
+    image: '/ai-portrait-hero.jpeg',
     slug: 'i-asked-ai-to-write-my-portrait',
   },
   {
