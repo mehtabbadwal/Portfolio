@@ -8,6 +8,10 @@ function TheDeskillingProblem() {
       author="MEHTAB BADWAL"
       readTime="7"
       heroImage="/deskilling_problem.svg"
+      prevPost={{
+        title: 'I Asked AI to Write My Portrait',
+        url: '/blog/i-asked-ai-to-write-my-portrait',
+      }}
       nextPost={{
         title: 'The Two-Hat Problem',
         url: '/blog/the-two-hat-problem',
